@@ -72,20 +72,35 @@ TARGET_INDUSTRIES = [
 ]
 
 BAD_SIGNALS = [
+    # tech / engineering
     "software engineer", "data engineer", "devops", "machine learning",
     "data scientist", "backend", "frontend engineer", "ios developer",
     "android developer", "java", "kubernetes", "aws engineer",
     "systems engineer", "it systems", "product analyst", "data analyst",
+    "security engineer", "infrastructure", "sre", "site reliability",
+    # medical / clinical
     "clinical", "nurse", "physician", "pharmacist", "radiologist",
     "therapy associate", "therapist", "counselor", "clinical social worker",
-    "accountant", "cpa", "tax manager", "bookkeeper",
+    # finance / admin
+    "accountant", "cpa", "tax manager", "bookkeeper", "tax",
+    "payroll", "accounts payable", "accounts receivable", "controller",
+    # logistics
     "supply chain", "warehouse", "logistics", "truck driver",
     "real estate agent", "insurance agent", "loan officer",
+    # crm / martech
     "braze admin", "salesforce developer", "sql developer",
     "lifecycle marketing manager", "crm manager",
+    # sales (not partnerships)
     "sales executive", "account executive", "sales development",
+    "inside sales", "outbound sales", "mid-market sales",
+    # operations / retail
     "yield manager", "revenue optimization", "store administrator",
     "store manager", "retail associate", "customer service",
+    "merchandiser", "field rep", "territory manager",
+    # geo filters — not relevant markets
+    "korea", "japan", "apac", "indonesia", "malaysia", "singapore",
+    "australia", "india", "emea", "latam", "brazil", "mexico",
+    "toronto", "london", "berlin", "amsterdam", "paris",
 ]
 
 TARGET_COMPANIES = [
@@ -286,7 +301,7 @@ def add_job(title, company, url, date_str="", source="", description=""):
         return
     desc_clean = clean_text(description)
     score = score_job(title, desc_clean, company)
-    if score < 2:
+    if score < 4:
         return
     seen_urls.add(url)
     jobs.append({
@@ -754,6 +769,45 @@ def scrape_direct_pages():
         "Pietra": "https://www.pietrastudio.com/careers",
         "Linktree": "https://linktr.ee/careers",
         "Dash Hudson": "https://www.dashhudson.com/careers",
+        # attainable — smaller, earlier stage, more likely to hire fractional
+        "Studs": "https://www.studs.com/pages/careers",
+        "Jolie": "https://jolieskinco.com/pages/careers",
+        "Soft Services": "https://www.softservices.com/pages/careers",
+        "Snif": "https://www.snif.co/pages/careers",
+        "French Girl Organics": "https://frenchgirlorganics.com/pages/careers",
+        "Oat Haus": "https://www.oathaus.com/pages/careers",
+        "Taika": "https://taika.co/pages/careers",
+        "Clevr Blends": "https://clevrblends.com/pages/careers",
+        "Wooden Spoon Herbs": "https://woodenspoonherbs.com/pages/careers",
+        "Diaspora Co": "https://www.diasporaco.com/pages/careers",
+        "Dae Hair": "https://daehair.com/pages/careers",
+        "Dieux Skin": "https://dieuxskin.com/pages/careers",
+        "Experiment Beauty": "https://experimentbeauty.com/pages/careers",
+        "Halfday": "https://drinkhalfday.com/pages/careers",
+        "Cann": "https://drinkcann.com/pages/careers",
+        "Wynk": "https://drinkwynk.com/pages/careers",
+        "Deux": "https://eatdeux.com/pages/careers",
+        "Mud Wtr": "https://mudwtr.com/pages/careers",
+        "Swoon": "https://swoondrinks.com/pages/careers",
+        "Gorgie": "https://drinkgorgie.com/pages/careers",
+        # austin-local attainable
+        "Austin Eastciders": "https://austineastciders.com/careers/",
+        "Waterloo Sparkling Water": "https://waterloosparkling.com/pages/careers",
+        "Rambler": "https://drinkrambler.com/pages/careers",
+        "Saveur Selects": "https://saveurselects.com/pages/careers",
+        "Keep Austin Weird": "https://keepaustinweird.com/careers",
+        "Austin Beerworks": "https://austinbeerworks.com/careers",
+        "Kendra Scott": "https://kendrascott.com/pages/careers",
+        "Tecovas": "https://www.tecovas.com/pages/careers",
+        "Criquet Shirts": "https://www.criquet.com/pages/careers",
+        "Nack": "https://nack.com/careers",
+        # gaming — smaller / attainable
+        "Whitethorn Games": "https://whitethorngames.com/jobs",
+        "Armor Games Studios": "https://armorgamesstudios.com/careers",
+        "Freedom Games": "https://freedomgames.com/careers",
+        "Graffiti Games": "https://www.graffiti.games/careers",
+        "Stride PR": "https://stridepr.com/careers",
+        "Vicarious PR": "https://www.vicariouspr.com/careers",
     }
     for company, url in pages.items():
         try:
@@ -1165,6 +1219,164 @@ def seed_known_prospects():
         revenue_est="$10M-30M",
         score=7,
         notes="",
+    )
+
+    # Attainable — smaller, earlier stage, more likely to respond to fractional pitch
+    add_prospect(
+        brand="Taika",
+        founder="Kal Freese",
+        contact="Kal Freese",
+        contact_title="Co-Founder / CEO",
+        gap="Taika is a functional coffee brand with a strong aesthetic identity and a clear point of view. Early stage, founder-operated, no dedicated partnerships or GTM operator. Exactly the profile for a fractional engagement.",
+        instagram="https://instagram.com/drinktaika",
+        website="https://taika.co",
+        industry="Food & Beverage / DTC",
+        revenue_est="$1M-5M",
+        score=8,
+        notes="Early stage — high responsiveness likelihood",
+    )
+    add_prospect(
+        brand="Clevr Blends",
+        founder="Hannah Mendoza",
+        contact="Hannah Mendoza",
+        contact_title="Co-Founder / CEO",
+        gap="Clevr Blends has built a distinctive brand in functional lattes with strong celebrity endorsement and community. The commercial infrastructure is thin. No dedicated partnerships operator.",
+        instagram="https://instagram.com/clevrblends",
+        website="https://clevrblends.com",
+        industry="Food & Beverage / Wellness",
+        revenue_est="$2M-8M",
+        score=8,
+        notes="Early stage — high responsiveness likelihood",
+    )
+    add_prospect(
+        brand="Mud/Wtr",
+        founder="Shane Heath",
+        contact="Shane Heath",
+        contact_title="Founder / CEO",
+        gap="Mud/Wtr has built a cult brand around coffee alternatives and a strong community. The partnership and collab layer is underdeveloped for the brand's cultural footprint. Founder-operated commercial function.",
+        instagram="https://instagram.com/mudwtr",
+        website="https://mudwtr.com",
+        industry="Food & Beverage / Wellness",
+        revenue_est="$10M-30M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="Deux",
+        founder="Sabeena Ladha",
+        contact="Sabeena Ladha",
+        contact_title="Founder / CEO",
+        gap="Deux makes functional cookie dough with a strong DTC brand and a genuinely funny, distinct voice. Small team, founder-operated, no commercial partnerships infrastructure. High responsiveness likelihood.",
+        instagram="https://instagram.com/eatdeux",
+        website="https://eatdeux.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$1M-5M",
+        score=8,
+        notes="Small team — high responsiveness likelihood",
+    )
+    add_prospect(
+        brand="Halfday",
+        founder="Lara Wyss",
+        contact="Lara Wyss",
+        contact_title="Co-Founder / CEO",
+        gap="Halfday is building in the relaxation drink space with a strong aesthetic and a clear consumer insight. Very early stage, founder-operated, no dedicated GTM or partnerships function.",
+        instagram="https://instagram.com/drinkhalfday",
+        website="https://drinkhalfday.com",
+        industry="Food & Beverage / Wellness",
+        revenue_est="$500K-$3M",
+        score=8,
+        notes="Early stage — high responsiveness likelihood",
+    )
+    add_prospect(
+        brand="Dieux Skin",
+        founder="Charlotte Palermino",
+        contact="Charlotte Palermino",
+        contact_title="Co-Founder / CEO",
+        gap="Dieux has built exceptional brand equity in skincare with a transparency-first positioning and a devoted community. Small team, founder-operated commercial function, no dedicated partnerships operator.",
+        instagram="https://instagram.com/dieuxskin",
+        website="https://dieuxskin.com",
+        industry="Beauty / DTC",
+        revenue_est="$3M-10M",
+        score=8,
+        notes="Small team — high responsiveness likelihood",
+    )
+    add_prospect(
+        brand="Criquet Shirts",
+        founder="Billy Nachman",
+        contact="Billy Nachman",
+        contact_title="Co-Founder / CEO",
+        gap="Criquet is a lifestyle apparel brand built around sport, culture, and a strong Austin identity. The commercial partnership and collaboration layer is minimal. Austin-based, founder-operated.",
+        instagram="https://instagram.com/criquetshirts",
+        website="https://criquet.com",
+        industry="Apparel / Lifestyle",
+        revenue_est="$3M-10M",
+        score=7,
+        notes="Austin-based",
+    )
+    add_prospect(
+        brand="Tecovas",
+        founder="Paul Hedrick",
+        contact="Paul Hedrick",
+        contact_title="Founder / CEO",
+        gap="Tecovas is the dominant DTC Western boot brand with strong Austin roots and a growing retail presence. The brand partnership and collab layer is underdeveloped for the brand's scale and cultural moment.",
+        instagram="https://instagram.com/tecovas",
+        website="https://tecovas.com",
+        industry="Apparel / Lifestyle",
+        revenue_est="$50M+",
+        score=6,
+        notes="Austin-based — larger org but strong fit",
+    )
+    add_prospect(
+        brand="Waterloo Sparkling Water",
+        founder="John Setz",
+        contact="John Setz",
+        contact_title="CEO",
+        gap="Waterloo is the leading Austin-born sparkling water brand with national distribution. The brand partnership and collaboration layer is not systematized at the level the brand warrants.",
+        instagram="https://instagram.com/waterloosparkling",
+        website="https://waterloosparkling.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$20M+",
+        score=6,
+        notes="Austin-based",
+    )
+    add_prospect(
+        brand="Whitethorn Games",
+        founder="Matthew White",
+        contact="Matthew White",
+        contact_title="Founder / CEO",
+        gap="Whitethorn Games publishes cozy and accessible indie games with a strong community identity. Small team, founder-operated, no dedicated partnerships or brand operator. High responsiveness likelihood for fractional engagement.",
+        instagram="https://instagram.com/whitethorndigital",
+        website="https://whitethorngames.com",
+        industry="Gaming",
+        revenue_est="$1M-5M",
+        score=8,
+        notes="Small team — high responsiveness likelihood",
+    )
+    add_prospect(
+        brand="Freedom Games",
+        founder="",
+        contact="",
+        contact_title="",
+        gap="Freedom Games is an indie publisher with a growing catalog and minimal commercial infrastructure. No dedicated partnerships operator. Strong fit for fractional developer relations and brand support.",
+        instagram="https://instagram.com/freedomgamesofficial",
+        website="https://freedomgames.com",
+        industry="Gaming",
+        revenue_est="$1M-5M",
+        score=7,
+        notes="Small team — high responsiveness likelihood",
+    )
+    add_prospect(
+        brand="Diaspora Co",
+        founder="Sana Javeri Kadri",
+        contact="Sana Javeri Kadri",
+        contact_title="Founder / CEO",
+        gap="Diaspora Co has built one of the most values-driven and editorially strong brands in the spice space. The commercial partnership layer is thin. Founder-operated, strong community, high responsiveness likelihood.",
+        instagram="https://instagram.com/diasporaco",
+        website="https://diasporaco.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$2M-8M",
+        score=8,
+        notes="Small team — high responsiveness likelihood",
     )
 
 def scrape_product_hunt_prospects():
