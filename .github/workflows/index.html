@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline / James Tedesco</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d0d0d;
+  --surface: #161616;
+  --surface-hover: #1c1c1c;
+  --border: #242424;
+  --border-2: #303030;
+  --text: #e4ddd4;
+  --text-2: #8a8480;
+  --text-3: #484440;
+  --accent: #c9a96e;
+  --accent-dim: rgba(201,169,110,0.12);
+}
+
+html.light {
+  --bg: #f8f6f2;
+  --surface: #ffffff;
+  --surface-hover: #f2efe9;
+  --border: #e2ddd6;
+  --border-2: #ccc8c0;
+  --text: #1a1714;
+  --text-2: #5a5450;
+  --text-3: #9a9590;
+  --accent: #a07840;
+  --accent-dim: rgba(160,120,64,0.1);
+}
+
+html, body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-brand {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--border);
+  white-space: nowrap;
+  user-select: none;
+}
+.nav-brand em { color: var(--accent); font-style: normal; }
+.nav-tabs { display: flex; flex: 1; }
+.nav-tab {
+  padding: 0 18px;
+  height: 46px;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  transition: color 0.12s, border-color 0.12s;
+  white-space: nowrap;
+}
+.nav-tab:hover { color: var(--text-2); }
+.nav-tab.active { color: var(--text); border-bottom-color: var(--accent); }
+.nav-meta {
+  font-size: 11px;
+  color: var(--text-3);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  border-left: 1px solid var(--border);
+}
+
+/* LAYOUT */
+.main { max-width: 1240px; margin: 0 auto; padding: 24px 20px; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* TOOLBAR */
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.search-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+}
+.search-input:focus { border-color: var(--border-2); }
+.search-input::placeholder { color: var(--text-3); }
+.filter-select {
+  padding: 8px 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-2);
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+.filter-select option { background: #1a1a1a; }
+.count-badge { font-size: 11px; color: var(--text-3); margin-left: auto; }
+
+/* CARDS */
+.card-grid { display: grid; gap: 10px; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  transition: border-color 0.12s;
+}
+.card:hover { border-color: var(--border-2); }
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.card-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.3; }
+.card-title a { color: inherit; text-decoration: none; }
+.card-title a:hover { color: var(--accent); }
+.card-subtitle { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+.card-desc { font-size: 12px; color: var(--text-2); margin-top: 8px; line-height: 1.55; }
+.card-gap {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-top: 10px;
+  padding: 9px 12px;
+  border-left: 2px solid var(--border-2);
+  background: rgba(255,255,255,0.025);
+  border-radius: 0 5px 5px 0;
+  line-height: 1.6;
+}
+.card-links { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+.card-link { font-size: 11px; color: var(--text-3); text-decoration: none; letter-spacing: 0.02em; }
+.card-link:hover { color: var(--accent); }
+.card-meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+.card-actions { display: flex; gap: 7px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+
+/* BADGES */
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.badge-strong { background: var(--accent-dim); color: var(--accent); }
+.badge-good { background: rgba(74,154,106,0.12); color: #7abf9a; }
+.badge-look { background: rgba(74,106,154,0.12); color: #7a9abf; }
+.badge-low { background: var(--border); color: var(--text-3); }
+.badge-new { background: var(--border); color: var(--text-3); }
+.badge-approved { background: rgba(58,90,138,0.18); color: #8aaad4; }
+.badge-applied { background: rgba(90,58,138,0.18); color: #a88ad4; }
+.badge-outreach { background: rgba(138,90,58,0.18); color: #d4b08a; }
+.badge-interview { background: rgba(58,122,90,0.18); color: #8ad4b0; }
+.badge-pass { background: rgba(122,58,58,0.18); color: #d48a8a; }
+.badge-active { background: rgba(58,122,90,0.18); color: #8ad4b0; }
+.badge-source { background: none; color: var(--text-3); font-size: 10px; font-weight: 400; text-transform: none; letter-spacing: 0; padding: 3px 4px; }
+
+/* BUTTONS */
+.btn {
+  padding: 6px 13px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--border-2);
+  background: transparent;
+  color: var(--text-2);
+  transition: all 0.12s;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.btn:hover { background: var(--surface-hover); color: var(--text); }
+.btn-primary {
+  background: var(--accent-dim);
+  border-color: rgba(201,169,110,0.4);
+  color: var(--accent);
+}
+.btn-primary:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.btn-danger { color: var(--text-3); border-color: var(--border); }
+.btn-danger:hover { background: rgba(122,58,58,0.15); border-color: rgba(122,58,58,0.5); color: #d48a8a; }
+.btn-mail { margin-left: auto; }
+.btn-mail:hover { border-color: rgba(201,169,110,0.4); color: var(--accent); }
+.status-select {
+  padding: 5px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-3);
+  font-size: 11px;
+  cursor: pointer;
+  outline: none;
+}
+.status-select option { background: #1a1a1a; }
+
+/* OUTREACH TAB */
+.outreach-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.outreach-header {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.outreach-header:hover { background: var(--surface-hover); }
+.outreach-type {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.outreach-type.job { background: rgba(58,90,138,0.2); color: #8aaad4; }
+.outreach-type.prospect { background: var(--accent-dim); color: var(--accent); }
+.outreach-name { font-size: 14px; font-weight: 600; }
+.outreach-sub { font-size: 12px; color: var(--text-2); margin-top: 1px; }
+.outreach-caret { color: var(--text-3); font-size: 11px; margin-left: auto; }
+.outreach-body { padding: 16px; border-top: 1px solid var(--border); display: none; }
+.email-preview {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.email-subject {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-2);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.email-body {
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.75;
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+.outreach-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* PIPELINE / KANBAN */
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+@media (max-width: 900px) { .pipeline-grid { grid-template-columns: 1fr; } }
+.pipeline-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.kanban-board {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.kanban-col { min-width: 148px; flex: 1; }
+.kanban-col-header {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kanban-count { font-weight: 400; text-transform: none; letter-spacing: 0; }
+.kanban-cards { display: flex; flex-direction: column; gap: 7px; min-height: 50px; }
+.kanban-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 9px 11px;
+  cursor: pointer;
+  transition: border-color 0.12s;
+}
+.kanban-card:hover { border-color: var(--border-2); }
+.kanban-card-title { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
+.kanban-card-company { font-size: 11px; color: var(--text-2); }
+.kanban-card-score { font-size: 10px; color: var(--text-3); margin-top: 4px; }
+.kanban-empty { font-size: 11px; color: var(--text-3); padding: 10px 0; font-style: italic; }
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 540px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+}
+.modal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; }
+.modal-title { font-size: 16px; font-weight: 600; }
+.modal-sub { font-size: 12px; color: var(--text-2); margin-top: 3px; }
+.modal-close { background: none; border: none; color: var(--text-3); cursor: pointer; font-size: 18px; padding: 0; line-height: 1; }
+.modal-close:hover { color: var(--text); }
+.modal-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 8px;
+}
+.stage-buttons { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+.divider { height: 1px; background: var(--border); margin: 18px 0; }
+
+/* EMPTY STATE */
+.empty-state { text-align: center; padding: 64px 20px; color: var(--text-3); }
+.empty-state-title { font-size: 15px; color: var(--text-2); margin-bottom: 8px; font-weight: 600; }
+
+/* LOADING */
+.loading { text-align: center; padding: 64px 20px; color: var(--text-3); font-size: 13px; }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+
+@media (max-width: 640px) {
+  .nav-brand { padding: 0 12px; font-size: 11px; }
+  .nav-tab { padding: 0 12px; font-size: 11px; }
+  .nav-meta { display: none; }
+  .main { padding: 16px 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">JT <em>/</em> Pipeline</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-tab="jobs" onclick="switchTab('jobs')">Jobs</button>
+    <button class="nav-tab" data-tab="prospects" onclick="switchTab('prospects')">Consulting</button>
+    <button class="nav-tab" data-tab="outreach" onclick="switchTab('outreach')">Outreach</button>
+    <button class="nav-tab" data-tab="pipeline" onclick="switchTab('pipeline')">Pipeline</button>
+  </div>
+  <div class="nav-meta" id="nav-meta">loading...</div>
+  <button onclick="toggleMode()" id="mode-btn" style="background:none;border:none;cursor:pointer;padding:0 16px;color:var(--text-3);font-size:18px;border-left:1px solid var(--border)" title="Toggle light/dark">&#9788;</button>
+</nav>
+
+<div class="main">
+
+  <!-- JOBS TAB -->
+  <div id="tab-jobs" class="tab-panel active">
+    <div class="toolbar">
+      <input type="text" class="search-input" id="jobs-search" placeholder="Search roles, companies, industries..." oninput="renderJobs()">
+      <select class="filter-select" id="jobs-status" onchange="renderJobs()">
+        <option value="">All Statuses</option>
+        <option value="new">New</option>
+        <option value="approved">Approved</option>
+        <option value="applied">Applied</option>
+        <option value="outreach_sent">Outreach Sent</option>
+        <option value="interview">Interview</option>
+        <option value="pass">Pass</option>
+      </select>
+      <select class="filter-select" id="jobs-score" onchange="renderJobs()">
+        <option value="">All Fits</option>
+        <option value="strong">Strong Fit (8+)</option>
+        <option value="good">Good Fit (5-7)</option>
+        <option value="look">Worth a Look (2-4)</option>
+      </select>
+      <select class="filter-select" id="jobs-sort" onchange="renderJobs()">
+        <option value="score">Score</option>
+        <option value="date">Date</option>
+        <option value="company">Company</option>
+      </select>
+      <span class="count-badge" id="jobs-count"></span>
+    </div>
+    <div class="card-grid" id="jobs-list"></div>
+  </div>
+
+  <!-- PROSPECTS TAB -->
+  <div id="tab-prospects" class="tab-panel">
+    <div class="toolbar">
+      <input type="text" class="search-input" id="prospects-search" placeholder="Search brands, founders, industries..." oninput="renderProspects()">
+      <select class="filter-select" id="prospects-status" onchange="renderProspects()">
+        <option value="">All Statuses</option>
+        <option value="new">New</option>
+        <option value="approved">Approved</option>
+        <option value="outreach_sent">Outreach Sent</option>
+        <option value="active">Active Client</option>
+        <option value="pass">Pass</option>
+      </select>
+      <select class="filter-select" id="prospects-industry" onchange="renderProspects()">
+        <option value="">All Industries</option>
+        <option value="gaming">Gaming</option>
+        <option value="dtc">DTC</option>
+        <option value="food">Food & Bev</option>
+        <option value="wellness">Wellness</option>
+        <option value="fashion">Fashion</option>
+        <option value="mental health">Mental Health</option>
+        <option value="editorial">Editorial / Media</option>
+        <option value="music">Music / Culture</option>
+      </select>
+      <span class="count-badge" id="prospects-count"></span>
+    </div>
+    <div class="card-grid" id="prospects-list"></div>
+  </div>
+
+  <!-- OUTREACH TAB -->
+  <div id="tab-outreach" class="tab-panel">
+    <div class="toolbar">
+      <select class="filter-select" id="outreach-filter" onchange="renderOutreach()">
+        <option value="">All Approved</option>
+        <option value="jobs">Jobs Only</option>
+        <option value="prospects">Prospects Only</option>
+      </select>
+      <span class="count-badge" id="outreach-count"></span>
+    </div>
+    <div id="outreach-list"></div>
+  </div>
+
+  <!-- PIPELINE TAB -->
+  <div id="tab-pipeline" class="tab-panel">
+    <div class="pipeline-grid">
+      <div>
+        <div class="pipeline-section-title">Full-Time Roles</div>
+        <div class="kanban-board" id="kanban-jobs"></div>
+      </div>
+      <div>
+        <div class="pipeline-section-title">Consulting Pipeline</div>
+        <div class="kanban-board" id="kanban-prospects"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal-overlay" class="modal-overlay" onclick="maybeCloseModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-sub" id="modal-sub"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────
+// LIGHT / DARK MODE
+// ─────────────────────────────────────────
+function toggleMode() {
+  const isLight = document.documentElement.classList.toggle('light');
+  localStorage.setItem('jt_mode', isLight ? 'light' : 'dark');
+  document.getElementById('mode-btn').innerHTML = isLight ? '&#9790;' : '&#9788;';
+}
+(function() {
+  if (localStorage.getItem('jt_mode') === 'light') {
+    document.documentElement.classList.add('light');
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mode-btn');
+      if (btn) btn.innerHTML = '&#9790;';
+    });
+  }
+})();
+
+// ─────────────────────────────────────────
+// CONFIG
+// ─────────────────────────────────────────
+const FROM_EMAIL = ''; // your email address - fill in or leave blank
+
+// ─────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────
+let jobs = [];
+let prospects = [];
+let currentTab = 'jobs';
+const _emailCache = {};
+const _metaCache = {};
+
+// localStorage helpers
+const LS = {
+  get: (k) => { try { return JSON.parse(localStorage.getItem(k) || '{}'); } catch { return {}; } },
+  set: (k, v) => localStorage.setItem(k, JSON.stringify(v)),
+  jobStatuses: () => LS.get('jt_job_statuses'),
+  prospectStatuses: () => LS.get('jt_prospect_statuses'),
+  dismissed: () => LS.get('jt_dismissed'),
+  setJobStatus: (id, s) => { const d = LS.jobStatuses(); d[id] = s; LS.set('jt_job_statuses', d); },
+  setProspectStatus: (id, s) => { const d = LS.prospectStatuses(); d[id] = s; LS.set('jt_prospect_statuses', d); },
+  dismiss: (id) => { const d = LS.dismissed(); d[id] = true; LS.set('jt_dismissed', d); },
+};
+
+// ─────────────────────────────────────────
+// ID GENERATION
+// ─────────────────────────────────────────
+function makeId(item) {
+  if (item.id) return item.id;
+  const raw = (item.url || '') + (item.company || item.brand || '') + (item.title || item.brand || '');
+  let h = 0;
+  for (let i = 0; i < raw.length; i++) { h = Math.imul(31, h) + raw.charCodeAt(i) | 0; }
+  return 'id' + Math.abs(h).toString(36);
+}
+
+// ─────────────────────────────────────────
+// LABEL HELPERS
+// ─────────────────────────────────────────
+function scoreMeta(score) {
+  if (score >= 8) return { label: 'Strong Fit', cls: 'strong' };
+  if (score >= 5) return { label: 'Good Fit', cls: 'good' };
+  if (score >= 2) return { label: 'Worth a Look', cls: 'look' };
+  return { label: 'Low Signal', cls: 'low' };
+}
+
+const STATUS_LABELS = {
+  new: 'New', approved: 'Approved', applied: 'Applied',
+  outreach_sent: 'Outreach Sent', interview: 'Interview',
+  pass: 'Pass', active: 'Active Client'
+};
+function statusLabel(s) { return STATUS_LABELS[s] || 'New'; }
+
+function statusBadge(s) {
+  const cls = { new:'new', approved:'approved', applied:'applied', outreach_sent:'outreach',
+                interview:'interview', pass:'pass', active:'active' }[s] || 'new';
+  return `<span class="badge badge-${cls}">${statusLabel(s)}</span>`;
+}
+
+// ─────────────────────────────────────────
+// EMAIL GENERATION
+// ─────────────────────────────────────────
+const COMPANY_VOICE = {
+  'aspyr': 'Aspyr has done more for game preservation than almost anyone in the industry. The back catalog work is genuinely respected and the Austin roots make it even more compelling.',
+  'heart and soil': 'Heart and Soil has built real community around organ meats in a category most brands make clinical. The conviction is unusually strong and the brand POV is clear.',
+  'heart & soil': 'Heart and Soil has built real community around organ meats in a category most brands make clinical. The conviction is unusually strong and the brand POV is clear.',
+  'everyday dose': 'Everyday Dose has found a clean wedge in functional coffee. The positioning is specific and the Austin base gives it local credibility with a national reach.',
+  'howler brothers': 'Howler Brothers occupies a genuinely distinct place in outdoor lifestyle. The aesthetic is specific, the community feel is real, and the content reflects that.',
+  'fishwife': 'Fishwife has built something genuinely special. The brand equity is real, the audience is committed, and the product is differentiated in a category that should be boring but is not.',
+  'midwest games': 'Midwest Games has carved out a real identity in indie publishing. The developer relationships feel genuine and the curation has a clear point of view.',
+  'popagenda': 'popagenda has a clear creative identity and a strong point of view. That is the hard part. The commercial infrastructure is where it gets interesting.',
+  'graza': 'Graza figured out how to make olive oil a brand decision. The positioning work behind that is real and it shows in how the brand shows up in the market.',
+  'ghia': 'Ghia is doing something rare: building genuine cultural cachet in a non-alc category that most brands treat as a dietary restriction rather than a lifestyle.',
+  'liquid death': 'Liquid Death turned canned water into a brand statement. The irreverence is a feature, not a bug, and the partnerships catalog reflects that.',
+  'olipop': 'OLIPOP has built one of the most compelling brand identities in better-for-you bev. The growth has been real and the audience is genuinely engaged.',
+  'madhappy': 'Madhappy has done something most brands only talk about: made mental health feel like a lifestyle position rather than a category.',
+  'wondermind': 'Wondermind is building in mental health with real cultural momentum and a founder story that carries weight.',
+  'riot games': 'Riot Games has built one of the most engaged gaming communities in the world. The IP depth creates real room for creative partnership work.',
+  'devolver digital': 'Devolver Digital has made irreverence into a brand position and it has worked better than almost anyone expected.',
+  'annapurna interactive': 'Annapurna Interactive has one of the strongest curatorial identities in games. The brand equity here is real and unusual for a publisher.',
+};
+
+function getObservation(company) {
+  const key = (company || '').toLowerCase();
+  for (const [k, v] of Object.entries(COMPANY_VOICE)) {
+    if (key.includes(k)) return v;
+  }
+  return `${company} caught my attention and this role looks like a strong fit for what I've been building.`;
+}
+
+function genJobEmail(job) {
+  const obs = getObservation(job.company);
+  const subject = `${job.title} - James Tedesco`;
+  const body = `Hi there,
+
+${obs}
+
+I've spent the last seven years building partnership programs and commercial infrastructure from scratch. At Opulist I built the entire partnership function with no pricing framework, no pipeline, no deal history - closed $50K+ in the first two quarters. At Sunday Scaries I conceived and ran Scenes of Note from concept to market and led the Dinner Service collab from cold outreach through launch across six co-branded products. Before that I ran 15+ branded campaign integrations a month at Fandom alongside CD Projekt Red, Sony Santa Monica, and Deep Silver.
+
+Happy to share more if it's useful.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`;
+  return { subject, body };
+}
+
+function genProspectEmail(prospect) {
+  const brand = prospect.brand || '';
+  const contact = prospect.contact || prospect.founder || '';
+  const firstName = contact ? contact.split(' ')[0] : 'there';
+  const gap = prospect.gap || `${brand} has a clear point of view and real product strength.`;
+  const lead = gap.split('.')[0].trim() + '.';
+
+  const subject = `Commercial infrastructure - ${brand}`;
+  const body = `Hi ${firstName},
+
+${lead} The commercial layer - partnerships, GTM, brand collaborations - is usually what takes founder-led brands from interesting to inevitable.
+
+I build that layer from scratch. Right now I'm the operator behind Opulist's entire partnership program (built from zero, $50K+ closed in the first two quarters) and I'm supporting indie.io on developer acquisition and publishing strategy. Before that I created Scenes of Note from concept to market and ran brand integrations at Fandom for five years.
+
+I'm looking for one more consulting client. Retainer-based, 15 hours a week. I come with an AI-powered backend, so I deliver what used to require a full team, fractionally.
+
+Worth a 20-minute conversation if the timing is right.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`;
+  return { subject, body };
+}
+
+function makeMailto(to, subject, body) {
+  return `mailto:${encodeURIComponent(to || '')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+// ─────────────────────────────────────────
+// TAB NAVIGATION
+// ─────────────────────────────────────────
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === tab);
+  });
+  document.getElementById('tab-' + tab).classList.add('active');
+  render();
+}
+
+function render() {
+  if (currentTab === 'jobs') renderJobs();
+  else if (currentTab === 'prospects') renderProspects();
+  else if (currentTab === 'outreach') renderOutreach();
+  else if (currentTab === 'pipeline') renderPipeline();
+}
+
+// ─────────────────────────────────────────
+// JOBS TAB
+// ─────────────────────────────────────────
+function renderJobs() {
+  const statuses = LS.jobStatuses();
+  const dismissed = LS.dismissed();
+  const q = (document.getElementById('jobs-search').value || '').toLowerCase();
+  const sf = document.getElementById('jobs-status').value;
+  const sc = document.getElementById('jobs-score').value;
+  const sort = document.getElementById('jobs-sort').value;
+
+  let list = jobs
+    .map(j => ({ ...j, _id: makeId(j), _status: statuses[makeId(j)] || 'new' }))
+    .filter(j => !dismissed[j._id])
+    .filter(j => !sf || j._status === sf)
+    .filter(j => {
+      if (!sc) return true;
+      if (sc === 'strong') return j.score >= 8;
+      if (sc === 'good') return j.score >= 5 && j.score < 8;
+      if (sc === 'look') return j.score >= 2 && j.score < 5;
+      return true;
+    })
+    .filter(j => !q || `${j.title} ${j.company} ${j.description || ''} ${j.source || ''}`.toLowerCase().includes(q));
+
+  if (sort === 'score') list.sort((a, b) => b.score - a.score);
+  else if (sort === 'date') list.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  else list.sort((a, b) => (a.company || '').localeCompare(b.company || ''));
+
+  document.getElementById('jobs-count').textContent = `${list.length} role${list.length !== 1 ? 's' : ''}`;
+  const el = document.getElementById('jobs-list');
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">No roles match</div>Adjust filters or wait for the next scrape run.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(job => {
+    const { label: sl, cls: sc2 } = scoreMeta(job.score);
+    const { subject, body } = genJobEmail(job);
+    const eid = job._id + '_email';
+    _emailCache[eid] = { subject, body };
+    const mailto = makeMailto(FROM_EMAIL, subject, body);
+    return `<div class="card">
+  <div class="card-header">
+    <div style="flex:1;min-width:0">
+      <div class="card-title">${job.url ? `<a href="${escH(job.url)}" target="_blank">${escH(job.title)}</a>` : escH(job.title)}</div>
+      <div class="card-subtitle">${escH(job.company)}${job.date ? ' &middot; ' + job.date : ''}</div>
+    </div>
+    <span class="badge badge-${sc2}" style="flex-shrink:0">${sl}</span>
+  </div>
+  ${job.description ? `<div class="card-desc">${escH(job.description)}</div>` : ''}
+  <div class="card-meta">
+    ${statusBadge(job._status)}
+    ${job.source ? `<span class="badge badge-source">${escH(job.source)}</span>` : ''}
+  </div>
+  <div class="card-actions">
+    ${job._status === 'new' ? `<button class="btn btn-primary" onclick="setJobStatus('${job._id}','approved')">Approve</button>` : ''}
+    <select class="status-select" onchange="setJobStatus('${job._id}',this.value);this.value=''">
+      <option value="">Move to&hellip;</option>
+      <option value="new">New</option>
+      <option value="approved">Approved</option>
+      <option value="applied">Applied</option>
+      <option value="outreach_sent">Outreach Sent</option>
+      <option value="interview">Interview</option>
+      <option value="pass">Pass</option>
+    </select>
+    <button class="btn btn-danger" onclick="dismissId('${job._id}')">Dismiss</button>
+    <a class="btn btn-mail" href="${mailto}">Draft Email</a>
+    ${job.url ? `<a class="card-link" href="${escH(job.url)}" target="_blank">View job &rarr;</a>` : ''}
+  </div>
+</div>`;
+  }).join('');
+}
+
+function setJobStatus(id, s) {
+  if (!s) return;
+  LS.setJobStatus(id, s);
+  render();
+}
+
+// ─────────────────────────────────────────
+// PROSPECTS TAB
+// ─────────────────────────────────────────
+function renderProspects() {
+  const statuses = LS.prospectStatuses();
+  const dismissed = LS.dismissed();
+  const q = (document.getElementById('prospects-search').value || '').toLowerCase();
+  const sf = document.getElementById('prospects-status').value;
+  const ind = document.getElementById('prospects-industry').value.toLowerCase();
+
+  let list = prospects
+    .map(p => ({ ...p, _id: makeId(p), _status: statuses[makeId(p)] || 'new' }))
+    .filter(p => !dismissed[p._id])
+    .filter(p => !sf || p._status === sf)
+    .filter(p => !ind || `${p.industry || ''} ${p.brand || ''} ${p.gap || ''}`.toLowerCase().includes(ind))
+    .filter(p => !q || `${p.brand} ${p.founder || ''} ${p.contact || ''} ${p.gap || ''} ${p.industry || ''}`.toLowerCase().includes(q));
+
+  list.sort((a, b) => (b.score || 0) - (a.score || 0));
+
+  document.getElementById('prospects-count').textContent = `${list.length} prospect${list.length !== 1 ? 's' : ''}`;
+  const el = document.getElementById('prospects-list');
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">No prospects match</div>Adjust filters or update the data file.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(p => {
+    const { label: sl, cls: sc } = scoreMeta(p.score || 5);
+    const { subject, body } = genProspectEmail(p);
+    const eid = p._id + '_email';
+    _emailCache[eid] = { subject, body };
+    const mailto = makeMailto(p.email || FROM_EMAIL, subject, body);
+    return `<div class="card">
+  <div class="card-header">
+    <div style="flex:1;min-width:0">
+      <div class="card-title">${escH(p.brand)}</div>
+      <div class="card-subtitle">${escH(p.industry || '')}</div>
+    </div>
+    <span class="badge badge-${sc}" style="flex-shrink:0">${sl}</span>
+  </div>
+  ${p.founder ? `<div class="card-subtitle" style="margin-top:4px">Founder: <strong>${escH(p.founder)}</strong></div>` : ''}
+  ${p.contact && p.contact !== p.founder ? `<div class="card-subtitle" style="margin-top:2px">Target: <strong>${escH(p.contact)}</strong>${p.contact_title ? ', ' + escH(p.contact_title) : ''}</div>` : ''}
+  ${p.gap ? `<div class="card-gap">${escH(p.gap)}</div>` : ''}
+  <div class="card-links">
+    ${p.linkedin ? `<a class="card-link" href="${escH(p.linkedin)}" target="_blank">LinkedIn &rarr;</a>` : ''}
+    ${p.instagram ? `<a class="card-link" href="${escH(p.instagram)}" target="_blank">Instagram &rarr;</a>` : ''}
+    ${p.website ? `<a class="card-link" href="${escH(p.website)}" target="_blank">Website &rarr;</a>` : ''}
+  </div>
+  <div class="card-meta">
+    ${statusBadge(p._status)}
+    ${p.revenue_est ? `<span class="badge badge-source">${escH(p.revenue_est)}</span>` : ''}
+    ${p.notes ? `<span class="badge badge-source">${escH(p.notes)}</span>` : ''}
+  </div>
+  <div class="card-actions">
+    ${p._status === 'new' ? `<button class="btn btn-primary" onclick="setProspectStatus('${p._id}','approved')">Approve</button>` : ''}
+    <select class="status-select" onchange="setProspectStatus('${p._id}',this.value);this.value=''">
+      <option value="">Move to&hellip;</option>
+      <option value="new">New</option>
+      <option value="approved">Approved</option>
+      <option value="outreach_sent">Outreach Sent</option>
+      <option value="active">Active Client</option>
+      <option value="pass">Pass</option>
+    </select>
+    <button class="btn btn-danger" onclick="dismissId('${p._id}')">Dismiss</button>
+    <a class="btn btn-mail" href="${mailto}">Draft Email</a>
+  </div>
+</div>`;
+  }).join('');
+}
+
+function setProspectStatus(id, s) {
+  if (!s) return;
+  LS.setProspectStatus(id, s);
+  render();
+}
+
+// ─────────────────────────────────────────
+// OUTREACH TAB
+// ─────────────────────────────────────────
+function renderOutreach() {
+  const jStatuses = LS.jobStatuses();
+  const pStatuses = LS.prospectStatuses();
+  const dismissed = LS.dismissed();
+  const filter = document.getElementById('outreach-filter').value;
+
+  const approvedJobs = filter !== 'prospects'
+    ? jobs.map(j => ({ ...j, _id: makeId(j), _type: 'job' }))
+        .filter(j => !dismissed[j._id] && (jStatuses[j._id] || 'new') === 'approved')
+    : [];
+
+  const approvedProspects = filter !== 'jobs'
+    ? prospects.map(p => ({ ...p, _id: makeId(p), _type: 'prospect' }))
+        .filter(p => !dismissed[p._id] && (pStatuses[p._id] || 'new') === 'approved')
+    : [];
+
+  const all = [...approvedJobs, ...approvedProspects];
+  document.getElementById('outreach-count').textContent = `${all.length} in queue`;
+  const el = document.getElementById('outreach-list');
+
+  if (!all.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">Outreach queue is empty</div>Approve jobs and prospects to build your queue.</div>`;
+    return;
+  }
+
+  el.innerHTML = all.map(item => {
+    const isJob = item._type === 'job';
+    const { subject, body } = isJob ? genJobEmail(item) : genProspectEmail(item);
+    const eid = item._id + '_out';
+    _emailCache[eid] = { subject, body, type: item._type };
+    const to = item.email || FROM_EMAIL;
+    const mailto = makeMailto(to, subject, body);
+    const name = isJob ? item.title : item.brand;
+    const sub = isJob ? item.company : (item.contact || item.founder || '');
+    return `<div class="outreach-item">
+  <div class="outreach-header" onclick="toggleOutreach('${eid}')">
+    <span class="outreach-type ${item._type}">${isJob ? 'Job' : 'Prospect'}</span>
+    <div style="flex:1;min-width:0">
+      <div class="outreach-name">${escH(name)}</div>
+      <div class="outreach-sub">${escH(sub)}</div>
+    </div>
+    <span class="outreach-caret" id="caret-${eid}">&#9654;</span>
+  </div>
+  <div class="outreach-body" id="body-${eid}">
+    <div class="email-preview">
+      <div class="email-subject">Subject: ${escH(subject)}</div>
+      <div class="email-body">${escH(body)}</div>
+    </div>
+    <div class="outreach-actions">
+      <a class="btn btn-primary" href="${mailto}">Open in Mail</a>
+      <button class="btn" onclick="copyBody('${eid}')">Copy Body</button>
+      <button class="btn" onclick="markSent('${eid}')">Mark Sent</button>
+    </div>
+  </div>
+</div>`;
+  }).join('');
+}
+
+function toggleOutreach(eid) {
+  const body = document.getElementById('body-' + eid);
+  const caret = document.getElementById('caret-' + eid);
+  const open = body.style.display !== 'block';
+  body.style.display = open ? 'block' : 'none';
+  if (caret) caret.innerHTML = open ? '&#9660;' : '&#9654;';
+}
+
+function copyBody(eid) {
+  const cached = _emailCache[eid];
+  if (!cached) return;
+  navigator.clipboard.writeText(cached.body).then(() => {
+    const btns = document.querySelectorAll(`[onclick="copyBody('${eid}')"]`);
+    btns.forEach(b => {
+      const orig = b.textContent;
+      b.textContent = 'Copied';
+      setTimeout(() => b.textContent = orig, 1500);
+    });
+  });
+}
+
+function markSent(eid) {
+  const cached = _emailCache[eid];
+  if (!cached) return;
+  // Extract real item id from cache key (strip _out suffix)
+  const id = eid.replace(/_out$/, '');
+  if (cached.type === 'job') LS.setJobStatus(id, 'outreach_sent');
+  else LS.setProspectStatus(id, 'outreach_sent');
+  render();
+}
+
+// ─────────────────────────────────────────
+// PIPELINE / KANBAN
+// ─────────────────────────────────────────
+function renderPipeline() {
+  const jStatuses = LS.jobStatuses();
+  const pStatuses = LS.prospectStatuses();
+  const dismissed = LS.dismissed();
+
+  const jobStages = ['new', 'approved', 'applied', 'outreach_sent', 'interview', 'pass'];
+  const pStages = ['new', 'approved', 'outreach_sent', 'active', 'pass'];
+
+  const jByStage = {};
+  jobStages.forEach(s => jByStage[s] = []);
+  const pByStage = {};
+  pStages.forEach(s => pByStage[s] = []);
+
+  jobs.forEach(j => {
+    const id = makeId(j);
+    if (dismissed[id]) return;
+    const s = jStatuses[id] || 'new';
+    if (jByStage[s]) jByStage[s].push({ ...j, _id: id });
+  });
+  prospects.forEach(p => {
+    const id = makeId(p);
+    if (dismissed[id]) return;
+    const s = pStatuses[id] || 'new';
+    if (pByStage[s]) pByStage[s].push({ ...p, _id: id });
+  });
+
+  const stageLabel = { new:'New', approved:'Approved', applied:'Applied', outreach_sent:'Outreach', interview:'Interview', pass:'Pass', active:'Active' };
+
+  function col(stage, items, type) {
+    const cards = items.map(item => {
+      const title = type === 'job' ? (item.title || '') : (item.brand || '');
+      const company = type === 'job' ? (item.company || '') : (item.founder || item.contact || '');
+      const { label: sl } = scoreMeta(item.score || 5);
+      return `<div class="kanban-card" onclick="openModal('${item._id}','${type}')">
+  <div class="kanban-card-title">${escH(title)}</div>
+  <div class="kanban-card-company">${escH(company)}</div>
+  <div class="kanban-card-score">${sl}</div>
+</div>`;
+    }).join('');
+    return `<div class="kanban-col">
+  <div class="kanban-col-header"><span>${stageLabel[stage]}</span><span class="kanban-count">${items.length}</span></div>
+  <div class="kanban-cards">${cards || '<div class="kanban-empty">empty</div>'}</div>
+</div>`;
+  }
+
+  document.getElementById('kanban-jobs').innerHTML = jobStages.map(s => col(s, jByStage[s], 'job')).join('');
+  document.getElementById('kanban-prospects').innerHTML = pStages.map(s => col(s, pByStage[s], 'prospect')).join('');
+}
+
+// ─────────────────────────────────────────
+// MODAL
+// ─────────────────────────────────────────
+function openModal(id, type) {
+  const item = type === 'job'
+    ? jobs.find(j => makeId(j) === id)
+    : prospects.find(p => makeId(p) === id);
+  if (!item) return;
+
+  const stages = type === 'job'
+    ? ['new','approved','applied','outreach_sent','interview','pass']
+    : ['new','approved','outreach_sent','active','pass'];
+
+  const statuses = type === 'job' ? LS.jobStatuses() : LS.prospectStatuses();
+  const current = statuses[id] || 'new';
+
+  const { subject, body } = type === 'job' ? genJobEmail(item) : genProspectEmail(item);
+  const mailto = makeMailto(item.email || FROM_EMAIL, subject, body);
+  const eid = id + '_modal';
+  _emailCache[eid] = { subject, body, type };
+
+  document.getElementById('modal-title').textContent = type === 'job' ? (item.title || '') : (item.brand || '');
+  document.getElementById('modal-sub').textContent = type === 'job' ? (item.company || '') : (item.founder || item.contact || '');
+
+  const stageButtons = stages.map(s =>
+    `<button class="btn ${s === current ? 'btn-primary' : ''}" onclick="moveCard('${id}','${type}','${s}')">${statusLabel(s)}</button>`
+  ).join('');
+
+  document.getElementById('modal-body').innerHTML = `
+<div class="modal-section-label">Stage</div>
+<div class="stage-buttons">${stageButtons}</div>
+<div class="divider"></div>
+<div class="modal-section-label" style="margin-bottom:8px">Draft email</div>
+<div class="email-preview" style="margin-bottom:12px">
+  <div class="email-subject">Subject: ${escH(subject)}</div>
+  <div class="email-body" style="max-height:180px;overflow-y:auto">${escH(body)}</div>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+  <a class="btn btn-primary" href="${mailto}">Open in Mail</a>
+  <button class="btn" onclick="copyBody('${eid}')">Copy Body</button>
+  <button class="btn btn-danger" onclick="dismissId('${id}');closeModal()">Dismiss</button>
+  ${type === 'job' && item.url ? `<a class="btn" href="${escH(item.url)}" target="_blank">View Job</a>` : ''}
+</div>`;
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function moveCard(id, type, stage) {
+  if (type === 'job') LS.setJobStatus(id, stage);
+  else LS.setProspectStatus(id, stage);
+  closeModal();
+  renderPipeline();
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+function maybeCloseModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+}
+
+// ─────────────────────────────────────────
+// SHARED ACTIONS
+// ─────────────────────────────────────────
+function dismissId(id) {
+  LS.dismiss(id);
+  render();
+}
+
+function escH(str) {
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// ─────────────────────────────────────────
+// SAMPLE DATA (used when JSON files unavailable)
+// ─────────────────────────────────────────
+const SAMPLE_JOBS = [
+  { id:"fishwife-growth-outreach", title:"Head of Growth (Direct Outreach)", company:"Fishwife", url:"https://eatfishwife.com/pages/careers", date:"2026-04-20", source:"Target", score:10, description:"No posted role. Targeting Anna Parmelee, Head of Growth. Direct outreach." },
+  { id:"aspyr-brand-manager", title:"Brand Manager", company:"Aspyr", url:"https://www.aspyr.com/open_positions", date:"2026-04-18", source:"Direct Career Page", score:9, description:"Brand Manager, Austin TX. Game publishing and preservation studio." },
+  { id:"heart-soil-partnerships", title:"Sr. Partnerships Manager", company:"Heart & Soil", url:"https://heartandsoil.co/careers/", date:"2026-04-17", source:"Direct Career Page", score:9, description:"Senior Partnerships Manager, Dripping Springs TX. Organ meat supplements brand with strong community and clear POV." },
+  { id:"midwest-games-partnerships", title:"Partnerships Manager (Contract)", company:"Midwest Games", url:"https://midwestgames.com/contact", date:"2026-04-20", source:"Target", score:9, description:"No posted role. Targeting Adam Orth, Founder/CEO. Contract opportunity." },
+  { id:"everyday-dose-brand-partnerships", title:"Brand Partnerships Manager", company:"Everyday Dose", url:"https://apply.workable.com/everyday-dose-inc/", date:"2026-04-16", source:"Workable", score:8, description:"Brand Partnerships Manager, Austin TX. Functional coffee brand with differentiated positioning." },
+  { id:"howler-brothers-content", title:"Content Marketing Manager", company:"Howler Brothers", url:"https://www.howlerbros.com/pages/careers", date:"2026-04-15", source:"Direct Career Page", score:8, description:"Content Marketing Manager, Austin TX. Outdoor lifestyle brand with genuine cultural footprint." },
+  { id:"popagenda-outreach", title:"Head of Partnerships (Direct Outreach)", company:"popagenda", url:"https://popagenda.co", date:"2026-04-20", source:"Target", score:8, description:"No posted role. Targeting Gen Miller, CEO. Direct outreach." }
+];
+
+const SAMPLE_PROSPECTS = [
+  { id:"opulist-active", brand:"Opulist", founder:"", contact:"", contact_title:"", gap:"Active retainer client. Partnership program built from scratch, $50K+ closed in first two quarters.", linkedin:"", instagram:"https://instagram.com/opulist", website:"https://opulist.co", industry:"Editorial / Media", revenue_est:"", score:10, notes:"Active retainer" },
+  { id:"indieio-active", brand:"indie.io", founder:"", contact:"", contact_title:"", gap:"Active contracting engagement. Developer acquisition pipeline, publishing strategy, positioning support.", linkedin:"", instagram:"", website:"https://indie.io", industry:"Gaming", revenue_est:"", score:10, notes:"Active contract" },
+  { id:"fishwife-prospect", brand:"Fishwife", founder:"Becca Millstein", contact:"Anna Parmelee", contact_title:"Head of Growth", gap:"Fishwife has one of the strongest brand identities in DTC food. The product is differentiated, the community is committed, and the brand equity is real. There is no dedicated partnerships operator. Founder-led on commercial strategy. The collab and brand integration potential here is significant and untapped.", linkedin:"https://linkedin.com/in/anna-parmelee", instagram:"https://instagram.com/eatfishwife", website:"https://eatfishwife.com", industry:"Food & Beverage / DTC", revenue_est:"$5M-10M", score:9, notes:"No posted role - direct outreach" },
+  { id:"popagenda-prospect", brand:"popagenda", founder:"Gen Miller", contact:"Gen Miller", contact_title:"CEO", gap:"popagenda has a clear creative identity and a strong point of view in music and culture. The commercial infrastructure - partnerships, brand collaborations, GTM - is founder-dependent and not yet systematized. Strong brand, weak commercial scaffolding. Real room for a fractional operator.", linkedin:"https://linkedin.com/in/gen-miller", instagram:"https://instagram.com/popagenda", website:"https://popagenda.co", industry:"Music / Culture", revenue_est:"$1M-5M", score:8, notes:"No posted role - direct outreach" },
+  { id:"midwest-games-prospect", brand:"Midwest Games", founder:"Adam Orth", contact:"Adam Orth", contact_title:"Founder / CEO", gap:"Midwest Games has built a compelling indie publishing identity but the partnership and commercial development layer is thin. Adam is founder-operating the business. Developer acquisition and brand partnership infrastructure is the clear gap.", linkedin:"https://linkedin.com/in/adam-orth", instagram:"https://instagram.com/midwestgames", website:"https://midwestgames.com", industry:"Gaming", revenue_est:"$2M-8M", score:8, notes:"Contractor opportunity" },
+  { id:"ghia-prospect", brand:"Ghia", founder:"Melanie Masarin", contact:"Melanie Masarin", contact_title:"Founder / CEO", gap:"Ghia is building genuine cultural cachet in non-alc but the partnership infrastructure is light relative to the brand equity. Real room for a dedicated partnerships operator to formalize collaborations and brand integrations.", linkedin:"https://linkedin.com/in/melanie-masarin", instagram:"https://instagram.com/drinkghia", website:"https://drinkghia.com", industry:"Food & Beverage / DTC", revenue_est:"$5M-15M", score:7, notes:"" },
+  { id:"graza-prospect", brand:"Graza", founder:"Andrew Benin", contact:"Andrew Benin", contact_title:"Co-Founder / CEO", gap:"Graza turned olive oil into a brand decision but the partnerships and collaboration layer is still founder-driven. The brand has the equity for real category-defying collabs and there is no dedicated operator to pursue them.", linkedin:"https://linkedin.com/in/andrew-benin", instagram:"https://instagram.com/graza.co", website:"https://graza.co", industry:"Food & Beverage / DTC", revenue_est:"$10M-30M", score:7, notes:"" },
+  { id:"wondermind-prospect", brand:"Wondermind", founder:"Mandy Teefey", contact:"Mandy Teefey", contact_title:"Co-Founder / CEO", gap:"Wondermind has strong founder equity and is building in mental health content with real cultural momentum. The brand partnership and GTM infrastructure is not yet systematized at the level the brand warrants.", linkedin:"https://linkedin.com/in/mandy-teefey", instagram:"https://instagram.com/wondermindco", website:"https://wondermind.com", industry:"Mental Health / Media", revenue_est:"$2M-8M", score:7, notes:"" }
+];
+
+// ─────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────
+async function init() {
+  // Pre-set active client statuses for Opulist and indie.io
+  const pStatuses = LS.prospectStatuses();
+  if (!pStatuses['opulist-active']) LS.setProspectStatus('opulist-active', 'active');
+  if (!pStatuses['indieio-active']) LS.setProspectStatus('indieio-active', 'active');
+
+  let jobsLoaded = false, prospectsLoaded = false;
+
+  try {
+    const r = await fetch('jobs.json');
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { jobs = d; jobsLoaded = true; } }
+  } catch {}
+
+  try {
+    const r = await fetch('prospects.json');
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { prospects = d; prospectsLoaded = true; } }
+  } catch {}
+
+  if (!jobsLoaded) jobs = SAMPLE_JOBS;
+  if (!prospectsLoaded) prospects = SAMPLE_PROSPECTS;
+
+  // Pre-set active clients if they appear in fetched data
+  prospects.forEach(p => {
+    const id = makeId(p);
+    const s = LS.prospectStatuses();
+    if ((p.notes || '').toLowerCase().includes('active') && !s[id]) {
+      LS.setProspectStatus(id, 'active');
+    }
+  });
+
+  let metaStr = '';
+  try {
+    const r = await fetch('meta.json');
+    if (r.ok) {
+      const m = await r.json();
+      metaStr = `Updated ${m.updated_at} &middot; ${m.jobs} roles &middot; ${m.prospects} prospects`;
+    }
+  } catch {}
+
+  if (!metaStr) {
+    const today = new Date().toLocaleDateString('en-US', { month:'short', day:'numeric' });
+    metaStr = `${today} &middot; ${jobs.length} roles &middot; ${prospects.length} prospects`;
+  }
+  document.getElementById('nav-meta').innerHTML = metaStr;
+
+  renderJobs();
+}
+
+init();
+</script>
+</body>
+</html>
