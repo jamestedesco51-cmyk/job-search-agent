@@ -20,6 +20,19 @@
   --accent-dim: rgba(201,169,110,0.12);
 }
 
+html.light {
+  --bg: #f8f6f2;
+  --surface: #ffffff;
+  --surface-hover: #f2efe9;
+  --border: #e2ddd6;
+  --border-2: #ccc8c0;
+  --text: #1a1714;
+  --text-2: #5a5450;
+  --text-3: #9a9590;
+  --accent: #a07840;
+  --accent-dim: rgba(160,120,64,0.1);
+}
+
 html, body {
   min-height: 100%;
   background: var(--bg);
@@ -397,6 +410,7 @@ html, body {
     <button class="nav-tab" data-tab="pipeline" onclick="switchTab('pipeline')">Pipeline</button>
   </div>
   <div class="nav-meta" id="nav-meta">loading...</div>
+  <button onclick="toggleMode()" id="mode-btn" style="background:none;border:none;cursor:pointer;padding:0 16px;color:var(--text-3);font-size:18px;border-left:1px solid var(--border)" title="Toggle light/dark">&#9788;</button>
 </nav>
 
 <div class="main">
@@ -502,6 +516,24 @@ html, body {
 </div>
 
 <script>
+// ─────────────────────────────────────────
+// LIGHT / DARK MODE
+// ─────────────────────────────────────────
+function toggleMode() {
+  const isLight = document.documentElement.classList.toggle('light');
+  localStorage.setItem('jt_mode', isLight ? 'light' : 'dark');
+  document.getElementById('mode-btn').innerHTML = isLight ? '&#9790;' : '&#9788;';
+}
+(function() {
+  if (localStorage.getItem('jt_mode') === 'light') {
+    document.documentElement.classList.add('light');
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mode-btn');
+      if (btn) btn.innerHTML = '&#9790;';
+    });
+  }
+})();
+
 // ─────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────

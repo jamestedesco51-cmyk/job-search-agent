@@ -75,34 +75,97 @@ BAD_SIGNALS = [
     "software engineer", "data engineer", "devops", "machine learning",
     "data scientist", "backend", "frontend engineer", "ios developer",
     "android developer", "java", "kubernetes", "aws engineer",
+    "systems engineer", "it systems", "product analyst", "data analyst",
     "clinical", "nurse", "physician", "pharmacist", "radiologist",
+    "therapy associate", "therapist", "counselor", "clinical social worker",
     "accountant", "cpa", "tax manager", "bookkeeper",
     "supply chain", "warehouse", "logistics", "truck driver",
     "real estate agent", "insurance agent", "loan officer",
     "braze admin", "salesforce developer", "sql developer",
     "lifecycle marketing manager", "crm manager",
+    "sales executive", "account executive", "sales development",
+    "yield manager", "revenue optimization", "store administrator",
+    "store manager", "retail associate", "customer service",
 ]
 
 TARGET_COMPANIES = [
-    # gaming
+    # gaming — publishers, studios, platforms
     "aspyr", "midwest games", "popagenda", "riot games", "epic games",
     "devolver digital", "annapurna interactive", "raw fury", "fellow traveller",
-    "humble games", "dexerto", "fandom", "crunchyroll", "ign",
-    # dtc / consumer
+    "humble games", "humble bundle", "dexerto", "fandom", "crunchyroll", "ign",
+    "2k games", "take two", "505 games", "sega", "bandai namco",
+    "focus entertainment", "plaion", "modus games", "maximum games",
+    "curve games", "team17", "private division", "tinyBuild", "neon doctrine",
+    "good shepherd", "skybound games", "nighthawk interactive",
+    "apply games", "games workshop", "gamescom", "gearbox",
+    "embracer group", "playtika", "naughty dog", "insomniac",
+    "double fine", "obsidian", "inXile", "machine games", "arkane",
+    "id software", "bethesda", "zenimax", "activision blizzard",
+    "505 games", "warhorse studios", "coffee stain", "paradox interactive",
+    "klei entertainment", "supergiant games", "motion twin",
+    "hitbox team", "thunderful", "joystick ventures",
+    # gaming media / community
+    "ign entertainment", "gamespot", "gamesradar", "kotaku", "polygon",
+    "pcgamer", "eurogamer", "rock paper shotgun", "giant bomb",
+    "hitmarker", "gamesindustry biz",
+    # dtc / consumer / food & bev
     "fishwife", "graza", "ghia", "brightland", "fly by jing",
     "diaspora co", "omsom", "vacation inc", "cuts clothing", "madhappy",
     "olipop", "liquid death", "momentous", "beam", "kin euphorics",
     "everyday dose", "heart and soil", "athletic greens", "seed health",
-    "thesis", "supergoop", "summer fridays",
-    # lifestyle / outdoor
+    "thesis", "supergoop", "summer fridays", "touchland", "necessaire",
+    "by humankind", "blueland", "grove collaborative",
+    "jones road beauty", "ilia beauty", "tower 28",
+    "jolie", "soft services", "starface", "paulas choice",
+    "recess", "trip", "de soi", "dram", "with/co",
+    "two roots", "hiyo", "aplós", "monday gin", "lyre's",
+    "omakase berry", "snif", "french girl organics",
+    "oat haus", "party ice", "fly by jing",
+    "chomps", "epic bar", "paleovalley", "equip foods",
+    "good culture", "kite hill", "forager project",
+    "fly by jing", "somos", "siete family foods",
+    "poppi", "popfizz", "culture pop", "united sodas",
+    "ghia", "trip", "lyre",
+    # apparel / fashion / lifestyle
     "howler brothers", "patagonia", "cotopaxi", "allbirds", "vuori",
-    "tracksmith", "satisfy running", "kith",
+    "tracksmith", "satisfy running", "kith", "aimé leon dore",
+    "beams", "noah", "corridor", "rowing blazers",
+    "free label", "entireworld", "buck mason", "taylor stitch",
+    "mack weldon", "unbound merino", "james perse",
+    "rhone", "public rec", "lululemon", "outdoor voices",
+    "alo yoga", "beyond yoga", "girlfriend collective",
+    "girlfriend collective", "girlfriend collective",
+    "khaite", "toteme", "ganni", "staud", "sleeper",
+    "skims", "parade", "aerie", "cuup",
     # mental health / wellness
     "wondermind", "calm", "headspace", "two chairs", "cerebral",
-    "spring health", "brightside",
-    # media / entertainment
+    "spring health", "brightside", "real", "talkspace",
+    "betterhelp", "monument", "workit health", "sober grid",
+    "done adhd", "alto pharmacy", "ahead", "noom",
+    "whoop", "oura", "levels", "eight sleep",
+    "thorne", "ritual", "care of", "seed health",
+    "hims hers", "ro health", "thirty madison",
+    # media / entertainment / editorial
     "a24", "spotify", "substack", "axios", "the ringer",
     "complex networks", "hypebeast", "high snobiety",
+    "vox media", "bustle digital", "puck news", "the atlantic",
+    "conde nast", "hearst", "future plc", "recurrent ventures",
+    "gallery media", "group nine", "barstool sports",
+    "meadowlark media", "uninterrupted", "togethxr",
+    "wave sports entertainment", "overtime", "loaded",
+    "nerdist", "collider", "screenrant", "cbr",
+    "dicebreaker", "tabletop gaming",
+    # creator economy / talent
+    "cameo", "patreon", "beehiiv", "ghost", "kajabi",
+    "teachable", "gumroad", "stan", "koji",
+    "pietra", "fourthwall", "creative juice",
+    "linktree", "later", "buffer", "dash hudson",
+    # music / culture
+    "sound on sound", "festival pass", "dice fm",
+    "seated", "songkick", "bandsintown",
+    "awal", "stem", "distrokid", "unitedmasters",
+    "venice music", "empire distribution", "create music group",
+    "canary music", "amuse", "tunecore",
 ]
 
 SEARCH_QUERIES = [
@@ -195,14 +258,34 @@ def make_job_id(title, company, url=""):
 jobs = []
 seen_urls = set()
 
+def clean_text(raw):
+    """Strip HTML tags and normalize whitespace."""
+    if not raw:
+        return ""
+    text = BeautifulSoup(str(raw), "html.parser").get_text(separator=" ")
+    return " ".join(text.split())
+
+def is_ascii_title(title):
+    """Reject titles that are mostly non-ASCII (e.g. Japanese)."""
+    try:
+        title.encode("ascii")
+        return True
+    except UnicodeEncodeError:
+        # allow if majority of chars are ASCII
+        ascii_chars = sum(1 for c in title if ord(c) < 128)
+        return ascii_chars / max(len(title), 1) > 0.6
+
 def add_job(title, company, url, date_str="", source="", description=""):
     if not title or not url:
+        return
+    if not is_ascii_title(title):
         return
     if url in seen_urls:
         return
     if not is_recent(date_str):
         return
-    score = score_job(title, description, company)
+    desc_clean = clean_text(description)
+    score = score_job(title, desc_clean, company)
     if score < 2:
         return
     seen_urls.add(url)
@@ -214,7 +297,7 @@ def add_job(title, company, url, date_str="", source="", description=""):
         "date": str(date_str)[:10] if date_str else "",
         "source": source,
         "score": score,
-        "description": description[:280].strip() if description else "",
+        "description": desc_clean[:280],
     })
 
 # ─────────────────────────────────────────────
@@ -435,15 +518,37 @@ def scrape_workable():
 def scrape_lever():
     print("  Scraping Lever career pages...")
     companies = [
-        "calm", "headspace", "wondermind", "graza", "cuts", "madhappy",
-        "vacation", "olipop", "liquid-death", "athletic-greens", "seed-health",
-        "two-chairs", "cerebral", "spring-health", "fishwife", "ghia",
-        "brightland", "fly-by-jing", "kin-euphorics", "hypebeast",
-        "high-snobiety", "the-ringer", "axios", "substack", "a24", "spotify",
+        # wellness / mental health
+        "calm", "headspace", "wondermind", "two-chairs", "cerebral",
+        "spring-health", "brightside", "real", "noom", "whoop", "levels",
+        "thorne", "ritual", "hims", "ro",
+        # dtc / food / bev
+        "graza", "cuts", "madhappy", "vacation", "olipop", "liquid-death",
+        "athletic-greens", "seed-health", "fishwife", "ghia", "brightland",
+        "fly-by-jing", "kin-euphorics", "momentous", "beam-organics",
+        "everyday-dose", "heart-and-soil", "poppi", "culture-pop",
+        "chomps", "paleovalley", "good-culture", "siete-foods",
+        "touchland", "necessaire", "blueland", "grove-collaborative",
+        "jones-road-beauty", "ilia", "tower-28", "starface",
+        # lifestyle / apparel
+        "patagonia", "cotopaxi", "allbirds", "vuori", "tracksmith",
+        "outdoor-voices", "alo", "rhone", "public-rec", "buck-mason",
+        "taylor-stitch", "mack-weldon", "kith",
+        # gaming
         "riot-games", "epic-games", "devolver-digital", "raw-fury",
-        "annapurna-interactive", "humble-games", "patagonia", "cotopaxi",
-        "allbirds", "vuori", "tracksmith", "momentous", "beam-organics",
-        "everyday-dose", "heart-and-soil",
+        "annapurna-interactive", "humble-games", "tinyBuild",
+        "good-shepherd", "skybound", "gearbox", "double-fine",
+        "coffee-stain", "paradox-interactive", "team17",
+        # media / editorial
+        "a24", "spotify", "substack", "axios", "the-ringer",
+        "hypebeast", "high-snobiety", "vox-media", "puck",
+        "barstool-sports", "uninterrupted", "overtime",
+        # creator economy
+        "patreon", "cameo", "beehiiv", "later", "dash-hudson",
+        "linktree", "pietra",
+        # music
+        "unitedmasters", "awal", "distrokid", "create-music-group",
+        "venice-music",
     ]
     for company in companies:
         try:
@@ -468,11 +573,32 @@ def scrape_lever():
 def scrape_greenhouse():
     print("  Scraping Greenhouse career pages...")
     companies = [
+        # gaming
         "aspyr", "riotgames", "epicgames", "fandom", "crunchyroll",
-        "calm", "headspace", "spotify", "howlerbros", "cuts", "allbirds",
-        "vuori", "madhappy", "momentous", "two-chairs", "spring-health",
-        "cerebral", "wondermind", "axios", "theringer", "hypebeast",
-        "rawfury", "humblebundle",
+        "rawfury", "humblebundle", "devolverdigital", "tinybuild",
+        "goodshepherdentertainment", "skyboundgames", "gearbox",
+        "doublefine", "obsidian", "coffeestain", "paradoxinteractive",
+        "team17", "klei",
+        # wellness / mental health
+        "calm", "headspace", "cerebral", "springhealth", "two-chairs",
+        "wondermind", "noom", "whoop", "levels", "thorne", "ritual",
+        "hims", "thirty-madison",
+        # dtc / consumer
+        "cuts", "allbirds", "vuori", "madhappy", "momentous",
+        "liquid-death", "olipop", "everyday-dose",
+        "touchland", "necessaire", "blueland",
+        "jones-road", "ilia-beauty", "starface",
+        "chomps", "siete", "good-culture",
+        # lifestyle
+        "howlerbros", "patagonia", "cotopaxi", "tracksmith",
+        "outdoor-voices", "alo", "rhone", "public-rec",
+        # media
+        "spotify", "axios", "theringer", "hypebeast",
+        "voxmedia", "substack", "a24",
+        # creator
+        "patreon", "beehiiv", "later",
+        # music
+        "unitedmasters", "awal", "venice-music",
     ]
     for company in companies:
         try:
@@ -488,7 +614,7 @@ def scrape_greenhouse():
                     url=job.get("absolute_url", ""),
                     date_str=job.get("updated_at", ""),
                     source="Greenhouse (Direct)",
-                    description=BeautifulSoup(job.get("content", ""), "html.parser").get_text()[:300],
+                    description=BeautifulSoup(job.get("content", "") or "", "html.parser").get_text(separator=" ").strip()[:300],
                 )
         except Exception:
             pass
@@ -496,10 +622,28 @@ def scrape_greenhouse():
 def scrape_ashby():
     print("  Scraping Ashby career pages...")
     companies = [
+        # dtc food / bev / wellness
         "fishwife", "ghia", "graza", "brightland", "everyday-dose",
-        "heart-and-soil", "momentous", "beam", "two-chairs", "fly-by-jing",
-        "olipop", "kin-euphorics", "thesis", "seed", "ritual", "supergoop",
-        "summer-fridays", "vacation-inc", "liquid-death", "madhappy", "cuts",
+        "heart-and-soil", "momentous", "beam", "fly-by-jing",
+        "olipop", "kin-euphorics", "thesis", "seed", "ritual",
+        "supergoop", "summer-fridays", "vacation-inc", "liquid-death",
+        "madhappy", "cuts", "poppi", "culture-pop", "chomps",
+        "paleovalley", "good-culture", "siete",
+        "touchland", "necessaire", "blueland", "grove",
+        "jones-road", "ilia", "tower28", "starface",
+        "recess", "de-soi", "hiyo", "aplós",
+        # gaming
+        "devolver", "annapurna", "raw-fury", "tinybuild",
+        "good-shepherd", "skybound", "coffee-stain",
+        # lifestyle / apparel
+        "outdoor-voices", "alo-yoga", "rhone", "public-rec",
+        "buck-mason", "taylor-stitch", "mack-weldon",
+        "rowing-blazers", "corridor", "noah",
+        # media / creator
+        "substack", "beehiiv", "patreon", "pietra",
+        "linktree", "later", "dash-hudson",
+        # music
+        "unitedmasters", "venice-music", "awal", "create-music-group",
     ]
     for company in companies:
         try:
@@ -526,33 +670,90 @@ def scrape_ashby():
 def scrape_direct_pages():
     print("  Scraping direct career pages...")
     pages = {
+        # James's named targets
         "Aspyr": "https://www.aspyr.com/open_positions",
         "Midwest Games": "https://www.midwestgames.com/contact",
         "Heart and Soil": "https://heartandsoil.co/careers/",
         "Everyday Dose": "https://apply.workable.com/everyday-dose-inc/",
         "Howler Brothers": "https://www.howlerbros.com/pages/careers",
         "Fishwife": "https://www.eatfishwife.com/pages/careers",
+        "popagenda": "https://popagenda.co",
+        # gaming
+        "Raw Fury": "https://rawfury.com/careers/",
+        "Fellow Traveller": "https://fellowtraveller.games/jobs/",
+        "tinyBuild": "https://www.tinybuild.com/careers",
+        "Good Shepherd": "https://goodshepherd.com/careers",
+        "Skybound Games": "https://www.skybound.com/careers",
+        "Devolver Digital": "https://www.devolverdigital.com/jobs",
+        "Annapurna Interactive": "https://annapurnainteractive.com/en/jobs",
+        "Joystick Ventures": "https://joystickventures.com",
+        # food / bev / dtc
         "Graza": "https://www.graza.co/pages/jobs",
         "Ghia": "https://drinkghia.com/pages/jobs",
-        "Wondermind": "https://www.wondermind.com/careers",
-        "Calm": "https://www.calm.com/careers",
-        "Headspace": "https://www.headspace.com/careers",
-        "Cuts Clothing": "https://www.cuts.com/pages/careers",
-        "Madhappy": "https://madhappy.com/pages/careers",
         "Vacation Inc": "https://vacation.inc/pages/jobs",
         "Olipop": "https://drinkolipop.com/pages/careers",
         "Liquid Death": "https://liquiddeath.com/pages/jobs",
+        "Poppi": "https://drinkpoppi.com/pages/careers",
+        "Recess": "https://drinkre.cc/pages/careers",
+        "Kin Euphorics": "https://www.kineuphoric.com/pages/careers",
+        "De Soi": "https://drinkdesoi.com/pages/careers",
+        "Fly By Jing": "https://www.flybyjing.com/pages/careers",
+        "Brightland": "https://www.brightland.co/pages/careers",
+        "Omsom": "https://www.omsom.com/pages/careers",
+        "Siete Foods": "https://sietefoods.com/pages/careers",
+        "Chomps": "https://www.chomps.com/pages/careers",
         "Momentous": "https://livemomentous.com/pages/careers",
+        # beauty / personal care
+        "Supergoop": "https://www.supergoop.com/pages/careers",
+        "Summer Fridays": "https://www.summerfridays.com/pages/careers",
+        "Touchland": "https://touchland.com/pages/careers",
+        "Necessaire": "https://www.necessaire.com/pages/careers",
+        "Jones Road Beauty": "https://www.jonesroadbeauty.com/pages/careers",
+        "Starface": "https://starface.world/pages/careers",
+        "Tower 28": "https://tower28beauty.com/pages/careers",
+        # apparel / lifestyle
+        "Cuts Clothing": "https://www.cuts.com/pages/careers",
+        "Madhappy": "https://madhappy.com/pages/careers",
         "Patagonia": "https://www.patagonia.com/jobs/",
         "Cotopaxi": "https://www.cotopaxi.com/pages/careers",
         "Tracksmith": "https://www.tracksmith.com/pages/careers",
         "Vuori": "https://vuoriclothing.com/pages/careers",
-        "Brightland": "https://www.brightland.co/pages/careers",
-        "Supergoop": "https://www.supergoop.com/pages/careers",
-        "Kin Euphorics": "https://www.kineuphoric.com/pages/careers",
-        "popagenda": "https://popagenda.co",
+        "Outdoor Voices": "https://www.outdoorvoices.com/pages/careers",
+        "Buck Mason": "https://www.buckmason.com/pages/careers",
+        "Taylor Stitch": "https://www.taylorstitch.com/pages/careers",
+        "Rowing Blazers": "https://rowingblazers.com/pages/careers",
+        "Corridor": "https://www.corridornyc.com/pages/careers",
+        "Rhone": "https://www.rhone.com/pages/careers",
+        "Public Rec": "https://publicrec.com/pages/careers",
+        # wellness / mental health
+        "Calm": "https://www.calm.com/careers",
+        "Headspace": "https://www.headspace.com/careers",
+        "Wondermind": "https://www.wondermind.com/careers",
         "Two Chairs": "https://www.twochairs.com/careers",
         "Spring Health": "https://springhealth.com/careers/",
+        "Levels": "https://www.levelshealth.com/careers",
+        "Eight Sleep": "https://www.eightsleep.com/careers/",
+        "Whoop": "https://www.whoop.com/careers/",
+        "Thorne": "https://www.thorne.com/pages/careers",
+        "Ritual": "https://ritual.com/pages/careers",
+        # media / editorial
+        "The Ringer": "https://www.theringer.com/careers",
+        "Substack": "https://substack.com/jobs",
+        "Puck": "https://puck.news/careers",
+        "Axios": "https://www.axios.com/about/careers",
+        "Hypebeast": "https://hypebeast.com/jobs",
+        # music / culture
+        "UnitedMasters": "https://unitedmasters.com/careers",
+        "AWAL": "https://www.awal.com/careers",
+        "Venice Music": "https://www.venicemusic.co/careers",
+        "Create Music Group": "https://createmusicgroup.com/careers/",
+        "DICE": "https://dice.fm/careers",
+        # creator economy
+        "Patreon": "https://www.patreon.com/careers",
+        "Beehiiv": "https://www.beehiiv.com/careers",
+        "Pietra": "https://www.pietrastudio.com/careers",
+        "Linktree": "https://linktr.ee/careers",
+        "Dash Hudson": "https://www.dashhudson.com/careers",
     }
     for company, url in pages.items():
         try:
@@ -769,6 +970,203 @@ def seed_known_prospects():
         notes="",
     )
 
+    # Additional consulting targets — strong brands, weak commercial infrastructure
+    add_prospect(
+        brand="Recess",
+        founder="Ben Witte",
+        contact="Ben Witte",
+        contact_title="Founder / CEO",
+        gap="Recess has built one of the most visually distinctive brands in the non-alc space. The aesthetic is genuinely good. The partnerships and brand collab layer is not systematized and the brand equity supports much more than what's been done commercially.",
+        instagram="https://instagram.com/drinkrecess",
+        website="https://drinkre.cc",
+        industry="Food & Beverage / DTC",
+        revenue_est="$5M-15M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="Brightland",
+        founder="Aishwarya Iyer",
+        contact="Aishwarya Iyer",
+        contact_title="Founder / CEO",
+        gap="Brightland has built exceptional brand equity in olive oil and vinegar with zero retail dependency. Strong editorial POV, strong community. No dedicated partnerships or commercial infrastructure operator.",
+        instagram="https://instagram.com/brightlandco",
+        website="https://brightland.co",
+        industry="Food & Beverage / DTC",
+        revenue_est="$3M-10M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="Fly By Jing",
+        founder="Jing Gao",
+        contact="Jing Gao",
+        contact_title="Founder / CEO",
+        gap="Fly By Jing has built a cult brand around Sichuan flavors and a strong founder identity. The commercial partnership and collab layer is underdeveloped relative to the cultural cachet. Real room for a fractional operator.",
+        instagram="https://instagram.com/flybyjing",
+        website="https://flybyjing.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$5M-15M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="Vacation Inc",
+        founder="Dakota Green",
+        contact="Dakota Green",
+        contact_title="Co-Founder / CEO",
+        gap="Vacation has built an unusually strong brand identity in sunscreen — irreverent, nostalgic, highly meme-able. The brand partnership and collab calendar is active but founder-driven. No dedicated commercial operator.",
+        instagram="https://instagram.com/vacation",
+        website="https://vacation.inc",
+        industry="Beauty / DTC",
+        revenue_est="$5M-20M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="Joystick Ventures",
+        founder="",
+        contact="",
+        contact_title="",
+        gap="Joystick Ventures is building community around gaming culture and brand. Early stage, founder-operated, no dedicated partnerships or GTM operator. Strong signal for fractional engagement.",
+        instagram="https://instagram.com/joystickventures",
+        website="https://joystickventures.com",
+        industry="Gaming",
+        revenue_est="$1M-5M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="Fellow Traveller",
+        founder="Chris Wright",
+        contact="Chris Wright",
+        contact_title="CEO",
+        gap="Fellow Traveller publishes narrative and story-driven games with a strong curatorial identity. The brand partnership and developer relations infrastructure is minimal for the cultural footprint they have.",
+        instagram="https://instagram.com/ftgames",
+        website="https://fellowtraveller.games",
+        industry="Gaming",
+        revenue_est="$2M-8M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="UnitedMasters",
+        founder="Steve Stoute",
+        contact="Steve Stoute",
+        contact_title="Founder / CEO",
+        gap="UnitedMasters sits at the intersection of music distribution, brand partnerships, and creator economy. The commercial partnership layer is sophisticated but there is real room for fractional GTM support on specific brand programs.",
+        instagram="https://instagram.com/unitedmasters",
+        website="https://unitedmasters.com",
+        industry="Music / Creator Economy",
+        revenue_est="$20M+",
+        score=6,
+        notes="Larger org — fractional brand program angle",
+    )
+    add_prospect(
+        brand="Beehiiv",
+        founder="Tyler Denk",
+        contact="Tyler Denk",
+        contact_title="Co-Founder / CEO",
+        gap="Beehiiv is the fastest-growing newsletter platform and has real brand equity in the creator economy. The brand partnership and commercial infrastructure is still founder-operated. Strong fit for fractional operator.",
+        instagram="https://instagram.com/beehiiv",
+        website="https://beehiiv.com",
+        industry="Creator Economy / Media",
+        revenue_est="$5M-20M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="DICE",
+        founder="Phil Hutcheon",
+        contact="Phil Hutcheon",
+        contact_title="Founder / CEO",
+        gap="DICE is building the ticketing platform for independent music and culture with a genuine community identity. The brand partnership and GTM layer is thin relative to the brand equity in the music space.",
+        instagram="https://instagram.com/dice_fm",
+        website="https://dice.fm",
+        industry="Music / Culture",
+        revenue_est="$10M-30M",
+        score=6,
+        notes="",
+    )
+    add_prospect(
+        brand="Rowing Blazers",
+        founder="Jack Carlson",
+        contact="Jack Carlson",
+        contact_title="Founder / Creative Director",
+        gap="Rowing Blazers has built one of the most culturally resonant menswear brands in the market. The collaboration catalog is impressive but the commercial infrastructure behind partnerships is still founder-driven.",
+        instagram="https://instagram.com/rowingblazers",
+        website="https://rowingblazers.com",
+        industry="Fashion / Apparel",
+        revenue_est="$5M-15M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="Puck",
+        founder="Jon Kelly",
+        contact="Jon Kelly",
+        contact_title="Co-Founder / CEO",
+        gap="Puck has built genuine media brand equity and a subscriber model with no ad dependency. The commercial partnership and brand integration layer is minimal — there is real room for someone to build that function.",
+        instagram="https://instagram.com/pucknews",
+        website="https://puck.news",
+        industry="Editorial / Media",
+        revenue_est="$5M-15M",
+        score=6,
+        notes="",
+    )
+    add_prospect(
+        brand="Outdoor Voices",
+        founder="",
+        contact="",
+        contact_title="",
+        gap="Outdoor Voices has a strong brand identity and an active community in activewear. Post-founder transition, the commercial infrastructure and partnership function needs rebuilding.",
+        instagram="https://instagram.com/outdoorvoices",
+        website="https://www.outdoorvoices.com",
+        industry="Apparel / Lifestyle",
+        revenue_est="$20M+",
+        score=6,
+        notes="Post-founder transition — rebuilding phase",
+    )
+    add_prospect(
+        brand="Omsom",
+        founder="Vanessa Pham",
+        contact="Vanessa Pham",
+        contact_title="Co-Founder / CEO",
+        gap="Omsom has built a loud, proud brand identity in Asian-American food culture with a devoted community. The collaboration and brand partnership layer is founder-driven and not yet systematized.",
+        instagram="https://instagram.com/omsom",
+        website="https://omsom.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$3M-10M",
+        score=7,
+        notes="",
+    )
+    add_prospect(
+        brand="Pietra",
+        founder="Ronak Trivedi",
+        contact="Ronak Trivedi",
+        contact_title="Co-Founder / CEO",
+        gap="Pietra is building commerce infrastructure for creators and brands with a strong network in the creator economy. GTM and brand partnership infrastructure is thin for the market position they occupy.",
+        instagram="https://instagram.com/pietrastudio",
+        website="https://pietrastudio.com",
+        industry="Creator Economy / DTC",
+        revenue_est="$5M-20M",
+        score=6,
+        notes="",
+    )
+    add_prospect(
+        brand="Madhappy",
+        founder="Peiman Raf",
+        contact="Peiman Raf",
+        contact_title="Co-Founder / CEO",
+        gap="Madhappy has made mental health feel like a lifestyle position rather than a category. The brand equity is real. The partnership and commercial infrastructure is still founder-operated below the brand's potential.",
+        instagram="https://instagram.com/madhappy",
+        website="https://madhappy.com",
+        industry="Fashion / Mental Health",
+        revenue_est="$10M-30M",
+        score=7,
+        notes="",
+    )
+
 def scrape_product_hunt_prospects():
     """Scrape Product Hunt for recent DTC/lifestyle/gaming launches."""
     print("  Scraping Product Hunt for prospects...")
@@ -863,7 +1261,7 @@ scrape_direct_pages()
 scrape_substacks()
 
 jobs.sort(key=lambda x: x["score"], reverse=True)
-top_jobs = jobs[:40]
+top_jobs = jobs  # no cap — show everything that passes the score filter
 
 print("\n--- PROSPECT SCRAPERS ---")
 seed_known_prospects()
