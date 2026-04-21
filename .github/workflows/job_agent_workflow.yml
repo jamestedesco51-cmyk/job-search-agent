@@ -1,0 +1,47 @@
+```yaml
+name: Daily Pipeline Update
+
+on:
+  schedule:
+    - cron: '0 13 * * *'  # 8am CST (UTC-5) every day
+  workflow_dispatch:        # run manually from GitHub Actions tab
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 feedparser python-dateutil
+
+      - name: Run pipeline agent
+        env:
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+        run: |
+          python3 job_agent.py
+
+      - name: Commit updated data files
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add jobs.json prospects.json meta.json
+          git diff --staged --quiet || git commit -m "chore: update pipeline data $(date -u +%Y-%m-%d)"
+          git push
+```
