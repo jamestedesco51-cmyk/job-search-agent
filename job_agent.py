@@ -90,6 +90,9 @@ BAD_SIGNALS = [
     # crm / martech
     "braze admin", "salesforce developer", "sql developer",
     "lifecycle marketing manager", "crm manager",
+    # platform ad sales (not brand partnerships)
+    "global business solutions", "tiktok for business",
+    "global sales", "ads manager", "performance marketing manager",
     # sales (not partnerships)
     "sales executive", "account executive", "sales development",
     "inside sales", "outbound sales", "mid-market sales",
@@ -97,10 +100,11 @@ BAD_SIGNALS = [
     "yield manager", "revenue optimization", "store administrator",
     "store manager", "retail associate", "customer service",
     "merchandiser", "field rep", "territory manager",
-    # geo filters — not relevant markets
+    # geo filters — international only, US cities are fine
     "korea", "japan", "apac", "indonesia", "malaysia", "singapore",
     "australia", "india", "emea", "latam", "brazil", "mexico",
     "toronto", "london", "berlin", "amsterdam", "paris",
+    "dublin", "sydney", "tokyo", "seoul", "shanghai", "beijing",
 ]
 
 TARGET_COMPANIES = [
@@ -211,6 +215,32 @@ SEARCH_QUERIES = [
     "collab manager fashion",
     "media partnerships manager",
     "growth partnerships manager",
+    # broader entertainment / culture / music
+    "brand partnerships entertainment",
+    "partnerships manager film",
+    "brand manager entertainment",
+    "partnerships manager music",
+    "brand partnerships film",
+    "creative partnerships entertainment",
+    "marketing manager film",
+    "partnerships manager sports",
+    "brand manager sports media",
+    "licensing partnerships manager",
+    "brand experience manager",
+    "experiential marketing manager",
+    "talent partnerships manager",
+    "artist partnerships manager",
+    "label partnerships",
+    "sync licensing manager",
+    # broader operator / builder titles
+    "head of brand",
+    "director of brand",
+    "brand operator",
+    "head of marketing startup",
+    "vp partnerships",
+    "director of partnerships",
+    "fractional partnerships",
+    "fractional brand",
 ]
 
 MAX_AGE_DAYS = 8
@@ -262,7 +292,9 @@ def score_job(title, description="", company=""):
             score -= 5
 
     if "austin" in text or "remote" in text or "hybrid" in text:
-        score += 1
+        score += 3
+    if "new york" in text or "los angeles" in text or "chicago" in text or "san francisco" in text:
+        score -= 2
 
     return score
 
@@ -272,6 +304,7 @@ def make_job_id(title, company, url=""):
 
 jobs = []
 seen_urls = set()
+seen_title_company = set()
 
 def clean_text(raw):
     """Strip HTML tags and normalize whitespace."""
@@ -297,11 +330,15 @@ def add_job(title, company, url, date_str="", source="", description=""):
         return
     if url in seen_urls:
         return
+    tc_key = title.lower().strip() + "|" + company.lower().strip()
+    if tc_key in seen_title_company:
+        return
+    seen_title_company.add(tc_key)
     if not is_recent(date_str):
         return
     desc_clean = clean_text(description)
     score = score_job(title, desc_clean, company)
-    if score < 4:
+    if score < 3:
         return
     seen_urls.add(url)
     jobs.append({
@@ -327,7 +364,7 @@ def scrape_indeed():
             for loc in ["Austin%2C+TX", "remote"]:
                 url = f"https://www.indeed.com/rss?q={encoded}&l={loc}&sort=date&fromage=7"
                 feed = feedparser.parse(url)
-                for entry in feed.entries[:10]:
+                for entry in feed.entries[:15]:
                     add_job(
                         title=entry.get("title", ""),
                         company=entry.get("source", {}).get("title", ""),
@@ -564,6 +601,12 @@ def scrape_lever():
         # music
         "unitedmasters", "awal", "distrokid", "create-music-group",
         "venice-music",
+        # entertainment / film
+        "a24", "neon-rated", "mubi", "bleecker-street",
+        "magnolia-pictures", "focus-features",
+        # sports / culture media
+        "uninterrupted", "overtime", "meadowlark-media",
+        "barstool-sports", "complex-networks", "togethxr",
     ]
     for company in companies:
         try:
@@ -588,32 +631,53 @@ def scrape_lever():
 def scrape_greenhouse():
     print("  Scraping Greenhouse career pages...")
     companies = [
-        # gaming
+        # gaming — major
         "aspyr", "riotgames", "epicgames", "fandom", "crunchyroll",
         "rawfury", "humblebundle", "devolverdigital", "tinybuild",
         "goodshepherdentertainment", "skyboundgames", "gearbox",
         "doublefine", "obsidian", "coffeestain", "paradoxinteractive",
-        "team17", "klei",
+        "team17", "klei", "sega", "2k", "take-two", "505games",
+        "focusentertainment", "plaion", "maximumgames", "curvesgames",
+        "privatedinvision", "nighthawkinteractive",
+        # gaming media
+        "ign", "dexerto", "gamespot", "fandomwire",
         # wellness / mental health
-        "calm", "headspace", "cerebral", "springhealth", "two-chairs",
+        "calm", "headspace", "cerebral", "springhealth", "twochairs",
         "wondermind", "noom", "whoop", "levels", "thorne", "ritual",
-        "hims", "thirty-madison",
-        # dtc / consumer
+        "hims", "thirty-madison", "done", "alto", "brightside",
+        "betterhelp", "talkspace", "workit",
+        # dtc / food / bev / beauty
         "cuts", "allbirds", "vuori", "madhappy", "momentous",
-        "liquid-death", "olipop", "everyday-dose",
-        "touchland", "necessaire", "blueland",
-        "jones-road", "ilia-beauty", "starface",
-        "chomps", "siete", "good-culture",
-        # lifestyle
+        "liquid-death", "olipop", "everyday-dose", "fishwife",
+        "touchland", "necessaire", "blueland", "graza", "ghia",
+        "jones-road", "iliabeauty", "starface", "tower28beauty",
+        "chomps", "siete", "good-culture", "poppi",
+        "vacation", "omsom", "diasporaco", "flybyjing",
+        "dieux", "softservices", "snif", "jolie",
+        "clevr", "mudwtr", "taika", "deux", "halfday",
+        "cann", "wynk", "recess", "desoi", "hiyo",
+        # apparel / lifestyle
         "howlerbros", "patagonia", "cotopaxi", "tracksmith",
-        "outdoor-voices", "alo", "rhone", "public-rec",
-        # media
-        "spotify", "axios", "theringer", "hypebeast",
-        "voxmedia", "substack", "a24",
-        # creator
-        "patreon", "beehiiv", "later",
+        "outdoorvoices", "aloyoga", "rhone", "publicrec",
+        "buckmason", "taylorstitch", "mackweldon", "rowingblazers",
+        "corridor", "criquet",
+        # austin brands
+        "tecovas", "kendrascott", "waterloosparkling",
+        "austineastciders", "rambler",
+        # media / entertainment
+        "spotify", "axios", "theringer", "hypebeast", "highsnobiety",
+        "voxmedia", "substack", "a24", "neon",
+        "complexnetworks", "uninterrupted", "overtime",
+        "meadowlarkmedia", "togethxr", "puck", "bustle",
+        "recurrentventures", "gallerymedia",
+        # creator economy
+        "patreon", "beehiiv", "later", "dashhudson",
+        "linktree", "pietra", "fourthwall",
         # music
         "unitedmasters", "awal", "venice-music",
+        "createmusicgroup", "empiredistribution", "distrokid",
+        # experiential / events
+        "smilebooth", "experiential-supply",
     ]
     for company in companies:
         try:
@@ -763,6 +827,17 @@ def scrape_direct_pages():
         "Venice Music": "https://www.venicemusic.co/careers",
         "Create Music Group": "https://createmusicgroup.com/careers/",
         "DICE": "https://dice.fm/careers",
+        # entertainment / film
+        "A24": "https://a24films.com/jobs",
+        "Neon": "https://www.neonrated.com/jobs",
+        "MUBI": "https://mubi.com/en/careers",
+        "Criterion": "https://www.criterion.com/about/jobs",
+        # sports / culture
+        "Uninterrupted": "https://www.uninterrupted.com/careers",
+        "Overtime": "https://overtime.tv/careers",
+        "Meadowlark Media": "https://meadowlarkmedia.com/careers",
+        "Complex Networks": "https://complex.com/careers",
+        "Togethxr": "https://www.togethxr.com/careers",
         # creator economy
         "Patreon": "https://www.patreon.com/careers",
         "Beehiiv": "https://www.beehiiv.com/careers",
@@ -824,6 +899,32 @@ def scrape_direct_pages():
                         description=f"Matching role found on {company} careers page",
                     )
                     break
+        except Exception:
+            pass
+
+def scrape_linkedin():
+    print("  Scraping LinkedIn...")
+    for q in SEARCH_QUERIES[:20]:
+        try:
+            encoded = q.replace(" ", "%20")
+            for loc in ["103644278", "90000070"]:  # Austin, Remote
+                url = f"https://www.linkedin.com/jobs/search/?keywords={encoded}&location={loc}&f_TPR=r604800&sortBy=DD"
+                resp = requests.get(url, headers=HEADERS, timeout=12)
+                soup = BeautifulSoup(resp.text, "html.parser")
+                for card in soup.select(".job-search-card, .base-card")[:10]:
+                    title_el = card.select_one(".base-search-card__title, h3")
+                    company_el = card.select_one(".base-search-card__subtitle, h4")
+                    link_el = card.select_one("a.base-card__full-link, a")
+                    date_el = card.select_one("time")
+                    if title_el:
+                        href = link_el.get("href", "") if link_el else ""
+                        add_job(
+                            title=title_el.text.strip(),
+                            company=company_el.text.strip() if company_el else "",
+                            url=href,
+                            date_str=date_el.get("datetime", "") if date_el else "",
+                            source="LinkedIn",
+                        )
         except Exception:
             pass
 
@@ -1470,6 +1571,7 @@ scrape_lever()
 scrape_greenhouse()
 scrape_ashby()
 scrape_direct_pages()
+scrape_linkedin()
 scrape_substacks()
 
 jobs.sort(key=lambda x: x["score"], reverse=True)
