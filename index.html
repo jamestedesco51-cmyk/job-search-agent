@@ -448,6 +448,14 @@ html, body {
         <option value="good">Good Fit (5-7)</option>
         <option value="look">Worth a Look (2-4)</option>
       </select>
+      <select class="filter-select" id="jobs-bucket" onchange="renderJobs()">
+        <option value="">All Buckets</option>
+        <option value="Partnerships">Partnerships</option>
+        <option value="Brand &amp; Marketing">Brand &amp; Marketing</option>
+        <option value="Creative">Creative</option>
+        <option value="Ecom &amp; Growth">Ecom &amp; Growth</option>
+        <option value="Gaming / Publishing">Gaming / Publishing</option>
+      </select>
       <select class="filter-select" id="jobs-sort" onchange="renderJobs()">
         <option value="score">Score</option>
         <option value="date">Date</option>
@@ -567,6 +575,25 @@ function toggleMode() {
 // CONFIG
 // ─────────────────────────────────────────
 const FROM_EMAIL = 'jamestedesco51@gmail.com';
+
+// ─────────────────────────────────────────
+// SKILL BUCKET DETECTION
+// ─────────────────────────────────────────
+const SKILL_BUCKETS = [
+  { label: 'Partnerships', color: '#a78bfa', keywords: ['partnerships','collaborations','collab','biz dev','business development','publisher relations','licensing','influencer partnerships','creator partnerships','co-marketing'] },
+  { label: 'Brand & Marketing', color: '#34d399', keywords: ['brand manager','brand marketing','marketing manager','go-to-market','gtm','integrated marketing','cultural marketing','campaign manager','experiential','head of brand','community manager','social media manager'] },
+  { label: 'Creative', color: '#f472b6', keywords: ['creative director','creative strategist','content strategist','editorial','head of content','copywriter','brand creative','creative producer','creative lead'] },
+  { label: 'Ecom & Growth', color: '#fb923c', keywords: ['ecommerce','ecom','shopify','growth manager','head of growth','growth marketing','conversion','digital marketing','email marketing','retention'] },
+  { label: 'Gaming / Publishing', color: '#38bdf8', keywords: ['developer relations','devrel','game scout','publishing manager','studio relations','gaming','esports','indie game','game marketing'] },
+];
+
+function detectBucket(title, description) {
+  const text = `${title} ${description}`.toLowerCase();
+  for (const b of SKILL_BUCKETS) {
+    if (b.keywords.some(k => text.includes(k))) return b;
+  }
+  return null;
+}
 
 // ─────────────────────────────────────────
 // STATE
@@ -784,6 +811,7 @@ function renderJobs() {
   const q = (document.getElementById('jobs-search').value || '').toLowerCase();
   const sf = document.getElementById('jobs-status').value;
   const sc = document.getElementById('jobs-score').value;
+  const sb = document.getElementById('jobs-bucket').value;
   const sort = document.getElementById('jobs-sort').value;
 
   let list = jobs
@@ -796,6 +824,11 @@ function renderJobs() {
       if (sc === 'good') return j.score >= 5 && j.score < 8;
       if (sc === 'look') return j.score >= 2 && j.score < 5;
       return true;
+    })
+    .filter(j => {
+      if (!sb) return true;
+      const b = detectBucket(j.title, j.description || '');
+      return b && b.label === sb;
     })
     .filter(j => !q || `${j.title} ${j.company} ${j.description || ''} ${j.source || ''}`.toLowerCase().includes(q));
 
@@ -829,6 +862,7 @@ function renderJobs() {
   ${renderContacts(job.contacts, job.company)}
   <div class="card-meta">
     ${statusBadge(job._status)}
+    ${(() => { const b = detectBucket(job.title, job.description || ''); return b ? `<span class="badge badge-source" style="background:${b.color}22;color:${b.color};border:1px solid ${b.color}44">${b.label}</span>` : ''; })()}
     ${job.source ? `<span class="badge badge-source">${escH(job.source)}</span>` : ''}
   </div>
   <div class="card-actions">

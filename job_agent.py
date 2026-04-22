@@ -28,80 +28,145 @@ from dateutil import parser as dateparser
 # CONFIG
 # ─────────────────────────────────────────────
 
-TARGET_TITLES = [
-    "brand partnerships manager",
-    "creative partnerships manager",
-    "partnerships manager",
-    "brand manager",
-    "head of partnerships",
-    "collaborations manager",
-    "head of collaborations",
-    "marketing manager",
-    "brand marketing manager",
-    "go-to-market manager",
-    "gtm manager",
-    "integrated marketing manager",
-    "cultural marketing manager",
-    "publisher relations manager",
-    "content marketing manager",
-    "campaign manager",
-    "strategic partnerships",
-    "business development manager",
-    "director of partnerships",
-    "brand strategist",
-    "influencer partnerships",
-    "creator partnerships",
-    "co-marketing manager",
-    "commercial partnerships",
-    "collab manager",
-    "brand and partnerships",
-    "growth partnerships",
-    "media partnerships",
-    "creative operator",
-    "brand operator",
+# ── SKILL BUCKET 1: Partnerships & Biz Dev ───────────────────────────────────
+TITLES_PARTNERSHIPS = [
+    "brand partnerships manager", "creative partnerships manager",
+    "partnerships manager", "head of partnerships", "director of partnerships",
+    "collaborations manager", "head of collaborations", "collab manager",
+    "co-marketing manager", "commercial partnerships", "brand and partnerships",
+    "growth partnerships", "media partnerships", "strategic partnerships",
+    "influencer partnerships", "creator partnerships", "talent partnerships",
+    "artist partnerships", "publisher relations", "licensing partnerships",
+    "business development manager", "biz dev manager",
 ]
+
+# ── SKILL BUCKET 2: Brand & Marketing ────────────────────────────────────────
+TITLES_BRAND_MARKETING = [
+    "brand manager", "brand marketing manager", "brand strategist",
+    "head of brand", "director of brand", "vp of brand",
+    "marketing manager", "integrated marketing manager", "cultural marketing manager",
+    "campaign manager", "content marketing manager", "go-to-market manager",
+    "gtm manager", "brand operator", "creative operator",
+    "experiential marketing manager", "brand experience manager",
+    "social media manager", "community manager",
+]
+
+# ── SKILL BUCKET 3: Creative & Content ───────────────────────────────────────
+TITLES_CREATIVE = [
+    "creative director", "associate creative director",
+    "creative strategist", "brand creative", "creative lead",
+    "content strategist", "editorial director", "head of content",
+    "content director", "creative producer", "brand producer",
+    "copy director", "copywriter", "brand copywriter",
+]
+
+# ── SKILL BUCKET 4: Ecom & Growth ────────────────────────────────────────────
+TITLES_ECOM = [
+    "ecommerce manager", "ecom manager", "shopify manager",
+    "growth manager", "head of growth", "growth marketing manager",
+    "conversion manager", "digital marketing manager",
+    "retention marketing manager", "email marketing manager",
+    "lifecycle manager",
+]
+
+# ── SKILL BUCKET 5: Gaming / Publishing ──────────────────────────────────────
+TITLES_GAMING = [
+    "publisher relations", "developer relations", "devrel",
+    "game scout", "publishing manager", "publishing coordinator",
+    "studio relations", "indie games manager", "gaming partnerships",
+    "gaming brand manager", "esports partnerships", "gaming marketing manager",
+]
+
+# Combined — all titles used for scoring
+TARGET_TITLES = (
+    TITLES_PARTNERSHIPS
+    + TITLES_BRAND_MARKETING
+    + TITLES_CREATIVE
+    + TITLES_ECOM
+    + TITLES_GAMING
+)
 
 TARGET_INDUSTRIES = [
     "gaming", "game", "indie game", "publisher", "esports",
     "consumer", "dtc", "direct to consumer", "lifestyle", "wellness", "cpg",
     "media", "entertainment", "editorial", "streaming", "creator economy",
     "fashion", "apparel", "food", "beverage", "spirits",
-    "mental health", "health", "fitness", "beauty", "skincare",
-    "travel", "hospitality", "culture", "music", "sports", "outdoor",
+    "mental health", "beauty", "skincare",
+    "culture", "music", "outdoor recreation",
     "sustainability", "creator", "influencer",
+    "sports media", "sports entertainment",  # media companies, NOT sports teams/franchises
+]
+
+# These keywords in the JOB TITLE alone are instant disqualifiers
+# (prevents company bonus from saving clearly wrong roles)
+TITLE_HARDSTOP = [
+    "tax", "accountant", "payroll", "controller", "bookkeeper",
+    "store administrator", "yield manager", "revenue optimization",
+    "customer service", "customer success", "client success",
+    "supply chain", "warehouse", "logistics",
+    "software engineer", "data engineer", "devops", "machine learning",
+    "data scientist", "security engineer", "infrastructure",
+    "product analyst", "data analyst", "business analyst",
+    "nurse", "physician", "pharmacist", "clinical",
+    "real estate", "insurance", "mortgage",
+    "asset protection", "loss prevention",
+    "sql", "java", "kubernetes",
+    "retail marketing manager",  # too retail-ops focused
+    "email and web",  # too tactical/channel-specific
+    "merchant partnerships",  # amazon sellers etc.
+    "3d printing",
+    "ai/cloud",
+    "starlink",
+    "west region",
+    "location partnerships",  # geospatial ad partnerships
 ]
 
 BAD_SIGNALS = [
-    # tech / engineering
+    # wrong function — tech / engineering
     "software engineer", "data engineer", "devops", "machine learning",
     "data scientist", "backend", "frontend engineer", "ios developer",
     "android developer", "java", "kubernetes", "aws engineer",
     "systems engineer", "it systems", "product analyst", "data analyst",
     "security engineer", "infrastructure", "sre", "site reliability",
-    # medical / clinical
+    # wrong function — medical / clinical
     "clinical", "nurse", "physician", "pharmacist", "radiologist",
     "therapy associate", "therapist", "counselor", "clinical social worker",
-    # finance / admin
-    "accountant", "cpa", "tax manager", "bookkeeper", "tax",
-    "payroll", "accounts payable", "accounts receivable", "controller",
-    # logistics
+    # wrong function — finance / legal / hr
+    "accountant", "cpa", "tax manager", "bookkeeper", "payroll",
+    "accounts payable", "accounts receivable", "controller",
+    "paralegal", "attorney", "recruiter", "talent acquisition",
+    # wrong function — logistics / ops
     "supply chain", "warehouse", "logistics", "truck driver",
     "real estate agent", "insurance agent", "loan officer",
-    # crm / martech
+    # wrong function — crm / martech engineering
     "braze admin", "salesforce developer", "sql developer",
-    "lifecycle marketing manager", "crm manager",
-    # platform ad sales (not brand partnerships)
+    "lifecycle marketing manager", "crm manager", "marketing automation",
+    # wrong function — platform ad sales
     "global business solutions", "tiktok for business",
     "global sales", "ads manager", "performance marketing manager",
-    # sales (not partnerships)
+    "programmatic", "paid media manager", "sem manager",
+    # wrong function — sales
     "sales executive", "account executive", "sales development",
     "inside sales", "outbound sales", "mid-market sales",
-    # operations / retail
-    "yield manager", "revenue optimization", "store administrator",
+    "enterprise sales", "smb sales",
+    # wrong function — retail / ops
     "store manager", "retail associate", "customer service",
     "merchandiser", "merchandising", "field rep", "territory manager",
-    "client success", "customer success",
-    # geo filters — international only, US cities are fine
+    "client success", "customer success", "asset protection",
+    # wrong industries entirely — not James's world
+    "cruise", "cruise line", "cruise ship",
+    "petroleum", "oil and gas", "mining", "drilling",
+    "automotive", "auto parts", "dealership",
+    "pharmaceutical", "pharma", "biotech",
+    "staffing agency", "temp agency", "recruiting firm",
+    "insurance", "reinsurance",
+    "banking", "mortgage", "lending", "wealth management",
+    "freight", "trucking", "shipping",
+    "pest control", "cleaning services", "janitorial",
+    "food service", "quick service", "fast food", "quick-service",
+    "hospitality chain", "hotel chain", "resort chain",
+    "sports team", "franchise", "sports franchise",
+    # geo filters — block international-only roles
     "korea", "japan", "apac", "indonesia", "malaysia", "singapore",
     "australia", "india", "emea", "latam", "brazil", "mexico",
     "toronto", "london", "berlin", "amsterdam", "paris",
@@ -110,132 +175,160 @@ BAD_SIGNALS = [
 
 # Companies that get +5 score boost — attainable, right-sized, strong brand fit
 TARGET_COMPANIES = [
-    # gaming — indie publishers, mid-size studios
+    # gaming — indie publishers, mid-size studios (James has context here)
     "aspyr", "midwest games", "devolver digital", "annapurna interactive",
     "raw fury", "fellow traveller", "humble games", "tinybuild",
     "good shepherd", "skybound games", "thunderful", "joystick ventures",
     "coffee stain", "klei entertainment", "supergiant games",
     "neon doctrine", "whitethorn games", "freedom games", "modus games",
     "curve games", "maximum games", "nighthawk interactive",
-    "hitmarker", "gamesindustry biz", "dexerto", "fandom",
-    # dtc / food & bev — small to mid
+    "hitmarker", "dexerto", "fandom", "gamesindustry",
+    # dtc food & bev — small to mid, editorial identity, founder-led
     "fishwife", "graza", "ghia", "brightland", "fly by jing",
     "diaspora co", "omsom", "vacation inc", "recess", "taika",
     "clevr blends", "mud/wtr", "deux", "halfday", "dieux skin",
     "kin euphorics", "everyday dose", "heart and soil",
-    "poppi", "culture pop", "united sodas", "de soi", "hiyo",
-    "chomps", "paleovalley", "good culture", "somos", "siete",
-    "snif", "oat haus", "touchland", "necessaire",
-    "jolie", "soft services", "starface", "tower 28",
-    "jones road", "ilia beauty",
-    # apparel / lifestyle — indie to mid
+    "poppi", "culture pop", "de soi", "hiyo",
+    "chomps", "paleovalley", "good culture", "somos",
+    "snif", "touchland", "necessaire",
+    "starface", "tower 28", "jones road", "ilia beauty",
+    # apparel / lifestyle — indie to mid, cultural identity
     "howler brothers", "cotopaxi", "tracksmith", "corridor",
     "rowing blazers", "buck mason", "taylor stitch", "public rec",
-    "outdoor voices", "criquet", "tecovas",
-    "satisfy running", "unbound merino",
-    # austin brands
-    "waterloo sparkling", "austin eastciders", "rambler",
-    "kendra scott", "yeti", "bumble",
-    # active application targets
-    "farrow and ball", "farrow & ball", "farrow-ball",
-    "turtle beach", "kyra", "joined media", "afk",
-    # mental health / wellness — mid-size
-    "wondermind", "two chairs", "real", "ahead",
-    "beam organics", "momentous", "seed health",
-    # media / editorial — indie + mid
-    "a24", "substack", "axios", "the ringer", "puck news",
+    "outdoor voices", "criquet", "satisfy running",
+    # austin-based — bonus for local proximity
+    "tecovas", "waterloo sparkling", "austin eastciders", "rambler",
+    # mental health / wellness — mission-driven, mid-size
+    "wondermind", "two chairs", "real", "ahead", "momentous",
+    # media / editorial — indie + boutique
+    "a24", "substack", "axios", "the ringer", "puck",
     "hypebeast", "highsnobiety", "recurrent ventures",
     "meadowlark media", "togethxr", "uninterrupted",
-    "neon", "mubi", "bleecker street",
-    # creator economy — small to mid
-    "beehiiv", "pietra", "fourthwall", "dash hudson",
-    "linktree", "later",
-    # music / culture
-    "dice fm", "unitedmasters", "venice music",
-    "awal", "create music group",
-    "popagenda",
+    "neon", "mubi", "bleecker street", "magnolia",
+    # creator economy — tools for creators, small to mid
+    "beehiiv", "pietra", "fourthwall", "dash hudson", "later",
+    # music / culture — independent
+    "dice fm", "unitedmasters", "venice music", "awal",
+    "create music group", "popagenda",
+    # active application / named targets
+    "farrow and ball", "farrow & ball",
+    "turtle beach", "kyra", "joined media", "afk",
 ]
 
-# Large corps that get a -3 score penalty — not unattainable but hard and slow
+# Large corps / wrong-industry companies — hard penalty (-4)
+# These get through on title match alone without this
 BIG_CORP_PENALTY = [
+    # big tech
     "google", "meta", "apple", "amazon", "microsoft", "netflix",
-    "spotify", "salesforce", "adobe", "oracle", "ibm", "intel",
-    "disney", "warner", "universal", "sony", "nintendo",
-    "activision", "blizzard", "electronic arts", "ea games", "ubisoft",
-    "take-two", "2k games", "bethesda", "zenimax",
-    "ralph lauren", "gap inc", "h&m", "zara", "lvmh", "kering",
-    "l'oreal", "unilever", "procter", "colgate", "kraft", "nestle",
-    "conagra", "pepsico", "coca-cola", "mondelez",
-    "verizon", "att", "comcast", "charter",
-    "jpmorgan", "goldman", "morgan stanley", "bank of america",
-    "united health", "cvs", "walgreens", "humana",
+    "salesforce", "adobe", "oracle", "ibm", "intel",
     "waymo", "uber", "lyft", "doordash", "airbnb", "coinbase",
     "linkedin", "twitter", "x corp", "snapchat", "pinterest",
-    "unity technologies", "unity software", "unity", "roblox", "riot games", "epic games",
     "twitch", "youtube", "tiktok",
+    # big gaming
+    "unity", "roblox", "riot games", "epic games",
+    "activision", "blizzard", "electronic arts", "ea games", "ubisoft",
+    "take-two", "2k games", "bethesda", "zenimax", "sega",
+    "bandai namco", "square enix", "capcom",
+    # big media / publishing
+    "spotify", "disney", "warner", "universal", "sony",
     "conde nast", "hearst", "vox media", "buzzfeed", "bustle",
-    "barstool sports", "complex networks",
-    "lululemon", "allbirds", "vuori", "patagonia", "north face",
+    "barstool sports", "complex networks", "iheartmedia",
+    # big consumer / retail
+    "ralph lauren", "gap inc", "h&m", "zara", "lvmh", "kering",
+    "l'oreal", "unilever", "procter", "colgate", "kraft", "nestle",
+    "conagra", "pepsico", "coca-cola", "mondelez", "dole", "tyson",
+    "starbucks", "mcdonald", "yum brands",
+    "puma", "adidas", "nike", "under armour", "columbia sportswear",
+    "lululemon", "allbirds", "vuori", "patagonia",
+    # big pharma / health / insurance
+    "united health", "cvs", "walgreens", "humana", "cigna",
+    "pfizer", "johnson & johnson", "abbvie",
+    # big finance
+    "jpmorgan", "goldman", "morgan stanley", "bank of america",
+    "wells fargo", "capital one", "american express",
+    # big telco / auto / industrial
+    "verizon", "att", "comcast", "charter",
+    "ford", "gm", "toyota", "honda", "valvoline",
+    # big wellness (already at scale, highly competitive)
     "whoop", "oura", "noom", "betterhelp", "hims", "ro health",
     "olipop", "liquid death", "athletic greens", "ag1",
     "calm", "headspace", "talkspace",
+    # big hospitality / travel / cruise
+    "marriott", "hilton", "hyatt", "intercontinental",
+    "norwegian cruise", "royal caribbean", "carnival",
+    "sage hospitality",
+    # big creator / platform
     "cameo", "patreon", "kajabi", "teachable",
+    # recruiting/staffing firms showing up as the "company"
+    "robert half", "aquent", "kforce", "randstad",
+    "heidrick", "russell reynolds",
+    # misc large / wrong-fit that keep slipping through
+    "kendra scott", "bumble", "roc nation", "coty",
+    "generous brands", "buzzivo",
+    "nintendo", "general mills", "ingram content",
+    "roku", "spacex", "doordash",
+    "houston dynamo", "orlando city", "sporting kc",  # sports franchises
+    "freshpaint", "octave", "provectus",  # healthcare / AI / wrong vertical
+    "iberostar", "marriott", "hilton", "wyndham",  # hotel chains
+    "livelabs", "livelab",
+    "talently", "reacher",  # recruiting / wrong vertical
 ]
 
 SEARCH_QUERIES = [
-    "brand partnerships manager",
+    # ── Partnerships & Biz Dev ────────────────────────────────
+    "brand partnerships manager DTC",
+    "brand partnerships manager gaming",
     "creative partnerships manager",
-    "partnerships manager DTC",
-    "partnerships manager gaming",
-    "brand manager gaming",
-    "brand manager lifestyle",
-    "brand manager consumer",
-    "collaborations manager",
-    "head of collaborations",
-    "head of partnerships",
-    "influencer partnerships manager",
+    "collaborations manager lifestyle",
+    "head of partnerships startup",
+    "influencer partnerships manager gaming",
     "creator partnerships manager",
-    "go-to-market manager",
-    "integrated marketing manager",
-    "cultural marketing manager",
-    "campaign manager entertainment",
-    "content marketing manager lifestyle",
-    "marketing manager indie games",
     "business development manager media",
-    "strategic partnerships media",
     "publisher relations manager",
-    "brand marketing manager consumer",
-    "partnerships manager wellness",
-    "brand manager DTC startup",
-    "collab manager fashion",
-    "media partnerships manager",
-    "growth partnerships manager",
-    # broader entertainment / culture / music
-    "brand partnerships entertainment",
-    "partnerships manager film",
-    "brand manager entertainment",
-    "partnerships manager music",
-    "brand partnerships film",
-    "creative partnerships entertainment",
-    "marketing manager film",
-    "partnerships manager sports",
-    "brand manager sports media",
     "licensing partnerships manager",
-    "brand experience manager",
+    "media partnerships manager",
+    # ── Brand & Marketing ─────────────────────────────────────
+    "brand manager DTC startup",
+    "brand manager indie games",
+    "brand marketing manager consumer",
+    "go-to-market manager startup",
+    "marketing manager lifestyle brand",
+    "marketing manager indie games",
+    "integrated marketing manager entertainment",
+    "cultural marketing manager",
     "experiential marketing manager",
-    "talent partnerships manager",
-    "artist partnerships manager",
-    "label partnerships",
-    "sync licensing manager",
-    # broader operator / builder titles
-    "head of brand",
+    "campaign manager entertainment",
+    "community manager gaming",
+    "head of brand startup",
+    # ── Creative & Content ────────────────────────────────────
+    "creative director DTC",
+    "creative director gaming",
+    "brand creative director",
+    "creative strategist lifestyle",
+    "content strategist DTC",
+    "editorial director media",
+    "head of content startup",
+    "brand copywriter",
+    # ── Ecom & Growth ─────────────────────────────────────────
+    "ecommerce manager DTC",
+    "head of growth DTC startup",
+    "growth marketing manager consumer",
+    "digital marketing manager lifestyle",
+    "email marketing manager DTC",
+    # ── Gaming / Publishing ───────────────────────────────────
+    "developer relations gaming",
+    "publishing manager indie games",
+    "gaming marketing manager",
+    "studio relations manager",
+    "game scout",
+    "esports partnerships manager",
+    # ── Broader operator / builder ────────────────────────────
+    "head of marketing startup",
     "director of brand",
     "brand operator",
-    "head of marketing startup",
     "vp partnerships",
-    "director of partnerships",
-    "fractional partnerships",
     "fractional brand",
+    "gtm manager startup",
 ]
 
 MAX_AGE_DAYS = 8
@@ -342,11 +435,16 @@ def score_job(title, description="", company=""):
     text = f"{title} {description} {company}".lower()
     title_lower = title.lower()
 
+    # Title scoring — award points only for the BEST single match
+    # (prevents "brand marketing manager" and "marketing manager" from double-stacking)
+    title_bonus = 0
+    desc_bonus = 0
     for t in TARGET_TITLES:
         if t in title_lower:
-            score += 4
+            title_bonus = max(title_bonus, 4)
         elif t in text:
-            score += 2
+            desc_bonus = max(desc_bonus, 2)
+    score += title_bonus + desc_bonus
 
     for ind in TARGET_INDUSTRIES:
         if ind in text:
@@ -361,7 +459,7 @@ def score_job(title, description="", company=""):
         co_clean = co.strip()
         # word-boundary match so "unity" doesn't hit "community", etc.
         if re.search(r'(?<![a-z])' + re.escape(co_clean) + r'(?![a-z])', co_lower):
-            score -= 3
+            score -= 6  # strong enough to overcome TARGET_COMPANIES bonus
 
     for kw in BAD_SIGNALS:
         if kw in text:
@@ -411,6 +509,10 @@ def add_job(title, company, url, date_str="", source="", description=""):
     if not title or not url:
         return
     if not is_ascii_title(title):
+        return
+    # Hard-stop: if the title itself signals a wrong function, skip immediately
+    title_lower = title.lower()
+    if any(hs in title_lower for hs in TITLE_HARDSTOP):
         return
     if url in seen_urls:
         return
