@@ -13,6 +13,7 @@
     "revenue_est": "",
     "score": 10,
     "notes": "Active retainer",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -29,6 +30,7 @@
     "revenue_est": "",
     "score": 10,
     "notes": "Active contract",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -45,6 +47,24 @@
     "revenue_est": "$5M-10M",
     "score": 9,
     "notes": "No posted role - direct outreach",
+    "region": "US",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "highsnobiety-david-fischer",
+    "brand": "Highsnobiety",
+    "founder": "David Fischer",
+    "contact": "David Fischer",
+    "contact_title": "Founder / CEO",
+    "gap": "Highsnobiety is Berlin's defining culture-and-commerce media brand \u2014 editorial, events, and brand partnerships at the intersection of streetwear, music, and luxury. They routinely hire US-based freelancers for brand and partnerships work and their commercial infrastructure is sophisticated enough to absorb a high-caliber operator.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/highsnobiety",
+    "website": "https://highsnobiety.com",
+    "industry": "Media / Fashion / Culture",
+    "revenue_est": "$20M+",
+    "score": 9,
+    "notes": "Berlin-based, US remote-friendly \u2014 strong fit",
+    "region": "EU",
     "added_date": "2026-04-21"
   },
   {
@@ -61,6 +81,7 @@
     "revenue_est": "$1M-5M",
     "score": 8,
     "notes": "No posted role - direct outreach",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -77,6 +98,7 @@
     "revenue_est": "$2M-8M",
     "score": 8,
     "notes": "Contractor opportunity",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -93,6 +115,7 @@
     "revenue_est": "$1M-5M",
     "score": 8,
     "notes": "Early stage \u2014 high responsiveness likelihood",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -109,6 +132,7 @@
     "revenue_est": "$2M-8M",
     "score": 8,
     "notes": "Early stage \u2014 high responsiveness likelihood",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -125,6 +149,7 @@
     "revenue_est": "$1M-5M",
     "score": 8,
     "notes": "Small team \u2014 high responsiveness likelihood",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -141,6 +166,7 @@
     "revenue_est": "$500K-$3M",
     "score": 8,
     "notes": "Early stage \u2014 high responsiveness likelihood",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -157,6 +183,7 @@
     "revenue_est": "$3M-10M",
     "score": 8,
     "notes": "Small team \u2014 high responsiveness likelihood",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -173,6 +200,7 @@
     "revenue_est": "$1M-5M",
     "score": 8,
     "notes": "Small team \u2014 high responsiveness likelihood",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -189,6 +217,58 @@
     "revenue_est": "$2M-8M",
     "score": 8,
     "notes": "Small team \u2014 high responsiveness likelihood",
+    "region": "US",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "pangaia-amanda-parkes",
+    "brand": "Pangaia",
+    "founder": "Amanda Parkes",
+    "contact": "Amanda Parkes",
+    "contact_title": "Chief Innovation Officer",
+    "gap": "Pangaia has built one of the most credible sustainability-first fashion brands globally. The brand partnership and commercial infrastructure layer is underdeveloped relative to the cultural equity. London-based but hires US-based consultants for commercial and partnership work.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/pangaia",
+    "website": "https://pangaia.com",
+    "industry": "Fashion / Sustainability",
+    "revenue_est": "$30M+",
+    "score": 8,
+    "notes": "London-based \u2014 US contractor opportunity",
+    "region": "EU",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "tony-s-chocolonely",
+    "brand": "Tony's Chocolonely",
+    "founder": "Teun van de Keuken",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Tony's has built one of the most purpose-driven food brands in the world and is aggressively expanding in the US market. The brand partnership and GTM infrastructure for US market entry is an active need. US-facing partnerships role is a clear opportunity.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/tonyschocolonely",
+    "website": "https://tonyschocolonely.com",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "$100M+",
+    "score": 8,
+    "notes": "Amsterdam HQ \u2014 active US expansion, strong contractor opportunity",
+    "region": "EU",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "represent-george-heaton",
+    "brand": "Represent",
+    "founder": "George Heaton",
+    "contact": "George Heaton",
+    "contact_title": "Founder / CEO",
+    "gap": "Represent has built serious brand equity in premium streetwear and is aggressively expanding in the US market. The brand partnership and commercial infrastructure for US market growth is the active gap. Manchester-based but US-facing commercial work is a clear need.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/representclo",
+    "website": "https://representclo.com",
+    "industry": "Fashion / Apparel",
+    "revenue_est": "$30M+",
+    "score": 8,
+    "notes": "Manchester-based \u2014 US expansion mode, contractor fit",
+    "region": "EU",
     "added_date": "2026-04-21"
   },
   {
@@ -205,6 +285,7 @@
     "revenue_est": "$5M-15M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -221,6 +302,7 @@
     "revenue_est": "$10M-30M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -237,6 +319,7 @@
     "revenue_est": "$2M-8M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -253,6 +336,7 @@
     "revenue_est": "$5M-15M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -269,6 +353,7 @@
     "revenue_est": "$3M-10M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -285,6 +370,7 @@
     "revenue_est": "$5M-15M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -301,6 +387,7 @@
     "revenue_est": "$5M-20M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -317,6 +404,7 @@
     "revenue_est": "$1M-5M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -333,6 +421,7 @@
     "revenue_est": "$2M-8M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -349,6 +438,7 @@
     "revenue_est": "$5M-20M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -365,6 +455,7 @@
     "revenue_est": "$5M-15M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -381,6 +472,7 @@
     "revenue_est": "$3M-10M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -397,6 +489,7 @@
     "revenue_est": "$10M-30M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -413,6 +506,7 @@
     "revenue_est": "$10M-30M",
     "score": 7,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -429,6 +523,7 @@
     "revenue_est": "$3M-10M",
     "score": 7,
     "notes": "Austin-based",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -445,6 +540,109 @@
     "revenue_est": "$1M-5M",
     "score": 7,
     "notes": "Small team \u2014 high responsiveness likelihood",
+    "region": "US",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "oatly",
+    "brand": "Oatly",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Oatly built the oat milk category and has unmatched brand equity in the space. The partnership and co-marketing layer in the US is thin relative to the brand's scale. US-based contractor work on brand programs is realistic.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/oatly",
+    "website": "https://oatly.com",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "$700M+",
+    "score": 7,
+    "notes": "Swedish HQ \u2014 US office in NYC, remote brand partnership work feasible",
+    "region": "EU",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "ganni-ditte-reffstrup",
+    "brand": "Ganni",
+    "founder": "Ditte Reffstrup",
+    "contact": "Ditte Reffstrup",
+    "contact_title": "Creative Director",
+    "gap": "Ganni has become the definitive Scandinavian fashion brand with genuine cultural cachet. The US market brand partnership and GTM infrastructure is not yet at the level the brand warrants. Copenhagen HQ with remote-friendly commercial infrastructure.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/ganni",
+    "website": "https://ganni.com",
+    "industry": "Fashion / DTC",
+    "revenue_est": "$100M+",
+    "score": 7,
+    "notes": "Copenhagen HQ \u2014 US remote consulting feasible",
+    "region": "EU",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "monocle-tyler-brule",
+    "brand": "Monocle",
+    "founder": "Tyler Brule",
+    "contact": "Tyler Brule",
+    "contact_title": "Founder / Editor-in-Chief",
+    "gap": "Monocle has built a global media brand with genuine cultural cachet and a distinctive commercial model built on brand partnerships and licensing. US-based freelance editorial and brand partnership work is a realistic engagement model for them.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/monoclemag",
+    "website": "https://monocle.com",
+    "industry": "Editorial / Media",
+    "revenue_est": "$20M+",
+    "score": 7,
+    "notes": "London HQ \u2014 US editorial and brand work feasible",
+    "region": "EU",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "veja",
+    "brand": "Veja",
+    "founder": "Francois-Ghislain Morillion",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Veja has built the most credible sustainability narrative in sneakers with genuine traction in the US market. The brand partnership and commercial infrastructure for US growth is minimal. Paris HQ with US market as an active growth priority.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/veja",
+    "website": "https://veja-store.com",
+    "industry": "Fashion / Sustainability",
+    "revenue_est": "$100M+",
+    "score": 7,
+    "notes": "Paris HQ \u2014 US market growth, contractor opportunity",
+    "region": "EU",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "dazed-media-jefferson-hack",
+    "brand": "Dazed Media",
+    "founder": "Jefferson Hack",
+    "contact": "Jefferson Hack",
+    "contact_title": "Co-Founder / CEO",
+    "gap": "Dazed is one of the most influential culture and fashion media brands globally. The brand partnership and commercial infrastructure in the US is thin for the brand's cultural reach. London-based with clear US market appetite.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/dazed",
+    "website": "https://dazeddigital.com",
+    "industry": "Media / Fashion / Culture",
+    "revenue_est": "$10M-30M",
+    "score": 7,
+    "notes": "London HQ \u2014 US brand and partnership work feasible",
+    "region": "EU",
+    "added_date": "2026-04-21"
+  },
+  {
+    "id": "patagonia-provisions",
+    "brand": "Patagonia Provisions",
+    "founder": "Yvon Chouinard",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Patagonia Provisions is building a premium food brand inside the world's most values-aligned outdoor company. The brand partnership and GTM infrastructure is minimal for the brand equity they carry. Fractional GTM and partnership support is the gap.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/patagoniafoods",
+    "website": "https://patagoniaprovisions.com",
+    "industry": "Food & Beverage / Sustainability",
+    "revenue_est": "$10M+",
+    "score": 7,
+    "notes": "Ventura CA HQ but operates globally \u2014 strong values fit",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -461,6 +659,7 @@
     "revenue_est": "$20M+",
     "score": 6,
     "notes": "Larger org \u2014 fractional brand program angle",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -477,6 +676,7 @@
     "revenue_est": "$10M-30M",
     "score": 6,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -493,6 +693,7 @@
     "revenue_est": "$5M-15M",
     "score": 6,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -509,6 +710,7 @@
     "revenue_est": "$20M+",
     "score": 6,
     "notes": "Post-founder transition \u2014 rebuilding phase",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -525,6 +727,7 @@
     "revenue_est": "$5M-20M",
     "score": 6,
     "notes": "",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -541,6 +744,7 @@
     "revenue_est": "$50M+",
     "score": 6,
     "notes": "Austin-based \u2014 larger org but strong fit",
+    "region": "US",
     "added_date": "2026-04-21"
   },
   {
@@ -557,6 +761,7 @@
     "revenue_est": "$20M+",
     "score": 6,
     "notes": "Austin-based",
+    "region": "US",
     "added_date": "2026-04-21"
   }
 ]

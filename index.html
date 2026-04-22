@@ -166,6 +166,16 @@ html, body {
   line-height: 1.6;
 }
 .card-links { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+.contacts-section { margin-top: 12px; }
+.contacts-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 7px; }
+.contact-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+.contact-row:last-child { border-bottom: none; }
+.contact-name { font-weight: 600; color: var(--text); min-width: 130px; }
+.contact-title { color: var(--text-2); flex: 1; }
+.contact-email { color: var(--accent); text-decoration: none; font-size: 11px; white-space: nowrap; }
+.contact-email:hover { text-decoration: underline; }
+.contact-li { font-size: 11px; color: var(--text-3); text-decoration: none; }
+.contact-li:hover { color: var(--accent); }
 .card-link { font-size: 11px; color: var(--text-3); text-decoration: none; letter-spacing: 0.02em; }
 .card-link:hover { color: var(--accent); }
 .card-meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
@@ -289,6 +299,10 @@ html, body {
   font-family: inherit;
 }
 .outreach-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.outreach-drafts-tabs { display: flex; gap: 4px; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+.draft-tab { background: none; border: 1px solid var(--border); color: var(--text-2); font-size: 11px; font-weight: 600; letter-spacing: .04em; padding: 4px 10px; border-radius: 4px; cursor: pointer; transition: all .15s; }
+.draft-tab:hover { border-color: var(--accent); color: var(--accent); }
+.draft-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
 /* PIPELINE / KANBAN */
 .pipeline-grid {
@@ -474,6 +488,21 @@ html, body {
 
   <!-- OUTREACH TAB -->
   <div id="tab-outreach" class="tab-panel">
+    <details class="checklist-card" style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:16px">
+      <summary style="cursor:pointer;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);list-style:none">Outreach Checklist &nbsp;<span style="font-weight:400;color:var(--text-3)">(click to expand)</span></summary>
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:12px;color:var(--text-2);line-height:1.6">
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Send LinkedIn connection note <em>with</em> a message</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Apply directly + personalize to the role</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Follow up via DM 3-5 days after applying</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Include a link to work samples (cargo.site)</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Reference something specific about the company</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Write in your own voice, not AI voice</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Lead with a specific observation, not a compliment</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Mention one relevant result with a real number</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Keep it short, clear, no fluff</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Ask one smart question in the note</label>
+      </div>
+    </details>
     <div class="toolbar">
       <select class="filter-select" id="outreach-filter" onchange="renderOutreach()">
         <option value="">All Approved</option>
@@ -627,19 +656,58 @@ function getObservation(company) {
 
 function genJobEmail(job) {
   const obs = getObservation(job.company);
-  const subject = `${job.title} - James Tedesco`;
+  const title = job.title || 'this role';
+  const co = job.company || 'your team';
+  const subject = `${title} - James Tedesco`;
   const body = `Hi there,
 
 ${obs}
 
-I've spent the last seven years building partnership programs and commercial infrastructure from scratch. At Opulist I built the entire partnership function with no pricing framework, no pipeline, no deal history - closed $50K+ in the first two quarters. At Sunday Scaries I conceived and ran Scenes of Note from concept to market and led the Dinner Service collab from cold outreach through launch across six co-branded products. Before that I ran 15+ branded campaign integrations a month at Fandom alongside CD Projekt Red, Sony Santa Monica, and Deep Silver.
+I applied for the ${title} role and wanted to make sure it came through. I'm genuinely interested in this one.
 
-Happy to share more if it's useful.
+A bit of context on why I think I'm a strong fit: I build partnership and commercial infrastructure from scratch. At Opulist I came in with no pricing framework, no pipeline, no deal history, and closed $50K+ in the first two quarters. At Sunday Scaries I conceived Scenes of Note from nothing and led the Dinner Service collab from cold outreach through a six-product launch. Before that I ran 15+ branded campaign integrations a month at Fandom alongside CD Projekt Red, Sony Santa Monica, and Deep Silver.
+
+The through-line is the same: come in early, build the function, show real results.
+
+Work samples: jmt115.cargo.site
+linkedin.com/in/james-tedesco
+
+Happy to get on a call if it's useful.
+
+James`;
+  return { subject, body };
+}
+
+function genFollowUpEmail(job) {
+  const obs = getObservation(job.company);
+  const title = job.title || 'this role';
+  const subject = `Following up - ${title}`;
+  const body = `Hi there,
+
+I applied for the ${title} role a few days ago and wanted to follow up. Just wanted to make sure it landed and confirm I'm still very interested.
+
+${obs}
+
+I'm not going to take up a lot of your time here. If it would help to see work examples or have a quick conversation, I'm easy to reach.
 
 James Tedesco
 jmt115.cargo.site
 linkedin.com/in/james-tedesco`;
   return { subject, body };
+}
+
+function genLinkedInNote(item) {
+  const isJob = !item.brand;
+  if (isJob) {
+    const obs = getObservation(item.company);
+    const firstSentence = obs.split('.')[0].trim();
+    return `${firstSentence}. Applied for ${item.title || 'the open role'} and wanted to connect directly. Happy to share more context if useful.`;
+  } else {
+    const brand = item.brand || '';
+    const contact = item.contact || item.founder || '';
+    const firstName = contact ? contact.split(' ')[0] : 'there';
+    return `Hi ${firstName}, ${brand}'s brand is really distinctive. I work with founder-led brands on partnerships and commercial infrastructure. Would love to connect.`;
+  }
 }
 
 function genProspectEmail(prospect) {
@@ -648,17 +716,20 @@ function genProspectEmail(prospect) {
   const firstName = contact ? contact.split(' ')[0] : 'there';
   const gap = prospect.gap || `${brand} has a clear point of view and real product strength.`;
   const lead = gap.split('.')[0].trim() + '.';
+  const isEU = prospect.region === 'EU';
 
-  const subject = `Commercial infrastructure - ${brand}`;
+  const subject = `Fractional partnerships - ${brand}`;
   const body = `Hi ${firstName},
 
-${lead} The commercial layer - partnerships, GTM, brand collaborations - is usually what takes founder-led brands from interesting to inevitable.
+${lead}
 
-I build that layer from scratch. Right now I'm the operator behind Opulist's entire partnership program (built from zero, $50K+ closed in the first two quarters) and I'm supporting indie.io on developer acquisition and publishing strategy. Before that I created Scenes of Note from concept to market and ran brand integrations at Fandom for five years.
+I work with brands like ${brand} on the commercial layer - partnerships, GTM, brand collaborations. That's usually the piece that doesn't get built until someone decides to build it.
 
-I'm looking for one more consulting client. Retainer-based, 15 hours a week. I come with an AI-powered backend, so I deliver what used to require a full team, fractionally.
+Here is what I've done recently: built Opulist's entire partnership function from zero ($50K+ closed in the first two quarters), supported indie.io on developer acquisition and publishing strategy, created Scenes of Note from concept to market, and ran brand integrations at Fandom for five years.${isEU ? '\n\nI work with US and European brands remotely. Timezone-flexible and used to cross-market coordination.' : ''}
 
-Worth a 20-minute conversation if the timing is right.
+I'm looking for one more client right now. Retainer-based, 15 hours a week, AI-powered backend so I deliver what used to take a full team.
+
+Is a quick conversation worth 20 minutes?
 
 James Tedesco
 jmt115.cargo.site
@@ -741,6 +812,7 @@ function renderJobs() {
     <span class="badge badge-${sc2}" style="flex-shrink:0">${sl}</span>
   </div>
   ${job.description ? `<div class="card-desc">${escH(job.description)}</div>` : ''}
+  ${renderContacts(job.contacts, job.company)}
   <div class="card-meta">
     ${statusBadge(job._status)}
     ${job.source ? `<span class="badge badge-source">${escH(job.source)}</span>` : ''}
@@ -814,6 +886,7 @@ function renderProspects() {
   ${p.founder ? `<div class="card-subtitle" style="margin-top:4px">Founder: <strong>${escH(p.founder)}</strong></div>` : ''}
   ${p.contact && p.contact !== p.founder ? `<div class="card-subtitle" style="margin-top:2px">Target: <strong>${escH(p.contact)}</strong>${p.contact_title ? ', ' + escH(p.contact_title) : ''}</div>` : ''}
   ${p.gap ? `<div class="card-gap">${escH(p.gap)}</div>` : ''}
+  ${renderContacts(p.contacts, p.brand)}
   <div class="card-links">
     ${p.linkedin ? `<a class="card-link" href="${escH(p.linkedin)}" target="_blank">LinkedIn &rarr;</a>` : ''}
     ${p.instagram ? `<a class="card-link" href="${escH(p.instagram)}" target="_blank">Instagram &rarr;</a>` : ''}
@@ -821,6 +894,7 @@ function renderProspects() {
   </div>
   <div class="card-meta">
     ${statusBadge(p._status)}
+    ${p.region === 'EU' ? `<span class="badge badge-source" style="background:rgba(59,130,246,.18);color:#60a5fa">🌍 EU — US remote</span>` : ''}
     ${p.revenue_est ? `<span class="badge badge-source">${escH(p.revenue_est)}</span>` : ''}
     ${p.notes ? `<span class="badge badge-source">${escH(p.notes)}</span>` : ''}
   </div>
@@ -877,11 +951,22 @@ function renderOutreach() {
 
   el.innerHTML = all.map(item => {
     const isJob = item._type === 'job';
-    const { subject, body } = isJob ? genJobEmail(item) : genProspectEmail(item);
+    const primary = isJob ? genJobEmail(item) : genProspectEmail(item);
     const eid = item._id + '_out';
-    _emailCache[eid] = { subject, body, type: item._type };
+    _emailCache[eid] = { ...primary, type: item._type };
+
+    // Secondary drafts
+    const followUpId = eid + '_fu';
+    const liId = eid + '_li';
+    if (isJob) {
+      const fu = genFollowUpEmail(item);
+      _emailCache[followUpId] = { ...fu, type: 'job' };
+    }
+    const liNote = genLinkedInNote(item);
+    _emailCache[liId] = { subject: 'LinkedIn note', body: liNote, type: item._type };
+
     const to = item.email || FROM_EMAIL;
-    const mailto = makeMailto(to, subject, body);
+    const mailto = makeMailto(to, primary.subject, primary.body);
     const name = isJob ? item.title : item.brand;
     const sub = isJob ? item.company : (item.contact || item.founder || '');
     return `<div class="outreach-item">
@@ -894,18 +979,56 @@ function renderOutreach() {
     <span class="outreach-caret" id="caret-${eid}">&#9654;</span>
   </div>
   <div class="outreach-body" id="body-${eid}">
-    <div class="email-preview">
-      <div class="email-subject">Subject: ${escH(subject)}</div>
-      <div class="email-body">${escH(body)}</div>
+    <div class="outreach-drafts-tabs">
+      <button class="draft-tab active" onclick="switchDraftTab('${eid}','main',this)">Application Email</button>
+      ${isJob ? `<button class="draft-tab" onclick="switchDraftTab('${eid}','fu',this)">Follow-Up</button>` : ''}
+      <button class="draft-tab" onclick="switchDraftTab('${eid}','li',this)">LinkedIn Note</button>
     </div>
-    <div class="outreach-actions">
-      <a class="btn btn-primary" href="${mailto}">Open in Mail</a>
-      <button class="btn" onclick="copyBody('${eid}')">Copy Body</button>
-      <button class="btn" onclick="markSent('${eid}')">Mark Sent</button>
+    <div id="draft-main-${eid}" class="draft-panel active">
+      <div class="email-preview">
+        <div class="email-subject">Subject: ${escH(primary.subject)}</div>
+        <div class="email-body">${escH(primary.body)}</div>
+      </div>
+      <div class="outreach-actions">
+        <a class="btn btn-primary" href="${mailto}">Open in Mail</a>
+        <button class="btn" onclick="copyBody('${eid}')">Copy Body</button>
+        <button class="btn" onclick="markSent('${eid}')">Mark Sent</button>
+      </div>
+    </div>
+    ${isJob ? `<div id="draft-fu-${eid}" class="draft-panel" style="display:none">
+      <div class="email-preview">
+        <div class="email-subject">Subject: ${escH(_emailCache[followUpId].subject)}</div>
+        <div class="email-body">${escH(_emailCache[followUpId].body)}</div>
+      </div>
+      <div class="outreach-actions">
+        <a class="btn btn-primary" href="${makeMailto(to, _emailCache[followUpId].subject, _emailCache[followUpId].body)}">Open in Mail</a>
+        <button class="btn" onclick="copyBody('${followUpId}')">Copy Body</button>
+      </div>
+    </div>` : ''}
+    <div id="draft-li-${eid}" class="draft-panel" style="display:none">
+      <div class="email-preview">
+        <div class="email-subject" style="color:var(--text-3);font-size:11px">LinkedIn connection note (300 char max)</div>
+        <div class="email-body" style="font-size:13px">${escH(liNote)}</div>
+        <div style="font-size:11px;color:var(--text-3);margin-top:6px">${liNote.length}/300 chars</div>
+      </div>
+      <div class="outreach-actions">
+        <button class="btn btn-primary" onclick="copyBody('${liId}')">Copy Note</button>
+      </div>
     </div>
   </div>
 </div>`;
   }).join('');
+}
+
+function switchDraftTab(eid, tab, btn) {
+  ['main', 'fu', 'li'].forEach(t => {
+    const el = document.getElementById(`draft-${t}-${eid}`);
+    if (el) el.style.display = 'none';
+  });
+  const active = document.getElementById(`draft-${tab}-${eid}`);
+  if (active) active.style.display = 'block';
+  btn.closest('.outreach-drafts-tabs').querySelectorAll('.draft-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
 }
 
 function toggleOutreach(eid) {
@@ -1059,6 +1182,36 @@ function maybeCloseModal(e) {
 function dismissId(id) {
   LS.dismiss(id);
   render();
+}
+
+function renderContacts(contacts, company) {
+  if (!contacts || !contacts.length) {
+    if (!company) return '';
+    const q = encodeURIComponent(`${company} marketing partnerships director`);
+    const liUrl = `https://www.linkedin.com/search/results/people/?keywords=${q}`;
+    const apUrl = `https://app.apollo.io/#/people?organization_names[]=${encodeURIComponent(company)}`;
+    return `<div class="contacts-section">
+      <div class="contacts-label">Contacts</div>
+      <div style="font-size:11px;color:var(--text-3);display:flex;gap:10px;padding:6px 0">
+        <a href="${liUrl}" target="_blank" style="color:var(--accent)">Search LinkedIn &rarr;</a>
+        <a href="${apUrl}" target="_blank" style="color:var(--accent)">Search Apollo &rarr;</a>
+      </div>
+    </div>`;
+  }
+  const rows = contacts.map(c => {
+    const mailto = c.email ? `<a class="contact-email" href="mailto:${escH(c.email)}">${escH(c.email)}</a>` : '<span style="color:var(--text-3);font-size:11px">no email</span>';
+    const li = c.linkedin ? `<a class="contact-li" href="${escH(c.linkedin)}" target="_blank">LinkedIn</a>` : '';
+    return `<div class="contact-row">
+      <span class="contact-name">${escH(c.name)}</span>
+      <span class="contact-title">${escH(c.title)}</span>
+      ${mailto}
+      ${li}
+    </div>`;
+  }).join('');
+  return `<div class="contacts-section">
+    <div class="contacts-label">Contacts</div>
+    ${rows}
+  </div>`;
 }
 
 function escH(str) {

@@ -252,6 +252,80 @@ OUTPUT_DIR = os.environ.get("GITHUB_WORKSPACE", ".")
 EMAIL_TO = os.environ.get("EMAIL_TO", "")
 EMAIL_FROM = os.environ.get("EMAIL_FROM", "")
 EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD", "")
+APOLLO_API_KEY = os.environ.get("APOLLO_API_KEY", "ueTL3dBbPL1d6QkBzk9nnw")
+HUNTER_API_KEY = os.environ.get("HUNTER_API_KEY", "2a556ff74abf73e7425a5a5557f1304dc9c34745")
+
+# ─────────────────────────────────────────────
+# APOLLO CONTACT LOOKUP
+# ─────────────────────────────────────────────
+
+CONTACT_TITLE_KEYWORDS = [
+    "partnerships", "brand", "marketing", "collaborations",
+    "creative", "growth", "gtm", "go-to-market", "talent",
+    "business development", "commercial", "founder", "ceo",
+    "cmo", "vp", "director", "head of", "recruiter", "hiring",
+]
+
+_hunter_cache = {}
+_apollo_cache = {}
+
+def apollo_get_contacts(company_name, domain=None):
+    """
+    Apollo.io contact lookup stub.
+    The $49/mo Apollo plan blocks /v1/mixed_people/search and /v1/people/search.
+    Upgrade to Professional (~$99/mo) to unlock full API database search.
+    """
+    return []
+
+def hunter_get_contacts(company_name, domain=None):
+    """Return up to 5 relevant contacts using Hunter.io domain search."""
+    if not HUNTER_API_KEY:
+        return []
+    cache_key = (domain or company_name).lower().strip()
+    if cache_key in _hunter_cache:
+        return _hunter_cache[cache_key]
+
+    # derive domain from company name if not provided
+    if not domain:
+        slug = re.sub(r"[^a-z0-9]", "", company_name.lower())
+        domain = f"{slug}.com"
+
+    try:
+        resp = requests.get(
+            f"https://api.hunter.io/v2/domain-search",
+            params={"domain": domain, "api_key": HUNTER_API_KEY, "limit": 20},
+            timeout=12,
+        )
+        if resp.status_code != 200:
+            _hunter_cache[cache_key] = []
+            return []
+
+        data = resp.json()
+        emails = data.get("data", {}).get("emails", [])
+
+        # score and filter by title relevance
+        scored = []
+        for e in emails:
+            title = (e.get("position") or "").lower()
+            score = sum(1 for kw in CONTACT_TITLE_KEYWORDS if kw in title)
+            if score > 0 and e.get("value"):
+                scored.append((score, e))
+
+        scored.sort(key=lambda x: x[0], reverse=True)
+        contacts = []
+        for _, e in scored[:5]:
+            contacts.append({
+                "name": f"{e.get('first_name', '')} {e.get('last_name', '')}".strip(),
+                "title": e.get("position", ""),
+                "email": e.get("value", ""),
+                "linkedin": e.get("linkedin", ""),
+            })
+
+        _hunter_cache[cache_key] = contacts
+        return contacts
+    except Exception:
+        _hunter_cache[cache_key] = []
+        return []
 
 # ─────────────────────────────────────────────
 # JOB HELPERS
@@ -291,9 +365,17 @@ def score_job(title, description="", company=""):
         if kw in text:
             score -= 5
 
-    if "austin" in text or "remote" in text or "hybrid" in text:
+    if "austin" in text or "austin, tx" in text:
+        score += 4
+    if "remote" in text or "hybrid" in text or "work from anywhere" in text or "distributed" in text:
         score += 3
-    if "new york" in text or "los angeles" in text or "chicago" in text or "san francisco" in text:
+    if "new york" in text or "brooklyn" in text or "manhattan" in text:
+        score -= 4
+    if "los angeles" in text or "santa monica" in text or "culver city" in text:
+        score -= 4
+    if "san francisco" in text or "bay area" in text or "seattle" in text:
+        score -= 3
+    if "chicago" in text or "boston" in text or "denver" in text:
         score -= 2
 
     return score
@@ -997,11 +1079,15 @@ def score_prospect(brand, description, industry, notes=""):
     if "austin" in text or "texas" in text:
         score += 1
 
+    # European companies that explicitly hire US remote/freelance — don't penalize
+    if any(kw in text for kw in ["us remote", "us expansion", "us market", "contractor opportunity", "us-based"]):
+        score += 2
+
     return max(score, 3)
 
 def add_prospect(brand, founder="", contact="", contact_title="", gap="",
                  linkedin="", instagram="", website="", industry="",
-                 revenue_est="", score=5, notes=""):
+                 revenue_est="", score=5, notes="", region="US"):
     if not brand or brand in seen_brands:
         return
     seen_brands.add(brand)
@@ -1019,6 +1105,7 @@ def add_prospect(brand, founder="", contact="", contact_title="", gap="",
         "revenue_est": revenue_est,
         "score": score,
         "notes": notes,
+        "region": region,
         "added_date": datetime.now().strftime("%Y-%m-%d"),
     })
 
@@ -1480,6 +1567,147 @@ def seed_known_prospects():
         notes="Small team — high responsiveness likelihood",
     )
 
+    # ── EUROPEAN COMPANIES — hire US-based freelancers / consultants ──────────
+    add_prospect(
+        brand="Highsnobiety",
+        founder="David Fischer",
+        contact="David Fischer",
+        contact_title="Founder / CEO",
+        gap="Highsnobiety is Berlin's defining culture-and-commerce media brand — editorial, events, and brand partnerships at the intersection of streetwear, music, and luxury. They routinely hire US-based freelancers for brand and partnerships work and their commercial infrastructure is sophisticated enough to absorb a high-caliber operator.",
+        instagram="https://instagram.com/highsnobiety",
+        website="https://highsnobiety.com",
+        industry="Media / Fashion / Culture",
+        revenue_est="$20M+",
+        score=9,
+        notes="Berlin-based, US remote-friendly — strong fit",
+        region="EU",
+    )
+    add_prospect(
+        brand="Pangaia",
+        founder="Amanda Parkes",
+        contact="Amanda Parkes",
+        contact_title="Chief Innovation Officer",
+        gap="Pangaia has built one of the most credible sustainability-first fashion brands globally. The brand partnership and commercial infrastructure layer is underdeveloped relative to the cultural equity. London-based but hires US-based consultants for commercial and partnership work.",
+        instagram="https://instagram.com/pangaia",
+        website="https://pangaia.com",
+        industry="Fashion / Sustainability",
+        revenue_est="$30M+",
+        score=8,
+        notes="London-based — US contractor opportunity",
+        region="EU",
+    )
+    add_prospect(
+        brand="Tony's Chocolonely",
+        founder="Teun van de Keuken",
+        contact="",
+        contact_title="",
+        gap="Tony's has built one of the most purpose-driven food brands in the world and is aggressively expanding in the US market. The brand partnership and GTM infrastructure for US market entry is an active need. US-facing partnerships role is a clear opportunity.",
+        instagram="https://instagram.com/tonyschocolonely",
+        website="https://tonyschocolonely.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$100M+",
+        score=8,
+        notes="Amsterdam HQ — active US expansion, strong contractor opportunity",
+        region="EU",
+    )
+    add_prospect(
+        brand="Oatly",
+        founder="",
+        contact="",
+        contact_title="",
+        gap="Oatly built the oat milk category and has unmatched brand equity in the space. The partnership and co-marketing layer in the US is thin relative to the brand's scale. US-based contractor work on brand programs is realistic.",
+        instagram="https://instagram.com/oatly",
+        website="https://oatly.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$700M+",
+        score=7,
+        notes="Swedish HQ — US office in NYC, remote brand partnership work feasible",
+        region="EU",
+    )
+    add_prospect(
+        brand="Ganni",
+        founder="Ditte Reffstrup",
+        contact="Ditte Reffstrup",
+        contact_title="Creative Director",
+        gap="Ganni has become the definitive Scandinavian fashion brand with genuine cultural cachet. The US market brand partnership and GTM infrastructure is not yet at the level the brand warrants. Copenhagen HQ with remote-friendly commercial infrastructure.",
+        instagram="https://instagram.com/ganni",
+        website="https://ganni.com",
+        industry="Fashion / DTC",
+        revenue_est="$100M+",
+        score=7,
+        notes="Copenhagen HQ — US remote consulting feasible",
+        region="EU",
+    )
+    add_prospect(
+        brand="Represent",
+        founder="George Heaton",
+        contact="George Heaton",
+        contact_title="Founder / CEO",
+        gap="Represent has built serious brand equity in premium streetwear and is aggressively expanding in the US market. The brand partnership and commercial infrastructure for US market growth is the active gap. Manchester-based but US-facing commercial work is a clear need.",
+        instagram="https://instagram.com/representclo",
+        website="https://representclo.com",
+        industry="Fashion / Apparel",
+        revenue_est="$30M+",
+        score=8,
+        notes="Manchester-based — US expansion mode, contractor fit",
+        region="EU",
+    )
+    add_prospect(
+        brand="Monocle",
+        founder="Tyler Brule",
+        contact="Tyler Brule",
+        contact_title="Founder / Editor-in-Chief",
+        gap="Monocle has built a global media brand with genuine cultural cachet and a distinctive commercial model built on brand partnerships and licensing. US-based freelance editorial and brand partnership work is a realistic engagement model for them.",
+        instagram="https://instagram.com/monoclemag",
+        website="https://monocle.com",
+        industry="Editorial / Media",
+        revenue_est="$20M+",
+        score=7,
+        notes="London HQ — US editorial and brand work feasible",
+        region="EU",
+    )
+    add_prospect(
+        brand="Veja",
+        founder="Francois-Ghislain Morillion",
+        contact="",
+        contact_title="",
+        gap="Veja has built the most credible sustainability narrative in sneakers with genuine traction in the US market. The brand partnership and commercial infrastructure for US growth is minimal. Paris HQ with US market as an active growth priority.",
+        instagram="https://instagram.com/veja",
+        website="https://veja-store.com",
+        industry="Fashion / Sustainability",
+        revenue_est="$100M+",
+        score=7,
+        notes="Paris HQ — US market growth, contractor opportunity",
+        region="EU",
+    )
+    add_prospect(
+        brand="Dazed Media",
+        founder="Jefferson Hack",
+        contact="Jefferson Hack",
+        contact_title="Co-Founder / CEO",
+        gap="Dazed is one of the most influential culture and fashion media brands globally. The brand partnership and commercial infrastructure in the US is thin for the brand's cultural reach. London-based with clear US market appetite.",
+        instagram="https://instagram.com/dazed",
+        website="https://dazeddigital.com",
+        industry="Media / Fashion / Culture",
+        revenue_est="$10M-30M",
+        score=7,
+        notes="London HQ — US brand and partnership work feasible",
+        region="EU",
+    )
+    add_prospect(
+        brand="Patagonia Provisions",
+        founder="Yvon Chouinard",
+        contact="",
+        contact_title="",
+        gap="Patagonia Provisions is building a premium food brand inside the world's most values-aligned outdoor company. The brand partnership and GTM infrastructure is minimal for the brand equity they carry. Fractional GTM and partnership support is the gap.",
+        instagram="https://instagram.com/patagoniafoods",
+        website="https://patagoniaprovisions.com",
+        industry="Food & Beverage / Sustainability",
+        revenue_est="$10M+",
+        score=7,
+        notes="Ventura CA HQ but operates globally — strong values fit",
+    )
+
 def scrape_product_hunt_prospects():
     """Scrape Product Hunt for recent DTC/lifestyle/gaming launches."""
     print("  Scraping Product Hunt for prospects...")
@@ -1577,12 +1805,35 @@ scrape_substacks()
 jobs.sort(key=lambda x: x["score"], reverse=True)
 top_jobs = jobs  # no cap — show everything that passes the score filter
 
+# Contact enrichment for top jobs (Hunter.io)
+print("\n--- CONTACT ENRICHMENT (JOBS) ---")
+for job in top_jobs[:30]:
+    if job.get("contacts"):
+        continue
+    contacts = hunter_get_contacts(job["company"]) if HUNTER_API_KEY else []
+    if contacts:
+        job["contacts"] = contacts
+        print(f"  {job['company']}: {len(contacts)} contacts")
+
 print("\n--- PROSPECT SCRAPERS ---")
 seed_known_prospects()
 scrape_product_hunt_prospects()
 scrape_words_of_mouth()
 
 prospects.sort(key=lambda x: x["score"], reverse=True)
+
+# Contact enrichment for prospects (Hunter.io)
+print("\n--- CONTACT ENRICHMENT (PROSPECTS) ---")
+for p in prospects[:30]:
+    if p.get("contacts"):
+        continue
+    domain = None
+    if p.get("website"):
+        domain = p["website"].replace("https://", "").replace("http://", "").replace("www.", "").split("/")[0]
+    contacts = hunter_get_contacts(p["brand"], domain=domain) if HUNTER_API_KEY else []
+    if contacts:
+        p["contacts"] = contacts
+        print(f"  {p['brand']}: {len(contacts)} contacts")
 
 print(f"\nDone.")
 print(f"  Jobs found:      {len(jobs)}, keeping top {len(top_jobs)}")
