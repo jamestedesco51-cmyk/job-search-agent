@@ -17,7 +17,8 @@
     "date": "",
     "source": "Direct Career Page",
     "score": 9,
-    "description": "Matching role found on Aspyr careers page"
+    "description": "Matching role found on Aspyr careers page",
+    "default_status": "applied"
   },
   {
     "id": "tower-28-marketing-manager-https---tower28beauty",
@@ -127,7 +128,8 @@
     "date": "2026-04-22",
     "source": "LinkedIn",
     "score": 5,
-    "description": ""
+    "description": "",
+    "default_status": "applied"
   },
   {
     "id": "google-senior-global-brand-marketing-manager--go",
@@ -147,7 +149,8 @@
     "date": "2026-04-17",
     "source": "LinkedIn",
     "score": 5,
-    "description": ""
+    "description": "",
+    "default_status": "applied"
   },
   {
     "id": "kendra-scott-senior-manager--social-marketing-ht",

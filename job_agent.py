@@ -136,6 +136,9 @@ TARGET_COMPANIES = [
     # austin brands
     "waterloo sparkling", "austin eastciders", "rambler",
     "kendra scott", "yeti", "bumble",
+    # active application targets
+    "farrow and ball", "farrow & ball", "farrow-ball",
+    "turtle beach", "kyra", "joined media", "afk",
     # mental health / wellness — mid-size
     "wondermind", "two chairs", "real", "ahead",
     "beam organics", "momentous", "seed health",
@@ -814,7 +817,7 @@ def scrape_ashby():
 def scrape_direct_pages():
     print("  Scraping direct career pages...")
     pages = {
-        # James's named targets
+        # James's named targets + active applications
         "Aspyr": "https://www.aspyr.com/open_positions",
         "Midwest Games": "https://www.midwestgames.com/contact",
         "Heart and Soil": "https://heartandsoil.co/careers/",
@@ -822,6 +825,10 @@ def scrape_direct_pages():
         "Howler Brothers": "https://www.howlerbros.com/pages/careers",
         "Fishwife": "https://www.eatfishwife.com/pages/careers",
         "popagenda": "https://popagenda.co",
+        "Farrow and Ball": "https://www.farrow-ball.com/careers",
+        "A24": "https://a24films.com/jobs",
+        "Dash Hudson": "https://www.dashhudson.com/careers",
+        "Turtle Beach": "https://careers.turtlebeach.com/",
         # gaming
         "Raw Fury": "https://rawfury.com/careers/",
         "Fellow Traveller": "https://fellowtraveller.games/jobs/",

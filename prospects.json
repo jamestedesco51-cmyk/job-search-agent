@@ -14,7 +14,8 @@
     "score": 10,
     "notes": "Active retainer",
     "region": "US",
-    "added_date": "2026-04-22"
+    "added_date": "2026-04-22",
+    "default_status": "active"
   },
   {
     "id": "indie-io",
@@ -31,7 +32,8 @@
     "score": 10,
     "notes": "Active contract",
     "region": "US",
-    "added_date": "2026-04-22"
+    "added_date": "2026-04-22",
+    "default_status": "active"
   },
   {
     "id": "fishwife-anna-parmelee",
@@ -48,7 +50,8 @@
     "score": 9,
     "notes": "No posted role - direct outreach",
     "region": "US",
-    "added_date": "2026-04-22"
+    "added_date": "2026-04-22",
+    "default_status": "outreach_sent"
   },
   {
     "id": "highsnobiety-david-fischer",
@@ -82,7 +85,8 @@
     "score": 8,
     "notes": "No posted role - direct outreach",
     "region": "US",
-    "added_date": "2026-04-22"
+    "added_date": "2026-04-22",
+    "default_status": "outreach_sent"
   },
   {
     "id": "midwest-games-adam-orth",
@@ -99,7 +103,8 @@
     "score": 8,
     "notes": "Contractor opportunity",
     "region": "US",
-    "added_date": "2026-04-22"
+    "added_date": "2026-04-22",
+    "default_status": "outreach_sent"
   },
   {
     "id": "taika-kal-freese",

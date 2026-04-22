@@ -566,7 +566,7 @@ function toggleMode() {
 // ─────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────
-const FROM_EMAIL = ''; // your email address - fill in or leave blank
+const FROM_EMAIL = 'jamestedesco51@gmail.com';
 
 // ─────────────────────────────────────────
 // STATE
@@ -644,6 +644,20 @@ const COMPANY_VOICE = {
   'riot games': 'Riot Games has built one of the most engaged gaming communities in the world. The IP depth creates real room for creative partnership work.',
   'devolver digital': 'Devolver Digital has made irreverence into a brand position and it has worked better than almost anyone expected.',
   'annapurna interactive': 'Annapurna Interactive has one of the strongest curatorial identities in games. The brand equity here is real and unusual for a publisher.',
+  'dash hudson': 'Dash Hudson has become the tool serious brand teams actually use. The fact that they need an influencer partnerships person means the commercial layer is maturing and there is real work to be done.',
+  'tower 28': 'Tower 28 has built exceptional brand credibility in clean beauty with a genuinely distinctive aesthetic. The community is real and the product conviction is there.',
+  'marchay': 'Marchay is building a genuinely differentiated travel membership model. The brand is sharp and the partnership potential in that space is wide open.',
+  'branch': 'Branch has built something specific in the commuter and remote worker space. The brand positioning is tight and the partnership layer is an obvious next move.',
+  'accrue': 'Accrue is building in a genuinely interesting wedge around saving toward purchases. The brand and commercial infrastructure are still being built.',
+  'howler brothers': 'Howler Brothers occupies a genuinely distinct place in outdoor lifestyle. The aesthetic is specific, the community feel is real, and the content reflects that.',
+  'farrow': 'Farrow and Ball has built one of the most recognizable color brands in the world. The positioning is specific, the audience is devoted, and the business development layer is where growth happens.',
+  'skillsearch': 'Skillsearch knows the gaming industry hiring market better than almost anyone. Placing the right brand partnerships person in the right studio is a meaningful role.',
+  'kyra': 'Kyra has built something specific at the intersection of creator partnerships and beauty and fashion brand work. The market position is clear and the brief is interesting.',
+  'joined media': 'Joined Media Group is building in gaming influencer marketing with a clear niche and real execution capability. The space is growing fast and they are positioned well in it.',
+  'afk': 'AFK is doing something specific in gaming creator and influencer marketing. The brief for a video games influencer manager is exactly the kind of role where direct industry knowledge matters.',
+  'roc nation': 'Roc Nation has built one of the most powerful brand and talent ecosystems in entertainment. A marketing role on a spirits brand inside that organization is a genuinely interesting brief.',
+  'turtle beach': 'Turtle Beach has been in gaming peripherals long enough to have real credibility and community. The partnerships angle inside a category like gaming audio is an interesting one.',
+  'consiglieri': 'Consiglieri operates at the brand consulting level with a specific and sophisticated client roster. A partner marketing role there touches real brand work across multiple verticals.',
 };
 
 function getObservation(company) {
@@ -773,7 +787,7 @@ function renderJobs() {
   const sort = document.getElementById('jobs-sort').value;
 
   let list = jobs
-    .map(j => ({ ...j, _id: makeId(j), _status: statuses[makeId(j)] || 'new' }))
+    .map(j => ({ ...j, _id: makeId(j), _status: statuses[makeId(j)] || j.default_status || 'new' }))
     .filter(j => !dismissed[j._id])
     .filter(j => !sf || j._status === sf)
     .filter(j => {
@@ -853,7 +867,7 @@ function renderProspects() {
   const ind = document.getElementById('prospects-industry').value.toLowerCase();
 
   let list = prospects
-    .map(p => ({ ...p, _id: makeId(p), _status: statuses[makeId(p)] || 'new' }))
+    .map(p => ({ ...p, _id: makeId(p), _status: statuses[makeId(p)] || p.default_status || 'new' }))
     .filter(p => !dismissed[p._id])
     .filter(p => !sf || p._status === sf)
     .filter(p => !ind || `${p.industry || ''} ${p.brand || ''} ${p.gap || ''}`.toLowerCase().includes(ind))
@@ -1081,13 +1095,13 @@ function renderPipeline() {
   jobs.forEach(j => {
     const id = makeId(j);
     if (dismissed[id]) return;
-    const s = jStatuses[id] || 'new';
+    const s = jStatuses[id] || j.default_status || 'new';
     if (jByStage[s]) jByStage[s].push({ ...j, _id: id });
   });
   prospects.forEach(p => {
     const id = makeId(p);
     if (dismissed[id]) return;
-    const s = pStatuses[id] || 'new';
+    const s = pStatuses[id] || p.default_status || 'new';
     if (pByStage[s]) pByStage[s].push({ ...p, _id: id });
   });
 
@@ -1128,7 +1142,7 @@ function openModal(id, type) {
     : ['new','approved','outreach_sent','active','pass'];
 
   const statuses = type === 'job' ? LS.jobStatuses() : LS.prospectStatuses();
-  const current = statuses[id] || 'new';
+  const current = statuses[id] || item.default_status || 'new';
 
   const { subject, body } = type === 'job' ? genJobEmail(item) : genProspectEmail(item);
   const mailto = makeMailto(item.email || FROM_EMAIL, subject, body);
