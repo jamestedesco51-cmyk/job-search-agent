@@ -99,7 +99,8 @@ BAD_SIGNALS = [
     # operations / retail
     "yield manager", "revenue optimization", "store administrator",
     "store manager", "retail associate", "customer service",
-    "merchandiser", "field rep", "territory manager",
+    "merchandiser", "merchandising", "field rep", "territory manager",
+    "client success", "customer success",
     # geo filters — international only, US cities are fine
     "korea", "japan", "apac", "indonesia", "malaysia", "singapore",
     "australia", "india", "emea", "latam", "brazil", "mexico",
@@ -107,84 +108,75 @@ BAD_SIGNALS = [
     "dublin", "sydney", "tokyo", "seoul", "shanghai", "beijing",
 ]
 
+# Companies that get +5 score boost — attainable, right-sized, strong brand fit
 TARGET_COMPANIES = [
-    # gaming — publishers, studios, platforms
-    "aspyr", "midwest games", "popagenda", "riot games", "epic games",
-    "devolver digital", "annapurna interactive", "raw fury", "fellow traveller",
-    "humble games", "humble bundle", "dexerto", "fandom", "crunchyroll", "ign",
-    "2k games", "take two", "505 games", "sega", "bandai namco",
-    "focus entertainment", "plaion", "modus games", "maximum games",
-    "curve games", "team17", "private division", "tinyBuild", "neon doctrine",
-    "good shepherd", "skybound games", "nighthawk interactive",
-    "apply games", "games workshop", "gamescom", "gearbox",
-    "embracer group", "playtika", "naughty dog", "insomniac",
-    "double fine", "obsidian", "inXile", "machine games", "arkane",
-    "id software", "bethesda", "zenimax", "activision blizzard",
-    "505 games", "warhorse studios", "coffee stain", "paradox interactive",
-    "klei entertainment", "supergiant games", "motion twin",
-    "hitbox team", "thunderful", "joystick ventures",
-    # gaming media / community
-    "ign entertainment", "gamespot", "gamesradar", "kotaku", "polygon",
-    "pcgamer", "eurogamer", "rock paper shotgun", "giant bomb",
-    "hitmarker", "gamesindustry biz",
-    # dtc / consumer / food & bev
+    # gaming — indie publishers, mid-size studios
+    "aspyr", "midwest games", "devolver digital", "annapurna interactive",
+    "raw fury", "fellow traveller", "humble games", "tinybuild",
+    "good shepherd", "skybound games", "thunderful", "joystick ventures",
+    "coffee stain", "klei entertainment", "supergiant games",
+    "neon doctrine", "whitethorn games", "freedom games", "modus games",
+    "curve games", "maximum games", "nighthawk interactive",
+    "hitmarker", "gamesindustry biz", "dexerto", "fandom",
+    # dtc / food & bev — small to mid
     "fishwife", "graza", "ghia", "brightland", "fly by jing",
-    "diaspora co", "omsom", "vacation inc", "cuts clothing", "madhappy",
-    "olipop", "liquid death", "momentous", "beam", "kin euphorics",
-    "everyday dose", "heart and soil", "athletic greens", "seed health",
-    "thesis", "supergoop", "summer fridays", "touchland", "necessaire",
-    "by humankind", "blueland", "grove collaborative",
-    "jones road beauty", "ilia beauty", "tower 28",
-    "jolie", "soft services", "starface", "paulas choice",
-    "recess", "trip", "de soi", "dram", "with/co",
-    "two roots", "hiyo", "aplós", "monday gin", "lyre's",
-    "omakase berry", "snif", "french girl organics",
-    "oat haus", "party ice", "fly by jing",
-    "chomps", "epic bar", "paleovalley", "equip foods",
-    "good culture", "kite hill", "forager project",
-    "fly by jing", "somos", "siete family foods",
-    "poppi", "popfizz", "culture pop", "united sodas",
-    "ghia", "trip", "lyre",
-    # apparel / fashion / lifestyle
-    "howler brothers", "patagonia", "cotopaxi", "allbirds", "vuori",
-    "tracksmith", "satisfy running", "kith", "aimé leon dore",
-    "beams", "noah", "corridor", "rowing blazers",
-    "free label", "entireworld", "buck mason", "taylor stitch",
-    "mack weldon", "unbound merino", "james perse",
-    "rhone", "public rec", "lululemon", "outdoor voices",
-    "alo yoga", "beyond yoga", "girlfriend collective",
-    "girlfriend collective", "girlfriend collective",
-    "khaite", "toteme", "ganni", "staud", "sleeper",
-    "skims", "parade", "aerie", "cuup",
-    # mental health / wellness
-    "wondermind", "calm", "headspace", "two chairs", "cerebral",
-    "spring health", "brightside", "real", "talkspace",
-    "betterhelp", "monument", "workit health", "sober grid",
-    "done adhd", "alto pharmacy", "ahead", "noom",
-    "whoop", "oura", "levels", "eight sleep",
-    "thorne", "ritual", "care of", "seed health",
-    "hims hers", "ro health", "thirty madison",
-    # media / entertainment / editorial
-    "a24", "spotify", "substack", "axios", "the ringer",
-    "complex networks", "hypebeast", "high snobiety",
-    "vox media", "bustle digital", "puck news", "the atlantic",
-    "conde nast", "hearst", "future plc", "recurrent ventures",
-    "gallery media", "group nine", "barstool sports",
-    "meadowlark media", "uninterrupted", "togethxr",
-    "wave sports entertainment", "overtime", "loaded",
-    "nerdist", "collider", "screenrant", "cbr",
-    "dicebreaker", "tabletop gaming",
-    # creator economy / talent
-    "cameo", "patreon", "beehiiv", "ghost", "kajabi",
-    "teachable", "gumroad", "stan", "koji",
-    "pietra", "fourthwall", "creative juice",
-    "linktree", "later", "buffer", "dash hudson",
+    "diaspora co", "omsom", "vacation inc", "recess", "taika",
+    "clevr blends", "mud/wtr", "deux", "halfday", "dieux skin",
+    "kin euphorics", "everyday dose", "heart and soil",
+    "poppi", "culture pop", "united sodas", "de soi", "hiyo",
+    "chomps", "paleovalley", "good culture", "somos", "siete",
+    "snif", "oat haus", "touchland", "necessaire",
+    "jolie", "soft services", "starface", "tower 28",
+    "jones road", "ilia beauty",
+    # apparel / lifestyle — indie to mid
+    "howler brothers", "cotopaxi", "tracksmith", "corridor",
+    "rowing blazers", "buck mason", "taylor stitch", "public rec",
+    "outdoor voices", "criquet", "tecovas",
+    "satisfy running", "unbound merino",
+    # austin brands
+    "waterloo sparkling", "austin eastciders", "rambler",
+    "kendra scott", "yeti", "bumble",
+    # mental health / wellness — mid-size
+    "wondermind", "two chairs", "real", "ahead",
+    "beam organics", "momentous", "seed health",
+    # media / editorial — indie + mid
+    "a24", "substack", "axios", "the ringer", "puck news",
+    "hypebeast", "highsnobiety", "recurrent ventures",
+    "meadowlark media", "togethxr", "uninterrupted",
+    "neon", "mubi", "bleecker street",
+    # creator economy — small to mid
+    "beehiiv", "pietra", "fourthwall", "dash hudson",
+    "linktree", "later",
     # music / culture
-    "sound on sound", "festival pass", "dice fm",
-    "seated", "songkick", "bandsintown",
-    "awal", "stem", "distrokid", "unitedmasters",
-    "venice music", "empire distribution", "create music group",
-    "canary music", "amuse", "tunecore",
+    "dice fm", "unitedmasters", "venice music",
+    "awal", "create music group",
+    "popagenda",
+]
+
+# Large corps that get a -3 score penalty — not unattainable but hard and slow
+BIG_CORP_PENALTY = [
+    "google", "meta", "apple", "amazon", "microsoft", "netflix",
+    "spotify", "salesforce", "adobe", "oracle", "ibm", "intel",
+    "disney", "warner", "universal", "sony", "nintendo",
+    "activision", "blizzard", "electronic arts", "ea games", "ubisoft",
+    "take-two", "2k games", "bethesda", "zenimax",
+    "ralph lauren", "gap inc", "h&m", "zara", "lvmh", "kering",
+    "l'oreal", "unilever", "procter", "colgate", "kraft", "nestle",
+    "conagra", "pepsico", "coca-cola", "mondelez",
+    "verizon", "att", "comcast", "charter",
+    "jpmorgan", "goldman", "morgan stanley", "bank of america",
+    "united health", "cvs", "walgreens", "humana",
+    "waymo", "uber", "lyft", "doordash", "airbnb", "coinbase",
+    "linkedin", "twitter", "x corp", "snapchat", "pinterest",
+    "unity technologies", "unity software", "unity", "roblox", "riot games", "epic games",
+    "twitch", "youtube", "tiktok",
+    "conde nast", "hearst", "vox media", "buzzfeed", "bustle",
+    "barstool sports", "complex networks",
+    "lululemon", "allbirds", "vuori", "patagonia", "north face",
+    "whoop", "oura", "noom", "betterhelp", "hims", "ro health",
+    "olipop", "liquid death", "athletic greens", "ag1",
+    "calm", "headspace", "talkspace",
+    "cameo", "patreon", "kajabi", "teachable",
 ]
 
 SEARCH_QUERIES = [
@@ -361,6 +353,13 @@ def score_job(title, description="", company=""):
         if co in company.lower():
             score += 5
 
+    co_lower = company.lower().strip()
+    for co in BIG_CORP_PENALTY:
+        co_clean = co.strip()
+        # word-boundary match so "unity" doesn't hit "community", etc.
+        if re.search(r'(?<![a-z])' + re.escape(co_clean) + r'(?![a-z])', co_lower):
+            score -= 3
+
     for kw in BAD_SIGNALS:
         if kw in text:
             score -= 5
@@ -420,7 +419,7 @@ def add_job(title, company, url, date_str="", source="", description=""):
         return
     desc_clean = clean_text(description)
     score = score_job(title, desc_clean, company)
-    if score < 3:
+    if score < 4:
         return
     seen_urls.add(url)
     jobs.append({
@@ -652,43 +651,39 @@ def scrape_workable():
 def scrape_lever():
     print("  Scraping Lever career pages...")
     companies = [
-        # wellness / mental health
-        "calm", "headspace", "wondermind", "two-chairs", "cerebral",
-        "spring-health", "brightside", "real", "noom", "whoop", "levels",
-        "thorne", "ritual", "hims", "ro",
-        # dtc / food / bev
-        "graza", "cuts", "madhappy", "vacation", "olipop", "liquid-death",
-        "athletic-greens", "seed-health", "fishwife", "ghia", "brightland",
-        "fly-by-jing", "kin-euphorics", "momentous", "beam-organics",
-        "everyday-dose", "heart-and-soil", "poppi", "culture-pop",
+        # gaming — indie / mid-size (attainable)
+        "devolver-digital", "raw-fury", "annapurna-interactive",
+        "humble-games", "tinybuild", "good-shepherd", "skybound",
+        "coffee-stain", "team17", "thunderful", "whitethorn-games",
+        "freedom-games", "modus-games", "curve-games",
+        "fellow-traveller", "joystick-ventures",
+        # dtc / food & bev — small to mid
+        "graza", "fishwife", "ghia", "brightland", "fly-by-jing",
+        "everyday-dose", "heart-and-soil", "taika", "clevr",
+        "deux", "halfday", "kin-euphorics", "momentous", "beam-organics",
+        "poppi", "culture-pop", "de-soi", "hiyo", "recess",
         "chomps", "paleovalley", "good-culture", "siete-foods",
-        "touchland", "necessaire", "blueland", "grove-collaborative",
-        "jones-road-beauty", "ilia", "tower-28", "starface",
-        # lifestyle / apparel
-        "patagonia", "cotopaxi", "allbirds", "vuori", "tracksmith",
-        "outdoor-voices", "alo", "rhone", "public-rec", "buck-mason",
-        "taylor-stitch", "mack-weldon", "kith",
-        # gaming
-        "riot-games", "epic-games", "devolver-digital", "raw-fury",
-        "annapurna-interactive", "humble-games", "tinyBuild",
-        "good-shepherd", "skybound", "gearbox", "double-fine",
-        "coffee-stain", "paradox-interactive", "team17",
+        "touchland", "necessaire", "jones-road-beauty", "ilia", "tower-28",
+        "omsom", "diaspora-co", "snif",
+        # apparel / lifestyle
+        "howler-brothers", "cotopaxi", "tracksmith", "corridor",
+        "rowing-blazers", "buck-mason", "taylor-stitch", "public-rec",
+        "outdoor-voices", "criquet", "satisfy-running",
+        # wellness / mental health — mid-size only
+        "wondermind", "two-chairs", "real", "ahead", "seed-health",
+        "thorne", "ritual",
         # media / editorial
-        "a24", "spotify", "substack", "axios", "the-ringer",
-        "hypebeast", "high-snobiety", "vox-media", "puck",
-        "barstool-sports", "uninterrupted", "overtime",
+        "a24", "substack", "axios", "the-ringer", "puck",
+        "hypebeast", "highsnobiety", "uninterrupted",
+        "meadowlark-media", "togethxr", "overtime",
+        "recurrent-ventures", "mubi", "neon",
         # creator economy
-        "patreon", "cameo", "beehiiv", "later", "dash-hudson",
-        "linktree", "pietra",
-        # music
-        "unitedmasters", "awal", "distrokid", "create-music-group",
-        "venice-music",
-        # entertainment / film
-        "a24", "neon-rated", "mubi", "bleecker-street",
-        "magnolia-pictures", "focus-features",
-        # sports / culture media
-        "uninterrupted", "overtime", "meadowlark-media",
-        "barstool-sports", "complex-networks", "togethxr",
+        "beehiiv", "later", "dash-hudson", "linktree", "pietra",
+        # music / culture
+        "unitedmasters", "awal", "venice-music", "create-music-group",
+        "dice-fm",
+        # austin
+        "tecovas", "waterloo-sparkling", "criquet",
     ]
     for company in companies:
         try:
@@ -713,53 +708,41 @@ def scrape_lever():
 def scrape_greenhouse():
     print("  Scraping Greenhouse career pages...")
     companies = [
-        # gaming — major
-        "aspyr", "riotgames", "epicgames", "fandom", "crunchyroll",
-        "rawfury", "humblebundle", "devolverdigital", "tinybuild",
-        "goodshepherdentertainment", "skyboundgames", "gearbox",
-        "doublefine", "obsidian", "coffeestain", "paradoxinteractive",
-        "team17", "klei", "sega", "2k", "take-two", "505games",
-        "focusentertainment", "plaion", "maximumgames", "curvesgames",
-        "privatedinvision", "nighthawkinteractive",
-        # gaming media
-        "ign", "dexerto", "gamespot", "fandomwire",
-        # wellness / mental health
-        "calm", "headspace", "cerebral", "springhealth", "twochairs",
-        "wondermind", "noom", "whoop", "levels", "thorne", "ritual",
-        "hims", "thirty-madison", "done", "alto", "brightside",
-        "betterhelp", "talkspace", "workit",
-        # dtc / food / bev / beauty
-        "cuts", "allbirds", "vuori", "madhappy", "momentous",
-        "liquid-death", "olipop", "everyday-dose", "fishwife",
-        "touchland", "necessaire", "blueland", "graza", "ghia",
-        "jones-road", "iliabeauty", "starface", "tower28beauty",
+        # gaming — indie / mid (aspyr is Austin, great target)
+        "aspyr", "rawfury", "humblebundle", "devolverdigital", "tinybuild",
+        "goodshepherdentertainment", "skyboundgames",
+        "doublefine", "coffeestain", "klei", "505games",
+        "maximumgames", "curvesgames", "nighthawkinteractive",
+        "fandom", "dexerto",
+        # dtc / food / bev / beauty — small to mid
+        "everyday-dose", "fishwife", "touchland", "necessaire",
+        "graza", "ghia", "jones-road", "iliabeauty", "starface", "tower28beauty",
         "chomps", "siete", "good-culture", "poppi",
         "vacation", "omsom", "diasporaco", "flybyjing",
         "dieux", "softservices", "snif", "jolie",
         "clevr", "mudwtr", "taika", "deux", "halfday",
-        "cann", "wynk", "recess", "desoi", "hiyo",
-        # apparel / lifestyle
-        "howlerbros", "patagonia", "cotopaxi", "tracksmith",
-        "outdoorvoices", "aloyoga", "rhone", "publicrec",
-        "buckmason", "taylorstitch", "mackweldon", "rowingblazers",
-        "corridor", "criquet",
+        "recess", "desoi", "hiyo", "momentous",
+        "brightland",
+        # apparel / lifestyle — indie to mid
+        "howlerbros", "cotopaxi", "tracksmith",
+        "outdoorvoices", "rowingblazers", "corridor", "criquet",
+        "buckmason", "taylorstitch", "publicrec",
         # austin brands
         "tecovas", "kendrascott", "waterloosparkling",
         "austineastciders", "rambler",
-        # media / entertainment
-        "spotify", "axios", "theringer", "hypebeast", "highsnobiety",
-        "voxmedia", "substack", "a24", "neon",
-        "complexnetworks", "uninterrupted", "overtime",
-        "meadowlarkmedia", "togethxr", "puck", "bustle",
-        "recurrentventures", "gallerymedia",
+        # media / editorial — attainable
+        "axios", "theringer", "hypebeast", "highsnobiety",
+        "substack", "a24", "neon", "mubi",
+        "uninterrupted", "meadowlarkmedia", "togethxr", "puck",
+        "recurrentventures",
         # creator economy
-        "patreon", "beehiiv", "later", "dashhudson",
-        "linktree", "pietra", "fourthwall",
-        # music
-        "unitedmasters", "awal", "venice-music",
-        "createmusicgroup", "empiredistribution", "distrokid",
+        "beehiiv", "later", "dashhudson", "linktree", "pietra", "fourthwall",
+        # music / culture
+        "unitedmasters", "awal", "venice-music", "createmusicgroup",
+        # wellness — mid-size only
+        "twochairs", "wondermind", "springhealth", "thorne", "ritual",
         # experiential / events
-        "smilebooth", "experiential-supply",
+        "smilebooth",
     ]
     for company in companies:
         try:
