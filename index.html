@@ -271,6 +271,7 @@ html, body {
 }
 .outreach-type.job { background: rgba(58,90,138,0.2); color: #8aaad4; }
 .outreach-type.prospect { background: var(--accent-dim); color: var(--accent); }
+.outreach-type.agency { background: rgba(244,114,182,0.15); color: #f472b6; }
 .outreach-name { font-size: 14px; font-weight: 600; }
 .outreach-sub { font-size: 12px; color: var(--text-2); margin-top: 1px; }
 .outreach-caret { color: var(--text-3); font-size: 11px; margin-left: auto; }
@@ -422,6 +423,7 @@ html, body {
     <button class="nav-tab" data-tab="prospects" onclick="switchTab('prospects')">Consulting</button>
     <button class="nav-tab" data-tab="outreach" onclick="switchTab('outreach')">Outreach</button>
     <button class="nav-tab" data-tab="pipeline" onclick="switchTab('pipeline')">Pipeline</button>
+    <button class="nav-tab" data-tab="agencies" onclick="switchTab('agencies')">Agencies</button>
   </div>
   <div class="nav-meta" id="nav-meta">loading...</div>
   <button onclick="toggleMode()" id="mode-btn" style="background:none;border:none;cursor:pointer;padding:0 16px;color:var(--text-3);font-size:18px;border-left:1px solid var(--border)" title="Toggle light/dark">&#9788;</button>
@@ -516,10 +518,44 @@ html, body {
         <option value="">All Approved</option>
         <option value="jobs">Jobs Only</option>
         <option value="prospects">Prospects Only</option>
+        <option value="agencies">Agencies Only</option>
       </select>
       <span class="count-badge" id="outreach-count"></span>
     </div>
     <div id="outreach-list"></div>
+  </div>
+
+  <!-- AGENCIES TAB -->
+  <div id="tab-agencies" class="tab-panel">
+    <div style="margin-bottom:18px">
+      <div style="font-size:12px;color:var(--text-2);line-height:1.75;max-width:680px">
+        Boutique creative agencies, brand studios, and cultural consultancies under 50 people. Target roles: Freelance Cultural Strategist, Creative Strategist, Brand Strategist, Partnerships Strategist. Rate: $55-60/hour. Lead with their specific work. Tell the connective tissue story. Soft close.
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:12px">
+        <a href="https://workingnotworking.com" target="_blank" style="color:var(--accent);text-decoration:none">Working Not Working &rarr;</a>
+        <a href="https://contra.com" target="_blank" style="color:var(--accent);text-decoration:none">Contra &rarr;</a>
+        <a href="https://the-dots.com" target="_blank" style="color:var(--accent);text-decoration:none">The Dots &rarr;</a>
+        <a href="https://creativepool.com" target="_blank" style="color:var(--accent);text-decoration:none">Creativepool &rarr;</a>
+      </div>
+    </div>
+    <div class="toolbar">
+      <input type="text" class="search-input" id="agencies-search" placeholder="Search agencies, studios, cities, types..." oninput="renderAgencies()">
+      <select class="filter-select" id="agencies-status" onchange="renderAgencies()">
+        <option value="">All Statuses</option>
+        <option value="new">New</option>
+        <option value="approved">Approved</option>
+        <option value="outreach_sent">Outreach Sent</option>
+        <option value="active">Active</option>
+        <option value="pass">Pass</option>
+      </select>
+      <select class="filter-select" id="agencies-location" onchange="renderAgencies()">
+        <option value="">All Locations</option>
+        <option value="Austin">Austin</option>
+        <option value="Remote">Remote</option>
+      </select>
+      <span class="count-badge" id="agencies-count"></span>
+    </div>
+    <div class="card-grid" id="agencies-list"></div>
   </div>
 
   <!-- PIPELINE TAB -->
@@ -600,6 +636,7 @@ function detectBucket(title, description) {
 // ─────────────────────────────────────────
 let jobs = [];
 let prospects = [];
+let agencies = [];
 let currentTab = 'jobs';
 const _emailCache = {};
 const _metaCache = {};
@@ -613,6 +650,8 @@ const LS = {
   dismissed: () => LS.get('jt_dismissed'),
   setJobStatus: (id, s) => { const d = LS.jobStatuses(); d[id] = s; LS.set('jt_job_statuses', d); },
   setProspectStatus: (id, s) => { const d = LS.prospectStatuses(); d[id] = s; LS.set('jt_prospect_statuses', d); },
+  agencyStatuses: () => LS.get('jt_agency_statuses'),
+  setAgencyStatus: (id, s) => { const d = LS.agencyStatuses(); d[id] = s; LS.set('jt_agency_statuses', d); },
   dismiss: (id) => { const d = LS.dismissed(); d[id] = true; LS.set('jt_dismissed', d); },
 };
 
@@ -778,6 +817,67 @@ linkedin.com/in/james-tedesco`;
   return { subject, body };
 }
 
+// ─────────────────────────────────────────
+// AGENCY EMAIL GENERATION
+// ─────────────────────────────────────────
+const AGENCY_VOICE = {
+  'red antler': "Red Antler's work on Casper and Allbirds is still the benchmark for how consumer brand positioning should work. Going from zero brand equity to category-defining in a compressed window is genuinely hard and they've done it more than once.",
+  'mythology': "Mythology's brand work has a cultural intelligence behind it that most studios don't have. The way they approach identity for premium consumer brands sets a different standard than what most positioning work produces.",
+  'humanaut': "Humanaut's work for Oatly is a case study in how to make a niche product feel inevitable to a mainstream audience. Holding a strong POV while making it accessible is exactly what the best brand work does.",
+  'dazed studio': "Dazed has built something genuinely rare: a media brand with real cultural authority that translates directly into commercial strategy work for brands. The studio side is the logical and credible extension of that.",
+  'preacher': "Preacher's Austin positioning gives them something most creative shops don't have: a genuine sense of place and the cultural credibility that comes with it. The work reflects that in a way that shows up on the page.",
+  'mcgarrah jessee': "McGarrah Jessee has built an exceptional track record of craft-led brand work out of Austin. The commitment to quality over volume is evident in everything they put out and it's held up for a long time.",
+  'and rising': "And Rising's creative capital model is the right framework for how serious creative work should function. The projects reflect a genuine POV rather than a service-delivery mentality.",
+  'bullish': "Bullish operates at the intersection of brand strategy and consumer investment in a way that creates a genuinely different kind of brief. The brands they work with are the right ones and the thinking behind the work shows it.",
+  'canvas8': "Canvas8 has built a library of cultural intelligence that most trend consultancies don't come close to. The way they connect consumer insight to brand action is the right methodology and the research reflects real fluency.",
+  'sparks & honey': "Sparks & Honey has a cultural foresight methodology that goes deeper than most trend research. Connecting emerging signals to brand strategy at the scale they operate is exactly what brands need and rarely find.",
+  'quality meats': "Quality Meats has a pop culture intelligence that shows up in the work in a way that feels earned rather than performed. The brand fluency is real and the output reflects it.",
+  'sibling rivalry': "Sibling Rivalry's editorial sensibility separates them from most creative studios. The work has a genuine cultural POV that isn't manufactured from a brief, it comes through in the execution.",
+  'hecho': "Hecho's focus on cultural brands and multicultural audiences addresses something most agencies still get wrong. The specificity of their positioning is a genuine strength in a space where most work is generic.",
+  'franklyn': "Franklyn's brand work has a precision that comes from real restraint. Finding the right frame and not overselling it is genuinely hard to do consistently and they do it.",
+  'oddfellows': "Oddfellows has a motion and brand voice that's immediately recognizable. The quality of execution is high and the brand clients reflect a real curation rather than just whoever is paying.",
+  'gretel': "Gretel's work for Netflix and HBO set a standard for entertainment brand identity that still holds. The selectivity of the studio means every project gets real attention and it shows in the output.",
+  'cassette': "Cassette's approach to cultural strategy is built on the kind of genuine cultural fluency that most strategy shops talk about but rarely demonstrate when you look at the actual work.",
+  'mythology': "Mythology's brand work has a cultural intelligence behind it that most studios don't have. The way they approach identity for premium consumer brands sets a different standard.",
+  'humanaut': "Humanaut's work for Oatly is a case study in how to make a niche product feel inevitable. Holding a strong POV while making it accessible is exactly what the best brand work does.",
+};
+
+function getAgencyObservation(agencyName) {
+  const key = (agencyName || '').toLowerCase();
+  for (const [k, v] of Object.entries(AGENCY_VOICE)) {
+    if (key.includes(k)) return v;
+  }
+  return `${agencyName}'s work has a specific cultural intelligence behind it that I genuinely respect.`;
+}
+
+function genAgencyEmail(agency) {
+  const name = agency.name || 'your team';
+  const obs = getAgencyObservation(name);
+  const subject = `Freelance inquiry / ${name} / James Tedesco`;
+  const body = `Hi team,
+
+${obs}
+
+I work across creative, strategy, and commercial infrastructure simultaneously. At Fandom I started in audience data, saw the commercial gap, and built a full brand partnerships program on top — Sony Santa Monica, CD Projekt Red, Deep Silver, 15+ campaigns a month. At Sunday Scaries I spotted a cultural signal, turned it into a product collab concept, directed the product, wrote the copy, and ran the launch end to end across six co-branded products. At Opulist I connected editorial content to commercial infrastructure and closed $50K from zero in the first two quarters.
+
+I'm not a designer. I'm the person who makes the whole thing make sense and generate revenue. I move between data, creative, strategy, and commercial and translate between them.
+
+I'd love to be on your radar for freelance or project work — cultural strategy, brand strategy, partnerships, or whatever the right brief is. Rate is $55-60/hour.
+
+Work: jmt115.cargo.site
+LinkedIn: linkedin.com/in/james-tedesco
+
+James Tedesco`;
+  return { subject, body };
+}
+
+function genAgencyLinkedInNote(agency) {
+  const obs = getAgencyObservation(agency.name || '');
+  const firstLine = obs.split('.')[0].trim() + '.';
+  const note = `${firstLine} I work across creative, strategy, and commercial simultaneously. Would love to be on your freelance radar for cultural strategy or brand work. Happy to send context.`;
+  return note.slice(0, 300);
+}
+
 function makeMailto(to, subject, body) {
   return `mailto:${encodeURIComponent(to || '')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
@@ -798,6 +898,7 @@ function switchTab(tab) {
 function render() {
   if (currentTab === 'jobs') renderJobs();
   else if (currentTab === 'prospects') renderProspects();
+  else if (currentTab === 'agencies') renderAgencies();
   else if (currentTab === 'outreach') renderOutreach();
   else if (currentTab === 'pipeline') renderPipeline();
 }
@@ -970,6 +1071,123 @@ function setProspectStatus(id, s) {
 }
 
 // ─────────────────────────────────────────
+// AGENCIES TAB
+// ─────────────────────────────────────────
+function renderAgencies() {
+  const statuses = LS.agencyStatuses();
+  const dismissed = LS.dismissed();
+  const q = (document.getElementById('agencies-search').value || '').toLowerCase();
+  const sf = document.getElementById('agencies-status').value;
+  const lt = document.getElementById('agencies-location').value;
+
+  let list = agencies
+    .map(a => ({ ...a, _id: a.id || ('ag_' + (a.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')), _status: '' }))
+    .map(a => ({ ...a, _status: statuses[a._id] || a.default_status || 'new' }))
+    .filter(a => !dismissed[a._id])
+    .filter(a => !sf || a._status === sf)
+    .filter(a => !lt || a.location_type === lt)
+    .filter(a => !q || `${a.name} ${a.type || ''} ${a.city || ''} ${a.focus || ''} ${a.why_relevant || ''}`.toLowerCase().includes(q));
+
+  list.sort((a, b) => (b.score || 0) - (a.score || 0));
+
+  document.getElementById('agencies-count').textContent = `${list.length} agenc${list.length !== 1 ? 'ies' : 'y'}`;
+  const el = document.getElementById('agencies-list');
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">No agencies match</div>Adjust filters.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(agency => {
+    const eid = agency._id + '_ag';
+    const { subject, body } = genAgencyEmail(agency);
+    _emailCache[eid] = { subject, body, type: 'agency' };
+    const mailto = makeMailto(FROM_EMAIL, subject, body);
+    const liNote = genAgencyLinkedInNote(agency);
+    _emailCache[eid + '_li'] = { subject: 'LinkedIn note', body: liNote, type: 'agency' };
+
+    const { label: sl, cls: sc } = scoreMeta(agency.score || 5);
+
+    const locationBadge = agency.location_type === 'Austin'
+      ? `<span class="badge badge-source" style="background:rgba(201,169,110,.18);color:var(--accent)">📍 Austin</span>`
+      : `<span class="badge badge-source" style="background:rgba(74,154,106,.12);color:#7abf9a">🌐 Remote-friendly</span>`;
+
+    const platforms = (agency.platforms || []).map(p =>
+      `<span class="badge badge-source">${escH(p)}</span>`
+    ).join(' ');
+
+    const liNoteLen = liNote.length;
+
+    return `<div class="card">
+  <div class="card-header">
+    <div style="flex:1;min-width:0">
+      <div class="card-title">${agency.website ? `<a href="${escH(agency.website)}" target="_blank">${escH(agency.name)}</a>` : escH(agency.name)}</div>
+      <div class="card-subtitle">${escH(agency.type || '')} &middot; ${escH(agency.city || '')}</div>
+    </div>
+    <span class="badge badge-${sc}" style="flex-shrink:0">${sl}</span>
+  </div>
+  ${agency.focus ? `<div class="card-desc">${escH(agency.focus)}</div>` : ''}
+  ${agency.why_relevant ? `<div class="card-gap">${escH(agency.why_relevant)}</div>` : ''}
+  <div class="card-links">
+    ${agency.website ? `<a class="card-link" href="${escH(agency.website)}" target="_blank">Website &rarr;</a>` : ''}
+    ${agency.linkedin ? `<a class="card-link" href="${escH(agency.linkedin)}" target="_blank">LinkedIn &rarr;</a>` : ''}
+    ${agency.instagram ? `<a class="card-link" href="${escH(agency.instagram)}" target="_blank">Instagram &rarr;</a>` : ''}
+  </div>
+  <div class="card-meta">
+    ${statusBadge(agency._status)}
+    ${locationBadge}
+    ${platforms}
+  </div>
+  <div class="card-actions" style="flex-direction:column;align-items:flex-start;gap:10px">
+    <div style="display:flex;gap:7px;flex-wrap:wrap;width:100%">
+      ${agency._status === 'new' ? `<button class="btn btn-primary" onclick="setAgencyStatus('${agency._id}','approved')">Approve</button>` : ''}
+      <select class="status-select" onchange="setAgencyStatus('${agency._id}',this.value);this.value=''">
+        <option value="">Move to&hellip;</option>
+        <option value="new">New</option>
+        <option value="approved">Approved</option>
+        <option value="outreach_sent">Outreach Sent</option>
+        <option value="active">Active</option>
+        <option value="pass">Pass</option>
+      </select>
+      <button class="btn btn-danger" onclick="dismissId('${agency._id}')">Dismiss</button>
+    </div>
+    <div class="outreach-drafts-tabs" style="margin-bottom:0;width:100%">
+      <button class="draft-tab active" onclick="switchDraftTab('${eid}','main',this)">Outreach Email</button>
+      <button class="draft-tab" onclick="switchDraftTab('${eid}','li',this)">LinkedIn Note</button>
+    </div>
+    <div id="draft-main-${eid}" style="width:100%">
+      <div class="email-preview">
+        <div class="email-subject">Subject: ${escH(subject)}</div>
+        <div class="email-body" style="max-height:160px;overflow-y:auto">${escH(body)}</div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <a class="btn btn-primary" href="${mailto}">Open in Mail</a>
+        <button class="btn" onclick="copyBody('${eid}')">Copy Body</button>
+        <button class="btn" onclick="setAgencyStatus('${agency._id}','outreach_sent')">Mark Sent</button>
+      </div>
+    </div>
+    <div id="draft-li-${eid}" style="display:none;width:100%">
+      <div class="email-preview">
+        <div class="email-subject" style="color:var(--text-3);font-size:11px">LinkedIn connection note (300 char max)</div>
+        <div class="email-body" style="font-size:13px">${escH(liNote)}</div>
+        <div style="font-size:11px;color:var(--text-3);margin-top:6px">${liNoteLen}/300 chars</div>
+      </div>
+      <div style="margin-top:8px">
+        <button class="btn btn-primary" onclick="copyBody('${eid}_li')">Copy Note</button>
+      </div>
+    </div>
+  </div>
+</div>`;
+  }).join('');
+}
+
+function setAgencyStatus(id, s) {
+  if (!s) return;
+  LS.setAgencyStatus(id, s);
+  render();
+}
+
+// ─────────────────────────────────────────
 // OUTREACH TAB
 // ─────────────────────────────────────────
 function renderOutreach() {
@@ -978,17 +1196,24 @@ function renderOutreach() {
   const dismissed = LS.dismissed();
   const filter = document.getElementById('outreach-filter').value;
 
-  const approvedJobs = filter !== 'prospects'
+  const aStatuses = LS.agencyStatuses();
+
+  const approvedJobs = (filter === '' || filter === 'jobs')
     ? jobs.map(j => ({ ...j, _id: makeId(j), _type: 'job' }))
         .filter(j => !dismissed[j._id] && (jStatuses[j._id] || 'new') === 'approved')
     : [];
 
-  const approvedProspects = filter !== 'jobs'
+  const approvedProspects = (filter === '' || filter === 'prospects')
     ? prospects.map(p => ({ ...p, _id: makeId(p), _type: 'prospect' }))
         .filter(p => !dismissed[p._id] && (pStatuses[p._id] || 'new') === 'approved')
     : [];
 
-  const all = [...approvedJobs, ...approvedProspects];
+  const approvedAgencies = (filter === '' || filter === 'agencies')
+    ? agencies.map(a => ({ ...a, _id: a.id || ('ag_' + (a.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')), _type: 'agency' }))
+        .filter(a => !dismissed[a._id] && (aStatuses[a._id] || 'new') === 'approved')
+    : [];
+
+  const all = [...approvedJobs, ...approvedProspects, ...approvedAgencies];
   document.getElementById('outreach-count').textContent = `${all.length} in queue`;
   const el = document.getElementById('outreach-list');
 
@@ -999,7 +1224,8 @@ function renderOutreach() {
 
   el.innerHTML = all.map(item => {
     const isJob = item._type === 'job';
-    const primary = isJob ? genJobEmail(item) : genProspectEmail(item);
+    const isAgency = item._type === 'agency';
+    const primary = isJob ? genJobEmail(item) : (isAgency ? genAgencyEmail(item) : genProspectEmail(item));
     const eid = item._id + '_out';
     _emailCache[eid] = { ...primary, type: item._type };
 
@@ -1010,16 +1236,16 @@ function renderOutreach() {
       const fu = genFollowUpEmail(item);
       _emailCache[followUpId] = { ...fu, type: 'job' };
     }
-    const liNote = genLinkedInNote(item);
+    const liNote = isAgency ? genAgencyLinkedInNote(item) : genLinkedInNote(item);
     _emailCache[liId] = { subject: 'LinkedIn note', body: liNote, type: item._type };
 
     const to = item.email || FROM_EMAIL;
     const mailto = makeMailto(to, primary.subject, primary.body);
-    const name = isJob ? item.title : item.brand;
-    const sub = isJob ? item.company : (item.contact || item.founder || '');
+    const name = isJob ? item.title : (isAgency ? item.name : item.brand);
+    const sub = isJob ? item.company : (isAgency ? item.type : (item.contact || item.founder || ''));
     return `<div class="outreach-item">
   <div class="outreach-header" onclick="toggleOutreach('${eid}')">
-    <span class="outreach-type ${item._type}">${isJob ? 'Job' : 'Prospect'}</span>
+    <span class="outreach-type ${item._type}">${isJob ? 'Job' : (isAgency ? 'Agency' : 'Prospect')}</span>
     <div style="flex:1;min-width:0">
       <div class="outreach-name">${escH(name)}</div>
       <div class="outreach-sub">${escH(sub)}</div>
@@ -1106,6 +1332,7 @@ function markSent(eid) {
   // Extract real item id from cache key (strip _out suffix)
   const id = eid.replace(/_out$/, '');
   if (cached.type === 'job') LS.setJobStatus(id, 'outreach_sent');
+  else if (cached.type === 'agency') LS.setAgencyStatus(id, 'outreach_sent');
   else LS.setProspectStatus(id, 'outreach_sent');
   render();
 }
@@ -1269,6 +1496,17 @@ function escH(str) {
 }
 
 // ─────────────────────────────────────────
+// SAMPLE AGENCY DATA (fallback when agencies.json unavailable)
+// ─────────────────────────────────────────
+const SAMPLE_AGENCIES = [
+  { id:"red-antler", name:"Red Antler", city:"New York, NY", location_type:"Remote", type:"Brand Studio", size:"20-50", focus:"Consumer startup brand studio. Behind Casper, Allbirds, Hims. Actively brings in freelance talent.", why_relevant:"Primary target. Actively uses freelancers. Consumer startups is the terrain. Working Not Working is the entry point.", website:"https://redantler.com", linkedin:"https://www.linkedin.com/company/red-antler/", platforms:["Working Not Working","Direct outreach"], score:9 },
+  { id:"dazed-studio", name:"Dazed Studio", city:"London, UK", location_type:"Remote", type:"Cultural Strategy Studio", size:"under 50", focus:"Creative and cultural strategy studio from Dazed Media. Maintains a freelance network of cultural strategists.", why_relevant:"Explicitly maintains a freelance network. Cultural strategy is the exact brief.", website:"https://dazedstudio.com", linkedin:"https://www.linkedin.com/company/dazed-media/", platforms:["Direct outreach","The Dots","Working Not Working"], score:9 },
+  { id:"mythology", name:"Mythology", city:"New York, NY", location_type:"Remote", type:"Brand Studio", size:"under 20", focus:"Brand studio with a strong cultural POV. Premium consumer brand work with genuine strategic depth.", why_relevant:"Cultural brand work with strategic rigor is the exact overlap. Project relationships are the entry point.", website:"https://wearemythology.com", platforms:["Working Not Working","Direct outreach"], score:8 },
+  { id:"humanaut", name:"Humanaut", city:"Chattanooga, TN", location_type:"Remote", type:"Creative Agency", size:"20-50", focus:"Fully remote-friendly creative agency. Purpose-led brands. Known for Oatly, Athletic Greens.", why_relevant:"Fully remote friendly. Purpose-led consumer brands in wellness is James's terrain. Actively uses freelancers.", website:"https://humanaut.com", platforms:["Working Not Working","Contra","Direct outreach"], score:8 },
+  { id:"preacher", name:"Preacher", city:"Austin, TX", location_type:"Austin", type:"Creative Agency", size:"20-50", focus:"Full-service creative and brand agency. Austin-based. Challenger brands and cultural storytelling.", why_relevant:"Austin-based means in-person relationship building. Right size for a fractional operator to matter.", website:"https://preacher.co", platforms:["Direct outreach","Working Not Working"], score:8 }
+];
+
+// ─────────────────────────────────────────
 // SAMPLE DATA (used when JSON files unavailable)
 // ─────────────────────────────────────────
 const SAMPLE_JOBS = [
@@ -1301,7 +1539,7 @@ async function init() {
   if (!pStatuses['opulist-active']) LS.setProspectStatus('opulist-active', 'active');
   if (!pStatuses['indieio-active']) LS.setProspectStatus('indieio-active', 'active');
 
-  let jobsLoaded = false, prospectsLoaded = false;
+  let jobsLoaded = false, prospectsLoaded = false, agenciesLoaded = false;
 
   try {
     const r = await fetch('jobs.json');
@@ -1313,8 +1551,14 @@ async function init() {
     if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { prospects = d; prospectsLoaded = true; } }
   } catch {}
 
+  try {
+    const r = await fetch('agencies.json');
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { agencies = d; agenciesLoaded = true; } }
+  } catch {}
+
   if (!jobsLoaded) jobs = SAMPLE_JOBS;
   if (!prospectsLoaded) prospects = SAMPLE_PROSPECTS;
+  if (!agenciesLoaded) agencies = SAMPLE_AGENCIES;
 
   // Pre-set active clients if they appear in fetched data
   prospects.forEach(p => {
@@ -1336,7 +1580,7 @@ async function init() {
 
   if (!metaStr) {
     const today = new Date().toLocaleDateString('en-US', { month:'short', day:'numeric' });
-    metaStr = `${today} &middot; ${jobs.length} roles &middot; ${prospects.length} prospects`;
+    metaStr = `${today} &middot; ${jobs.length} roles &middot; ${prospects.length} prospects &middot; ${agencies.length} agencies`;
   }
   document.getElementById('nav-meta').innerHTML = metaStr;
 

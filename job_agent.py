@@ -1800,6 +1800,139 @@ def seed_known_prospects():
         notes="Ventura CA HQ but operates globally — strong values fit",
     )
 
+def seed_known_agencies():
+    """Return the curated list of boutique creative agencies for James to target."""
+    return [
+        # ── Austin ────────────────────────────────────────────────
+        {"id":"preacher","name":"Preacher","city":"Austin, TX","location_type":"Austin","type":"Creative Agency","size":"20-50",
+         "focus":"Full-service creative and brand agency. Austin-based. Challenger brands and cultural storytelling.",
+         "why_relevant":"Austin-based means in-person relationship building. Right size for a fractional operator to matter.",
+         "website":"https://preacher.co","linkedin":"https://www.linkedin.com/company/preacher-co/","instagram":"",
+         "platforms":["Direct outreach","Working Not Working"],"score":8},
+        {"id":"mcgarrah-jessee","name":"McGarrah Jessee","city":"Austin, TX","location_type":"Austin","type":"Creative Agency","size":"20-50",
+         "focus":"Craft-first independent creative agency. Austin-based. Known for brand storytelling and quality over volume.",
+         "why_relevant":"Local Austin agency with a long track record. Freelance or project-basis entry point.",
+         "website":"https://mcgarrahjessee.com","linkedin":"https://www.linkedin.com/company/mcgarrah-jessee/","instagram":"",
+         "platforms":["Direct outreach"],"score":7},
+        {"id":"sunday-afternoon","name":"Sunday Afternoon","city":"Austin, TX","location_type":"Austin","type":"Brand Studio","size":"under 20",
+         "focus":"Small brand studio, Austin. Consumer-focused, design-led.",
+         "why_relevant":"Austin-based. Very small means every person matters and project relationships are the norm.",
+         "website":"https://sundayafternoon.studio","linkedin":"","instagram":"",
+         "platforms":["Direct outreach"],"score":7},
+        # ── National boutiques (remote-friendly, under 50) ────────
+        {"id":"red-antler","name":"Red Antler","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"20-50",
+         "focus":"Consumer startup brand studio. Behind Casper, Allbirds, Hims. Actively brings in freelance talent on a project basis.",
+         "why_relevant":"Primary target. Actively uses freelancers. Consumer startups is exactly the terrain. Working Not Working is the entry point.",
+         "website":"https://redantler.com","linkedin":"https://www.linkedin.com/company/red-antler/","instagram":"https://instagram.com/redantler",
+         "platforms":["Working Not Working","Direct outreach"],"score":9},
+        {"id":"mythology","name":"Mythology","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"under 20",
+         "focus":"Brand studio with a strong cultural POV. NYC-based. Premium consumer brand work with genuine strategic depth.",
+         "why_relevant":"Cultural brand work with strategic rigor is the exact overlap. Project relationships are the entry point.",
+         "website":"https://wearemythology.com","linkedin":"https://www.linkedin.com/company/mythology/","instagram":"https://instagram.com/wearemythology",
+         "platforms":["Working Not Working","Direct outreach"],"score":8},
+        {"id":"humanaut","name":"Humanaut","city":"Chattanooga, TN","location_type":"Remote","type":"Creative Agency","size":"20-50",
+         "focus":"Fully remote-friendly creative agency. Purpose-led brands. Known for Oatly, Athletic Greens.",
+         "why_relevant":"Fully remote friendly. Purpose-led consumer brands in wellness is James's terrain. Actively uses freelancers.",
+         "website":"https://humanaut.com","linkedin":"https://www.linkedin.com/company/humanaut/","instagram":"https://instagram.com/humanaut",
+         "platforms":["Working Not Working","Contra","Direct outreach"],"score":8},
+        {"id":"established","name":"Established","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"under 20",
+         "focus":"Brand studio focused on consumer brands. NYC-based. Small team that brings in project talent.",
+         "why_relevant":"Consumer brand focus. Small enough that a strong freelancer gets real work.",
+         "website":"https://weareestablished.com","linkedin":"","instagram":"",
+         "platforms":["Working Not Working","Direct outreach"],"score":7},
+        {"id":"quality-meats","name":"Quality Meats","city":"New York, NY","location_type":"Remote","type":"Creative Studio","size":"under 20",
+         "focus":"Boutique creative studio. Pop culture-savvy, brand-forward work. NYC.",
+         "why_relevant":"Pop culture and brand work is the right intersection. Small studio means project work is the primary model.",
+         "website":"https://qualitymeats.nyc","linkedin":"","instagram":"https://instagram.com/qualitymeatsnyc",
+         "platforms":["Working Not Working","Direct outreach"],"score":7},
+        {"id":"oddfellows","name":"Oddfellows","city":"Portland, OR","location_type":"Remote","type":"Creative Studio","size":"20-50",
+         "focus":"Motion and brand studio. Remote-friendly. Known for animated brand work and cultural clients.",
+         "why_relevant":"Remote-friendly. Brand and cultural work is the overlap. Strategy and partnerships framing is the entry point.",
+         "website":"https://oddfellows.tv","linkedin":"https://www.linkedin.com/company/oddfellows/","instagram":"https://instagram.com/oddfellows",
+         "platforms":["Working Not Working","Direct outreach"],"score":7},
+        {"id":"franklyn","name":"Franklyn","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"under 20",
+         "focus":"Small brand studio, NYC. Craft and identity-focused. Selective client roster.",
+         "why_relevant":"Small studio means every relationship matters. Brand and cultural work. Project-based model.",
+         "website":"https://franklyn.co","linkedin":"","instagram":"https://instagram.com/franklyn.co",
+         "platforms":["Direct outreach","Working Not Working"],"score":7},
+        {"id":"athletics","name":"Athletics","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"under 20",
+         "focus":"Brand studio known for consumer and cultural brand work. NYC-based.",
+         "why_relevant":"Consumer and cultural brand focus is the right lane. Small studio model.",
+         "website":"https://athletics.nyc","linkedin":"","instagram":"https://instagram.com/athletics.nyc",
+         "platforms":["Direct outreach","Working Not Working"],"score":7},
+        {"id":"gretel","name":"Gretel","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"under 20",
+         "focus":"Highly selective small brand studio, NYC. Known for Netflix, HBO, high-end cultural clients.",
+         "why_relevant":"Selective but prestigious. Cultural and entertainment focus is right. Media and brand fluency matters here.",
+         "website":"https://gretelny.com","linkedin":"","instagram":"https://instagram.com/gretel_ny",
+         "platforms":["Direct outreach"],"score":6},
+        {"id":"focus-lab","name":"Focus Lab","city":"Remote","location_type":"Remote","type":"Brand Studio","size":"under 50",
+         "focus":"Remote-first brand and design studio. Growing into consumer brand territory. Strong freelance network.",
+         "why_relevant":"Remote-first means accessibility. Growing into consumer brand territory is the window.",
+         "website":"https://focuslabllc.com","linkedin":"https://www.linkedin.com/company/focus-lab/","instagram":"",
+         "platforms":["Working Not Working","Direct outreach"],"score":6},
+        {"id":"sibling-rivalry","name":"Sibling Rivalry","city":"New York, NY","location_type":"Remote","type":"Creative Studio","size":"under 20",
+         "focus":"Small creative studio. Known for editorial and cultural brand work with a strong visual and conceptual POV.",
+         "why_relevant":"Editorial and cultural work is exactly the overlap. Small enough for project relationships to be meaningful.",
+         "website":"https://siblingrivalry.studio","linkedin":"","instagram":"https://instagram.com/siblingrivalry",
+         "platforms":["Direct outreach","Working Not Working"],"score":7},
+        {"id":"hecho","name":"Hecho","city":"New York, NY","location_type":"Remote","type":"Boutique Agency","size":"under 20",
+         "focus":"Boutique agency focused on cultural brands and multicultural audiences.",
+         "why_relevant":"Cultural brand focus is the exact intersection. Boutique means relationships matter.",
+         "website":"https://hechoagency.com","linkedin":"","instagram":"",
+         "platforms":["Direct outreach"],"score":7},
+        {"id":"heroes-ghosts","name":"Heroes & Ghosts","city":"New York, NY","location_type":"Remote","type":"Creative Studio","size":"under 20",
+         "focus":"Small creative studio. Brand and cultural work with a consumer focus.",
+         "why_relevant":"Consumer brand and cultural work. Small studio model means project relationships are how they grow.",
+         "website":"https://heroesandghosts.com","linkedin":"","instagram":"",
+         "platforms":["Direct outreach","Working Not Working"],"score":7},
+        {"id":"and-rising","name":"And Rising","city":"Los Angeles, CA","location_type":"Remote","type":"Creative Studio","size":"under 20",
+         "focus":"LA-based creative studio, remote-friendly. Creative capital model. Consumer and cultural brand focus.",
+         "why_relevant":"Remote-friendly. The creative capital model means freelance relationships are built into how they operate.",
+         "website":"https://andrising.com","linkedin":"","instagram":"https://instagram.com/andrising",
+         "platforms":["Direct outreach","Working Not Working"],"score":8},
+        {"id":"bullish","name":"Bullish","city":"New York, NY","location_type":"Remote","type":"Agency / Venture Hybrid","size":"under 50",
+         "focus":"Hybrid creative agency and consumer brand venture. Works with emerging consumer brands at the intersection of strategy and investment.",
+         "why_relevant":"Consumer brand focus at the strategy and commercial layer is exactly the overlap. Hybrid model means diverse briefs.",
+         "website":"https://bullish.studio","linkedin":"https://www.linkedin.com/company/bullish-inc/","instagram":"",
+         "platforms":["Direct outreach","Working Not Working"],"score":8},
+        {"id":"teak","name":"Teak","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"under 20",
+         "focus":"Small brand studio. Consumer brand and strategy focus.",
+         "why_relevant":"Small enough for a meaningful project relationship. Consumer brand and strategy focus.",
+         "website":"https://teak.studio","linkedin":"","instagram":"",
+         "platforms":["Direct outreach"],"score":6},
+        {"id":"superhero-cheesecake","name":"Superhero Cheesecake","city":"New York, NY","location_type":"Remote","type":"Creative Studio","size":"under 20",
+         "focus":"Boutique NYC creative studio. Brand and cultural work.",
+         "why_relevant":"Cultural and brand work at boutique scale. Project-based model.",
+         "website":"https://superheroesc.com","linkedin":"","instagram":"",
+         "platforms":["Direct outreach","Working Not Working"],"score":6},
+        {"id":"waterfall","name":"Waterfall","city":"New York, NY","location_type":"Remote","type":"Brand & Strategy Studio","size":"under 20",
+         "focus":"Small brand and strategy studio. Consumer and cultural focus.",
+         "why_relevant":"Brand and strategy studio is the exact overlap. Small means project relationships matter.",
+         "website":"https://waterfall.is","linkedin":"","instagram":"",
+         "platforms":["Direct outreach"],"score":7},
+        # ── Cultural strategy boutiques ───────────────────────────
+        {"id":"dazed-studio","name":"Dazed Studio","city":"London, UK","location_type":"Remote","type":"Cultural Strategy Studio","size":"under 50",
+         "focus":"Creative and cultural strategy studio from Dazed Media. Maintains a freelance network of cultural strategists and creatives. Remote-friendly.",
+         "why_relevant":"Explicitly maintains a freelance network. Cultural strategy is the exact brief. The connective tissue story maps directly.",
+         "website":"https://dazedstudio.com","linkedin":"https://www.linkedin.com/company/dazed-media/","instagram":"https://instagram.com/dazedstudio",
+         "platforms":["Direct outreach","The Dots","Working Not Working"],"score":9},
+        {"id":"cassette","name":"Cassette","city":"Remote","location_type":"Remote","type":"Cultural Strategy","size":"under 20",
+         "focus":"Cultural strategy consultancy. Works with brands on cultural insight, trend intelligence, and positioning.",
+         "why_relevant":"Cultural strategy is the direct overlap. Boutique consultancy model means project relationships are the norm.",
+         "website":"https://cassette.is","linkedin":"","instagram":"",
+         "platforms":["Direct outreach"],"score":8},
+        {"id":"canvas8","name":"Canvas8","city":"London, UK","location_type":"Remote","type":"Cultural Intelligence","size":"20-50",
+         "focus":"Cultural intelligence and consumer insight firm. Publishes research, works with global brands on audience and trend strategy. Maintains a contributor network.",
+         "why_relevant":"Cultural and consumer intelligence is the direct overlap. Maintains a contributor and freelance network.",
+         "website":"https://canvas8.com","linkedin":"https://www.linkedin.com/company/canvas8/","instagram":"",
+         "platforms":["Direct outreach","Working Not Working"],"score":8},
+        {"id":"sparks-honey","name":"Sparks & Honey","city":"New York, NY","location_type":"Remote","type":"Cultural Intelligence","size":"20-50",
+         "focus":"Cultural intelligence and trend strategy consultancy. Works with large brands on cultural foresight and consumer insight.",
+         "why_relevant":"Cultural intelligence is the exact through line. The connective tissue story maps directly to what they sell.",
+         "website":"https://sparksandhoney.com","linkedin":"https://www.linkedin.com/company/sparks-honey/","instagram":"",
+         "platforms":["Direct outreach","Working Not Working"],"score":8},
+    ]
+
 def scrape_product_hunt_prospects():
     """Scrape Product Hunt for recent DTC/lifestyle/gaming launches."""
     print("  Scraping Product Hunt for prospects...")
@@ -1912,6 +2045,9 @@ seed_known_prospects()
 scrape_product_hunt_prospects()
 scrape_words_of_mouth()
 
+# Agencies are a static curated list — no scraping needed
+known_agencies = seed_known_agencies()
+
 prospects.sort(key=lambda x: x["score"], reverse=True)
 
 # Contact enrichment for prospects (Hunter.io)
@@ -1945,12 +2081,18 @@ with open(prospects_path, "w") as f:
     json.dump(prospects, f, indent=2)
 print(f"Wrote {len(prospects)} prospects  ->  {prospects_path}")
 
+agencies_path = os.path.join(OUTPUT_DIR, "agencies.json")
+with open(agencies_path, "w") as f:
+    json.dump(known_agencies, f, indent=2)
+print(f"Wrote {len(known_agencies)} agencies  ->  {agencies_path}")
+
 meta_path = os.path.join(OUTPUT_DIR, "meta.json")
 with open(meta_path, "w") as f:
     json.dump({
         "updated_at": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
         "jobs": len(top_jobs),
         "prospects": len(prospects),
+        "agencies": len(known_agencies),
     }, f, indent=2)
 print(f"Wrote meta  ->  {meta_path}")
 
