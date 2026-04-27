@@ -272,6 +272,16 @@ html, body {
 .outreach-type.job { background: rgba(58,90,138,0.2); color: #8aaad4; }
 .outreach-type.prospect { background: var(--accent-dim); color: var(--accent); }
 .outreach-type.agency { background: rgba(244,114,182,0.15); color: #f472b6; }
+
+/* RE-ENGAGE TAB */
+.re-mode-badge { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; }
+.re-mode-no-reply { background: rgba(58,90,138,0.2); color: #8aaad4; }
+.re-mode-went-cold { background: rgba(201,169,110,0.18); color: var(--accent); }
+.re-mode-personal { background: rgba(74,154,106,0.15); color: #7abf9a; }
+.re-reply-yes { background: rgba(74,154,106,0.15); color: #7abf9a; font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 3px; }
+.re-reply-no { background: rgba(122,58,58,0.2); color: #d48a8a; font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 3px; }
+.re-draft-area { width: 100%; min-height: 200px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 12px; color: var(--text); font-family: inherit; font-size: 12px; line-height: 1.75; resize: vertical; outline: none; margin-top: 10px; }
+.re-draft-area:focus { border-color: var(--border-2); }
 .outreach-name { font-size: 14px; font-weight: 600; }
 .outreach-sub { font-size: 12px; color: var(--text-2); margin-top: 1px; }
 .outreach-caret { color: var(--text-3); font-size: 11px; margin-left: auto; }
@@ -424,6 +434,7 @@ html, body {
     <button class="nav-tab" data-tab="outreach" onclick="switchTab('outreach')">Outreach</button>
     <button class="nav-tab" data-tab="pipeline" onclick="switchTab('pipeline')">Pipeline</button>
     <button class="nav-tab" data-tab="agencies" onclick="switchTab('agencies')">Agencies</button>
+    <button class="nav-tab" data-tab="reengage" onclick="switchTab('reengage')">Re-Engage</button>
   </div>
   <div class="nav-meta" id="nav-meta">loading...</div>
   <button onclick="toggleMode()" id="mode-btn" style="background:none;border:none;cursor:pointer;padding:0 16px;color:var(--text-3);font-size:18px;border-left:1px solid var(--border)" title="Toggle light/dark">&#9788;</button>
@@ -523,6 +534,34 @@ html, body {
       <span class="count-badge" id="outreach-count"></span>
     </div>
     <div id="outreach-list"></div>
+  </div>
+
+  <!-- RE-ENGAGE TAB -->
+  <div id="tab-reengage" class="tab-panel">
+    <div style="margin-bottom:18px">
+      <div style="font-size:12px;color:var(--text-2);line-height:1.75;max-width:680px">
+        2023-2025 outreach history. Run <code style="background:var(--border);padding:1px 6px;border-radius:3px;font-size:11px">/re-engage</code> in Claude Code to generate personalized drafts for every contact. No-reply contacts sorted first.
+      </div>
+    </div>
+    <div class="toolbar">
+      <input type="text" class="search-input" id="reengage-search" placeholder="Search name, company..." oninput="renderReengage()">
+      <select class="filter-select" id="reengage-status" onchange="renderReengage()">
+        <option value="">All Statuses</option>
+        <option value="not_contacted">Not Contacted</option>
+        <option value="draft_ready">Draft Ready</option>
+        <option value="sent">Sent</option>
+        <option value="responded">Responded</option>
+        <option value="pass">Pass</option>
+      </select>
+      <select class="filter-select" id="reengage-mode" onchange="renderReengage()">
+        <option value="">All Types</option>
+        <option value="no_reply">No Reply</option>
+        <option value="went_cold">Went Cold</option>
+        <option value="personal">Personal</option>
+      </select>
+      <span class="count-badge" id="reengage-count"></span>
+    </div>
+    <div class="card-grid" id="reengage-list"></div>
   </div>
 
   <!-- AGENCIES TAB -->
@@ -637,6 +676,7 @@ function detectBucket(title, description) {
 let jobs = [];
 let prospects = [];
 let agencies = [];
+let reengagements = [];
 let currentTab = 'jobs';
 const _emailCache = {};
 const _metaCache = {};
@@ -652,6 +692,8 @@ const LS = {
   setProspectStatus: (id, s) => { const d = LS.prospectStatuses(); d[id] = s; LS.set('jt_prospect_statuses', d); },
   agencyStatuses: () => LS.get('jt_agency_statuses'),
   setAgencyStatus: (id, s) => { const d = LS.agencyStatuses(); d[id] = s; LS.set('jt_agency_statuses', d); },
+  reengageStatuses: () => LS.get('jt_reengage_statuses'),
+  setReengageStatus: (id, s) => { const d = LS.reengageStatuses(); d[id] = s; LS.set('jt_reengage_statuses', d); },
   dismiss: (id) => { const d = LS.dismissed(); d[id] = true; LS.set('jt_dismissed', d); },
 };
 
@@ -899,6 +941,7 @@ function render() {
   if (currentTab === 'jobs') renderJobs();
   else if (currentTab === 'prospects') renderProspects();
   else if (currentTab === 'agencies') renderAgencies();
+  else if (currentTab === 'reengage') renderReengage();
   else if (currentTab === 'outreach') renderOutreach();
   else if (currentTab === 'pipeline') renderPipeline();
 }
@@ -1185,6 +1228,204 @@ function setAgencyStatus(id, s) {
   if (!s) return;
   LS.setAgencyStatus(id, s);
   render();
+}
+
+// ─────────────────────────────────────────
+// RE-ENGAGE TAB
+// ─────────────────────────────────────────
+function makeReengageId(contact) {
+  if (contact.id) return contact.id;
+  const raw = (contact.email || '') + (contact.name || '') + (contact.company || '');
+  let h = 0;
+  for (let i = 0; i < raw.length; i++) { h = Math.imul(31, h) + raw.charCodeAt(i) | 0; }
+  return 're' + Math.abs(h).toString(36);
+}
+
+function inferMode(contact) {
+  if (contact.mode) return contact.mode;
+  const co = (contact.company || '').toLowerCase();
+  if (co.includes('personal')) return 'personal';
+  return contact.got_reply ? 'went_cold' : 'no_reply';
+}
+
+function isSkippable(contact) {
+  const co = (contact.company || '').toLowerCase();
+  const name = (contact.name || '').toLowerCase();
+  const email = (contact.email || '').toLowerCase();
+  // Skip Creative Circle and other pure recruiters
+  if (co.includes('creative circle')) return true;
+  if (email.includes('jobalert.creativecircle')) return true;
+  // Skip bounced emails
+  if (name.includes('bounced') || (contact.summary || '').toLowerCase().includes('bounced')) return true;
+  return false;
+}
+
+function genReengageDraft(contact) {
+  // Use pre-generated draft from JSON (via /re-engage Claude Code command) if available
+  if (contact.draft && contact.draft.body && contact.draft.body.length > 50) {
+    return contact.draft;
+  }
+  // Client-side fallback template
+  const mode = inferMode(contact);
+  const firstName = (contact.name || 'there').split(' ')[0].replace(/\s*\(.*\)/, '').trim();
+  const company = contact.company || 'your company';
+  const summary = contact.summary || '';
+
+  if (mode === 'personal') {
+    return {
+      subject: 'Catching up — James Tedesco',
+      body: `Hi ${firstName},
+
+Wanted to reach out and catch up. It's been a while since we've been in touch.
+
+A lot has changed since we last connected. I've been building partnership programs and go-to-market infrastructure for a few founder-led brands — built the whole function from zero at Opulist ($50K+ in the first two quarters), and I'm now doing game scouting and publisher deal structuring at indie.io.
+
+Would love to reconnect if you're open to a quick call. No agenda, just catching up.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`
+    };
+  }
+
+  if (mode === 'went_cold') {
+    return {
+      subject: 'Catching up — James Tedesco',
+      body: `Hi ${firstName},
+
+Wanted to check back in — things have moved pretty fast since we last spoke.
+
+Since then I've been building partnership programs and commercial infrastructure for a handful of founder-led brands. At Opulist I built the entire partnership function from zero and closed $50K+ in the first two quarters. I'm also working with indie.io on game scouting and publisher deal structuring. The common thread is coming in early and building the function that doesn't exist yet.
+
+Curious what you're working on now${company !== 'your company' ? ' at ' + company : ''}. If there's a consulting angle or a role worth exploring, happy to find 20 minutes.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`
+    };
+  }
+
+  // no_reply default
+  return {
+    subject: 'Checking back in — James Tedesco',
+    body: `Hi ${firstName},
+
+I reached out a while back and wanted to check in again.
+
+Since then I've been building partnership programs and GTM infrastructure for a few founder-led brands — most recently closing $50K+ at Opulist from zero and scouting indie game deals at indie.io. The common thread across all of it is building the commercial layer that makes things actually work.
+
+If the timing is better now or there's a different angle worth exploring, I'm easy to reach. No pressure either way.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`
+  };
+}
+
+function openGmail(email, subject, body) {
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email || '')}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.open(url, '_blank');
+}
+
+function toggleReengageDraft(id) {
+  const el = document.getElementById('re-draft-' + id);
+  const btn = document.getElementById('re-draft-btn-' + id);
+  if (!el || !btn) return;
+  const open = el.style.display !== 'block';
+  el.style.display = open ? 'block' : 'none';
+  btn.textContent = open ? 'Hide Draft' : 'Show Draft';
+}
+
+function copyReengage(id) {
+  const el = document.getElementById('re-ta-' + id);
+  if (!el) return;
+  navigator.clipboard.writeText(el.value).then(() => {
+    const btn = document.getElementById('re-copy-btn-' + id);
+    if (btn) { const orig = btn.textContent; btn.textContent = 'Copied'; setTimeout(() => btn.textContent = orig, 1500); }
+  });
+}
+
+function renderReengage() {
+  const statuses = LS.reengageStatuses();
+  const q = (document.getElementById('reengage-search').value || '').toLowerCase();
+  const sf = document.getElementById('reengage-status').value;
+  const mf = document.getElementById('reengage-mode').value;
+
+  let list = reengagements
+    .filter(c => !isSkippable(c))
+    .map(c => {
+      const id = makeReengageId(c);
+      const mode = inferMode(c);
+      const status = statuses[id] || c.status || 'not_contacted';
+      return { ...c, _id: id, _mode: mode, _status: status };
+    })
+    .filter(c => !sf || c._status === sf)
+    .filter(c => !mf || c._mode === mf)
+    .filter(c => !q || `${c.name} ${c.company} ${c.summary || ''}`.toLowerCase().includes(q));
+
+  // Sort: no_reply first, then by date desc
+  list.sort((a, b) => {
+    if (a._mode === 'no_reply' && b._mode !== 'no_reply') return -1;
+    if (b._mode === 'no_reply' && a._mode !== 'no_reply') return 1;
+    return (b.date || '').localeCompare(a.date || '');
+  });
+
+  document.getElementById('reengage-count').textContent = `${list.length} contact${list.length !== 1 ? 's' : ''}`;
+  const el = document.getElementById('reengage-list');
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">No contacts match</div>Run /re-engage in Claude Code to generate drafts, or adjust filters.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(c => {
+    const { subject, body } = genReengageDraft(c);
+    const hasClaude = c.draft && c.draft.body && c.draft.body.length > 50;
+
+    const modeLabel = { no_reply: 'No Reply', went_cold: 'Went Cold', personal: 'Personal' }[c._mode] || c._mode;
+    const modeCls = { no_reply: 're-mode-no-reply', went_cold: 're-mode-went-cold', personal: 're-mode-personal' }[c._mode] || '';
+    const replyBadge = c.got_reply
+      ? `<span class="re-reply-yes">Replied</span>`
+      : `<span class="re-reply-no">No Reply</span>`;
+
+    const statusOptions = ['not_contacted','draft_ready','sent','responded','pass'].map(s =>
+      `<option value="${s}" ${c._status === s ? 'selected' : ''}>${{not_contacted:'Not Contacted',draft_ready:'Draft Ready',sent:'Sent',responded:'Responded',pass:'Pass'}[s]}</option>`
+    ).join('');
+
+    return `<div class="card">
+  <div class="card-header">
+    <div style="flex:1;min-width:0">
+      <div class="card-title">${escH(c.name)}</div>
+      <div class="card-subtitle">${escH(c.company)}${c.date ? ' &middot; ' + c.date : ''}</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0">
+      <span class="re-mode-badge ${modeCls}">${modeLabel}</span>
+      ${replyBadge}
+    </div>
+  </div>
+  ${c.summary ? `<div class="card-desc" style="margin-top:8px"><em style="color:var(--text-3);font-style:normal">${escH(c.summary)}</em></div>` : ''}
+  <div class="card-actions" style="margin-top:10px;flex-direction:column;align-items:flex-start;gap:10px">
+    <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
+      <button class="btn btn-primary" id="re-draft-btn-${c._id}" onclick="toggleReengageDraft('${c._id}')">${hasClaude ? 'Show Draft' : 'Show Template'}</button>
+      <select class="status-select" onchange="LS.setReengageStatus('${c._id}',this.value);renderReengage()" style="margin-left:0">
+        ${statusOptions}
+      </select>
+      ${c.email && !c.email.includes('jobalert') ? `<a class="card-link" href="mailto:${escH(c.email)}" style="font-size:11px">mailto &rarr;</a>` : ''}
+      ${c.linkedin ? `<a class="card-link" href="${escH(c.linkedin)}" target="_blank">LinkedIn &rarr;</a>` : ''}
+    </div>
+    <div id="re-draft-${c._id}" style="display:none;width:100%">
+      ${hasClaude ? '' : '<div style="font-size:11px;color:var(--text-3);margin-bottom:6px">Template draft (run /re-engage for a personalized version)</div>'}
+      <div style="font-size:11px;font-weight:600;color:var(--text-3);margin-bottom:4px;letter-spacing:.04em">Subject: ${escH(subject)}</div>
+      <textarea class="re-draft-area" id="re-ta-${c._id}">${escH(body)}</textarea>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <button class="btn btn-primary" onclick="openGmail('${escH(c.email || '')}', document.getElementById('re-ta-${c._id}') ? '${escH(subject)}' : '', document.getElementById('re-ta-${c._id}') ? document.getElementById('re-ta-${c._id}').value : '')">Open in Gmail</button>
+        <button class="btn" id="re-copy-btn-${c._id}" onclick="copyReengage('${c._id}')">Copy Body</button>
+        <button class="btn" onclick="LS.setReengageStatus('${c._id}','sent');renderReengage()">Mark Sent</button>
+      </div>
+    </div>
+  </div>
+</div>`;
+  }).join('');
 }
 
 // ─────────────────────────────────────────
@@ -1496,6 +1737,63 @@ function escH(str) {
 }
 
 // ─────────────────────────────────────────
+// SAMPLE RE-ENGAGE DATA (loaded from CSV via /re-engage command)
+// Falls back to raw CSV data parsed client-side
+// ─────────────────────────────────────────
+const RAW_CONTACTS_CSV = `Name,Email,Company,Date,Subject,Summary,Got Reply
+Tori,tori@smartflyer.com,SmartFlyer,2025-03-13,Interest in the copywriter position,Reached out about a copywriting role discussed on LinkedIn after seeing it mentioned in DMs.,No
+Axel Alarcon,axelalarcon@cinetailor.com,Cinetailor,2025-03-12,Exploring Creative Producer Opportunities at Cinetailor,Cold outreach expressing interest in Creative Producer opportunities.,No
+Party Up Media,business@partyupmedia.com,Party Up Media,2025-03-13,Exploring Collaboration with Party Up Media,Cold outreach exploring gaming content collaboration around partnerships and production.,No
+Nat (Doing Things),nat@doingthings.com,Doing Things,2025-03-13,An Intro with McGarrah Jessee,Asked contact for an introduction to McGarrah Jessee for a Brand Manager role.,No
+Ben,ben@urbanarchive.nyc,Urban Archive,2025-02-07,Driving Growth and Partnerships for Urban Archive,Applied for Director of Growth and Partnerships role citing mission alignment.,No
+Erin Hoffman,erin.hoffman@movementstrategy.com,Movement Strategy,2025-01-24,James Tedesco x Content & Engagement Manager,Reached out directly about the Content & Engagement Manager role.,No
+William,william@loaded.gg,Loaded,2025-01-03,Regarding the Partnerships Associate Role,Expressed interest in the Partnerships Associate position at gaming company Loaded.,No
+James Kelleher,jkelleher@enthusiastgaming.com,Enthusiast Gaming,2024-11-20,James Tedesco - Brand Solutions Position,Followed up after contact surfaced resume to leadership for a Brand Solutions role.,Yes
+Nicholas White,nicholas.white@fragmnt.com,Fragmnt,2024-11-06,Partnerships Strategist Position X James Tedesco,Cold email to CEO pitching himself for a Partnerships Strategist position.,No
+Candace Bridges,cbridges@fourhands.com,Four Hands,2024-11-13,An Intro to Four Hands - James Tedesco,Introduced himself and expressed interest in Senior Brand and Product Marketing Specialist role.,No
+Joyce Morrell,joycemorrell@yahoo.com,Personal Connection,2024-09-19,James Tedesco Resume!,Sent resume to personal connection and scheduled a networking call.,Yes
+Jonathan Palmer,jonathanwpalmer1@gmail.com,Personal Contact (Mutiny),2024-09-04,Account Manager Integrated Marketing - James Tedesco,Sent resume and cover letter via personal contact for an Account Manager Integrated Marketing role.,No
+Brittany Jump,brittany.jump@chatbooks.com,Chatbooks,2024-08-08,James Tedesco - Senior Acquisition Manager Position,Reached out after applying for Web Optimization Manager role and completed a video interview.,Yes
+James Gottlieb,james.gottlieb@sony.com,Sony Interactive Entertainment,2024-07-10,James Tedesco - New Ladera Fantasy Football and SIE,Reached out via mutual fantasy football connection about PlayStation career opportunities.,Yes
+Josh Rickel,jr@goperigon.com,Perigon,2024-06-28,Re: James Tedesco Intro - Director of Growth Marketing role,Responded to a mutual intro for Director of Growth Marketing role.,Yes
+Laurie Hill,lahill@ea.com,Electronic Arts,2024-06-11,Laurie x James follow up,Followed up with EA contact to schedule a call and share resume.,Yes
+Katie Hutton,katie.straub.hutton@gmail.com,Airbnb,2024-05-30,Following up - James Tedesco,Reached out through a mutual family connection to network with an Airbnb employee.,Yes
+Nat Myers,nat@doingthings.com,Doing Things,2024-04-08,Re: Doing Things Account Manager Brand Partnerships Interview Request,Confirmed interview scheduling for Account Manager Brand Partnerships role.,Yes
+Jules,jules@onistudios.gg,Oni Studios,2024-03-26,Lead Marketing Strategist,Cold outreach about Lead Marketing Strategist role at gaming studio Oni Studios.,Yes
+Christine Landon,Christinelandon@me.com,Personal Connection,2024-03-28,James Tedesco,Followed up after a phone call with a personal connection to stay on their radar.,No
+Benjamin,benjamin@brainsonfire.com,Brains on Fire,2024-02-29,Your New Brand Strategist?,Cold outreach to branding agency about Brand Strategist opportunities citing Fandom experience.,No
+David Lee,dlee@webtoon.com,Webtoon,2024-07-16,Post Golf Round Catch Up - James Tedesco,Reached out after dad's golf round with David Lee to explore Webtoon partnership and marketing roles.,Yes
+Bailey Appleton,bailey@doingthingsmedia.com,Doing Things Media,2023-10-24,Re: James x Bailey,Post-call thank-you to Director of Brand Partnerships who then intro'd to VP of Sales.,Yes
+Alexis Moyer,amoyer@aspyr.com,Aspyr Media,2025-11-18,Re: Aspyr Media - Follow-up on Brand Manager,Responded to Aspyr's re-engagement about a Brand Manager position.,Yes`;
+
+function parseCSVFallback(csv) {
+  const lines = csv.trim().split('\n');
+  const headers = lines[0].split(',');
+  return lines.slice(1).map(line => {
+    // Handle commas in quoted fields
+    const cols = [];
+    let cur = '', inQ = false;
+    for (const ch of line) {
+      if (ch === '"') { inQ = !inQ; }
+      else if (ch === ',' && !inQ) { cols.push(cur.trim()); cur = ''; }
+      else { cur += ch; }
+    }
+    cols.push(cur.trim());
+    const obj = {};
+    headers.forEach((h, i) => { obj[h.trim()] = cols[i] || ''; });
+    return {
+      name: obj['Name'] || '',
+      email: obj['Email'] || '',
+      company: obj['Company'] || '',
+      date: obj['Date'] || '',
+      subject_original: obj['Subject'] || '',
+      summary: obj['Summary'] || '',
+      got_reply: (obj['Got Reply'] || '').toLowerCase() === 'yes',
+    };
+  });
+}
+
+// ─────────────────────────────────────────
 // SAMPLE AGENCY DATA (fallback when agencies.json unavailable)
 // ─────────────────────────────────────────
 const SAMPLE_AGENCIES = [
@@ -1539,7 +1837,7 @@ async function init() {
   if (!pStatuses['opulist-active']) LS.setProspectStatus('opulist-active', 'active');
   if (!pStatuses['indieio-active']) LS.setProspectStatus('indieio-active', 'active');
 
-  let jobsLoaded = false, prospectsLoaded = false, agenciesLoaded = false;
+  let jobsLoaded = false, prospectsLoaded = false, agenciesLoaded = false, reengageLoaded = false;
 
   try {
     const r = await fetch('jobs.json');
@@ -1556,9 +1854,15 @@ async function init() {
     if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { agencies = d; agenciesLoaded = true; } }
   } catch {}
 
+  try {
+    const r = await fetch('reengagement.json');
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { reengagements = d; reengageLoaded = true; } }
+  } catch {}
+
   if (!jobsLoaded) jobs = SAMPLE_JOBS;
   if (!prospectsLoaded) prospects = SAMPLE_PROSPECTS;
   if (!agenciesLoaded) agencies = SAMPLE_AGENCIES;
+  if (!reengageLoaded) reengagements = parseCSVFallback(RAW_CONTACTS_CSV);
 
   // Pre-set active clients if they appear in fetched data
   prospects.forEach(p => {
