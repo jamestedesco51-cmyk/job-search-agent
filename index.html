@@ -900,23 +900,22 @@ function genAgencyEmail(agency) {
 
 ${obs}
 
-I work across creative, strategy, and commercial infrastructure simultaneously. At Fandom I started in audience data, saw the commercial gap, and built a full brand partnerships program on top — Sony Santa Monica, CD Projekt Red, Deep Silver, 15+ campaigns a month. At Sunday Scaries I spotted a cultural signal, turned it into a product collab concept, directed the product, wrote the copy, and ran the launch end to end across six co-branded products. At Opulist I connected editorial content to commercial infrastructure and closed $50K from zero in the first two quarters.
+By way of background, I work across creative, strategy, and commercial simultaneously. At Fandom I started in audience data, spotted the commercial gap, and built a full brand partnerships program on top. At Sunday Scaries I took a cultural signal, turned it into a product concept, directed the collab, wrote the copy, and ran the launch across six co-branded products end to end. Most recently at Opulist I connected editorial content to commercial infrastructure and closed $50K in the first two quarters.
 
-I'm not a designer. I'm the person who makes the whole thing make sense and generate revenue. I move between data, creative, strategy, and commercial and translate between them.
+That overlap between creative intelligence and commercial execution feels like a lot of what you're doing with clients.
 
-I'd love to be on your radar for freelance or project work — cultural strategy, brand strategy, partnerships, or whatever the right brief is. Rate is $55-60/hour.
+If there's ever a project or a brief where an extra hand makes sense, I'd love to be on your radar. No pressure at all.
 
-Work: jmt115.cargo.site
-LinkedIn: linkedin.com/in/james-tedesco
-
-James Tedesco`;
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`;
   return { subject, body };
 }
 
 function genAgencyLinkedInNote(agency) {
   const obs = getAgencyObservation(agency.name || '');
   const firstLine = obs.split('.')[0].trim() + '.';
-  const note = `${firstLine} I work across creative, strategy, and commercial simultaneously. Would love to be on your freelance radar for cultural strategy or brand work. Happy to send context.`;
+  const note = `${firstLine} I work across creative, strategy, and commercial and I'm genuinely a fan of the work. Would love to be on your radar if a project brief ever fits. Happy to send context.`;
   return note.slice(0, 300);
 }
 
