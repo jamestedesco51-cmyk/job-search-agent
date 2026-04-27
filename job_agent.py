@@ -159,6 +159,10 @@ BAD_SIGNALS = [
     "automotive", "auto parts", "dealership",
     "pharmaceutical", "pharma", "biotech",
     "staffing agency", "temp agency", "recruiting firm",
+    "goodwin recruiting", "motion recruitment", "cybercoders",
+    "nemt", "non-emergency medical", "non emergency medical",
+    "government contractor", "federal contractor", "dod contractor",
+    "restaurant chain", "drive-in restaurant", "quick service",
     "insurance", "reinsurance",
     "banking", "mortgage", "lending", "wealth management",
     "freight", "trucking", "shipping",
@@ -237,9 +241,21 @@ BIG_CORP_PENALTY = [
     "ralph lauren", "gap inc", "h&m", "zara", "lvmh", "kering",
     "l'oreal", "unilever", "procter", "colgate", "kraft", "nestle",
     "conagra", "pepsico", "coca-cola", "mondelez", "dole", "tyson",
-    "starbucks", "mcdonald", "yum brands",
+    "starbucks", "mcdonald", "yum brands", "kfc", "taco bell",
+    "checkers", "rally's", "sonic drive", "jack in the box",
     "puma", "adidas", "nike", "under armour", "columbia sportswear",
     "lululemon", "allbirds", "vuori", "patagonia",
+    # big consumer brands that keep slipping through
+    "heineken", "ab inbev", "anheuser", "molson", "diageo", "constellation brands",
+    "puig", "estee lauder", "revlon", "coty",
+    "bodyarmor", "gatorade", "powerade",
+    "fanatics", "nfl", "nba", "mlb", "nhl",
+    # big B2B / fintech / wrong sector
+    "affirm", "klarna", "stripe", "square", "paypal", "brex",
+    "people.ai", "salesloft", "outreach.io", "gong",
+    "servicenow", "workday", "hubspot", "zendesk",
+    # government / defense / wrong world
+    "govcio", "leidos", "booz allen", "saic", "caci",
     # big pharma / health / insurance
     "united health", "cvs", "walgreens", "humana", "cigna",
     "pfizer", "johnson & johnson", "abbvie",
@@ -331,7 +347,7 @@ SEARCH_QUERIES = [
     "gtm manager startup",
 ]
 
-MAX_AGE_DAYS = 8
+MAX_AGE_DAYS = 14
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
@@ -580,7 +596,7 @@ def add_job(title, company, url, date_str="", source="", description=""):
         return
     desc_clean = clean_text(description)
     score = score_job(title, desc_clean, company)
-    if score < 4:
+    if score < 3:
         return
     seen_urls.add(url)
     jobs.append({
@@ -2132,9 +2148,13 @@ print(f"  Prospects found: {len(prospects)}\n")
 # ─────────────────────────────────────────────
 
 jobs_path = os.path.join(OUTPUT_DIR, "jobs.json")
-with open(jobs_path, "w") as f:
-    json.dump(top_jobs, f, indent=2)
-print(f"Wrote {len(top_jobs)} jobs  ->  {jobs_path}")
+# Safety net: never overwrite with an empty list — keep existing data as fallback
+if top_jobs:
+    with open(jobs_path, "w") as f:
+        json.dump(top_jobs, f, indent=2)
+    print(f"Wrote {len(top_jobs)} jobs  ->  {jobs_path}")
+else:
+    print(f"WARNING: 0 jobs found this run — keeping existing jobs.json to avoid wiping data")
 
 prospects_path = os.path.join(OUTPUT_DIR, "prospects.json")
 with open(prospects_path, "w") as f:
