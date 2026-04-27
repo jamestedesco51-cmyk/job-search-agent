@@ -1699,17 +1699,25 @@ function dismissId(id) {
   render();
 }
 
+function liCompanySlug(name) {
+  return (name || '').toLowerCase().replace(/[''']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 function renderContacts(contacts, company) {
   if (!contacts || !contacts.length) {
     if (!company) return '';
-    const q = encodeURIComponent(`${company} marketing partnerships director`);
-    const liUrl = `https://www.linkedin.com/search/results/people/?keywords=${q}`;
-    const apUrl = `https://app.apollo.io/#/people?organization_names[]=${encodeURIComponent(company)}`;
+    // Company people page (most accurate — shows actual employees)
+    const slug = liCompanySlug(company);
+    const liPeopleUrl = `https://www.linkedin.com/company/${slug}/people/`;
+    // Keyword search fallback — exact company name + relevant titles
+    const liSearchUrl = `https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent('"' + company + '" partnerships OR brand OR marketing')}`;
+    const apUrl = `https://app.apollo.io/#/people?organization_names[]=${encodeURIComponent(company)}&prospectingTarget=contacts`;
     return `<div class="contacts-section">
       <div class="contacts-label">Contacts</div>
-      <div style="font-size:11px;color:var(--text-3);display:flex;gap:10px;padding:6px 0">
-        <a href="${liUrl}" target="_blank" style="color:var(--accent)">Search LinkedIn &rarr;</a>
-        <a href="${apUrl}" target="_blank" style="color:var(--accent)">Search Apollo &rarr;</a>
+      <div style="font-size:11px;color:var(--text-3);display:flex;gap:10px;padding:6px 0;flex-wrap:wrap">
+        <a href="${liPeopleUrl}" target="_blank" style="color:var(--accent)">Company people &rarr;</a>
+        <a href="${liSearchUrl}" target="_blank" style="color:var(--accent)">Search LinkedIn &rarr;</a>
+        <a href="${apUrl}" target="_blank" style="color:var(--accent)">Apollo &rarr;</a>
       </div>
     </div>`;
   }

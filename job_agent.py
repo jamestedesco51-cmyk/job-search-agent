@@ -359,11 +359,67 @@ _apollo_cache = {}
 
 def apollo_get_contacts(company_name, domain=None):
     """
-    Apollo.io contact lookup stub.
-    The $49/mo Apollo plan blocks /v1/mixed_people/search and /v1/people/search.
-    Upgrade to Professional (~$99/mo) to unlock full API database search.
+    Apollo.io People Search — returns up to 3 relevant contacts at a company.
+    Uses /api/v1/mixed_people/search (requires Professional plan or higher).
+    Names and titles are returned; emails require separate enrichment credits.
     """
-    return []
+    if not APOLLO_API_KEY:
+        return []
+    cache_key = (domain or company_name).lower().strip()
+    if cache_key in _apollo_cache:
+        return _apollo_cache[cache_key]
+
+    try:
+        payload = {
+            "api_key": APOLLO_API_KEY,
+            "q_keywords": company_name,
+            "person_seniorities": ["manager", "director", "vp", "c_suite", "head"],
+            "person_titles": [
+                "partnerships", "brand manager", "marketing manager",
+                "head of partnerships", "director of partnerships",
+                "vp of marketing", "cmo", "founder", "ceo",
+                "growth", "collaborations", "creative director",
+            ],
+            "per_page": 5,
+        }
+        if domain:
+            payload["q_organization_domains_list"] = [domain]
+
+        resp = requests.post(
+            "https://api.apollo.io/api/v1/mixed_people/search",
+            json=payload,
+            headers={"Content-Type": "application/json", "Cache-Control": "no-cache"},
+            timeout=12,
+        )
+
+        if resp.status_code != 200:
+            _apollo_cache[cache_key] = []
+            return []
+
+        data = resp.json()
+        people = data.get("people", [])
+        contacts = []
+        for p in people[:3]:
+            last = p.get("last_name") or p.get("last_name_obfuscated", "")
+            name = f"{p.get('first_name', '')} {last}".strip()
+            # Build LinkedIn URL from name if available
+            linkedin = p.get("linkedin_url", "")
+            if not linkedin:
+                slug = re.sub(r"[^a-z0-9]", "-", name.lower()).strip("-")
+                linkedin = f"https://www.linkedin.com/in/{slug}" if slug else ""
+            contacts.append({
+                "name": name,
+                "title": p.get("title", ""),
+                "email": p.get("email", ""),
+                "linkedin": linkedin,
+                "source": "Apollo",
+            })
+        _apollo_cache[cache_key] = contacts
+        return contacts
+
+    except Exception:
+        _apollo_cache[cache_key] = []
+        return []
 
 def hunter_get_contacts(company_name, domain=None):
     """Return up to 5 relevant contacts using Hunter.io domain search."""
@@ -1817,7 +1873,7 @@ def seed_known_agencies():
         {"id":"sunday-afternoon","name":"Sunday Afternoon","city":"Austin, TX","location_type":"Austin","type":"Brand Studio","size":"under 20",
          "focus":"Small brand studio, Austin. Consumer-focused, design-led.",
          "why_relevant":"Austin-based. Very small means every person matters and project relationships are the norm.",
-         "website":"https://sundayafternoon.studio","linkedin":"","instagram":"",
+         "website":"https://www.sundayafternoon.us","linkedin":"","instagram":"",
          "platforms":["Direct outreach"],"score":7},
         # ── National boutiques (remote-friendly, under 50) ────────
         {"id":"red-antler","name":"Red Antler","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"20-50",
@@ -1838,7 +1894,7 @@ def seed_known_agencies():
         {"id":"established","name":"Established","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"under 20",
          "focus":"Brand studio focused on consumer brands. NYC-based. Small team that brings in project talent.",
          "why_relevant":"Consumer brand focus. Small enough that a strong freelancer gets real work.",
-         "website":"https://weareestablished.com","linkedin":"","instagram":"",
+         "website":"https://established.design","linkedin":"","instagram":"",
          "platforms":["Working Not Working","Direct outreach"],"score":7},
         {"id":"quality-meats","name":"Quality Meats","city":"New York, NY","location_type":"Remote","type":"Creative Studio","size":"under 20",
          "focus":"Boutique creative studio. Pop culture-savvy, brand-forward work. NYC.",
@@ -1873,17 +1929,17 @@ def seed_known_agencies():
         {"id":"sibling-rivalry","name":"Sibling Rivalry","city":"New York, NY","location_type":"Remote","type":"Creative Studio","size":"under 20",
          "focus":"Small creative studio. Known for editorial and cultural brand work with a strong visual and conceptual POV.",
          "why_relevant":"Editorial and cultural work is exactly the overlap. Small enough for project relationships to be meaningful.",
-         "website":"https://siblingrivalry.studio","linkedin":"","instagram":"https://instagram.com/siblingrivalry",
+         "website":"https://www.siblingrivalryny.com","linkedin":"","instagram":"https://instagram.com/siblingrivalry",
          "platforms":["Direct outreach","Working Not Working"],"score":7},
         {"id":"hecho","name":"Hecho","city":"New York, NY","location_type":"Remote","type":"Boutique Agency","size":"under 20",
          "focus":"Boutique agency focused on cultural brands and multicultural audiences.",
          "why_relevant":"Cultural brand focus is the exact intersection. Boutique means relationships matter.",
-         "website":"https://hechoagency.com","linkedin":"","instagram":"",
+         "website":"https://www.wearehecho.com","linkedin":"","instagram":"",
          "platforms":["Direct outreach"],"score":7},
         {"id":"heroes-ghosts","name":"Heroes & Ghosts","city":"New York, NY","location_type":"Remote","type":"Creative Studio","size":"under 20",
          "focus":"Small creative studio. Brand and cultural work with a consumer focus.",
          "why_relevant":"Consumer brand and cultural work. Small studio model means project relationships are how they grow.",
-         "website":"https://heroesandghosts.com","linkedin":"","instagram":"",
+         "website":"https://www.heroesghosts.com","linkedin":"","instagram":"",
          "platforms":["Direct outreach","Working Not Working"],"score":7},
         {"id":"and-rising","name":"And Rising","city":"Los Angeles, CA","location_type":"Remote","type":"Creative Studio","size":"under 20",
          "focus":"LA-based creative studio, remote-friendly. Creative capital model. Consumer and cultural brand focus.",
@@ -1893,7 +1949,7 @@ def seed_known_agencies():
         {"id":"bullish","name":"Bullish","city":"New York, NY","location_type":"Remote","type":"Agency / Venture Hybrid","size":"under 50",
          "focus":"Hybrid creative agency and consumer brand venture. Works with emerging consumer brands at the intersection of strategy and investment.",
          "why_relevant":"Consumer brand focus at the strategy and commercial layer is exactly the overlap. Hybrid model means diverse briefs.",
-         "website":"https://bullish.studio","linkedin":"https://www.linkedin.com/company/bullish-inc/","instagram":"",
+         "website":"https://www.dobullish.com","linkedin":"https://www.linkedin.com/company/bullish-inc/","instagram":"",
          "platforms":["Direct outreach","Working Not Working"],"score":8},
         {"id":"teak","name":"Teak","city":"New York, NY","location_type":"Remote","type":"Brand Studio","size":"under 20",
          "focus":"Small brand studio. Consumer brand and strategy focus.",
@@ -1903,7 +1959,7 @@ def seed_known_agencies():
         {"id":"superhero-cheesecake","name":"Superhero Cheesecake","city":"New York, NY","location_type":"Remote","type":"Creative Studio","size":"under 20",
          "focus":"Boutique NYC creative studio. Brand and cultural work.",
          "why_relevant":"Cultural and brand work at boutique scale. Project-based model.",
-         "website":"https://superheroesc.com","linkedin":"","instagram":"",
+         "website":"https://www.superheroesc.com","linkedin":"","instagram":"",
          "platforms":["Direct outreach","Working Not Working"],"score":6},
         {"id":"waterfall","name":"Waterfall","city":"New York, NY","location_type":"Remote","type":"Brand & Strategy Studio","size":"under 20",
          "focus":"Small brand and strategy studio. Consumer and cultural focus.",
@@ -1919,7 +1975,7 @@ def seed_known_agencies():
         {"id":"cassette","name":"Cassette","city":"Remote","location_type":"Remote","type":"Cultural Strategy","size":"under 20",
          "focus":"Cultural strategy consultancy. Works with brands on cultural insight, trend intelligence, and positioning.",
          "why_relevant":"Cultural strategy is the direct overlap. Boutique consultancy model means project relationships are the norm.",
-         "website":"https://cassette.is","linkedin":"","instagram":"",
+         "website":"https://www.cassetteagency.com","linkedin":"","instagram":"",
          "platforms":["Direct outreach"],"score":8},
         {"id":"canvas8","name":"Canvas8","city":"London, UK","location_type":"Remote","type":"Cultural Intelligence","size":"20-50",
          "focus":"Cultural intelligence and consumer insight firm. Publishes research, works with global brands on audience and trend strategy. Maintains a contributor network.",
@@ -2030,15 +2086,17 @@ scrape_substacks()
 jobs.sort(key=lambda x: x["score"], reverse=True)
 top_jobs = jobs  # no cap — show everything that passes the score filter
 
-# Contact enrichment for top jobs (Hunter.io)
+# Contact enrichment for top jobs (Apollo first, Hunter fallback)
 print("\n--- CONTACT ENRICHMENT (JOBS) ---")
 for job in top_jobs[:30]:
     if job.get("contacts"):
         continue
-    contacts = hunter_get_contacts(job["company"]) if HUNTER_API_KEY else []
+    contacts = apollo_get_contacts(job["company"]) if APOLLO_API_KEY else []
+    if not contacts:
+        contacts = hunter_get_contacts(job["company"]) if HUNTER_API_KEY else []
     if contacts:
         job["contacts"] = contacts
-        print(f"  {job['company']}: {len(contacts)} contacts")
+        print(f"  {job['company']}: {len(contacts)} contacts via {'Apollo' if contacts[0].get('source') == 'Apollo' else 'Hunter'}")
 
 print("\n--- PROSPECT SCRAPERS ---")
 seed_known_prospects()
@@ -2050,7 +2108,7 @@ known_agencies = seed_known_agencies()
 
 prospects.sort(key=lambda x: x["score"], reverse=True)
 
-# Contact enrichment for prospects (Hunter.io)
+# Contact enrichment for prospects (Apollo first, Hunter fallback)
 print("\n--- CONTACT ENRICHMENT (PROSPECTS) ---")
 for p in prospects[:30]:
     if p.get("contacts"):
@@ -2058,10 +2116,12 @@ for p in prospects[:30]:
     domain = None
     if p.get("website"):
         domain = p["website"].replace("https://", "").replace("http://", "").replace("www.", "").split("/")[0]
-    contacts = hunter_get_contacts(p["brand"], domain=domain) if HUNTER_API_KEY else []
+    contacts = apollo_get_contacts(p["brand"], domain=domain) if APOLLO_API_KEY else []
+    if not contacts:
+        contacts = hunter_get_contacts(p["brand"], domain=domain) if HUNTER_API_KEY else []
     if contacts:
         p["contacts"] = contacts
-        print(f"  {p['brand']}: {len(contacts)} contacts")
+        print(f"  {p['brand']}: {len(contacts)} contacts via {'Apollo' if contacts[0].get('source') == 'Apollo' else 'Hunter'}")
 
 print(f"\nDone.")
 print(f"  Jobs found:      {len(jobs)}, keeping top {len(top_jobs)}")
