@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline / James Tedesco</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d0d0d;
+  --surface: #161616;
+  --surface-hover: #1c1c1c;
+  --border: #242424;
+  --border-2: #303030;
+  --text: #e4ddd4;
+  --text-2: #8a8480;
+  --text-3: #484440;
+  --accent: #c9a96e;
+  --accent-dim: rgba(201,169,110,0.12);
+}
+
+html.light {
+  --bg: #f8f6f2;
+  --surface: #ffffff;
+  --surface-hover: #f2efe9;
+  --border: #e2ddd6;
+  --border-2: #ccc8c0;
+  --text: #1a1714;
+  --text-2: #5a5450;
+  --text-3: #9a9590;
+  --accent: #a07840;
+  --accent-dim: rgba(160,120,64,0.1);
+}
+
+html, body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-brand {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--border);
+  white-space: nowrap;
+  user-select: none;
+}
+.nav-brand em { color: var(--accent); font-style: normal; }
+.nav-tabs { display: flex; flex: 1; }
+.nav-tab {
+  padding: 0 18px;
+  height: 46px;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  transition: color 0.12s, border-color 0.12s;
+  white-space: nowrap;
+}
+.nav-tab:hover { color: var(--text-2); }
+.nav-tab.active { color: var(--text); border-bottom-color: var(--accent); }
+.nav-meta {
+  font-size: 11px;
+  color: var(--text-3);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  border-left: 1px solid var(--border);
+}
+
+/* LAYOUT */
+.main { max-width: 1240px; margin: 0 auto; padding: 24px 20px; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* TOOLBAR */
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.search-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+}
+.search-input:focus { border-color: var(--border-2); }
+.search-input::placeholder { color: var(--text-3); }
+.filter-select {
+  padding: 8px 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-2);
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+.filter-select option { background: #1a1a1a; }
+.count-badge { font-size: 11px; color: var(--text-3); margin-left: auto; }
+
+/* CARDS */
+.card-grid { display: grid; gap: 10px; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  transition: border-color 0.12s;
+}
+.card:hover { border-color: var(--border-2); }
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.card-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.3; }
+.card-title a { color: inherit; text-decoration: none; }
+.card-title a:hover { color: var(--accent); }
+.card-subtitle { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+.card-desc { font-size: 12px; color: var(--text-2); margin-top: 8px; line-height: 1.55; }
+.card-gap {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-top: 10px;
+  padding: 9px 12px;
+  border-left: 2px solid var(--border-2);
+  background: rgba(255,255,255,0.025);
+  border-radius: 0 5px 5px 0;
+  line-height: 1.6;
+}
+.card-links { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+.contacts-section { margin-top: 12px; }
+.contacts-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 7px; }
+.contact-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+.contact-row:last-child { border-bottom: none; }
+.contact-name { font-weight: 600; color: var(--text); min-width: 130px; }
+.contact-title { color: var(--text-2); flex: 1; }
+.contact-email { color: var(--accent); text-decoration: none; font-size: 11px; white-space: nowrap; }
+.contact-email:hover { text-decoration: underline; }
+.contact-li { font-size: 11px; color: var(--text-3); text-decoration: none; }
+.contact-li:hover { color: var(--accent); }
+.card-link { font-size: 11px; color: var(--text-3); text-decoration: none; letter-spacing: 0.02em; }
+.card-link:hover { color: var(--accent); }
+.card-meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+.card-actions { display: flex; gap: 7px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+
+/* BADGES */
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.badge-strong { background: var(--accent-dim); color: var(--accent); }
+.badge-good { background: rgba(74,154,106,0.12); color: #7abf9a; }
+.badge-look { background: rgba(74,106,154,0.12); color: #7a9abf; }
+.badge-low { background: var(--border); color: var(--text-3); }
+.badge-new { background: var(--border); color: var(--text-3); }
+.badge-approved { background: rgba(58,90,138,0.18); color: #8aaad4; }
+.badge-applied { background: rgba(90,58,138,0.18); color: #a88ad4; }
+.badge-outreach { background: rgba(138,90,58,0.18); color: #d4b08a; }
+.badge-interview { background: rgba(58,122,90,0.18); color: #8ad4b0; }
+.badge-pass { background: rgba(122,58,58,0.18); color: #d48a8a; }
+.badge-active { background: rgba(58,122,90,0.18); color: #8ad4b0; }
+.badge-source { background: none; color: var(--text-3); font-size: 10px; font-weight: 400; text-transform: none; letter-spacing: 0; padding: 3px 4px; }
+
+/* BUTTONS */
+.btn {
+  padding: 6px 13px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--border-2);
+  background: transparent;
+  color: var(--text-2);
+  transition: all 0.12s;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.btn:hover { background: var(--surface-hover); color: var(--text); }
+.btn-primary {
+  background: var(--accent-dim);
+  border-color: rgba(201,169,110,0.4);
+  color: var(--accent);
+}
+.btn-primary:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.btn-danger { color: var(--text-3); border-color: var(--border); }
+.btn-danger:hover { background: rgba(122,58,58,0.15); border-color: rgba(122,58,58,0.5); color: #d48a8a; }
+.btn-mail { margin-left: auto; }
+.btn-mail:hover { border-color: rgba(201,169,110,0.4); color: var(--accent); }
+.status-select {
+  padding: 5px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-3);
+  font-size: 11px;
+  cursor: pointer;
+  outline: none;
+}
+.status-select option { background: #1a1a1a; }
+
+/* OUTREACH TAB */
+.outreach-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.outreach-header {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.outreach-header:hover { background: var(--surface-hover); }
+.outreach-type {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.outreach-type.job { background: rgba(58,90,138,0.2); color: #8aaad4; }
+.outreach-type.prospect { background: var(--accent-dim); color: var(--accent); }
+.outreach-type.agency { background: rgba(244,114,182,0.15); color: #f472b6; }
+
+/* RE-ENGAGE TAB */
+.re-mode-badge { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; }
+.re-mode-no-reply { background: rgba(58,90,138,0.2); color: #8aaad4; }
+.re-mode-went-cold { background: rgba(201,169,110,0.18); color: var(--accent); }
+.re-mode-personal { background: rgba(74,154,106,0.15); color: #7abf9a; }
+.re-reply-yes { background: rgba(74,154,106,0.15); color: #7abf9a; font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 3px; }
+.re-reply-no { background: rgba(122,58,58,0.2); color: #d48a8a; font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 3px; }
+.re-draft-area { width: 100%; min-height: 200px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 12px; color: var(--text); font-family: inherit; font-size: 12px; line-height: 1.75; resize: vertical; outline: none; margin-top: 10px; }
+.re-draft-area:focus { border-color: var(--border-2); }
+.outreach-name { font-size: 14px; font-weight: 600; }
+.outreach-sub { font-size: 12px; color: var(--text-2); margin-top: 1px; }
+.outreach-caret { color: var(--text-3); font-size: 11px; margin-left: auto; }
+.outreach-body { padding: 16px; border-top: 1px solid var(--border); display: none; }
+.email-preview {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.email-subject {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-2);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.email-body {
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.75;
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+.outreach-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.outreach-drafts-tabs { display: flex; gap: 4px; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+.draft-tab { background: none; border: 1px solid var(--border); color: var(--text-2); font-size: 11px; font-weight: 600; letter-spacing: .04em; padding: 4px 10px; border-radius: 4px; cursor: pointer; transition: all .15s; }
+.draft-tab:hover { border-color: var(--accent); color: var(--accent); }
+.draft-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* PIPELINE / KANBAN */
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+@media (max-width: 900px) { .pipeline-grid { grid-template-columns: 1fr; } }
+.pipeline-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.kanban-board {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.kanban-col { min-width: 148px; flex: 1; }
+.kanban-col-header {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kanban-count { font-weight: 400; text-transform: none; letter-spacing: 0; }
+.kanban-cards { display: flex; flex-direction: column; gap: 7px; min-height: 50px; }
+.kanban-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 9px 11px;
+  cursor: pointer;
+  transition: border-color 0.12s;
+}
+.kanban-card:hover { border-color: var(--border-2); }
+.kanban-card-title { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
+.kanban-card-company { font-size: 11px; color: var(--text-2); }
+.kanban-card-score { font-size: 10px; color: var(--text-3); margin-top: 4px; }
+.kanban-empty { font-size: 11px; color: var(--text-3); padding: 10px 0; font-style: italic; }
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 540px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+}
+.modal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; }
+.modal-title { font-size: 16px; font-weight: 600; }
+.modal-sub { font-size: 12px; color: var(--text-2); margin-top: 3px; }
+.modal-close { background: none; border: none; color: var(--text-3); cursor: pointer; font-size: 18px; padding: 0; line-height: 1; }
+.modal-close:hover { color: var(--text); }
+.modal-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 8px;
+}
+.stage-buttons { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+.divider { height: 1px; background: var(--border); margin: 18px 0; }
+
+/* EMPTY STATE */
+.empty-state { text-align: center; padding: 64px 20px; color: var(--text-3); }
+.empty-state-title { font-size: 15px; color: var(--text-2); margin-bottom: 8px; font-weight: 600; }
+
+/* LOADING */
+.loading { text-align: center; padding: 64px 20px; color: var(--text-3); font-size: 13px; }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+
+@media (max-width: 640px) {
+  .nav-brand { padding: 0 12px; font-size: 11px; }
+  .nav-tab { padding: 0 12px; font-size: 11px; }
+  .nav-meta { display: none; }
+  .main { padding: 16px 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">JT <em>/</em> Pipeline</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-tab="jobs" onclick="switchTab('jobs')">Jobs</button>
+    <button class="nav-tab" data-tab="prospects" onclick="switchTab('prospects')">Consulting</button>
+    <button class="nav-tab" data-tab="outreach" onclick="switchTab('outreach')">Outreach</button>
+    <button class="nav-tab" data-tab="pipeline" onclick="switchTab('pipeline')">Pipeline</button>
+    <button class="nav-tab" data-tab="agencies" onclick="switchTab('agencies')">Agencies</button>
+    <button class="nav-tab" data-tab="reengage" onclick="switchTab('reengage')">Re-Engage</button>
+  </div>
+  <div class="nav-meta" id="nav-meta">loading...</div>
+  <button onclick="toggleMode()" id="mode-btn" style="background:none;border:none;cursor:pointer;padding:0 16px;color:var(--text-3);font-size:18px;border-left:1px solid var(--border)" title="Toggle light/dark">&#9788;</button>
+</nav>
+
+<div class="main">
+
+  <!-- JOBS TAB -->
+  <div id="tab-jobs" class="tab-panel active">
+    <div class="toolbar">
+      <input type="text" class="search-input" id="jobs-search" placeholder="Search roles, companies, industries..." oninput="renderJobs()">
+      <select class="filter-select" id="jobs-status" onchange="renderJobs()">
+        <option value="">All Statuses</option>
+        <option value="new">New</option>
+        <option value="approved">Approved</option>
+        <option value="applied">Applied</option>
+        <option value="outreach_sent">Outreach Sent</option>
+        <option value="interview">Interview</option>
+        <option value="pass">Pass</option>
+      </select>
+      <select class="filter-select" id="jobs-score" onchange="renderJobs()">
+        <option value="">All Fits</option>
+        <option value="strong">Strong Fit (8+)</option>
+        <option value="good">Good Fit (5-7)</option>
+        <option value="look">Worth a Look (2-4)</option>
+      </select>
+      <select class="filter-select" id="jobs-bucket" onchange="renderJobs()">
+        <option value="">All Buckets</option>
+        <option value="Partnerships">Partnerships</option>
+        <option value="Brand &amp; Marketing">Brand &amp; Marketing</option>
+        <option value="Creative">Creative</option>
+        <option value="Ecom &amp; Growth">Ecom &amp; Growth</option>
+        <option value="Gaming / Publishing">Gaming / Publishing</option>
+      </select>
+      <select class="filter-select" id="jobs-sort" onchange="renderJobs()">
+        <option value="score">Score</option>
+        <option value="date">Date</option>
+        <option value="company">Company</option>
+      </select>
+      <span class="count-badge" id="jobs-count"></span>
+    </div>
+    <div class="card-grid" id="jobs-list"></div>
+  </div>
+
+  <!-- PROSPECTS TAB -->
+  <div id="tab-prospects" class="tab-panel">
+    <div class="toolbar">
+      <input type="text" class="search-input" id="prospects-search" placeholder="Search brands, founders, industries..." oninput="renderProspects()">
+      <select class="filter-select" id="prospects-status" onchange="renderProspects()">
+        <option value="">All Statuses</option>
+        <option value="new">New</option>
+        <option value="approved">Approved</option>
+        <option value="outreach_sent">Outreach Sent</option>
+        <option value="active">Active Client</option>
+        <option value="pass">Pass</option>
+      </select>
+      <select class="filter-select" id="prospects-industry" onchange="renderProspects()">
+        <option value="">All Industries</option>
+        <option value="gaming">Gaming</option>
+        <option value="dtc">DTC</option>
+        <option value="food">Food & Bev</option>
+        <option value="wellness">Wellness</option>
+        <option value="fashion">Fashion</option>
+        <option value="mental health">Mental Health</option>
+        <option value="editorial">Editorial / Media</option>
+        <option value="music">Music / Culture</option>
+      </select>
+      <span class="count-badge" id="prospects-count"></span>
+    </div>
+    <div class="card-grid" id="prospects-list"></div>
+  </div>
+
+  <!-- OUTREACH TAB -->
+  <div id="tab-outreach" class="tab-panel">
+    <details class="checklist-card" style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:16px">
+      <summary style="cursor:pointer;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);list-style:none">Outreach Checklist &nbsp;<span style="font-weight:400;color:var(--text-3)">(click to expand)</span></summary>
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:12px;color:var(--text-2);line-height:1.6">
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Send LinkedIn connection note <em>with</em> a message</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Apply directly + personalize to the role</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Follow up via DM 3-5 days after applying</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Include a link to work samples (cargo.site)</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Reference something specific about the company</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Write in your own voice, not AI voice</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Lead with a specific observation, not a compliment</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Mention one relevant result with a real number</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Keep it short, clear, no fluff</label>
+        <label style="display:flex;gap:8px;cursor:pointer"><input type="checkbox"> Ask one smart question in the note</label>
+      </div>
+    </details>
+    <div class="toolbar">
+      <select class="filter-select" id="outreach-filter" onchange="renderOutreach()">
+        <option value="">All Approved</option>
+        <option value="jobs">Jobs Only</option>
+        <option value="prospects">Prospects Only</option>
+        <option value="agencies">Agencies Only</option>
+      </select>
+      <span class="count-badge" id="outreach-count"></span>
+    </div>
+    <div id="outreach-list"></div>
+  </div>
+
+  <!-- RE-ENGAGE TAB -->
+  <div id="tab-reengage" class="tab-panel">
+    <div style="margin-bottom:18px">
+      <div style="font-size:12px;color:var(--text-2);line-height:1.75;max-width:680px">
+        2023-2025 outreach history. Run <code style="background:var(--border);padding:1px 6px;border-radius:3px;font-size:11px">/re-engage</code> in Claude Code to generate personalized drafts for every contact. No-reply contacts sorted first.
+      </div>
+    </div>
+    <div class="toolbar">
+      <input type="text" class="search-input" id="reengage-search" placeholder="Search name, company..." oninput="renderReengage()">
+      <select class="filter-select" id="reengage-status" onchange="renderReengage()">
+        <option value="">All Statuses</option>
+        <option value="not_contacted">Not Contacted</option>
+        <option value="draft_ready">Draft Ready</option>
+        <option value="sent">Sent</option>
+        <option value="responded">Responded</option>
+        <option value="pass">Pass</option>
+      </select>
+      <select class="filter-select" id="reengage-mode" onchange="renderReengage()">
+        <option value="">All Types</option>
+        <option value="no_reply">No Reply</option>
+        <option value="went_cold">Went Cold</option>
+        <option value="personal">Personal</option>
+      </select>
+      <span class="count-badge" id="reengage-count"></span>
+    </div>
+    <div class="card-grid" id="reengage-list"></div>
+  </div>
+
+  <!-- AGENCIES TAB -->
+  <div id="tab-agencies" class="tab-panel">
+    <div style="margin-bottom:18px">
+      <div style="font-size:12px;color:var(--text-2);line-height:1.75;max-width:680px">
+        Boutique creative agencies, brand studios, and cultural consultancies under 50 people. Target roles: Freelance Cultural Strategist, Creative Strategist, Brand Strategist, Partnerships Strategist. Rate: $55-60/hour. Lead with their specific work. Tell the connective tissue story. Soft close.
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:12px">
+        <a href="https://workingnotworking.com" target="_blank" style="color:var(--accent);text-decoration:none">Working Not Working &rarr;</a>
+        <a href="https://contra.com" target="_blank" style="color:var(--accent);text-decoration:none">Contra &rarr;</a>
+        <a href="https://the-dots.com" target="_blank" style="color:var(--accent);text-decoration:none">The Dots &rarr;</a>
+        <a href="https://creativepool.com" target="_blank" style="color:var(--accent);text-decoration:none">Creativepool &rarr;</a>
+      </div>
+    </div>
+    <div class="toolbar">
+      <input type="text" class="search-input" id="agencies-search" placeholder="Search agencies, studios, cities, types..." oninput="renderAgencies()">
+      <select class="filter-select" id="agencies-status" onchange="renderAgencies()">
+        <option value="">All Statuses</option>
+        <option value="new">New</option>
+        <option value="approved">Approved</option>
+        <option value="outreach_sent">Outreach Sent</option>
+        <option value="active">Active</option>
+        <option value="pass">Pass</option>
+      </select>
+      <select class="filter-select" id="agencies-location" onchange="renderAgencies()">
+        <option value="">All Locations</option>
+        <option value="Austin">Austin</option>
+        <option value="Remote">Remote</option>
+      </select>
+      <span class="count-badge" id="agencies-count"></span>
+    </div>
+    <div class="card-grid" id="agencies-list"></div>
+  </div>
+
+  <!-- PIPELINE TAB -->
+  <div id="tab-pipeline" class="tab-panel">
+    <div class="pipeline-grid">
+      <div>
+        <div class="pipeline-section-title">Full-Time Roles</div>
+        <div class="kanban-board" id="kanban-jobs"></div>
+      </div>
+      <div>
+        <div class="pipeline-section-title">Consulting Pipeline</div>
+        <div class="kanban-board" id="kanban-prospects"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal-overlay" class="modal-overlay" onclick="maybeCloseModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-sub" id="modal-sub"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────
+// LIGHT / DARK MODE
+// ─────────────────────────────────────────
+function toggleMode() {
+  const isLight = document.documentElement.classList.toggle('light');
+  localStorage.setItem('jt_mode', isLight ? 'light' : 'dark');
+  document.getElementById('mode-btn').innerHTML = isLight ? '&#9790;' : '&#9788;';
+}
+(function() {
+  if (localStorage.getItem('jt_mode') === 'light') {
+    document.documentElement.classList.add('light');
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mode-btn');
+      if (btn) btn.innerHTML = '&#9790;';
+    });
+  }
+})();
+
+// ─────────────────────────────────────────
+// CONFIG
+// ─────────────────────────────────────────
+const FROM_EMAIL = 'jamestedesco51@gmail.com';
+
+// ─────────────────────────────────────────
+// SKILL BUCKET DETECTION
+// ─────────────────────────────────────────
+const SKILL_BUCKETS = [
+  { label: 'Partnerships', color: '#a78bfa', keywords: ['partnerships','collaborations','collab','biz dev','business development','publisher relations','licensing','influencer partnerships','creator partnerships','co-marketing'] },
+  { label: 'Brand & Marketing', color: '#34d399', keywords: ['brand manager','brand marketing','marketing manager','go-to-market','gtm','integrated marketing','cultural marketing','campaign manager','experiential','head of brand','community manager','social media manager'] },
+  { label: 'Creative', color: '#f472b6', keywords: ['creative director','creative strategist','content strategist','editorial','head of content','copywriter','brand creative','creative producer','creative lead'] },
+  { label: 'Ecom & Growth', color: '#fb923c', keywords: ['ecommerce','ecom','shopify','growth manager','head of growth','growth marketing','conversion','digital marketing','email marketing','retention'] },
+  { label: 'Gaming / Publishing', color: '#38bdf8', keywords: ['developer relations','devrel','game scout','publishing manager','studio relations','gaming','esports','indie game','game marketing'] },
+];
+
+function detectBucket(title, description) {
+  const text = `${title} ${description}`.toLowerCase();
+  for (const b of SKILL_BUCKETS) {
+    if (b.keywords.some(k => text.includes(k))) return b;
+  }
+  return null;
+}
+
+// ─────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────
+let jobs = [];
+let prospects = [];
+let agencies = [];
+let reengagements = [];
+let currentTab = 'jobs';
+const _emailCache = {};
+const _metaCache = {};
+
+// localStorage helpers
+const LS = {
+  get: (k) => { try { return JSON.parse(localStorage.getItem(k) || '{}'); } catch { return {}; } },
+  set: (k, v) => localStorage.setItem(k, JSON.stringify(v)),
+  jobStatuses: () => LS.get('jt_job_statuses'),
+  prospectStatuses: () => LS.get('jt_prospect_statuses'),
+  dismissed: () => LS.get('jt_dismissed'),
+  setJobStatus: (id, s) => { const d = LS.jobStatuses(); d[id] = s; LS.set('jt_job_statuses', d); },
+  setProspectStatus: (id, s) => { const d = LS.prospectStatuses(); d[id] = s; LS.set('jt_prospect_statuses', d); },
+  agencyStatuses: () => LS.get('jt_agency_statuses'),
+  setAgencyStatus: (id, s) => { const d = LS.agencyStatuses(); d[id] = s; LS.set('jt_agency_statuses', d); },
+  reengageStatuses: () => LS.get('jt_reengage_statuses'),
+  setReengageStatus: (id, s) => { const d = LS.reengageStatuses(); d[id] = s; LS.set('jt_reengage_statuses', d); },
+  dismiss: (id) => { const d = LS.dismissed(); d[id] = true; LS.set('jt_dismissed', d); },
+};
+
+// ─────────────────────────────────────────
+// ID GENERATION
+// ─────────────────────────────────────────
+function makeId(item) {
+  if (item.id) return item.id;
+  const raw = (item.url || '') + (item.company || item.brand || '') + (item.title || item.brand || '');
+  let h = 0;
+  for (let i = 0; i < raw.length; i++) { h = Math.imul(31, h) + raw.charCodeAt(i) | 0; }
+  return 'id' + Math.abs(h).toString(36);
+}
+
+// ─────────────────────────────────────────
+// LABEL HELPERS
+// ─────────────────────────────────────────
+function scoreMeta(score) {
+  if (score >= 8) return { label: 'Strong Fit', cls: 'strong' };
+  if (score >= 5) return { label: 'Good Fit', cls: 'good' };
+  if (score >= 2) return { label: 'Worth a Look', cls: 'look' };
+  return { label: 'Low Signal', cls: 'low' };
+}
+
+const STATUS_LABELS = {
+  new: 'New', approved: 'Approved', applied: 'Applied',
+  outreach_sent: 'Outreach Sent', interview: 'Interview',
+  pass: 'Pass', active: 'Active Client'
+};
+function statusLabel(s) { return STATUS_LABELS[s] || 'New'; }
+
+function statusBadge(s) {
+  const cls = { new:'new', approved:'approved', applied:'applied', outreach_sent:'outreach',
+                interview:'interview', pass:'pass', active:'active' }[s] || 'new';
+  return `<span class="badge badge-${cls}">${statusLabel(s)}</span>`;
+}
+
+// ─────────────────────────────────────────
+// EMAIL GENERATION
+// ─────────────────────────────────────────
+const COMPANY_VOICE = {
+  'aspyr': 'Aspyr has done more for game preservation than almost anyone in the industry. The back catalog work is genuinely respected and the Austin roots make it even more compelling.',
+  'heart and soil': 'Heart and Soil has built real community around organ meats in a category most brands make clinical. The conviction is unusually strong and the brand POV is clear.',
+  'heart & soil': 'Heart and Soil has built real community around organ meats in a category most brands make clinical. The conviction is unusually strong and the brand POV is clear.',
+  'everyday dose': 'Everyday Dose has found a clean wedge in functional coffee. The positioning is specific and the Austin base gives it local credibility with a national reach.',
+  'howler brothers': 'Howler Brothers occupies a genuinely distinct place in outdoor lifestyle. The aesthetic is specific, the community feel is real, and the content reflects that.',
+  'fishwife': 'Fishwife has built something genuinely special. The brand equity is real, the audience is committed, and the product is differentiated in a category that should be boring but is not.',
+  'midwest games': 'Midwest Games has carved out a real identity in indie publishing. The developer relationships feel genuine and the curation has a clear point of view.',
+  'popagenda': 'popagenda has a clear creative identity and a strong point of view. That is the hard part. The commercial infrastructure is where it gets interesting.',
+  'graza': 'Graza figured out how to make olive oil a brand decision. The positioning work behind that is real and it shows in how the brand shows up in the market.',
+  'ghia': 'Ghia is doing something rare: building genuine cultural cachet in a non-alc category that most brands treat as a dietary restriction rather than a lifestyle.',
+  'liquid death': 'Liquid Death turned canned water into a brand statement. The irreverence is a feature, not a bug, and the partnerships catalog reflects that.',
+  'olipop': 'OLIPOP has built one of the most compelling brand identities in better-for-you bev. The growth has been real and the audience is genuinely engaged.',
+  'madhappy': 'Madhappy has done something most brands only talk about: made mental health feel like a lifestyle position rather than a category.',
+  'wondermind': 'Wondermind is building in mental health with real cultural momentum and a founder story that carries weight.',
+  'riot games': 'Riot Games has built one of the most engaged gaming communities in the world. The IP depth creates real room for creative partnership work.',
+  'devolver digital': 'Devolver Digital has made irreverence into a brand position and it has worked better than almost anyone expected.',
+  'annapurna interactive': 'Annapurna Interactive has one of the strongest curatorial identities in games. The brand equity here is real and unusual for a publisher.',
+  'dash hudson': 'Dash Hudson has become the tool serious brand teams actually use. The fact that they need an influencer partnerships person means the commercial layer is maturing and there is real work to be done.',
+  'tower 28': 'Tower 28 has built exceptional brand credibility in clean beauty with a genuinely distinctive aesthetic. The community is real and the product conviction is there.',
+  'marchay': 'Marchay is building a genuinely differentiated travel membership model. The brand is sharp and the partnership potential in that space is wide open.',
+  'branch': 'Branch has built something specific in the commuter and remote worker space. The brand positioning is tight and the partnership layer is an obvious next move.',
+  'accrue': 'Accrue is building in a genuinely interesting wedge around saving toward purchases. The brand and commercial infrastructure are still being built.',
+  'howler brothers': 'Howler Brothers occupies a genuinely distinct place in outdoor lifestyle. The aesthetic is specific, the community feel is real, and the content reflects that.',
+  'farrow': 'Farrow and Ball has built one of the most recognizable color brands in the world. The positioning is specific, the audience is devoted, and the business development layer is where growth happens.',
+  'skillsearch': 'Skillsearch knows the gaming industry hiring market better than almost anyone. Placing the right brand partnerships person in the right studio is a meaningful role.',
+  'kyra': 'Kyra has built something specific at the intersection of creator partnerships and beauty and fashion brand work. The market position is clear and the brief is interesting.',
+  'joined media': 'Joined Media Group is building in gaming influencer marketing with a clear niche and real execution capability. The space is growing fast and they are positioned well in it.',
+  'afk': 'AFK is doing something specific in gaming creator and influencer marketing. The brief for a video games influencer manager is exactly the kind of role where direct industry knowledge matters.',
+  'roc nation': 'Roc Nation has built one of the most powerful brand and talent ecosystems in entertainment. A marketing role on a spirits brand inside that organization is a genuinely interesting brief.',
+  'turtle beach': 'Turtle Beach has been in gaming peripherals long enough to have real credibility and community. The partnerships angle inside a category like gaming audio is an interesting one.',
+  'consiglieri': 'Consiglieri operates at the brand consulting level with a specific and sophisticated client roster. A partner marketing role there touches real brand work across multiple verticals.',
+};
+
+function getObservation(company) {
+  const key = (company || '').toLowerCase();
+  for (const [k, v] of Object.entries(COMPANY_VOICE)) {
+    if (key.includes(k)) return v;
+  }
+  return `${company} caught my attention and this role looks like a strong fit for what I've been building.`;
+}
+
+function genJobEmail(job) {
+  const obs = getObservation(job.company);
+  const title = job.title || 'this role';
+  const co = job.company || 'your team';
+  const subject = `${title} - James Tedesco`;
+  const body = `Hi there,
+
+${obs}
+
+I applied for the ${title} role and wanted to make sure it came through. I'm genuinely interested in this one.
+
+A bit of context on why I think I'm a strong fit: I build partnership and commercial infrastructure from scratch. At Opulist I came in with no pricing framework, no pipeline, no deal history, and closed $50K+ in the first two quarters. At Sunday Scaries I conceived Scenes of Note from nothing and led the Dinner Service collab from cold outreach through a six-product launch. Before that I ran 15+ branded campaign integrations a month at Fandom alongside CD Projekt Red, Sony Santa Monica, and Deep Silver.
+
+The through-line is the same: come in early, build the function, show real results.
+
+Work samples: jmt115.cargo.site
+linkedin.com/in/james-tedesco
+
+Happy to get on a call if it's useful.
+
+James`;
+  return { subject, body };
+}
+
+function genFollowUpEmail(job) {
+  const obs = getObservation(job.company);
+  const title = job.title || 'this role';
+  const subject = `Following up - ${title}`;
+  const body = `Hi there,
+
+I applied for the ${title} role a few days ago and wanted to follow up. Just wanted to make sure it landed and confirm I'm still very interested.
+
+${obs}
+
+I'm not going to take up a lot of your time here. If it would help to see work examples or have a quick conversation, I'm easy to reach.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`;
+  return { subject, body };
+}
+
+function genLinkedInNote(item) {
+  const isJob = !item.brand;
+  if (isJob) {
+    const obs = getObservation(item.company);
+    const firstSentence = obs.split('.')[0].trim();
+    return `${firstSentence}. Applied for ${item.title || 'the open role'} and wanted to connect directly. Happy to share more context if useful.`;
+  } else {
+    const brand = item.brand || '';
+    const contact = item.contact || item.founder || '';
+    const firstName = contact ? contact.split(' ')[0] : 'there';
+    return `Hi ${firstName}, ${brand}'s brand is really distinctive. I work with founder-led brands on partnerships and commercial infrastructure. Would love to connect.`;
+  }
+}
+
+function genProspectEmail(prospect) {
+  const brand = prospect.brand || '';
+  const contact = prospect.contact || prospect.founder || '';
+  const firstName = contact ? contact.split(' ')[0] : 'there';
+  const gap = prospect.gap || `${brand} has a clear point of view and real product strength.`;
+  const lead = gap.split('.')[0].trim() + '.';
+  const isEU = prospect.region === 'EU';
+
+  const subject = `Fractional partnerships - ${brand}`;
+  const body = `Hi ${firstName},
+
+${lead}
+
+I work with brands like ${brand} on the commercial layer - partnerships, GTM, brand collaborations. That's usually the piece that doesn't get built until someone decides to build it.
+
+Here is what I've done recently: built Opulist's entire partnership function from zero ($50K+ closed in the first two quarters), supported indie.io on developer acquisition and publishing strategy, created Scenes of Note from concept to market, and ran brand integrations at Fandom for five years.${isEU ? '\n\nI work with US and European brands remotely. Timezone-flexible and used to cross-market coordination.' : ''}
+
+I'm looking for one more client right now. Retainer-based, 15 hours a week, AI-powered backend so I deliver what used to take a full team.
+
+Is a quick conversation worth 20 minutes?
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`;
+  return { subject, body };
+}
+
+// ─────────────────────────────────────────
+// AGENCY EMAIL GENERATION
+// ─────────────────────────────────────────
+const AGENCY_VOICE = {
+  'red antler': "Red Antler's work on Casper and Allbirds is still the benchmark for how consumer brand positioning should work. Going from zero brand equity to category-defining in a compressed window is genuinely hard and they've done it more than once.",
+  'mythology': "Mythology's brand work has a cultural intelligence behind it that most studios don't have. The way they approach identity for premium consumer brands sets a different standard than what most positioning work produces.",
+  'humanaut': "Humanaut's work for Oatly is a case study in how to make a niche product feel inevitable to a mainstream audience. Holding a strong POV while making it accessible is exactly what the best brand work does.",
+  'dazed studio': "Dazed has built something genuinely rare: a media brand with real cultural authority that translates directly into commercial strategy work for brands. The studio side is the logical and credible extension of that.",
+  'preacher': "Preacher's Austin positioning gives them something most creative shops don't have: a genuine sense of place and the cultural credibility that comes with it. The work reflects that in a way that shows up on the page.",
+  'mcgarrah jessee': "McGarrah Jessee has built an exceptional track record of craft-led brand work out of Austin. The commitment to quality over volume is evident in everything they put out and it's held up for a long time.",
+  'and rising': "And Rising's creative capital model is the right framework for how serious creative work should function. The projects reflect a genuine POV rather than a service-delivery mentality.",
+  'bullish': "Bullish operates at the intersection of brand strategy and consumer investment in a way that creates a genuinely different kind of brief. The brands they work with are the right ones and the thinking behind the work shows it.",
+  'canvas8': "Canvas8 has built a library of cultural intelligence that most trend consultancies don't come close to. The way they connect consumer insight to brand action is the right methodology and the research reflects real fluency.",
+  'sparks & honey': "Sparks & Honey has a cultural foresight methodology that goes deeper than most trend research. Connecting emerging signals to brand strategy at the scale they operate is exactly what brands need and rarely find.",
+  'quality meats': "Quality Meats has a pop culture intelligence that shows up in the work in a way that feels earned rather than performed. The brand fluency is real and the output reflects it.",
+  'sibling rivalry': "Sibling Rivalry's editorial sensibility separates them from most creative studios. The work has a genuine cultural POV that isn't manufactured from a brief, it comes through in the execution.",
+  'hecho': "Hecho's focus on cultural brands and multicultural audiences addresses something most agencies still get wrong. The specificity of their positioning is a genuine strength in a space where most work is generic.",
+  'franklyn': "Franklyn's brand work has a precision that comes from real restraint. Finding the right frame and not overselling it is genuinely hard to do consistently and they do it.",
+  'oddfellows': "Oddfellows has a motion and brand voice that's immediately recognizable. The quality of execution is high and the brand clients reflect a real curation rather than just whoever is paying.",
+  'gretel': "Gretel's work for Netflix and HBO set a standard for entertainment brand identity that still holds. The selectivity of the studio means every project gets real attention and it shows in the output.",
+  'cassette': "Cassette's approach to cultural strategy is built on the kind of genuine cultural fluency that most strategy shops talk about but rarely demonstrate when you look at the actual work.",
+  'mythology': "Mythology's brand work has a cultural intelligence behind it that most studios don't have. The way they approach identity for premium consumer brands sets a different standard.",
+  'humanaut': "Humanaut's work for Oatly is a case study in how to make a niche product feel inevitable. Holding a strong POV while making it accessible is exactly what the best brand work does.",
+};
+
+function getAgencyObservation(agencyName) {
+  const key = (agencyName || '').toLowerCase();
+  for (const [k, v] of Object.entries(AGENCY_VOICE)) {
+    if (key.includes(k)) return v;
+  }
+  return `${agencyName}'s work has a specific cultural intelligence behind it that I genuinely respect.`;
+}
+
+function genAgencyEmail(agency) {
+  const name = agency.name || 'your team';
+  const obs = getAgencyObservation(name);
+  const subject = `Freelance inquiry / ${name} / James Tedesco`;
+  const body = `Hi team,
+
+${obs}
+
+By way of background, I work across creative, strategy, and commercial simultaneously. At Fandom I started in audience data, spotted the commercial gap, and built a full brand partnerships program on top. At Sunday Scaries I took a cultural signal, turned it into a product concept, directed the collab, wrote the copy, and ran the launch across six co-branded products end to end. Most recently at Opulist I connected editorial content to commercial infrastructure and closed $50K in the first two quarters.
+
+That overlap between creative intelligence and commercial execution feels like a lot of what you're doing with clients.
+
+If there's ever a project or a brief where an extra hand makes sense, I'd love to be on your radar. No pressure at all.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`;
+  return { subject, body };
+}
+
+function genAgencyLinkedInNote(agency) {
+  const obs = getAgencyObservation(agency.name || '');
+  const firstLine = obs.split('.')[0].trim() + '.';
+  const note = `${firstLine} I work across creative, strategy, and commercial and I'm genuinely a fan of the work. Would love to be on your radar if a project brief ever fits. Happy to send context.`;
+  return note.slice(0, 300);
+}
+
+function makeMailto(to, subject, body) {
+  return `mailto:${encodeURIComponent(to || '')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+// ─────────────────────────────────────────
+// TAB NAVIGATION
+// ─────────────────────────────────────────
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === tab);
+  });
+  document.getElementById('tab-' + tab).classList.add('active');
+  render();
+}
+
+function render() {
+  if (currentTab === 'jobs') renderJobs();
+  else if (currentTab === 'prospects') renderProspects();
+  else if (currentTab === 'agencies') renderAgencies();
+  else if (currentTab === 'reengage') renderReengage();
+  else if (currentTab === 'outreach') renderOutreach();
+  else if (currentTab === 'pipeline') renderPipeline();
+}
+
+// ─────────────────────────────────────────
+// JOBS TAB
+// ─────────────────────────────────────────
+function renderJobs() {
+  const statuses = LS.jobStatuses();
+  const dismissed = LS.dismissed();
+  const q = (document.getElementById('jobs-search').value || '').toLowerCase();
+  const sf = document.getElementById('jobs-status').value;
+  const sc = document.getElementById('jobs-score').value;
+  const sb = document.getElementById('jobs-bucket').value;
+  const sort = document.getElementById('jobs-sort').value;
+
+  let list = jobs
+    .map(j => ({ ...j, _id: makeId(j), _status: statuses[makeId(j)] || j.default_status || 'new' }))
+    .filter(j => !dismissed[j._id])
+    .filter(j => !sf || j._status === sf)
+    .filter(j => {
+      if (!sc) return true;
+      if (sc === 'strong') return j.score >= 8;
+      if (sc === 'good') return j.score >= 5 && j.score < 8;
+      if (sc === 'look') return j.score >= 2 && j.score < 5;
+      return true;
+    })
+    .filter(j => {
+      if (!sb) return true;
+      const b = detectBucket(j.title, j.description || '');
+      return b && b.label === sb;
+    })
+    .filter(j => !q || `${j.title} ${j.company} ${j.description || ''} ${j.source || ''}`.toLowerCase().includes(q));
+
+  if (sort === 'score') list.sort((a, b) => b.score - a.score);
+  else if (sort === 'date') list.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  else list.sort((a, b) => (a.company || '').localeCompare(b.company || ''));
+
+  document.getElementById('jobs-count').textContent = `${list.length} role${list.length !== 1 ? 's' : ''}`;
+  const el = document.getElementById('jobs-list');
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">No roles match</div>Adjust filters or wait for the next scrape run.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(job => {
+    const { label: sl, cls: sc2 } = scoreMeta(job.score);
+    const { subject, body } = genJobEmail(job);
+    const eid = job._id + '_email';
+    _emailCache[eid] = { subject, body };
+    const mailto = makeMailto(FROM_EMAIL, subject, body);
+    return `<div class="card">
+  <div class="card-header">
+    <div style="flex:1;min-width:0">
+      <div class="card-title">${job.url ? `<a href="${escH(job.url)}" target="_blank">${escH(job.title)}</a>` : escH(job.title)}</div>
+      <div class="card-subtitle">${escH(job.company)}${job.date ? ' &middot; ' + job.date : ''}</div>
+    </div>
+    <span class="badge badge-${sc2}" style="flex-shrink:0">${sl}</span>
+  </div>
+  ${job.description ? `<div class="card-desc">${escH(job.description)}</div>` : ''}
+  ${renderContacts(job.contacts, job.company)}
+  <div class="card-meta">
+    ${statusBadge(job._status)}
+    ${(() => { const b = detectBucket(job.title, job.description || ''); return b ? `<span class="badge badge-source" style="background:${b.color}22;color:${b.color};border:1px solid ${b.color}44">${b.label}</span>` : ''; })()}
+    ${job.source ? `<span class="badge badge-source">${escH(job.source)}</span>` : ''}
+  </div>
+  <div class="card-actions">
+    ${job._status === 'new' ? `<button class="btn btn-primary" onclick="setJobStatus('${job._id}','approved')">Approve</button>` : ''}
+    <select class="status-select" onchange="setJobStatus('${job._id}',this.value);this.value=''">
+      <option value="">Move to&hellip;</option>
+      <option value="new">New</option>
+      <option value="approved">Approved</option>
+      <option value="applied">Applied</option>
+      <option value="outreach_sent">Outreach Sent</option>
+      <option value="interview">Interview</option>
+      <option value="pass">Pass</option>
+    </select>
+    <button class="btn btn-danger" onclick="dismissId('${job._id}')">Dismiss</button>
+    <a class="btn btn-mail" href="${mailto}">Draft Email</a>
+    ${job.url ? `<a class="card-link" href="${escH(job.url)}" target="_blank">View job &rarr;</a>` : ''}
+  </div>
+</div>`;
+  }).join('');
+}
+
+function setJobStatus(id, s) {
+  if (!s) return;
+  LS.setJobStatus(id, s);
+  render();
+}
+
+// ─────────────────────────────────────────
+// PROSPECTS TAB
+// ─────────────────────────────────────────
+function renderProspects() {
+  const statuses = LS.prospectStatuses();
+  const dismissed = LS.dismissed();
+  const q = (document.getElementById('prospects-search').value || '').toLowerCase();
+  const sf = document.getElementById('prospects-status').value;
+  const ind = document.getElementById('prospects-industry').value.toLowerCase();
+
+  let list = prospects
+    .map(p => ({ ...p, _id: makeId(p), _status: statuses[makeId(p)] || p.default_status || 'new' }))
+    .filter(p => !dismissed[p._id])
+    .filter(p => !sf || p._status === sf)
+    .filter(p => !ind || `${p.industry || ''} ${p.brand || ''} ${p.gap || ''}`.toLowerCase().includes(ind))
+    .filter(p => !q || `${p.brand} ${p.founder || ''} ${p.contact || ''} ${p.gap || ''} ${p.industry || ''}`.toLowerCase().includes(q));
+
+  list.sort((a, b) => (b.score || 0) - (a.score || 0));
+
+  document.getElementById('prospects-count').textContent = `${list.length} prospect${list.length !== 1 ? 's' : ''}`;
+  const el = document.getElementById('prospects-list');
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">No prospects match</div>Adjust filters or update the data file.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(p => {
+    const { label: sl, cls: sc } = scoreMeta(p.score || 5);
+    const { subject, body } = genProspectEmail(p);
+    const eid = p._id + '_email';
+    _emailCache[eid] = { subject, body };
+    const mailto = makeMailto(p.email || FROM_EMAIL, subject, body);
+    return `<div class="card">
+  <div class="card-header">
+    <div style="flex:1;min-width:0">
+      <div class="card-title">${escH(p.brand)}</div>
+      <div class="card-subtitle">${escH(p.industry || '')}</div>
+    </div>
+    <span class="badge badge-${sc}" style="flex-shrink:0">${sl}</span>
+  </div>
+  ${p.founder ? `<div class="card-subtitle" style="margin-top:4px">Founder: <strong>${escH(p.founder)}</strong></div>` : ''}
+  ${p.contact && p.contact !== p.founder ? `<div class="card-subtitle" style="margin-top:2px">Target: <strong>${escH(p.contact)}</strong>${p.contact_title ? ', ' + escH(p.contact_title) : ''}</div>` : ''}
+  ${p.gap ? `<div class="card-gap">${escH(p.gap)}</div>` : ''}
+  ${renderContacts(p.contacts, p.brand)}
+  <div class="card-links">
+    ${p.linkedin ? `<a class="card-link" href="${escH(p.linkedin)}" target="_blank">LinkedIn &rarr;</a>` : ''}
+    ${p.instagram ? `<a class="card-link" href="${escH(p.instagram)}" target="_blank">Instagram &rarr;</a>` : ''}
+    ${p.website ? `<a class="card-link" href="${escH(p.website)}" target="_blank">Website &rarr;</a>` : ''}
+  </div>
+  <div class="card-meta">
+    ${statusBadge(p._status)}
+    ${p.region === 'EU' ? `<span class="badge badge-source" style="background:rgba(59,130,246,.18);color:#60a5fa">🌍 EU — US remote</span>` : ''}
+    ${p.revenue_est ? `<span class="badge badge-source">${escH(p.revenue_est)}</span>` : ''}
+    ${p.notes ? `<span class="badge badge-source">${escH(p.notes)}</span>` : ''}
+  </div>
+  <div class="card-actions">
+    ${p._status === 'new' ? `<button class="btn btn-primary" onclick="setProspectStatus('${p._id}','approved')">Approve</button>` : ''}
+    <select class="status-select" onchange="setProspectStatus('${p._id}',this.value);this.value=''">
+      <option value="">Move to&hellip;</option>
+      <option value="new">New</option>
+      <option value="approved">Approved</option>
+      <option value="outreach_sent">Outreach Sent</option>
+      <option value="active">Active Client</option>
+      <option value="pass">Pass</option>
+    </select>
+    <button class="btn btn-danger" onclick="dismissId('${p._id}')">Dismiss</button>
+    <a class="btn btn-mail" href="${mailto}">Draft Email</a>
+  </div>
+</div>`;
+  }).join('');
+}
+
+function setProspectStatus(id, s) {
+  if (!s) return;
+  LS.setProspectStatus(id, s);
+  render();
+}
+
+// ─────────────────────────────────────────
+// AGENCIES TAB
+// ─────────────────────────────────────────
+function renderAgencies() {
+  const statuses = LS.agencyStatuses();
+  const dismissed = LS.dismissed();
+  const q = (document.getElementById('agencies-search').value || '').toLowerCase();
+  const sf = document.getElementById('agencies-status').value;
+  const lt = document.getElementById('agencies-location').value;
+
+  let list = agencies
+    .map(a => ({ ...a, _id: a.id || ('ag_' + (a.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')), _status: '' }))
+    .map(a => ({ ...a, _status: statuses[a._id] || a.default_status || 'new' }))
+    .filter(a => !dismissed[a._id])
+    .filter(a => !sf || a._status === sf)
+    .filter(a => !lt || a.location_type === lt)
+    .filter(a => !q || `${a.name} ${a.type || ''} ${a.city || ''} ${a.focus || ''} ${a.why_relevant || ''}`.toLowerCase().includes(q));
+
+  list.sort((a, b) => (b.score || 0) - (a.score || 0));
+
+  document.getElementById('agencies-count').textContent = `${list.length} agenc${list.length !== 1 ? 'ies' : 'y'}`;
+  const el = document.getElementById('agencies-list');
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">No agencies match</div>Adjust filters.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(agency => {
+    const eid = agency._id + '_ag';
+    const { subject, body } = genAgencyEmail(agency);
+    _emailCache[eid] = { subject, body, type: 'agency' };
+    const mailto = makeMailto(FROM_EMAIL, subject, body);
+    const liNote = genAgencyLinkedInNote(agency);
+    _emailCache[eid + '_li'] = { subject: 'LinkedIn note', body: liNote, type: 'agency' };
+
+    const { label: sl, cls: sc } = scoreMeta(agency.score || 5);
+
+    const locationBadge = agency.location_type === 'Austin'
+      ? `<span class="badge badge-source" style="background:rgba(201,169,110,.18);color:var(--accent)">📍 Austin</span>`
+      : `<span class="badge badge-source" style="background:rgba(74,154,106,.12);color:#7abf9a">🌐 Remote-friendly</span>`;
+
+    const platforms = (agency.platforms || []).map(p =>
+      `<span class="badge badge-source">${escH(p)}</span>`
+    ).join(' ');
+
+    const liNoteLen = liNote.length;
+
+    return `<div class="card">
+  <div class="card-header">
+    <div style="flex:1;min-width:0">
+      <div class="card-title">${agency.website ? `<a href="${escH(agency.website)}" target="_blank">${escH(agency.name)}</a>` : escH(agency.name)}</div>
+      <div class="card-subtitle">${escH(agency.type || '')} &middot; ${escH(agency.city || '')}</div>
+    </div>
+    <span class="badge badge-${sc}" style="flex-shrink:0">${sl}</span>
+  </div>
+  ${agency.focus ? `<div class="card-desc">${escH(agency.focus)}</div>` : ''}
+  ${agency.why_relevant ? `<div class="card-gap">${escH(agency.why_relevant)}</div>` : ''}
+  <div class="card-links">
+    ${agency.website ? `<a class="card-link" href="${escH(agency.website)}" target="_blank">Website &rarr;</a>` : ''}
+    ${agency.linkedin ? `<a class="card-link" href="${escH(agency.linkedin)}" target="_blank">LinkedIn &rarr;</a>` : ''}
+    ${agency.instagram ? `<a class="card-link" href="${escH(agency.instagram)}" target="_blank">Instagram &rarr;</a>` : ''}
+  </div>
+  <div class="card-meta">
+    ${statusBadge(agency._status)}
+    ${locationBadge}
+    ${platforms}
+  </div>
+  <div class="card-actions" style="flex-direction:column;align-items:flex-start;gap:10px">
+    <div style="display:flex;gap:7px;flex-wrap:wrap;width:100%">
+      ${agency._status === 'new' ? `<button class="btn btn-primary" onclick="setAgencyStatus('${agency._id}','approved')">Approve</button>` : ''}
+      <select class="status-select" onchange="setAgencyStatus('${agency._id}',this.value);this.value=''">
+        <option value="">Move to&hellip;</option>
+        <option value="new">New</option>
+        <option value="approved">Approved</option>
+        <option value="outreach_sent">Outreach Sent</option>
+        <option value="active">Active</option>
+        <option value="pass">Pass</option>
+      </select>
+      <button class="btn btn-danger" onclick="dismissId('${agency._id}')">Dismiss</button>
+    </div>
+    <div class="outreach-drafts-tabs" style="margin-bottom:0;width:100%">
+      <button class="draft-tab active" onclick="switchDraftTab('${eid}','main',this)">Outreach Email</button>
+      <button class="draft-tab" onclick="switchDraftTab('${eid}','li',this)">LinkedIn Note</button>
+    </div>
+    <div id="draft-main-${eid}" style="width:100%">
+      <div class="email-preview">
+        <div class="email-subject">Subject: ${escH(subject)}</div>
+        <div class="email-body" style="max-height:160px;overflow-y:auto">${escH(body)}</div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <a class="btn btn-primary" href="${mailto}">Open in Mail</a>
+        <button class="btn" onclick="copyBody('${eid}')">Copy Body</button>
+        <button class="btn" onclick="setAgencyStatus('${agency._id}','outreach_sent')">Mark Sent</button>
+      </div>
+    </div>
+    <div id="draft-li-${eid}" style="display:none;width:100%">
+      <div class="email-preview">
+        <div class="email-subject" style="color:var(--text-3);font-size:11px">LinkedIn connection note (300 char max)</div>
+        <div class="email-body" style="font-size:13px">${escH(liNote)}</div>
+        <div style="font-size:11px;color:var(--text-3);margin-top:6px">${liNoteLen}/300 chars</div>
+      </div>
+      <div style="margin-top:8px">
+        <button class="btn btn-primary" onclick="copyBody('${eid}_li')">Copy Note</button>
+      </div>
+    </div>
+  </div>
+</div>`;
+  }).join('');
+}
+
+function setAgencyStatus(id, s) {
+  if (!s) return;
+  LS.setAgencyStatus(id, s);
+  render();
+}
+
+// ─────────────────────────────────────────
+// RE-ENGAGE TAB
+// ─────────────────────────────────────────
+function makeReengageId(contact) {
+  if (contact.id) return contact.id;
+  const raw = (contact.email || '') + (contact.name || '') + (contact.company || '');
+  let h = 0;
+  for (let i = 0; i < raw.length; i++) { h = Math.imul(31, h) + raw.charCodeAt(i) | 0; }
+  return 're' + Math.abs(h).toString(36);
+}
+
+function inferMode(contact) {
+  if (contact.mode) return contact.mode;
+  const co = (contact.company || '').toLowerCase();
+  if (co.includes('personal')) return 'personal';
+  return contact.got_reply ? 'went_cold' : 'no_reply';
+}
+
+function isSkippable(contact) {
+  const co = (contact.company || '').toLowerCase();
+  const name = (contact.name || '').toLowerCase();
+  const email = (contact.email || '').toLowerCase();
+  // Skip Creative Circle and other pure recruiters
+  if (co.includes('creative circle')) return true;
+  if (email.includes('jobalert.creativecircle')) return true;
+  // Skip bounced emails
+  if (name.includes('bounced') || (contact.summary || '').toLowerCase().includes('bounced')) return true;
+  return false;
+}
+
+function genReengageDraft(contact) {
+  // Use pre-generated draft from JSON (via /re-engage Claude Code command) if available
+  if (contact.draft && contact.draft.body && contact.draft.body.length > 50) {
+    return contact.draft;
+  }
+  // Client-side fallback template
+  const mode = inferMode(contact);
+  const firstName = (contact.name || 'there').split(' ')[0].replace(/\s*\(.*\)/, '').trim();
+  const company = contact.company || 'your company';
+  const summary = contact.summary || '';
+
+  if (mode === 'personal') {
+    return {
+      subject: 'Catching up — James Tedesco',
+      body: `Hi ${firstName},
+
+Wanted to reach out and catch up. It's been a while since we've been in touch.
+
+A lot has changed since we last connected. I've been building partnership programs and go-to-market infrastructure for a few founder-led brands — built the whole function from zero at Opulist ($50K+ in the first two quarters), and I'm now doing game scouting and publisher deal structuring at indie.io.
+
+Would love to reconnect if you're open to a quick call. No agenda, just catching up.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`
+    };
+  }
+
+  if (mode === 'went_cold') {
+    return {
+      subject: 'Catching up — James Tedesco',
+      body: `Hi ${firstName},
+
+Wanted to check back in — things have moved pretty fast since we last spoke.
+
+Since then I've been building partnership programs and commercial infrastructure for a handful of founder-led brands. At Opulist I built the entire partnership function from zero and closed $50K+ in the first two quarters. I'm also working with indie.io on game scouting and publisher deal structuring. The common thread is coming in early and building the function that doesn't exist yet.
+
+Curious what you're working on now${company !== 'your company' ? ' at ' + company : ''}. If there's a consulting angle or a role worth exploring, happy to find 20 minutes.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`
+    };
+  }
+
+  // no_reply default
+  return {
+    subject: 'Checking back in — James Tedesco',
+    body: `Hi ${firstName},
+
+I reached out a while back and wanted to check in again.
+
+Since then I've been building partnership programs and GTM infrastructure for a few founder-led brands — most recently closing $50K+ at Opulist from zero and scouting indie game deals at indie.io. The common thread across all of it is building the commercial layer that makes things actually work.
+
+If the timing is better now or there's a different angle worth exploring, I'm easy to reach. No pressure either way.
+
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`
+  };
+}
+
+function openGmail(email, subject, body) {
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email || '')}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.open(url, '_blank');
+}
+
+function toggleReengageDraft(id) {
+  const el = document.getElementById('re-draft-' + id);
+  const btn = document.getElementById('re-draft-btn-' + id);
+  if (!el || !btn) return;
+  const open = el.style.display !== 'block';
+  el.style.display = open ? 'block' : 'none';
+  btn.textContent = open ? 'Hide Draft' : 'Show Draft';
+}
+
+function copyReengage(id) {
+  const el = document.getElementById('re-ta-' + id);
+  if (!el) return;
+  navigator.clipboard.writeText(el.value).then(() => {
+    const btn = document.getElementById('re-copy-btn-' + id);
+    if (btn) { const orig = btn.textContent; btn.textContent = 'Copied'; setTimeout(() => btn.textContent = orig, 1500); }
+  });
+}
+
+function renderReengage() {
+  const statuses = LS.reengageStatuses();
+  const q = (document.getElementById('reengage-search').value || '').toLowerCase();
+  const sf = document.getElementById('reengage-status').value;
+  const mf = document.getElementById('reengage-mode').value;
+
+  let list = reengagements
+    .filter(c => !isSkippable(c))
+    .map(c => {
+      const id = makeReengageId(c);
+      const mode = inferMode(c);
+      const status = statuses[id] || c.status || 'not_contacted';
+      return { ...c, _id: id, _mode: mode, _status: status };
+    })
+    .filter(c => !sf || c._status === sf)
+    .filter(c => !mf || c._mode === mf)
+    .filter(c => !q || `${c.name} ${c.company} ${c.summary || ''}`.toLowerCase().includes(q));
+
+  // Sort: no_reply first, then by date desc
+  list.sort((a, b) => {
+    if (a._mode === 'no_reply' && b._mode !== 'no_reply') return -1;
+    if (b._mode === 'no_reply' && a._mode !== 'no_reply') return 1;
+    return (b.date || '').localeCompare(a.date || '');
+  });
+
+  document.getElementById('reengage-count').textContent = `${list.length} contact${list.length !== 1 ? 's' : ''}`;
+  const el = document.getElementById('reengage-list');
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">No contacts match</div>Run /re-engage in Claude Code to generate drafts, or adjust filters.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(c => {
+    const { subject, body } = genReengageDraft(c);
+    const hasClaude = c.draft && c.draft.body && c.draft.body.length > 50;
+
+    const modeLabel = { no_reply: 'No Reply', went_cold: 'Went Cold', personal: 'Personal' }[c._mode] || c._mode;
+    const modeCls = { no_reply: 're-mode-no-reply', went_cold: 're-mode-went-cold', personal: 're-mode-personal' }[c._mode] || '';
+    const replyBadge = c.got_reply
+      ? `<span class="re-reply-yes">Replied</span>`
+      : `<span class="re-reply-no">No Reply</span>`;
+
+    const statusOptions = ['not_contacted','draft_ready','sent','responded','pass'].map(s =>
+      `<option value="${s}" ${c._status === s ? 'selected' : ''}>${{not_contacted:'Not Contacted',draft_ready:'Draft Ready',sent:'Sent',responded:'Responded',pass:'Pass'}[s]}</option>`
+    ).join('');
+
+    return `<div class="card">
+  <div class="card-header">
+    <div style="flex:1;min-width:0">
+      <div class="card-title">${escH(c.name)}</div>
+      <div class="card-subtitle">${escH(c.company)}${c.date ? ' &middot; ' + c.date : ''}</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0">
+      <span class="re-mode-badge ${modeCls}">${modeLabel}</span>
+      ${replyBadge}
+    </div>
+  </div>
+  ${c.summary ? `<div class="card-desc" style="margin-top:8px"><em style="color:var(--text-3);font-style:normal">${escH(c.summary)}</em></div>` : ''}
+  <div class="card-actions" style="margin-top:10px;flex-direction:column;align-items:flex-start;gap:10px">
+    <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
+      <button class="btn btn-primary" id="re-draft-btn-${c._id}" onclick="toggleReengageDraft('${c._id}')">${hasClaude ? 'Show Draft' : 'Show Template'}</button>
+      <select class="status-select" onchange="LS.setReengageStatus('${c._id}',this.value);renderReengage()" style="margin-left:0">
+        ${statusOptions}
+      </select>
+      ${c.email && !c.email.includes('jobalert') ? `<a class="card-link" href="mailto:${escH(c.email)}" style="font-size:11px">mailto &rarr;</a>` : ''}
+      ${c.linkedin ? `<a class="card-link" href="${escH(c.linkedin)}" target="_blank">LinkedIn &rarr;</a>` : ''}
+    </div>
+    <div id="re-draft-${c._id}" style="display:none;width:100%">
+      ${hasClaude ? '' : '<div style="font-size:11px;color:var(--text-3);margin-bottom:6px">Template draft (run /re-engage for a personalized version)</div>'}
+      <div style="font-size:11px;font-weight:600;color:var(--text-3);margin-bottom:4px;letter-spacing:.04em">Subject: ${escH(subject)}</div>
+      <textarea class="re-draft-area" id="re-ta-${c._id}">${escH(body)}</textarea>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <button class="btn btn-primary" onclick="openGmail('${escH(c.email || '')}', document.getElementById('re-ta-${c._id}') ? '${escH(subject)}' : '', document.getElementById('re-ta-${c._id}') ? document.getElementById('re-ta-${c._id}').value : '')">Open in Gmail</button>
+        <button class="btn" id="re-copy-btn-${c._id}" onclick="copyReengage('${c._id}')">Copy Body</button>
+        <button class="btn" onclick="LS.setReengageStatus('${c._id}','sent');renderReengage()">Mark Sent</button>
+      </div>
+    </div>
+  </div>
+</div>`;
+  }).join('');
+}
+
+// ─────────────────────────────────────────
+// OUTREACH TAB
+// ─────────────────────────────────────────
+function renderOutreach() {
+  const jStatuses = LS.jobStatuses();
+  const pStatuses = LS.prospectStatuses();
+  const dismissed = LS.dismissed();
+  const filter = document.getElementById('outreach-filter').value;
+
+  const aStatuses = LS.agencyStatuses();
+
+  const approvedJobs = (filter === '' || filter === 'jobs')
+    ? jobs.map(j => ({ ...j, _id: makeId(j), _type: 'job' }))
+        .filter(j => !dismissed[j._id] && (jStatuses[j._id] || 'new') === 'approved')
+    : [];
+
+  const approvedProspects = (filter === '' || filter === 'prospects')
+    ? prospects.map(p => ({ ...p, _id: makeId(p), _type: 'prospect' }))
+        .filter(p => !dismissed[p._id] && (pStatuses[p._id] || 'new') === 'approved')
+    : [];
+
+  const approvedAgencies = (filter === '' || filter === 'agencies')
+    ? agencies.map(a => ({ ...a, _id: a.id || ('ag_' + (a.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')), _type: 'agency' }))
+        .filter(a => !dismissed[a._id] && (aStatuses[a._id] || 'new') === 'approved')
+    : [];
+
+  const all = [...approvedJobs, ...approvedProspects, ...approvedAgencies];
+  document.getElementById('outreach-count').textContent = `${all.length} in queue`;
+  const el = document.getElementById('outreach-list');
+
+  if (!all.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-title">Outreach queue is empty</div>Approve jobs and prospects to build your queue.</div>`;
+    return;
+  }
+
+  el.innerHTML = all.map(item => {
+    const isJob = item._type === 'job';
+    const isAgency = item._type === 'agency';
+    const primary = isJob ? genJobEmail(item) : (isAgency ? genAgencyEmail(item) : genProspectEmail(item));
+    const eid = item._id + '_out';
+    _emailCache[eid] = { ...primary, type: item._type };
+
+    // Secondary drafts
+    const followUpId = eid + '_fu';
+    const liId = eid + '_li';
+    if (isJob) {
+      const fu = genFollowUpEmail(item);
+      _emailCache[followUpId] = { ...fu, type: 'job' };
+    }
+    const liNote = isAgency ? genAgencyLinkedInNote(item) : genLinkedInNote(item);
+    _emailCache[liId] = { subject: 'LinkedIn note', body: liNote, type: item._type };
+
+    const to = item.email || FROM_EMAIL;
+    const mailto = makeMailto(to, primary.subject, primary.body);
+    const name = isJob ? item.title : (isAgency ? item.name : item.brand);
+    const sub = isJob ? item.company : (isAgency ? item.type : (item.contact || item.founder || ''));
+    return `<div class="outreach-item">
+  <div class="outreach-header" onclick="toggleOutreach('${eid}')">
+    <span class="outreach-type ${item._type}">${isJob ? 'Job' : (isAgency ? 'Agency' : 'Prospect')}</span>
+    <div style="flex:1;min-width:0">
+      <div class="outreach-name">${escH(name)}</div>
+      <div class="outreach-sub">${escH(sub)}</div>
+    </div>
+    <span class="outreach-caret" id="caret-${eid}">&#9654;</span>
+  </div>
+  <div class="outreach-body" id="body-${eid}">
+    <div class="outreach-drafts-tabs">
+      <button class="draft-tab active" onclick="switchDraftTab('${eid}','main',this)">Application Email</button>
+      ${isJob ? `<button class="draft-tab" onclick="switchDraftTab('${eid}','fu',this)">Follow-Up</button>` : ''}
+      <button class="draft-tab" onclick="switchDraftTab('${eid}','li',this)">LinkedIn Note</button>
+    </div>
+    <div id="draft-main-${eid}" class="draft-panel active">
+      <div class="email-preview">
+        <div class="email-subject">Subject: ${escH(primary.subject)}</div>
+        <div class="email-body">${escH(primary.body)}</div>
+      </div>
+      <div class="outreach-actions">
+        <a class="btn btn-primary" href="${mailto}">Open in Mail</a>
+        <button class="btn" onclick="copyBody('${eid}')">Copy Body</button>
+        <button class="btn" onclick="markSent('${eid}')">Mark Sent</button>
+      </div>
+    </div>
+    ${isJob ? `<div id="draft-fu-${eid}" class="draft-panel" style="display:none">
+      <div class="email-preview">
+        <div class="email-subject">Subject: ${escH(_emailCache[followUpId].subject)}</div>
+        <div class="email-body">${escH(_emailCache[followUpId].body)}</div>
+      </div>
+      <div class="outreach-actions">
+        <a class="btn btn-primary" href="${makeMailto(to, _emailCache[followUpId].subject, _emailCache[followUpId].body)}">Open in Mail</a>
+        <button class="btn" onclick="copyBody('${followUpId}')">Copy Body</button>
+      </div>
+    </div>` : ''}
+    <div id="draft-li-${eid}" class="draft-panel" style="display:none">
+      <div class="email-preview">
+        <div class="email-subject" style="color:var(--text-3);font-size:11px">LinkedIn connection note (300 char max)</div>
+        <div class="email-body" style="font-size:13px">${escH(liNote)}</div>
+        <div style="font-size:11px;color:var(--text-3);margin-top:6px">${liNote.length}/300 chars</div>
+      </div>
+      <div class="outreach-actions">
+        <button class="btn btn-primary" onclick="copyBody('${liId}')">Copy Note</button>
+      </div>
+    </div>
+  </div>
+</div>`;
+  }).join('');
+}
+
+function switchDraftTab(eid, tab, btn) {
+  ['main', 'fu', 'li'].forEach(t => {
+    const el = document.getElementById(`draft-${t}-${eid}`);
+    if (el) el.style.display = 'none';
+  });
+  const active = document.getElementById(`draft-${tab}-${eid}`);
+  if (active) active.style.display = 'block';
+  btn.closest('.outreach-drafts-tabs').querySelectorAll('.draft-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function toggleOutreach(eid) {
+  const body = document.getElementById('body-' + eid);
+  const caret = document.getElementById('caret-' + eid);
+  const open = body.style.display !== 'block';
+  body.style.display = open ? 'block' : 'none';
+  if (caret) caret.innerHTML = open ? '&#9660;' : '&#9654;';
+}
+
+function copyBody(eid) {
+  const cached = _emailCache[eid];
+  if (!cached) return;
+  navigator.clipboard.writeText(cached.body).then(() => {
+    const btns = document.querySelectorAll(`[onclick="copyBody('${eid}')"]`);
+    btns.forEach(b => {
+      const orig = b.textContent;
+      b.textContent = 'Copied';
+      setTimeout(() => b.textContent = orig, 1500);
+    });
+  });
+}
+
+function markSent(eid) {
+  const cached = _emailCache[eid];
+  if (!cached) return;
+  // Extract real item id from cache key (strip _out suffix)
+  const id = eid.replace(/_out$/, '');
+  if (cached.type === 'job') LS.setJobStatus(id, 'outreach_sent');
+  else if (cached.type === 'agency') LS.setAgencyStatus(id, 'outreach_sent');
+  else LS.setProspectStatus(id, 'outreach_sent');
+  render();
+}
+
+// ─────────────────────────────────────────
+// PIPELINE / KANBAN
+// ─────────────────────────────────────────
+function renderPipeline() {
+  const jStatuses = LS.jobStatuses();
+  const pStatuses = LS.prospectStatuses();
+  const dismissed = LS.dismissed();
+
+  const jobStages = ['new', 'approved', 'applied', 'outreach_sent', 'interview', 'pass'];
+  const pStages = ['new', 'approved', 'outreach_sent', 'active', 'pass'];
+
+  const jByStage = {};
+  jobStages.forEach(s => jByStage[s] = []);
+  const pByStage = {};
+  pStages.forEach(s => pByStage[s] = []);
+
+  jobs.forEach(j => {
+    const id = makeId(j);
+    if (dismissed[id]) return;
+    const s = jStatuses[id] || j.default_status || 'new';
+    if (jByStage[s]) jByStage[s].push({ ...j, _id: id });
+  });
+  prospects.forEach(p => {
+    const id = makeId(p);
+    if (dismissed[id]) return;
+    const s = pStatuses[id] || p.default_status || 'new';
+    if (pByStage[s]) pByStage[s].push({ ...p, _id: id });
+  });
+
+  const stageLabel = { new:'New', approved:'Approved', applied:'Applied', outreach_sent:'Outreach', interview:'Interview', pass:'Pass', active:'Active' };
+
+  function col(stage, items, type) {
+    const cards = items.map(item => {
+      const title = type === 'job' ? (item.title || '') : (item.brand || '');
+      const company = type === 'job' ? (item.company || '') : (item.founder || item.contact || '');
+      const { label: sl } = scoreMeta(item.score || 5);
+      return `<div class="kanban-card" onclick="openModal('${item._id}','${type}')">
+  <div class="kanban-card-title">${escH(title)}</div>
+  <div class="kanban-card-company">${escH(company)}</div>
+  <div class="kanban-card-score">${sl}</div>
+</div>`;
+    }).join('');
+    return `<div class="kanban-col">
+  <div class="kanban-col-header"><span>${stageLabel[stage]}</span><span class="kanban-count">${items.length}</span></div>
+  <div class="kanban-cards">${cards || '<div class="kanban-empty">empty</div>'}</div>
+</div>`;
+  }
+
+  document.getElementById('kanban-jobs').innerHTML = jobStages.map(s => col(s, jByStage[s], 'job')).join('');
+  document.getElementById('kanban-prospects').innerHTML = pStages.map(s => col(s, pByStage[s], 'prospect')).join('');
+}
+
+// ─────────────────────────────────────────
+// MODAL
+// ─────────────────────────────────────────
+function openModal(id, type) {
+  const item = type === 'job'
+    ? jobs.find(j => makeId(j) === id)
+    : prospects.find(p => makeId(p) === id);
+  if (!item) return;
+
+  const stages = type === 'job'
+    ? ['new','approved','applied','outreach_sent','interview','pass']
+    : ['new','approved','outreach_sent','active','pass'];
+
+  const statuses = type === 'job' ? LS.jobStatuses() : LS.prospectStatuses();
+  const current = statuses[id] || item.default_status || 'new';
+
+  const { subject, body } = type === 'job' ? genJobEmail(item) : genProspectEmail(item);
+  const mailto = makeMailto(item.email || FROM_EMAIL, subject, body);
+  const eid = id + '_modal';
+  _emailCache[eid] = { subject, body, type };
+
+  document.getElementById('modal-title').textContent = type === 'job' ? (item.title || '') : (item.brand || '');
+  document.getElementById('modal-sub').textContent = type === 'job' ? (item.company || '') : (item.founder || item.contact || '');
+
+  const stageButtons = stages.map(s =>
+    `<button class="btn ${s === current ? 'btn-primary' : ''}" onclick="moveCard('${id}','${type}','${s}')">${statusLabel(s)}</button>`
+  ).join('');
+
+  document.getElementById('modal-body').innerHTML = `
+<div class="modal-section-label">Stage</div>
+<div class="stage-buttons">${stageButtons}</div>
+<div class="divider"></div>
+<div class="modal-section-label" style="margin-bottom:8px">Draft email</div>
+<div class="email-preview" style="margin-bottom:12px">
+  <div class="email-subject">Subject: ${escH(subject)}</div>
+  <div class="email-body" style="max-height:180px;overflow-y:auto">${escH(body)}</div>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+  <a class="btn btn-primary" href="${mailto}">Open in Mail</a>
+  <button class="btn" onclick="copyBody('${eid}')">Copy Body</button>
+  <button class="btn btn-danger" onclick="dismissId('${id}');closeModal()">Dismiss</button>
+  ${type === 'job' && item.url ? `<a class="btn" href="${escH(item.url)}" target="_blank">View Job</a>` : ''}
+</div>`;
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function moveCard(id, type, stage) {
+  if (type === 'job') LS.setJobStatus(id, stage);
+  else LS.setProspectStatus(id, stage);
+  closeModal();
+  renderPipeline();
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+function maybeCloseModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+}
+
+// ─────────────────────────────────────────
+// SHARED ACTIONS
+// ─────────────────────────────────────────
+function dismissId(id) {
+  LS.dismiss(id);
+  render();
+}
+
+function liCompanySlug(name) {
+  return (name || '').toLowerCase().replace(/[''']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function renderContacts(contacts, company) {
+  if (!contacts || !contacts.length) {
+    if (!company) return '';
+    // Company people page (most accurate — shows actual employees)
+    const slug = liCompanySlug(company);
+    const liPeopleUrl = `https://www.linkedin.com/company/${slug}/people/`;
+    // Keyword search fallback — exact company name + relevant titles
+    const liSearchUrl = `https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent('"' + company + '" partnerships OR brand OR marketing')}`;
+    const apUrl = `https://app.apollo.io/#/people?organization_names[]=${encodeURIComponent(company)}&prospectingTarget=contacts`;
+    return `<div class="contacts-section">
+      <div class="contacts-label">Contacts</div>
+      <div style="font-size:11px;color:var(--text-3);display:flex;gap:10px;padding:6px 0;flex-wrap:wrap">
+        <a href="${liPeopleUrl}" target="_blank" style="color:var(--accent)">Company people &rarr;</a>
+        <a href="${liSearchUrl}" target="_blank" style="color:var(--accent)">Search LinkedIn &rarr;</a>
+        <a href="${apUrl}" target="_blank" style="color:var(--accent)">Apollo &rarr;</a>
+      </div>
+    </div>`;
+  }
+  const rows = contacts.map(c => {
+    const mailto = c.email ? `<a class="contact-email" href="mailto:${escH(c.email)}">${escH(c.email)}</a>` : '<span style="color:var(--text-3);font-size:11px">no email</span>';
+    const li = c.linkedin ? `<a class="contact-li" href="${escH(c.linkedin)}" target="_blank">LinkedIn</a>` : '';
+    return `<div class="contact-row">
+      <span class="contact-name">${escH(c.name)}</span>
+      <span class="contact-title">${escH(c.title)}</span>
+      ${mailto}
+      ${li}
+    </div>`;
+  }).join('');
+  return `<div class="contacts-section">
+    <div class="contacts-label">Contacts</div>
+    ${rows}
+  </div>`;
+}
+
+function escH(str) {
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// ─────────────────────────────────────────
+// SAMPLE RE-ENGAGE DATA (loaded from CSV via /re-engage command)
+// Falls back to raw CSV data parsed client-side
+// ─────────────────────────────────────────
+const RAW_CONTACTS_CSV = `Name,Email,Company,Date,Subject,Summary,Got Reply
+Tori,tori@smartflyer.com,SmartFlyer,2025-03-13,Interest in the copywriter position,Reached out about a copywriting role discussed on LinkedIn after seeing it mentioned in DMs.,No
+Axel Alarcon,axelalarcon@cinetailor.com,Cinetailor,2025-03-12,Exploring Creative Producer Opportunities at Cinetailor,Cold outreach expressing interest in Creative Producer opportunities.,No
+Party Up Media,business@partyupmedia.com,Party Up Media,2025-03-13,Exploring Collaboration with Party Up Media,Cold outreach exploring gaming content collaboration around partnerships and production.,No
+Nat (Doing Things),nat@doingthings.com,Doing Things,2025-03-13,An Intro with McGarrah Jessee,Asked contact for an introduction to McGarrah Jessee for a Brand Manager role.,No
+Ben,ben@urbanarchive.nyc,Urban Archive,2025-02-07,Driving Growth and Partnerships for Urban Archive,Applied for Director of Growth and Partnerships role citing mission alignment.,No
+Erin Hoffman,erin.hoffman@movementstrategy.com,Movement Strategy,2025-01-24,James Tedesco x Content & Engagement Manager,Reached out directly about the Content & Engagement Manager role.,No
+William,william@loaded.gg,Loaded,2025-01-03,Regarding the Partnerships Associate Role,Expressed interest in the Partnerships Associate position at gaming company Loaded.,No
+James Kelleher,jkelleher@enthusiastgaming.com,Enthusiast Gaming,2024-11-20,James Tedesco - Brand Solutions Position,Followed up after contact surfaced resume to leadership for a Brand Solutions role.,Yes
+Nicholas White,nicholas.white@fragmnt.com,Fragmnt,2024-11-06,Partnerships Strategist Position X James Tedesco,Cold email to CEO pitching himself for a Partnerships Strategist position.,No
+Candace Bridges,cbridges@fourhands.com,Four Hands,2024-11-13,An Intro to Four Hands - James Tedesco,Introduced himself and expressed interest in Senior Brand and Product Marketing Specialist role.,No
+Joyce Morrell,joycemorrell@yahoo.com,Personal Connection,2024-09-19,James Tedesco Resume!,Sent resume to personal connection and scheduled a networking call.,Yes
+Jonathan Palmer,jonathanwpalmer1@gmail.com,Personal Contact (Mutiny),2024-09-04,Account Manager Integrated Marketing - James Tedesco,Sent resume and cover letter via personal contact for an Account Manager Integrated Marketing role.,No
+Brittany Jump,brittany.jump@chatbooks.com,Chatbooks,2024-08-08,James Tedesco - Senior Acquisition Manager Position,Reached out after applying for Web Optimization Manager role and completed a video interview.,Yes
+James Gottlieb,james.gottlieb@sony.com,Sony Interactive Entertainment,2024-07-10,James Tedesco - New Ladera Fantasy Football and SIE,Reached out via mutual fantasy football connection about PlayStation career opportunities.,Yes
+Josh Rickel,jr@goperigon.com,Perigon,2024-06-28,Re: James Tedesco Intro - Director of Growth Marketing role,Responded to a mutual intro for Director of Growth Marketing role.,Yes
+Laurie Hill,lahill@ea.com,Electronic Arts,2024-06-11,Laurie x James follow up,Followed up with EA contact to schedule a call and share resume.,Yes
+Katie Hutton,katie.straub.hutton@gmail.com,Airbnb,2024-05-30,Following up - James Tedesco,Reached out through a mutual family connection to network with an Airbnb employee.,Yes
+Nat Myers,nat@doingthings.com,Doing Things,2024-04-08,Re: Doing Things Account Manager Brand Partnerships Interview Request,Confirmed interview scheduling for Account Manager Brand Partnerships role.,Yes
+Jules,jules@onistudios.gg,Oni Studios,2024-03-26,Lead Marketing Strategist,Cold outreach about Lead Marketing Strategist role at gaming studio Oni Studios.,Yes
+Christine Landon,Christinelandon@me.com,Personal Connection,2024-03-28,James Tedesco,Followed up after a phone call with a personal connection to stay on their radar.,No
+Benjamin,benjamin@brainsonfire.com,Brains on Fire,2024-02-29,Your New Brand Strategist?,Cold outreach to branding agency about Brand Strategist opportunities citing Fandom experience.,No
+David Lee,dlee@webtoon.com,Webtoon,2024-07-16,Post Golf Round Catch Up - James Tedesco,Reached out after dad's golf round with David Lee to explore Webtoon partnership and marketing roles.,Yes
+Bailey Appleton,bailey@doingthingsmedia.com,Doing Things Media,2023-10-24,Re: James x Bailey,Post-call thank-you to Director of Brand Partnerships who then intro'd to VP of Sales.,Yes
+Alexis Moyer,amoyer@aspyr.com,Aspyr Media,2025-11-18,Re: Aspyr Media - Follow-up on Brand Manager,Responded to Aspyr's re-engagement about a Brand Manager position.,Yes`;
+
+function parseCSVFallback(csv) {
+  const lines = csv.trim().split('\n');
+  const headers = lines[0].split(',');
+  return lines.slice(1).map(line => {
+    // Handle commas in quoted fields
+    const cols = [];
+    let cur = '', inQ = false;
+    for (const ch of line) {
+      if (ch === '"') { inQ = !inQ; }
+      else if (ch === ',' && !inQ) { cols.push(cur.trim()); cur = ''; }
+      else { cur += ch; }
+    }
+    cols.push(cur.trim());
+    const obj = {};
+    headers.forEach((h, i) => { obj[h.trim()] = cols[i] || ''; });
+    return {
+      name: obj['Name'] || '',
+      email: obj['Email'] || '',
+      company: obj['Company'] || '',
+      date: obj['Date'] || '',
+      subject_original: obj['Subject'] || '',
+      summary: obj['Summary'] || '',
+      got_reply: (obj['Got Reply'] || '').toLowerCase() === 'yes',
+    };
+  });
+}
+
+// ─────────────────────────────────────────
+// SAMPLE AGENCY DATA (fallback when agencies.json unavailable)
+// ─────────────────────────────────────────
+const SAMPLE_AGENCIES = [
+  { id:"red-antler", name:"Red Antler", city:"New York, NY", location_type:"Remote", type:"Brand Studio", size:"20-50", focus:"Consumer startup brand studio. Behind Casper, Allbirds, Hims. Actively brings in freelance talent.", why_relevant:"Primary target. Actively uses freelancers. Consumer startups is the terrain. Working Not Working is the entry point.", website:"https://redantler.com", linkedin:"https://www.linkedin.com/company/red-antler/", platforms:["Working Not Working","Direct outreach"], score:9 },
+  { id:"dazed-studio", name:"Dazed Studio", city:"London, UK", location_type:"Remote", type:"Cultural Strategy Studio", size:"under 50", focus:"Creative and cultural strategy studio from Dazed Media. Maintains a freelance network of cultural strategists.", why_relevant:"Explicitly maintains a freelance network. Cultural strategy is the exact brief.", website:"https://dazedstudio.com", linkedin:"https://www.linkedin.com/company/dazed-media/", platforms:["Direct outreach","The Dots","Working Not Working"], score:9 },
+  { id:"mythology", name:"Mythology", city:"New York, NY", location_type:"Remote", type:"Brand Studio", size:"under 20", focus:"Brand studio with a strong cultural POV. Premium consumer brand work with genuine strategic depth.", why_relevant:"Cultural brand work with strategic rigor is the exact overlap. Project relationships are the entry point.", website:"https://wearemythology.com", platforms:["Working Not Working","Direct outreach"], score:8 },
+  { id:"humanaut", name:"Humanaut", city:"Chattanooga, TN", location_type:"Remote", type:"Creative Agency", size:"20-50", focus:"Fully remote-friendly creative agency. Purpose-led brands. Known for Oatly, Athletic Greens.", why_relevant:"Fully remote friendly. Purpose-led consumer brands in wellness is James's terrain. Actively uses freelancers.", website:"https://humanaut.com", platforms:["Working Not Working","Contra","Direct outreach"], score:8 },
+  { id:"preacher", name:"Preacher", city:"Austin, TX", location_type:"Austin", type:"Creative Agency", size:"20-50", focus:"Full-service creative and brand agency. Austin-based. Challenger brands and cultural storytelling.", why_relevant:"Austin-based means in-person relationship building. Right size for a fractional operator to matter.", website:"https://preacher.co", platforms:["Direct outreach","Working Not Working"], score:8 }
+];
+
+// ─────────────────────────────────────────
+// SAMPLE DATA (used when JSON files unavailable)
+// ─────────────────────────────────────────
+const SAMPLE_JOBS = [
+  { id:"fishwife-growth-outreach", title:"Head of Growth (Direct Outreach)", company:"Fishwife", url:"https://eatfishwife.com/pages/careers", date:"2026-04-20", source:"Target", score:10, description:"No posted role. Targeting Anna Parmelee, Head of Growth. Direct outreach." },
+  { id:"aspyr-brand-manager", title:"Brand Manager", company:"Aspyr", url:"https://www.aspyr.com/open_positions", date:"2026-04-18", source:"Direct Career Page", score:9, description:"Brand Manager, Austin TX. Game publishing and preservation studio." },
+  { id:"heart-soil-partnerships", title:"Sr. Partnerships Manager", company:"Heart & Soil", url:"https://heartandsoil.co/careers/", date:"2026-04-17", source:"Direct Career Page", score:9, description:"Senior Partnerships Manager, Dripping Springs TX. Organ meat supplements brand with strong community and clear POV." },
+  { id:"midwest-games-partnerships", title:"Partnerships Manager (Contract)", company:"Midwest Games", url:"https://midwestgames.com/contact", date:"2026-04-20", source:"Target", score:9, description:"No posted role. Targeting Adam Orth, Founder/CEO. Contract opportunity." },
+  { id:"everyday-dose-brand-partnerships", title:"Brand Partnerships Manager", company:"Everyday Dose", url:"https://apply.workable.com/everyday-dose-inc/", date:"2026-04-16", source:"Workable", score:8, description:"Brand Partnerships Manager, Austin TX. Functional coffee brand with differentiated positioning." },
+  { id:"howler-brothers-content", title:"Content Marketing Manager", company:"Howler Brothers", url:"https://www.howlerbros.com/pages/careers", date:"2026-04-15", source:"Direct Career Page", score:8, description:"Content Marketing Manager, Austin TX. Outdoor lifestyle brand with genuine cultural footprint." },
+  { id:"popagenda-outreach", title:"Head of Partnerships (Direct Outreach)", company:"popagenda", url:"https://popagenda.co", date:"2026-04-20", source:"Target", score:8, description:"No posted role. Targeting Gen Miller, CEO. Direct outreach." }
+];
+
+const SAMPLE_PROSPECTS = [
+  { id:"opulist-active", brand:"Opulist", founder:"", contact:"", contact_title:"", gap:"Active retainer client. Partnership program built from scratch, $50K+ closed in first two quarters.", linkedin:"", instagram:"https://instagram.com/opulist", website:"https://opulist.co", industry:"Editorial / Media", revenue_est:"", score:10, notes:"Active retainer" },
+  { id:"indieio-active", brand:"indie.io", founder:"", contact:"", contact_title:"", gap:"Active contracting engagement. Developer acquisition pipeline, publishing strategy, positioning support.", linkedin:"", instagram:"", website:"https://indie.io", industry:"Gaming", revenue_est:"", score:10, notes:"Active contract" },
+  { id:"fishwife-prospect", brand:"Fishwife", founder:"Becca Millstein", contact:"Anna Parmelee", contact_title:"Head of Growth", gap:"Fishwife has one of the strongest brand identities in DTC food. The product is differentiated, the community is committed, and the brand equity is real. There is no dedicated partnerships operator. Founder-led on commercial strategy. The collab and brand integration potential here is significant and untapped.", linkedin:"https://linkedin.com/in/anna-parmelee", instagram:"https://instagram.com/eatfishwife", website:"https://eatfishwife.com", industry:"Food & Beverage / DTC", revenue_est:"$5M-10M", score:9, notes:"No posted role - direct outreach" },
+  { id:"popagenda-prospect", brand:"popagenda", founder:"Gen Miller", contact:"Gen Miller", contact_title:"CEO", gap:"popagenda has a clear creative identity and a strong point of view in music and culture. The commercial infrastructure - partnerships, brand collaborations, GTM - is founder-dependent and not yet systematized. Strong brand, weak commercial scaffolding. Real room for a fractional operator.", linkedin:"https://linkedin.com/in/gen-miller", instagram:"https://instagram.com/popagenda", website:"https://popagenda.co", industry:"Music / Culture", revenue_est:"$1M-5M", score:8, notes:"No posted role - direct outreach" },
+  { id:"midwest-games-prospect", brand:"Midwest Games", founder:"Adam Orth", contact:"Adam Orth", contact_title:"Founder / CEO", gap:"Midwest Games has built a compelling indie publishing identity but the partnership and commercial development layer is thin. Adam is founder-operating the business. Developer acquisition and brand partnership infrastructure is the clear gap.", linkedin:"https://linkedin.com/in/adam-orth", instagram:"https://instagram.com/midwestgames", website:"https://midwestgames.com", industry:"Gaming", revenue_est:"$2M-8M", score:8, notes:"Contractor opportunity" },
+  { id:"ghia-prospect", brand:"Ghia", founder:"Melanie Masarin", contact:"Melanie Masarin", contact_title:"Founder / CEO", gap:"Ghia is building genuine cultural cachet in non-alc but the partnership infrastructure is light relative to the brand equity. Real room for a dedicated partnerships operator to formalize collaborations and brand integrations.", linkedin:"https://linkedin.com/in/melanie-masarin", instagram:"https://instagram.com/drinkghia", website:"https://drinkghia.com", industry:"Food & Beverage / DTC", revenue_est:"$5M-15M", score:7, notes:"" },
+  { id:"graza-prospect", brand:"Graza", founder:"Andrew Benin", contact:"Andrew Benin", contact_title:"Co-Founder / CEO", gap:"Graza turned olive oil into a brand decision but the partnerships and collaboration layer is still founder-driven. The brand has the equity for real category-defying collabs and there is no dedicated operator to pursue them.", linkedin:"https://linkedin.com/in/andrew-benin", instagram:"https://instagram.com/graza.co", website:"https://graza.co", industry:"Food & Beverage / DTC", revenue_est:"$10M-30M", score:7, notes:"" },
+  { id:"wondermind-prospect", brand:"Wondermind", founder:"Mandy Teefey", contact:"Mandy Teefey", contact_title:"Co-Founder / CEO", gap:"Wondermind has strong founder equity and is building in mental health content with real cultural momentum. The brand partnership and GTM infrastructure is not yet systematized at the level the brand warrants.", linkedin:"https://linkedin.com/in/mandy-teefey", instagram:"https://instagram.com/wondermindco", website:"https://wondermind.com", industry:"Mental Health / Media", revenue_est:"$2M-8M", score:7, notes:"" }
+];
+
+// ─────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────
+async function init() {
+  // Pre-set active client statuses for Opulist and indie.io
+  const pStatuses = LS.prospectStatuses();
+  if (!pStatuses['opulist-active']) LS.setProspectStatus('opulist-active', 'active');
+  if (!pStatuses['indieio-active']) LS.setProspectStatus('indieio-active', 'active');
+
+  let jobsLoaded = false, prospectsLoaded = false, agenciesLoaded = false, reengageLoaded = false;
+
+  try {
+    const r = await fetch('jobs.json');
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { jobs = d; jobsLoaded = true; } }
+  } catch {}
+
+  try {
+    const r = await fetch('prospects.json');
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { prospects = d; prospectsLoaded = true; } }
+  } catch {}
+
+  try {
+    const r = await fetch('agencies.json');
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { agencies = d; agenciesLoaded = true; } }
+  } catch {}
+
+  try {
+    const r = await fetch('reengagement.json');
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) { reengagements = d; reengageLoaded = true; } }
+  } catch {}
+
+  if (!jobsLoaded) jobs = SAMPLE_JOBS;
+  if (!prospectsLoaded) prospects = SAMPLE_PROSPECTS;
+  if (!agenciesLoaded) agencies = SAMPLE_AGENCIES;
+  if (!reengageLoaded) reengagements = parseCSVFallback(RAW_CONTACTS_CSV);
+
+  // Pre-set active clients if they appear in fetched data
+  prospects.forEach(p => {
+    const id = makeId(p);
+    const s = LS.prospectStatuses();
+    if ((p.notes || '').toLowerCase().includes('active') && !s[id]) {
+      LS.setProspectStatus(id, 'active');
+    }
+  });
+
+  let metaStr = '';
+  try {
+    const r = await fetch('meta.json');
+    if (r.ok) {
+      const m = await r.json();
+      metaStr = `Updated ${m.updated_at} &middot; ${m.jobs} roles &middot; ${m.prospects} prospects`;
+    }
+  } catch {}
+
+  if (!metaStr) {
+    const today = new Date().toLocaleDateString('en-US', { month:'short', day:'numeric' });
+    metaStr = `${today} &middot; ${jobs.length} roles &middot; ${prospects.length} prospects &middot; ${agencies.length} agencies`;
+  }
+  document.getElementById('nav-meta').innerHTML = metaStr;
+
+  renderJobs();
+}
+
+init();
+</script>
+</body>
+</html>
