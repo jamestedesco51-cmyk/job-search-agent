@@ -1293,6 +1293,26 @@ FOUNDER_SIGNALS = [
     "small team", "solo founder",
 ]
 
+# Signals that the function/role doesn't exist yet — James fills the gap
+HEADCOUNT_GAP_SIGNALS = [
+    "no dedicated", "no partnerships", "no head of", "no brand",
+    "founder-operated", "founder-driven", "founder doing it",
+    "doing it themselves", "wearing all the hats", "first hire",
+    "building the function", "zero infrastructure", "thin commercial",
+    "underdeveloped", "not systematized", "minimal infrastructure",
+    "commercial layer is the gap", "function is the gap",
+    "execution gap", "no operator", "no commercial",
+]
+
+# Signals that there's real budget/traction but a missing operator
+EXECUTION_GAP_SIGNALS = [
+    "growing fast", "fast-growing", "rapid growth", "scaling",
+    "strong brand", "strong community", "cult brand", "brand equity",
+    "devoted community", "real traction", "clear gap", "room for",
+    "untapped", "warrants more", "level the brand warrants",
+    "fractional engagement", "fractional operator", "retainer",
+]
+
 def make_prospect_id(brand, contact=""):
     raw = f"{brand}-{contact}".lower()
     return re.sub(r"[^a-z0-9]", "-", raw)[:40].strip("-")
@@ -1308,6 +1328,21 @@ def score_prospect(brand, description, industry, notes=""):
     for sig in FOUNDER_SIGNALS:
         if sig in text:
             score += 2
+
+    # Headcount/execution gap signals — the core of what James solves
+    for sig in HEADCOUNT_GAP_SIGNALS:
+        if sig in text:
+            score += 3
+            break  # one gap signal is enough — don't stack
+
+    for sig in EXECUTION_GAP_SIGNALS:
+        if sig in text:
+            score += 2
+            break  # one execution signal is enough
+
+    # Explicit small headcount in gap description — strongest signal
+    if any(hc in text for hc in ["1-10", "1-15", "3-10", "5-15", "5-20", "10-25", "10-30", "15-30"]):
+        score += 2
 
     if "austin" in text or "texas" in text:
         score += 1

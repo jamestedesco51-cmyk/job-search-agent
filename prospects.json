@@ -14,6 +14,9 @@
     "score": 10,
     "notes": "Active retainer",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -31,6 +34,9 @@
     "score": 10,
     "notes": "Active contract",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -48,6 +54,9 @@
     "score": 9,
     "notes": "No posted role - direct outreach",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -65,6 +74,69 @@
     "score": 9,
     "notes": "Berlin-based, US remote-friendly \u2014 strong fit",
     "region": "EU",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-11"
+  },
+  {
+    "id": "everyday-dose-jack-savage",
+    "brand": "Everyday Dose",
+    "founder": "Jack Savage",
+    "contact": "Jack Savage",
+    "contact_title": "Founder / CEO",
+    "gap": "Everyday Dose is building in the functional coffee alternative space with a strong product and growing DTC presence. Small team, founder-operated, no dedicated partnerships or commercial infrastructure operator.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/everydaydose",
+    "website": "https://everydaydose.com",
+    "industry": "Food & Beverage / Wellness",
+    "revenue_est": "$2M-8M",
+    "score": 9,
+    "notes": "Named target \u2014 resume ready",
+    "region": "US",
+    "fractional_role": "Fractional Head of Partnerships",
+    "headcount": "5-15",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-11"
+  },
+  {
+    "id": "heart---soil-paul-saladino",
+    "brand": "Heart & Soil",
+    "founder": "Paul Saladino",
+    "contact": "Paul Saladino",
+    "contact_title": "Founder / CEO",
+    "gap": "Heart and Soil is a fast-growing organ supplement brand with a devoted community built around the carnivore and ancestral health movement. The brand partnership and commercial infrastructure is entirely founder-operated. No dedicated partnerships layer.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/heartandsoilsupplements",
+    "website": "https://heartandsoil.co",
+    "industry": "Wellness / DTC",
+    "revenue_est": "$5M-15M",
+    "score": 9,
+    "notes": "Named target \u2014 resume ready",
+    "region": "US",
+    "fractional_role": "Fractional Head of Partnerships",
+    "headcount": "10-25",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-11"
+  },
+  {
+    "id": "howler-brothers-adam-olson",
+    "brand": "Howler Brothers",
+    "founder": "Adam Olson",
+    "contact": "Adam Olson",
+    "contact_title": "Co-Founder",
+    "gap": "Howler Brothers is one of the most culturally credible outdoor and surf lifestyle brands in the market. Austin-based, founder-operated, with a strong community and editorial identity. The commercial partnership and collab layer is underdeveloped for the brand equity they carry.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/howlerbros",
+    "website": "https://howlerbros.com",
+    "industry": "Apparel / Lifestyle",
+    "revenue_est": "$5M-15M",
+    "score": 9,
+    "notes": "Named target \u2014 warm contact inside",
+    "region": "US",
+    "fractional_role": "Fractional Head of Partnerships",
+    "headcount": "10-25",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -82,6 +154,9 @@
     "score": 8,
     "notes": "No posted role - direct outreach",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -99,6 +174,9 @@
     "score": 8,
     "notes": "Contractor opportunity",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -116,6 +194,9 @@
     "score": 8,
     "notes": "Early stage \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -133,6 +214,9 @@
     "score": 8,
     "notes": "Early stage \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -150,6 +234,9 @@
     "score": 8,
     "notes": "Small team \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -167,6 +254,9 @@
     "score": 8,
     "notes": "Early stage \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -184,6 +274,9 @@
     "score": 8,
     "notes": "Small team \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -201,6 +294,9 @@
     "score": 8,
     "notes": "Small team \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -218,6 +314,9 @@
     "score": 8,
     "notes": "Small team \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -235,6 +334,9 @@
     "score": 8,
     "notes": "London-based \u2014 US contractor opportunity",
     "region": "EU",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -252,6 +354,9 @@
     "score": 8,
     "notes": "Amsterdam HQ \u2014 active US expansion, strong contractor opportunity",
     "region": "EU",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -269,57 +374,109 @@
     "score": 8,
     "notes": "Manchester-based \u2014 US expansion mode, contractor fit",
     "region": "EU",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
-    "id": "ghia-melanie-masarin",
-    "brand": "Ghia",
-    "founder": "Melanie Masarin",
-    "contact": "Melanie Masarin",
-    "contact_title": "Founder / CEO",
-    "gap": "Ghia is building genuine cultural cachet in non-alc but the partnership infrastructure is light relative to the brand equity. Real room for a dedicated operator to formalize collaborations and brand integrations.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/drinkghia",
-    "website": "https://drinkghia.com",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "$5M-15M",
-    "score": 7,
-    "notes": "",
-    "region": "US",
-    "added_date": "2026-05-11"
-  },
-  {
-    "id": "graza-andrew-benin",
-    "brand": "Graza",
-    "founder": "Andrew Benin",
-    "contact": "Andrew Benin",
+    "id": "lomi-matt-bertulli",
+    "brand": "Lomi",
+    "founder": "Matt Bertulli",
+    "contact": "Matt Bertulli",
     "contact_title": "Co-Founder / CEO",
-    "gap": "Graza turned olive oil into a brand decision. The partnerships and collaboration layer is still founder-driven. The brand has the equity for real category-defying collabs and there is no dedicated operator to pursue them.",
+    "gap": "Lomi built a genuine consumer category in home composting. The DTC brand is strong, the community is real, and the commercial partnership layer is not systematized. Small team with no dedicated partnerships operator.",
     "linkedin": "",
-    "instagram": "https://instagram.com/graza.co",
-    "website": "https://graza.co",
-    "industry": "Food & Beverage / DTC",
+    "instagram": "https://instagram.com/lomi.world",
+    "website": "https://lomi.com",
+    "industry": "Sustainability / DTC",
     "revenue_est": "$10M-30M",
-    "score": 7,
-    "notes": "",
+    "score": 8,
+    "notes": "Small team \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "Fractional Head of Partnerships",
+    "headcount": "15-30",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
-    "id": "wondermind-mandy-teefey",
-    "brand": "Wondermind",
-    "founder": "Mandy Teefey",
-    "contact": "Mandy Teefey",
-    "contact_title": "Co-Founder / CEO",
-    "gap": "Wondermind has strong founder equity and is building in mental health content with real cultural momentum. The brand partnership and GTM infrastructure is not yet systematized at the level the brand warrants.",
+    "id": "nguyen-coffee-supply-sahra-nguyen",
+    "brand": "Nguyen Coffee Supply",
+    "founder": "Sahra Nguyen",
+    "contact": "Sahra Nguyen",
+    "contact_title": "Founder / CEO",
+    "gap": "Nguyen Coffee Supply has built a strong brand identity around Vietnamese coffee culture with a devoted community. Small team, founder-operated, no dedicated brand partnership or commercial infrastructure operator.",
     "linkedin": "",
-    "instagram": "https://instagram.com/wondermindco",
-    "website": "https://wondermind.com",
-    "industry": "Mental Health / Media",
+    "instagram": "https://instagram.com/nguyencoffeesupply",
+    "website": "https://nguyencoffeesupply.com",
+    "industry": "Food & Beverage / DTC",
     "revenue_est": "$2M-8M",
-    "score": 7,
-    "notes": "",
+    "score": 8,
+    "notes": "Small team \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "Fractional Head of Partnerships",
+    "headcount": "5-15",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-11"
+  },
+  {
+    "id": "canopy-ken-berkun",
+    "brand": "Canopy",
+    "founder": "Ken Berkun",
+    "contact": "Ken Berkun",
+    "contact_title": "Founder / CEO",
+    "gap": "Canopy is building in the home wellness and air quality space with a strong DTC brand and a growing community. Very small team, founder-operated, no dedicated partnerships or GTM operator.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/canopyhumidifier",
+    "website": "https://canopyhumidifier.com",
+    "industry": "Wellness / DTC",
+    "revenue_est": "$3M-10M",
+    "score": 8,
+    "notes": "Small team \u2014 high responsiveness likelihood",
+    "region": "US",
+    "fractional_role": "Fractional GTM Strategist",
+    "headcount": "5-15",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-11"
+  },
+  {
+    "id": "mela-watermelon-water-dominic-purpura",
+    "brand": "Mela Watermelon Water",
+    "founder": "Dominic Purpura",
+    "contact": "Dominic Purpura",
+    "contact_title": "Co-Founder / CEO",
+    "gap": "Mela has built a genuinely differentiated product in the functional water space and is growing fast. Very small team, founder-operated, no dedicated partnerships or commercial infrastructure operator. Exactly the profile for fractional engagement.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/drinkwatermelon",
+    "website": "https://drinkwatermelon.com",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "$1M-5M",
+    "score": 8,
+    "notes": "Early stage \u2014 high responsiveness likelihood",
+    "region": "US",
+    "fractional_role": "Fractional Head of Partnerships",
+    "headcount": "3-10",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-11"
+  },
+  {
+    "id": "surreal-cereal-kit-gammell",
+    "brand": "Surreal Cereal",
+    "founder": "Kit Gammell",
+    "contact": "Kit Gammell",
+    "contact_title": "Co-Founder / CEO",
+    "gap": "Surreal has built a brand with a genuinely funny, irreverent voice in the functional food space. UK-based but active in the US market. Small team, founder-operated, strong brand, thin commercial infrastructure.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/eatmoresurreal",
+    "website": "https://eatmoresurreal.com",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "$2M-8M",
+    "score": 8,
+    "notes": "UK-based, active US expansion \u2014 strong cultural fit",
+    "region": "EU",
+    "fractional_role": "Fractional Head of Partnerships",
+    "headcount": "5-15",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -337,6 +494,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -354,6 +514,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -371,23 +534,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
-    "added_date": "2026-05-11"
-  },
-  {
-    "id": "vacation-inc-dakota-green",
-    "brand": "Vacation Inc",
-    "founder": "Dakota Green",
-    "contact": "Dakota Green",
-    "contact_title": "Co-Founder / CEO",
-    "gap": "Vacation has built an unusually strong brand identity in sunscreen \u2014 irreverent, nostalgic, highly meme-able. The brand partnership and collab calendar is active but founder-driven. No dedicated commercial operator.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/vacation",
-    "website": "https://vacation.inc",
-    "industry": "Beauty / DTC",
-    "revenue_est": "$5M-20M",
-    "score": 7,
-    "notes": "",
-    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -405,6 +554,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -422,6 +574,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -439,6 +594,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -456,6 +614,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -473,6 +634,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -490,6 +654,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -507,6 +674,9 @@
     "score": 7,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -524,6 +694,9 @@
     "score": 7,
     "notes": "Austin-based",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -541,6 +714,9 @@
     "score": 7,
     "notes": "Small team \u2014 high responsiveness likelihood",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -558,6 +734,9 @@
     "score": 7,
     "notes": "Swedish HQ \u2014 US office in NYC, remote brand partnership work feasible",
     "region": "EU",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -575,6 +754,9 @@
     "score": 7,
     "notes": "Copenhagen HQ \u2014 US remote consulting feasible",
     "region": "EU",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -592,6 +774,9 @@
     "score": 7,
     "notes": "London HQ \u2014 US editorial and brand work feasible",
     "region": "EU",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -609,6 +794,9 @@
     "score": 7,
     "notes": "Paris HQ \u2014 US market growth, contractor opportunity",
     "region": "EU",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -626,6 +814,9 @@
     "score": 7,
     "notes": "London HQ \u2014 US brand and partnership work feasible",
     "region": "EU",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -643,6 +834,49 @@
     "score": 7,
     "notes": "Ventura CA HQ but operates globally \u2014 strong values fit",
     "region": "US",
+    "fractional_role": "Fractional Brand & GTM Strategist",
+    "headcount": "10-30",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-11"
+  },
+  {
+    "id": "chamberlain-coffee",
+    "brand": "Chamberlain Coffee",
+    "founder": "Emma Chamberlain",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Chamberlain Coffee has strong brand recognition from the founder's platform but the commercial partnership infrastructure is not operating at the level the audience warrants. Small team behind a large name.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/chamberlaincoffee",
+    "website": "https://chamberlaincoffee.com",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "$5M-20M",
+    "score": 7,
+    "notes": "Founder-celebrity brand \u2014 commercial layer is the gap",
+    "region": "US",
+    "fractional_role": "Fractional Head of Partnerships",
+    "headcount": "10-25",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-11"
+  },
+  {
+    "id": "public-goods-morgan-hirsh",
+    "brand": "Public Goods",
+    "founder": "Morgan Hirsh",
+    "contact": "Morgan Hirsh",
+    "contact_title": "Founder / CEO",
+    "gap": "Public Goods is a membership-based sustainable essentials brand with a strong editorial identity and devoted community. The brand partnership and collab layer is underdeveloped. Small team, no dedicated operator.",
+    "linkedin": "",
+    "instagram": "https://instagram.com/publicgoods",
+    "website": "https://publicgoods.com",
+    "industry": "Sustainability / DTC",
+    "revenue_est": "$5M-15M",
+    "score": 7,
+    "notes": "Small team \u2014 high responsiveness likelihood",
+    "region": "US",
+    "fractional_role": "Fractional Head of Brand",
+    "headcount": "10-25",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -660,6 +894,9 @@
     "score": 6,
     "notes": "Larger org \u2014 fractional brand program angle",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -677,6 +914,9 @@
     "score": 6,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -694,6 +934,9 @@
     "score": 6,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -711,6 +954,9 @@
     "score": 6,
     "notes": "Post-founder transition \u2014 rebuilding phase",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -728,6 +974,9 @@
     "score": 6,
     "notes": "",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -745,6 +994,9 @@
     "score": 6,
     "notes": "Austin-based \u2014 larger org but strong fit",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   },
   {
@@ -762,6 +1014,9 @@
     "score": 6,
     "notes": "Austin-based",
     "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
     "added_date": "2026-05-11"
   }
 ]
