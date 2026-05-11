@@ -38,6 +38,11 @@ TITLES_PARTNERSHIPS = [
     "influencer partnerships", "creator partnerships", "talent partnerships",
     "artist partnerships", "publisher relations", "licensing partnerships",
     "business development manager", "biz dev manager",
+    # fractional / contract
+    "fractional cmo", "fractional head of marketing", "fractional head of partnerships",
+    "fractional brand", "fractional marketing", "fractional partnerships",
+    "fractional gtm", "fractional creative director", "fractional strategist",
+    "fractional operator", "fractional consultant",
 ]
 
 # ── SKILL BUCKET 2: Brand & Marketing ────────────────────────────────────────
@@ -345,6 +350,17 @@ SEARCH_QUERIES = [
     "vp partnerships remote",
     "gtm manager startup remote",
     "partnerships lead remote",
+    # ── Fractional / contract roles ───────────────────────────
+    "fractional CMO remote",
+    "fractional head of marketing",
+    "fractional head of partnerships",
+    "fractional brand strategist",
+    "fractional marketing director",
+    "fractional partnerships manager",
+    "fractional GTM remote",
+    "fractional creative director",
+    "contract brand partnerships manager",
+    "contract head of growth remote",
 ]
 
 MAX_AGE_DAYS = 14
