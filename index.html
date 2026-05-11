@@ -430,7 +430,7 @@ html, body {
   <div class="nav-brand">JT <em>/</em> Pipeline</div>
   <div class="nav-tabs">
     <button class="nav-tab active" data-tab="jobs" onclick="switchTab('jobs')">Jobs</button>
-    <button class="nav-tab" data-tab="prospects" onclick="switchTab('prospects')">Consulting</button>
+    <button class="nav-tab" data-tab="prospects" onclick="switchTab('prospects')">Consulting + Fractional</button>
     <button class="nav-tab" data-tab="outreach" onclick="switchTab('outreach')">Outreach</button>
     <button class="nav-tab" data-tab="pipeline" onclick="switchTab('pipeline')">Pipeline</button>
     <button class="nav-tab" data-tab="agencies" onclick="switchTab('agencies')">Agencies</button>
@@ -1076,6 +1076,7 @@ function renderProspects() {
   </div>
   ${p.founder ? `<div class="card-subtitle" style="margin-top:4px">Founder: <strong>${escH(p.founder)}</strong></div>` : ''}
   ${p.contact && p.contact !== p.founder ? `<div class="card-subtitle" style="margin-top:2px">Target: <strong>${escH(p.contact)}</strong>${p.contact_title ? ', ' + escH(p.contact_title) : ''}</div>` : ''}
+  ${p.fractional_role ? `<div style="margin:6px 0 2px"><span class="badge" style="background:rgba(139,92,246,.18);color:#a78bfa;font-size:11px;letter-spacing:.04em">${escH(p.fractional_role)}</span>${p.headcount ? `<span class="badge badge-source" style="margin-left:4px">${escH(p.headcount)} people</span>` : ''}</div>` : ''}
   ${p.gap ? `<div class="card-gap">${escH(p.gap)}</div>` : ''}
   ${renderContacts(p.contacts, p.brand)}
   <div class="card-links">

@@ -1320,7 +1320,8 @@ def score_prospect(brand, description, industry, notes=""):
 
 def add_prospect(brand, founder="", contact="", contact_title="", gap="",
                  linkedin="", instagram="", website="", industry="",
-                 revenue_est="", score=5, notes="", region="US"):
+                 revenue_est="", score=5, notes="", region="US",
+                 fractional_role="", headcount="", engagement_type="fractional"):
     if not brand or brand in seen_brands:
         return
     seen_brands.add(brand)
@@ -1339,6 +1340,9 @@ def add_prospect(brand, founder="", contact="", contact_title="", gap="",
         "score": score,
         "notes": notes,
         "region": region,
+        "fractional_role": fractional_role,
+        "headcount": headcount,
+        "engagement_type": engagement_type,  # fractional | consulting | retainer
         "added_date": datetime.now().strftime("%Y-%m-%d"),
     })
 
@@ -1405,45 +1409,7 @@ def seed_known_prospects():
         score=8,
         notes="Contractor opportunity",
     )
-    add_prospect(
-        brand="Ghia",
-        founder="Melanie Masarin",
-        contact="Melanie Masarin",
-        contact_title="Founder / CEO",
-        gap="Ghia is building genuine cultural cachet in non-alc but the partnership infrastructure is light relative to the brand equity. Real room for a dedicated operator to formalize collaborations and brand integrations.",
-        instagram="https://instagram.com/drinkghia",
-        website="https://drinkghia.com",
-        industry="Food & Beverage / DTC",
-        revenue_est="$5M-15M",
-        score=7,
-        notes="",
-    )
-    add_prospect(
-        brand="Graza",
-        founder="Andrew Benin",
-        contact="Andrew Benin",
-        contact_title="Co-Founder / CEO",
-        gap="Graza turned olive oil into a brand decision. The partnerships and collaboration layer is still founder-driven. The brand has the equity for real category-defying collabs and there is no dedicated operator to pursue them.",
-        instagram="https://instagram.com/graza.co",
-        website="https://graza.co",
-        industry="Food & Beverage / DTC",
-        revenue_est="$10M-30M",
-        score=7,
-        notes="",
-    )
-    add_prospect(
-        brand="Wondermind",
-        founder="Mandy Teefey",
-        contact="Mandy Teefey",
-        contact_title="Co-Founder / CEO",
-        gap="Wondermind has strong founder equity and is building in mental health content with real cultural momentum. The brand partnership and GTM infrastructure is not yet systematized at the level the brand warrants.",
-        instagram="https://instagram.com/wondermindco",
-        website="https://wondermind.com",
-        industry="Mental Health / Media",
-        revenue_est="$2M-8M",
-        score=7,
-        notes="",
-    )
+    # Ghia, Graza, Wondermind removed — too established per master context do-not-target list
 
     # Additional consulting targets — strong brands, weak commercial infrastructure
     add_prospect(
@@ -1485,19 +1451,7 @@ def seed_known_prospects():
         score=7,
         notes="",
     )
-    add_prospect(
-        brand="Vacation Inc",
-        founder="Dakota Green",
-        contact="Dakota Green",
-        contact_title="Co-Founder / CEO",
-        gap="Vacation has built an unusually strong brand identity in sunscreen — irreverent, nostalgic, highly meme-able. The brand partnership and collab calendar is active but founder-driven. No dedicated commercial operator.",
-        instagram="https://instagram.com/vacation",
-        website="https://vacation.inc",
-        industry="Beauty / DTC",
-        revenue_est="$5M-20M",
-        score=7,
-        notes="",
-    )
+    # Vacation Inc removed — too established per master context do-not-target list
     add_prospect(
         brand="Joystick Ventures",
         founder="",
@@ -1939,6 +1893,171 @@ def seed_known_prospects():
         revenue_est="$10M+",
         score=7,
         notes="Ventura CA HQ but operates globally — strong values fit",
+        fractional_role="Fractional Brand & GTM Strategist",
+        headcount="10-30",
+    )
+
+    # ── FRACTIONAL SWEET SPOT — 1-30 people, growing, need the function ──────
+    add_prospect(
+        brand="Everyday Dose",
+        founder="Jack Savage",
+        contact="Jack Savage",
+        contact_title="Founder / CEO",
+        gap="Everyday Dose is building in the functional coffee alternative space with a strong product and growing DTC presence. Small team, founder-operated, no dedicated partnerships or commercial infrastructure operator.",
+        instagram="https://instagram.com/everydaydose",
+        website="https://everydaydose.com",
+        industry="Food & Beverage / Wellness",
+        revenue_est="$2M-8M",
+        score=9,
+        notes="Named target — resume ready",
+        fractional_role="Fractional Head of Partnerships",
+        headcount="5-15",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Heart & Soil",
+        founder="Paul Saladino",
+        contact="Paul Saladino",
+        contact_title="Founder / CEO",
+        gap="Heart and Soil is a fast-growing organ supplement brand with a devoted community built around the carnivore and ancestral health movement. The brand partnership and commercial infrastructure is entirely founder-operated. No dedicated partnerships layer.",
+        instagram="https://instagram.com/heartandsoilsupplements",
+        website="https://heartandsoil.co",
+        industry="Wellness / DTC",
+        revenue_est="$5M-15M",
+        score=9,
+        notes="Named target — resume ready",
+        fractional_role="Fractional Head of Partnerships",
+        headcount="10-25",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Howler Brothers",
+        founder="Adam Olson",
+        contact="Adam Olson",
+        contact_title="Co-Founder",
+        gap="Howler Brothers is one of the most culturally credible outdoor and surf lifestyle brands in the market. Austin-based, founder-operated, with a strong community and editorial identity. The commercial partnership and collab layer is underdeveloped for the brand equity they carry.",
+        instagram="https://instagram.com/howlerbros",
+        website="https://howlerbros.com",
+        industry="Apparel / Lifestyle",
+        revenue_est="$5M-15M",
+        score=9,
+        notes="Named target — warm contact inside",
+        fractional_role="Fractional Head of Partnerships",
+        headcount="10-25",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Lomi",
+        founder="Matt Bertulli",
+        contact="Matt Bertulli",
+        contact_title="Co-Founder / CEO",
+        gap="Lomi built a genuine consumer category in home composting. The DTC brand is strong, the community is real, and the commercial partnership layer is not systematized. Small team with no dedicated partnerships operator.",
+        instagram="https://instagram.com/lomi.world",
+        website="https://lomi.com",
+        industry="Sustainability / DTC",
+        revenue_est="$10M-30M",
+        score=8,
+        notes="Small team — high responsiveness likelihood",
+        fractional_role="Fractional Head of Partnerships",
+        headcount="15-30",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Nguyen Coffee Supply",
+        founder="Sahra Nguyen",
+        contact="Sahra Nguyen",
+        contact_title="Founder / CEO",
+        gap="Nguyen Coffee Supply has built a strong brand identity around Vietnamese coffee culture with a devoted community. Small team, founder-operated, no dedicated brand partnership or commercial infrastructure operator.",
+        instagram="https://instagram.com/nguyencoffeesupply",
+        website="https://nguyencoffeesupply.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$2M-8M",
+        score=8,
+        notes="Small team — high responsiveness likelihood",
+        fractional_role="Fractional Head of Partnerships",
+        headcount="5-15",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Chamberlain Coffee",
+        founder="Emma Chamberlain",
+        contact="",
+        contact_title="",
+        gap="Chamberlain Coffee has strong brand recognition from the founder's platform but the commercial partnership infrastructure is not operating at the level the audience warrants. Small team behind a large name.",
+        instagram="https://instagram.com/chamberlaincoffee",
+        website="https://chamberlaincoffee.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$5M-20M",
+        score=7,
+        notes="Founder-celebrity brand — commercial layer is the gap",
+        fractional_role="Fractional Head of Partnerships",
+        headcount="10-25",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Canopy",
+        founder="Ken Berkun",
+        contact="Ken Berkun",
+        contact_title="Founder / CEO",
+        gap="Canopy is building in the home wellness and air quality space with a strong DTC brand and a growing community. Very small team, founder-operated, no dedicated partnerships or GTM operator.",
+        instagram="https://instagram.com/canopyhumidifier",
+        website="https://canopyhumidifier.com",
+        industry="Wellness / DTC",
+        revenue_est="$3M-10M",
+        score=8,
+        notes="Small team — high responsiveness likelihood",
+        fractional_role="Fractional GTM Strategist",
+        headcount="5-15",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Mela Watermelon Water",
+        founder="Dominic Purpura",
+        contact="Dominic Purpura",
+        contact_title="Co-Founder / CEO",
+        gap="Mela has built a genuinely differentiated product in the functional water space and is growing fast. Very small team, founder-operated, no dedicated partnerships or commercial infrastructure operator. Exactly the profile for fractional engagement.",
+        instagram="https://instagram.com/drinkwatermelon",
+        website="https://drinkwatermelon.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$1M-5M",
+        score=8,
+        notes="Early stage — high responsiveness likelihood",
+        fractional_role="Fractional Head of Partnerships",
+        headcount="3-10",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Public Goods",
+        founder="Morgan Hirsh",
+        contact="Morgan Hirsh",
+        contact_title="Founder / CEO",
+        gap="Public Goods is a membership-based sustainable essentials brand with a strong editorial identity and devoted community. The brand partnership and collab layer is underdeveloped. Small team, no dedicated operator.",
+        instagram="https://instagram.com/publicgoods",
+        website="https://publicgoods.com",
+        industry="Sustainability / DTC",
+        revenue_est="$5M-15M",
+        score=7,
+        notes="Small team — high responsiveness likelihood",
+        fractional_role="Fractional Head of Brand",
+        headcount="10-25",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Surreal Cereal",
+        founder="Kit Gammell",
+        contact="Kit Gammell",
+        contact_title="Co-Founder / CEO",
+        gap="Surreal has built a brand with a genuinely funny, irreverent voice in the functional food space. UK-based but active in the US market. Small team, founder-operated, strong brand, thin commercial infrastructure.",
+        instagram="https://instagram.com/eatmoresurreal",
+        website="https://eatmoresurreal.com",
+        industry="Food & Beverage / DTC",
+        revenue_est="$2M-8M",
+        score=8,
+        notes="UK-based, active US expansion — strong cultural fit",
+        fractional_role="Fractional Head of Partnerships",
+        headcount="5-15",
+        engagement_type="fractional",
+        region="EU",
     )
 
 def seed_known_agencies():
