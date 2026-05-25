@@ -387,6 +387,46 @@ SEARCH_QUERIES = [
     "fractional creative director",
     "contract brand partnerships manager",
     "contract head of growth remote",
+    # ── Fractional (expanded — @falsestartKate sources) ───────
+    "fractional creative producer",
+    "fractional brand manager",
+    "fractional content strategist",
+    "fractional brand operator",
+    "fractional partnerships lead",
+    "fractional growth marketer",
+    "fractional head of content",
+    "fractional creative lead",
+    "fractional campaign manager",
+    "fractional creative strategist",
+    "fractional brand DTC",
+    "fractional marketing CPG",
+    "fractional marketing startup",
+    "fractional brand marketing",
+    "interim head of marketing",
+    "interim brand manager",
+    "interim partnerships manager",
+    "interim creative director",
+    "interim head of brand",
+    "interim marketing manager",
+    "interim GTM manager",
+    "contract creative strategist",
+    "contract brand manager",
+    "contract creative producer",
+    "contract content strategist",
+    "contract marketing manager remote",
+    "contract head of brand",
+    "contract brand marketing manager",
+    "contract partnerships manager",
+    "part-time brand manager",
+    "part-time partnerships manager",
+    "part-time head of growth",
+    "part-time creative director remote",
+    "part-time marketing manager remote",
+    "retainer brand strategist",
+    "retainer partnerships manager",
+    "consulting brand strategy startup",
+    "consulting GTM DTC",
+    "consulting partnerships CPG",
     # ── Brand & Creative (expanded) ───────────────────────────
     "brand director remote",
     "creative director lifestyle remote",
@@ -1359,6 +1399,120 @@ def scrape_substacks():
         except Exception:
             pass
 
+def scrape_contra():
+    """Scrape Contra for fractional/contract roles matching target titles."""
+    print("  Scraping Contra (fractional platform)...")
+    base_url = "https://contra.com/jobs"
+    queries = [
+        "brand", "partnerships", "creative", "marketing", "content", "growth", "gtm"
+    ]
+    for q in queries:
+        try:
+            url = f"{base_url}?q={requests.utils.quote(q)}&remote=true"
+            r = requests.get(url, headers=HEADERS, timeout=10)
+            if r.status_code != 200:
+                continue
+            soup = BeautifulSoup(r.text, "html.parser")
+            # Contra renders JS, so we parse what we can from static HTML
+            for card in soup.find_all(["article", "div"], class_=re.compile(r"job|role|card|listing", re.I))[:15]:
+                title_el = card.find(["h2", "h3", "h4", "a"])
+                if not title_el:
+                    continue
+                title = title_el.get_text(strip=True)
+                if not any(t in title.lower() for t in ["brand", "partner", "creative", "market", "content", "growth", "gtm", "fractional"]):
+                    continue
+                link = title_el.get("href", "") if title_el.name == "a" else ""
+                if link and not link.startswith("http"):
+                    link = "https://contra.com" + link
+                company_el = card.find(["span", "p"], class_=re.compile(r"company|client|org", re.I))
+                company = company_el.get_text(strip=True) if company_el else "Contra"
+                desc_el = card.find(["p", "div"], class_=re.compile(r"desc|summary|snippet", re.I))
+                desc = desc_el.get_text(strip=True)[:200] if desc_el else ""
+                add_job(title=title, company=company, url=link or "https://contra.com/jobs",
+                        date_str="", source="Contra (Fractional)", description=desc)
+        except Exception as e:
+            print(f"    Contra error ({q}): {e}")
+
+    # Also hit their RSS/API if available
+    try:
+        feed = feedparser.parse("https://contra.com/feed.xml")
+        for entry in feed.entries[:20]:
+            title = entry.get("title", "")
+            if any(t in title.lower() for t in ["brand", "partner", "creative", "market", "content", "growth"]):
+                add_job(title=title, company="Contra", url=entry.get("link", "https://contra.com/jobs"),
+                        date_str=entry.get("published", ""), source="Contra (Fractional)",
+                        description=entry.get("summary", "")[:200])
+    except Exception:
+        pass
+
+
+def scrape_working_not_working():
+    """Scrape Working Not Working for creative/brand contract roles."""
+    print("  Scraping Working Not Working...")
+    try:
+        url = "https://workingnotworking.com/jobs"
+        r = requests.get(url, headers=HEADERS, timeout=10)
+        if r.status_code != 200:
+            return
+        soup = BeautifulSoup(r.text, "html.parser")
+        for card in soup.find_all(["article", "li", "div"], class_=re.compile(r"job|listing|card|post", re.I))[:20]:
+            title_el = card.find(["h2", "h3", "h4", "a"])
+            if not title_el:
+                continue
+            title = title_el.get_text(strip=True)
+            if not any(t in title.lower() for t in ["brand", "creative", "content", "partner", "market", "strategy", "producer", "director"]):
+                continue
+            link = title_el.get("href", "") if title_el.name == "a" else card.find("a", href=True)
+            if isinstance(link, str):
+                if link and not link.startswith("http"):
+                    link = "https://workingnotworking.com" + link
+            else:
+                link = (link["href"] if link else "")
+                if link and not link.startswith("http"):
+                    link = "https://workingnotworking.com" + link
+            company_el = card.find(["span", "p"], class_=re.compile(r"company|client|brand", re.I))
+            company = company_el.get_text(strip=True) if company_el else "Working Not Working"
+            desc_el = card.find(["p", "div"], class_=re.compile(r"desc|summary|detail", re.I))
+            desc = desc_el.get_text(strip=True)[:200] if desc_el else ""
+            add_job(title=title, company=company, url=link or "https://workingnotworking.com/jobs",
+                    date_str="", source="Working Not Working", description=desc)
+    except Exception as e:
+        print(f"    Working Not Working error: {e}")
+
+
+def scrape_himalayas():
+    """Scrape Himalayas for remote fractional/contract brand and creative roles."""
+    print("  Scraping Himalayas (remote jobs)...")
+    queries = [
+        "fractional brand", "fractional marketing", "fractional partnerships",
+        "contract creative", "interim head of marketing", "part-time brand manager",
+        "brand manager remote", "creative strategist remote", "partnerships manager remote",
+    ]
+    for q in queries:
+        try:
+            url = f"https://himalayas.app/jobs?q={requests.utils.quote(q)}"
+            r = requests.get(url, headers=HEADERS, timeout=10)
+            if r.status_code != 200:
+                continue
+            soup = BeautifulSoup(r.text, "html.parser")
+            for card in soup.find_all(["article", "li", "div"], class_=re.compile(r"job|card|listing", re.I))[:10]:
+                title_el = card.find(["h2", "h3", "a"])
+                if not title_el:
+                    continue
+                title = title_el.get_text(strip=True)
+                link = title_el.get("href", "") if title_el.name == "a" else ""
+                if link and not link.startswith("http"):
+                    link = "https://himalayas.app" + link
+                company_el = card.find(["span", "p"], class_=re.compile(r"company|employer", re.I))
+                company = company_el.get_text(strip=True) if company_el else "Himalayas"
+                desc_el = card.find(["p", "div"], class_=re.compile(r"desc|snippet", re.I))
+                desc = desc_el.get_text(strip=True)[:200] if desc_el else ""
+                add_job(title=title, company=company, url=link or "https://himalayas.app/jobs",
+                        date_str="", source="Himalayas (Remote)", description=desc)
+        except Exception as e:
+            print(f"    Himalayas error ({q}): {e}")
+
+
 # ─────────────────────────────────────────────
 # CONSULTING PROSPECT SCRAPERS
 # ─────────────────────────────────────────────
@@ -1372,6 +1526,9 @@ PROSPECT_INDUSTRIES = [
     "editorial", "media", "creator economy", "music", "culture",
     "menswear", "men's", "outdoor", "surf", "heritage", "lifestyle goods",
     "functional", "running", "sportswear", "workwear",
+    "healthcare", "health", "medtech", "digital health", "medical device",
+    "biotech", "health tech", "clinical",
+    "university", "higher education", "academic", "research", "education",
 ]
 
 FOUNDER_SIGNALS = [
@@ -2802,6 +2959,9 @@ scrape_remotive()
 scrape_weworkremotely()
 scrape_remoteok()
 scrape_substacks()
+scrape_contra()
+scrape_working_not_working()
+scrape_himalayas()
 
 jobs.sort(key=lambda x: x["score"], reverse=True)
 top_jobs = jobs  # no cap — show everything that passes the score filter
