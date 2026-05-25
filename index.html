@@ -366,6 +366,109 @@ html, body {
 .kanban-card-score { font-size: 10px; color: var(--text-3); margin-top: 4px; }
 .kanban-empty { font-size: 11px; color: var(--text-3); padding: 10px 0; font-style: italic; }
 
+/* JOB LIST — ranked rows */
+.job-list { display: flex; flex-direction: column; gap: 10px; }
+.job-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  transition: border-color 0.12s;
+}
+.job-row:hover { border-color: var(--border-2); }
+.job-row-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.job-fit-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.fit-number {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+.fit-label { font-size: 9px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-3); }
+.fit-5 { color: #22c55e; }
+.fit-4 { color: #84cc16; }
+.fit-3 { color: #f59e0b; }
+.fit-2 { color: #f97316; }
+.fit-1 { color: var(--text-3); }
+.job-row-body { flex: 1; min-width: 0; }
+.job-row-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+.job-row-title a { color: inherit; text-decoration: none; }
+.job-row-title a:hover { color: var(--accent); }
+.job-row-meta {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.job-row-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+.job-row-desc {
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.55;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.job-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.job-status-select {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font-size: 11px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.flag-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-3);
+  font-size: 11px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.flag-btn.active { border-color: #f59e0b; color: #f59e0b; background: rgba(245,158,11,.08); }
+.flag-btn.active-blue { border-color: #60a5fa; color: #60a5fa; background: rgba(96,165,250,.08); }
+.salary-tag { color: #22c55e; font-weight: 600; font-size: 11px; }
+.size-startup { color: #a78bfa; }
+.size-boutique { color: #60a5fa; }
+.size-midsize { color: var(--text-2); }
+.size-enterprise { color: #f97316; }
+
 /* MODAL */
 .modal-overlay {
   position: fixed;
@@ -448,35 +551,46 @@ html, body {
       <input type="text" class="search-input" id="jobs-search" placeholder="Search roles, companies, industries..." oninput="renderJobs()">
       <select class="filter-select" id="jobs-status" onchange="renderJobs()">
         <option value="">All Statuses</option>
-        <option value="new">New</option>
-        <option value="approved">Approved</option>
+        <option value="found">Found</option>
+        <option value="resume_tailored">Resume Tailored</option>
+        <option value="cover_letter_done">Cover Letter Done</option>
         <option value="applied">Applied</option>
-        <option value="outreach_sent">Outreach Sent</option>
+        <option value="follow_up_sent">Follow Up Sent</option>
         <option value="interview">Interview</option>
+        <option value="offer">Offer</option>
         <option value="pass">Pass</option>
       </select>
-      <select class="filter-select" id="jobs-score" onchange="renderJobs()">
-        <option value="">All Fits</option>
-        <option value="strong">Strong Fit (8+)</option>
-        <option value="good">Good Fit (5-7)</option>
-        <option value="look">Worth a Look (2-4)</option>
-      </select>
-      <select class="filter-select" id="jobs-bucket" onchange="renderJobs()">
-        <option value="">All Buckets</option>
+      <select class="filter-select" id="jobs-category" onchange="renderJobs()">
+        <option value="">All Categories</option>
         <option value="Partnerships">Partnerships</option>
-        <option value="Brand &amp; Marketing">Brand &amp; Marketing</option>
-        <option value="Creative">Creative</option>
-        <option value="Ecom &amp; Growth">Ecom &amp; Growth</option>
-        <option value="Gaming / Publishing">Gaming / Publishing</option>
+        <option value="Brand Management">Brand Management</option>
+        <option value="Creative Strategy">Creative Strategy</option>
+        <option value="Growth Marketing">Growth Marketing</option>
+        <option value="Gaming">Gaming</option>
+        <option value="Project Management">Project Management</option>
+        <option value="Fractional">Fractional</option>
       </select>
-      <select class="filter-select" id="jobs-sort" onchange="renderJobs()">
-        <option value="score">Score</option>
-        <option value="date">Date</option>
-        <option value="company">Company</option>
+      <select class="filter-select" id="jobs-fit" onchange="renderJobs()">
+        <option value="">All Fit Scores</option>
+        <option value="5">5 — Perfect</option>
+        <option value="4">4+ — Strong</option>
+        <option value="3">3+ — Good</option>
+      </select>
+      <select class="filter-select" id="jobs-size" onchange="renderJobs()">
+        <option value="">All Company Sizes</option>
+        <option value="Startup">Startup</option>
+        <option value="Boutique Agency">Boutique Agency</option>
+        <option value="Mid-size">Mid-size</option>
+        <option value="Enterprise">Enterprise</option>
+      </select>
+      <select class="filter-select" id="jobs-flags" onchange="renderJobs()">
+        <option value="">All Roles</option>
+        <option value="warm">Warm Contact</option>
+        <option value="materials">Materials Ready</option>
       </select>
       <span class="count-badge" id="jobs-count"></span>
     </div>
-    <div class="card-grid" id="jobs-list"></div>
+    <div id="jobs-list"></div>
   </div>
 
   <!-- PROSPECTS TAB -->
@@ -948,36 +1062,105 @@ function render() {
 // ─────────────────────────────────────────
 // JOBS TAB
 // ─────────────────────────────────────────
+// ─────────────────────────────────────────
+// JOB HELPERS — fit score, category, size, salary
+// ─────────────────────────────────────────
+function jobFitScore(score) {
+  if (score >= 14) return 5;
+  if (score >= 10) return 4;
+  if (score >= 7)  return 3;
+  if (score >= 4)  return 2;
+  return 1;
+}
+
+function jobCategory(title, description) {
+  const t = (title + ' ' + (description || '')).toLowerCase();
+  if (/fractional/.test(t)) return 'Fractional';
+  if (/gaming|game|publisher|developer rel|devrel|esports|indie game/.test(t)) return 'Gaming';
+  if (/partnership|collab|biz dev|business dev/.test(t)) return 'Partnerships';
+  if (/project manager|creative project|program manager/.test(t)) return 'Project Management';
+  if (/associate creative director|creative director|creative strategist|creative producer|creative lead|content strateg|editorial/.test(t)) return 'Creative Strategy';
+  if (/brand manager|brand marketing|head of brand|brand strateg|brand director/.test(t)) return 'Brand Management';
+  if (/growth|gtm|go-to-market|integrated marketing|marketing manager|marketing director/.test(t)) return 'Growth Marketing';
+  return 'Brand Management';
+}
+
+function jobCompanySize(company, description) {
+  const co = (company || '').toLowerCase();
+  const d = (description || '').toLowerCase();
+  if (/fortune 500|publicly traded|nasdaq|nyse|global company|enterprise/.test(d)) return 'Enterprise';
+  if (/startup|seed stage|series a|early.stage|small team|founding team|scrappy/.test(d)) return 'Startup';
+  if (/agency|studio|boutique/.test(d + co)) return 'Boutique Agency';
+  if (/series [b-z]|growth stage|mid.?size|scale.?up/.test(d)) return 'Mid-size';
+  // rough headcount signals
+  if (/\b[1-9]\d? employees|\bunder 50\b|\bteam of \d/.test(d)) return 'Startup';
+  if (/\b[5-9]\d\d employees|\b[1-4],\d{3} employees/.test(d)) return 'Mid-size';
+  if (/\b\d{4,} employees/.test(d)) return 'Enterprise';
+  return 'Mid-size';
+}
+
+function parseSalary(description) {
+  if (!description) return '';
+  const m = description.match(/\$(\d{2,3})[Kk]\s*[-–to]+\s*\$?(\d{2,3})[Kk]/) ||
+            description.match(/\$(\d{2,3}),\d{3}\s*[-–to]+\s*\$?(\d{2,3}),\d{3}/) ||
+            description.match(/(\d{2,3})[Kk]\s*[-–]+\s*(\d{2,3})[Kk]/);
+  if (!m) return '';
+  let lo = m[1].replace(/,\d{3}/, ''), hi = m[2].replace(/,\d{3}/, '');
+  return `$${lo}K – $${hi}K`;
+}
+
+const JOB_STATUS_LABELS = {
+  found: 'Found', resume_tailored: 'Resume Tailored', cover_letter_done: 'Cover Letter Done',
+  applied: 'Applied', follow_up_sent: 'Follow Up Sent',
+  interview: 'Interview', offer: 'Offer', pass: 'Pass'
+};
+const JOB_STATUS_COLORS = {
+  found: 'var(--text-3)', resume_tailored: '#60a5fa', cover_letter_done: '#818cf8',
+  applied: '#a78bfa', follow_up_sent: '#f59e0b',
+  interview: '#22c55e', offer: '#10b981', pass: 'var(--text-3)'
+};
+
+const CAT_COLORS = {
+  'Partnerships': '#f59e0b', 'Brand Management': '#60a5fa', 'Creative Strategy': '#c084fc',
+  'Growth Marketing': '#34d399', 'Gaming': '#f97316', 'Project Management': '#94a3b8',
+  'Fractional': '#a78bfa'
+};
+
 function renderJobs() {
-  const statuses = LS.jobStatuses();
-  const dismissed = LS.dismissed();
-  const q = (document.getElementById('jobs-search').value || '').toLowerCase();
-  const sf = document.getElementById('jobs-status').value;
-  const sc = document.getElementById('jobs-score').value;
-  const sb = document.getElementById('jobs-bucket').value;
-  const sort = document.getElementById('jobs-sort').value;
+  const statuses   = LS.jobStatuses();
+  const dismissed  = LS.dismissed();
+  const flags      = JSON.parse(localStorage.getItem('jt_job_flags') || '{}');
+  const q          = (document.getElementById('jobs-search').value || '').toLowerCase();
+  const sf         = document.getElementById('jobs-status').value;
+  const sc         = document.getElementById('jobs-category').value;
+  const fitFilter  = document.getElementById('jobs-fit').value;
+  const sizeFilter = document.getElementById('jobs-size').value;
+  const flagFilter = document.getElementById('jobs-flags').value;
 
-  let list = jobs
-    .map(j => ({ ...j, _id: makeId(j), _status: statuses[makeId(j)] || j.default_status || 'new' }))
-    .filter(j => !dismissed[j._id])
-    .filter(j => !sf || j._status === sf)
-    .filter(j => {
-      if (!sc) return true;
-      if (sc === 'strong') return j.score >= 8;
-      if (sc === 'good') return j.score >= 5 && j.score < 8;
-      if (sc === 'look') return j.score >= 2 && j.score < 5;
-      return true;
-    })
-    .filter(j => {
-      if (!sb) return true;
-      const b = detectBucket(j.title, j.description || '');
-      return b && b.label === sb;
-    })
-    .filter(j => !q || `${j.title} ${j.company} ${j.description || ''} ${j.source || ''}`.toLowerCase().includes(q));
+  let list = jobs.map(j => {
+    const id = makeId(j);
+    return {
+      ...j,
+      _id: id,
+      _status: statuses[id] || 'found',
+      _fit: jobFitScore(j.score),
+      _category: jobCategory(j.title, j.description || ''),
+      _size: jobCompanySize(j.company, j.description || ''),
+      _salary: parseSalary(j.description || ''),
+      _warm: !!(flags[id] && flags[id].warm),
+      _materials: !!(flags[id] && flags[id].materials),
+    };
+  })
+  .filter(j => !dismissed[j._id])
+  .filter(j => !sf || j._status === sf)
+  .filter(j => !sc || j._category === sc)
+  .filter(j => !fitFilter || j._fit >= parseInt(fitFilter))
+  .filter(j => !sizeFilter || j._size === sizeFilter)
+  .filter(j => flagFilter === 'warm' ? j._warm : flagFilter === 'materials' ? j._materials : true)
+  .filter(j => !q || `${j.title} ${j.company} ${j.description || ''} ${j.source || ''}`.toLowerCase().includes(q));
 
-  if (sort === 'score') list.sort((a, b) => b.score - a.score);
-  else if (sort === 'date') list.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-  else list.sort((a, b) => (a.company || '').localeCompare(b.company || ''));
+  // Sort: fit desc, then date desc
+  list.sort((a, b) => b._fit - a._fit || (b.date || '').localeCompare(a.date || ''));
 
   document.getElementById('jobs-count').textContent = `${list.length} role${list.length !== 1 ? 's' : ''}`;
   const el = document.getElementById('jobs-list');
@@ -987,50 +1170,71 @@ function renderJobs() {
     return;
   }
 
-  el.innerHTML = list.map(job => {
-    const { label: sl, cls: sc2 } = scoreMeta(job.score);
+  const statusOpts = Object.entries(JOB_STATUS_LABELS).map(([v, l]) => `<option value="${v}">${l}</option>`).join('');
+
+  el.innerHTML = `<div class="job-list">${list.map(job => {
+    const catColor = CAT_COLORS[job._category] || 'var(--text-2)';
+    const statusColor = JOB_STATUS_COLORS[job._status] || 'var(--text-3)';
+    const sizeClass = { Startup: 'size-startup', 'Boutique Agency': 'size-boutique', 'Mid-size': 'size-midsize', Enterprise: 'size-enterprise' }[job._size] || '';
     const { subject, body } = genJobEmail(job);
     const eid = job._id + '_email';
     _emailCache[eid] = { subject, body };
     const mailto = makeMailto(FROM_EMAIL, subject, body);
-    return `<div class="card">
-  <div class="card-header">
-    <div style="flex:1;min-width:0">
-      <div class="card-title">${job.url ? `<a href="${escH(job.url)}" target="_blank">${escH(job.title)}</a>` : escH(job.title)}</div>
-      <div class="card-subtitle">${escH(job.company)}${job.date ? ' &middot; ' + job.date : ''}</div>
+
+    return `<div class="job-row" id="row-${job._id}">
+  <div class="job-row-top">
+    <div class="job-fit-score">
+      <span class="fit-number fit-${job._fit}">${job._fit}</span>
+      <span class="fit-label">fit</span>
     </div>
-    <span class="badge badge-${sc2}" style="flex-shrink:0">${sl}</span>
-  </div>
-  ${job.description ? `<div class="card-desc">${escH(job.description)}</div>` : ''}
-  ${renderContacts(job.contacts, job.company)}
-  <div class="card-meta">
-    ${statusBadge(job._status)}
-    ${(() => { const b = detectBucket(job.title, job.description || ''); return b ? `<span class="badge badge-source" style="background:${b.color}22;color:${b.color};border:1px solid ${b.color}44">${b.label}</span>` : ''; })()}
-    ${job.source ? `<span class="badge badge-source">${escH(job.source)}</span>` : ''}
-  </div>
-  <div class="card-actions">
-    ${job._status === 'new' ? `<button class="btn btn-primary" onclick="setJobStatus('${job._id}','approved')">Approve</button>` : ''}
-    <select class="status-select" onchange="setJobStatus('${job._id}',this.value);this.value=''">
-      <option value="">Move to&hellip;</option>
-      <option value="new">New</option>
-      <option value="approved">Approved</option>
-      <option value="applied">Applied</option>
-      <option value="outreach_sent">Outreach Sent</option>
-      <option value="interview">Interview</option>
-      <option value="pass">Pass</option>
-    </select>
-    <button class="btn btn-danger" onclick="dismissId('${job._id}')">Dismiss</button>
-    <a class="btn btn-mail" href="${mailto}">Draft Email</a>
-    ${job.url ? `<a class="card-link" href="${escH(job.url)}" target="_blank">View job &rarr;</a>` : ''}
+    <div class="job-row-body">
+      <div class="job-row-title">${job.url ? `<a href="${escH(job.url)}" target="_blank">${escH(job.title)}</a>` : escH(job.title)}</div>
+      <div class="job-row-meta">
+        <span>${escH(job.company)}</span>
+        ${job.date ? `<span style="color:var(--text-3)">&middot; ${job.date}</span>` : ''}
+        ${job._salary ? `<span class="salary-tag">${job._salary}</span>` : ''}
+        <span class="${sizeClass}">&middot; ${job._size}</span>
+        ${job._warm ? `<span style="color:#f59e0b;font-size:11px">★ Warm Contact</span>` : ''}
+        ${job._materials ? `<span style="color:#60a5fa;font-size:11px">✓ Materials Ready</span>` : ''}
+      </div>
+      <div class="job-row-tags">
+        <span class="badge" style="background:${catColor}18;color:${catColor};border:1px solid ${catColor}33;font-size:10px">${job._category}</span>
+        <span class="badge badge-source" style="font-size:10px;padding:2px 7px;border-radius:4px;display:inline-flex;align-items:center;gap:3px">
+          <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${statusColor}"></span>
+          ${JOB_STATUS_LABELS[job._status] || job._status}
+        </span>
+        ${job.source ? `<span class="badge badge-source" style="font-size:10px">${escH(job.source)}</span>` : ''}
+      </div>
+      ${job.description ? `<div class="job-row-desc">${escH(job.description)}</div>` : ''}
+      ${renderContacts(job.contacts, job.company)}
+      <div class="job-row-actions">
+        <select class="job-status-select" onchange="setJobStatus('${job._id}',this.value)" style="border-color:${statusColor}44">
+          ${Object.entries(JOB_STATUS_LABELS).map(([v,l]) => `<option value="${v}"${job._status===v?' selected':''}>${l}</option>`).join('')}
+        </select>
+        <button class="flag-btn${job._warm?' active':''}" onclick="toggleJobFlag('${job._id}','warm')">★ Warm Contact</button>
+        <button class="flag-btn${job._materials?' active-blue':''}" onclick="toggleJobFlag('${job._id}','materials')">✓ Materials</button>
+        <button class="btn btn-danger" onclick="dismissId('${job._id}')">Dismiss</button>
+        <a class="btn btn-mail" href="${mailto}">Draft Email</a>
+        ${job.url ? `<a class="card-link" href="${escH(job.url)}" target="_blank">View &rarr;</a>` : ''}
+      </div>
+    </div>
   </div>
 </div>`;
-  }).join('');
+  }).join('')}</div>`;
 }
 
 function setJobStatus(id, s) {
   if (!s) return;
   LS.setJobStatus(id, s);
-  render();
+  renderJobs();
+}
+
+function toggleJobFlag(id, flag) {
+  const flags = JSON.parse(localStorage.getItem('jt_job_flags') || '{}');
+  if (!flags[id]) flags[id] = {};
+  flags[id][flag] = !flags[id][flag];
+  localStorage.setItem('jt_job_flags', JSON.stringify(flags));
+  renderJobs();
 }
 
 // ─────────────────────────────────────────

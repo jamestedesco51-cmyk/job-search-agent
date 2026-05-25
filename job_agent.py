@@ -31,7 +31,8 @@ from dateutil import parser as dateparser
 # ── SKILL BUCKET 1: Partnerships & Biz Dev ───────────────────────────────────
 TITLES_PARTNERSHIPS = [
     "brand partnerships manager", "creative partnerships manager",
-    "partnerships manager", "head of partnerships", "director of partnerships",
+    "partnerships manager", "senior partnerships manager", "sr. partnerships manager",
+    "head of partnerships",
     "collaborations manager", "head of collaborations", "collab manager",
     "co-marketing manager", "commercial partnerships", "brand and partnerships",
     "growth partnerships", "media partnerships", "strategic partnerships",
@@ -48,21 +49,23 @@ TITLES_PARTNERSHIPS = [
 # ── SKILL BUCKET 2: Brand & Marketing ────────────────────────────────────────
 TITLES_BRAND_MARKETING = [
     "brand manager", "brand marketing manager", "brand strategist",
-    "head of brand", "director of brand", "vp of brand",
-    "marketing manager", "integrated marketing manager", "cultural marketing manager",
-    "campaign manager", "content marketing manager", "go-to-market manager",
-    "gtm manager", "brand operator", "creative operator",
+    "head of brand", "senior brand manager",
+    "marketing manager", "senior marketing manager", "integrated marketing manager",
+    "cultural marketing manager", "campaign manager", "content marketing manager",
+    "go-to-market manager", "gtm manager", "brand operator", "creative operator",
     "experiential marketing manager", "brand experience manager",
-    "social media manager", "community manager",
 ]
 
 # ── SKILL BUCKET 3: Creative & Content ───────────────────────────────────────
 TITLES_CREATIVE = [
-    "creative director", "associate creative director",
-    "creative strategist", "brand creative", "creative lead",
-    "content strategist", "editorial director", "head of content",
-    "content director", "creative producer", "brand producer",
-    "copy director", "copywriter", "brand copywriter",
+    "associate creative director",
+    "creative strategist", "senior creative strategist",
+    "brand creative", "creative lead",
+    "content strategist", "senior content strategist",
+    "head of content", "content director",
+    "creative producer", "brand producer", "senior creative producer",
+    "creative project manager", "project manager marketing",
+    "integrated marketing manager",
 ]
 
 # ── SKILL BUCKET 4: Ecom & Growth ────────────────────────────────────────────
@@ -98,6 +101,10 @@ TARGET_INDUSTRIES = [
     "fashion", "apparel", "food", "beverage", "spirits",
     "mental health", "beauty", "skincare",
     "culture", "music", "outdoor recreation",
+    "menswear", "lifestyle goods", "heritage", "surf", "outdoor",
+    "healthcare", "health", "medtech", "digital health", "medical device",
+    "biotech", "health tech", "clinical", "hospital", "health system",
+    "university", "higher education", "academic", "research", "education",
     "sustainability", "creator", "influencer",
     "sports media", "sports entertainment",  # media companies, NOT sports teams/franchises
 ]
@@ -128,6 +135,12 @@ TITLE_HARDSTOP = [
     "social media manager",  # too narrow / junior
     "influencer manager",  # pure influencer ops
     "talent manager",  # talent representation, not brand strategy
+    # pure technical/engineering design roles
+    "ui designer", "ux designer",
+    "motion designer",
+    "programmatic manager",
+    # too junior
+    "junior partnerships",
 ]
 
 BAD_SIGNALS = [
@@ -226,6 +239,19 @@ TARGET_COMPANIES = [
     # active application / named targets
     "farrow and ball", "farrow & ball",
     "turtle beach", "kyra", "joined media", "afk",
+    # menswear / lifestyle goods
+    "corridor nyc", "corridor", "adsum", "metalwood", "pilgrim surf",
+    "blackstock", "dehen", "carter young", "knickerbocker",
+    # medical / health startups (brand-forward, not big pharma)
+    "hims & hers", "ro health", "cerebral", "brightline", "headway",
+    "noom", "life house", "devoted health", "devoted studios",
+    "tend dental", "dental intelligence", "smiledirectclub",
+    "keep company", "wellthy", "carrot fertility", "progyny",
+    "midi health", "oshi health", "harbor health",
+    # academia / university (Austin-centric)
+    "ut austin", "university of texas", "texas medical center",
+    "st. david's", "baylor scott", "ascension seton",
+    "dell medical", "md anderson", "texas children's",
 ]
 
 # Large corps / wrong-industry companies — hard penalty (-4)
@@ -361,9 +387,39 @@ SEARCH_QUERIES = [
     "fractional creative director",
     "contract brand partnerships manager",
     "contract head of growth remote",
+    # ── Brand & Creative (expanded) ───────────────────────────
+    "brand director remote",
+    "creative director lifestyle remote",
+    "creative director CPG remote",
+    "brand strategist remote",
+    "brand lead startup remote",
+    "creative lead DTC remote",
+    "brand creative director remote",
+    "director of creative remote",
+    "VP creative remote",
+    "brand experience manager remote",
+    "storytelling director remote",
+    # ── Medical / Healthcare branding ─────────────────────────
+    "brand manager healthcare remote",
+    "marketing manager health startup remote",
+    "brand partnerships manager health wellness",
+    "creative director health brand remote",
+    "head of marketing medtech remote",
+    "brand strategist medical device remote",
+    "marketing director digital health remote",
+    "partnerships manager healthcare remote",
+    # ── Academia / University / UT Austin ─────────────────────
+    "brand partnerships university remote",
+    "marketing manager university Austin",
+    "director of partnerships UT Austin",
+    "creative director university remote",
+    "head of brand education remote",
+    "marketing director higher education remote",
+    "brand manager education Austin",
+    "partnerships director research institution",
 ]
 
-MAX_AGE_DAYS = 14
+MAX_AGE_DAYS = 7
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
@@ -552,6 +608,35 @@ def score_job(title, description="", company=""):
     for kw in BAD_SIGNALS:
         if kw in text:
             score -= 5
+
+    # Team-based roles are a strong positive signal — James thrives in collaborative environments
+    team_signals = ["team", "collaborate", "cross-functional", "work with", "partner with",
+                    "alongside", "joint", "collective", "crew", "in-house"]
+    if any(sig in text for sig in team_signals):
+        score += 2
+
+    # Standalone "creative director" (not associate) is a senior stretch — nudge down
+    if "creative director" in title_lower and "associate" not in title_lower:
+        score -= 3
+
+    # 8 years exp — director-level at established orgs is a reach
+    # "Head of X" at startups is fine (startup speak for manager), "Director of X" is not
+    # Director and VP level — stretch at 8 years, nudge down so they surface but don't dominate
+    stretch_titles = [
+        "director of brand", "director of partnerships", "director of marketing",
+        "director of creative", "director of content", "director of growth",
+        "brand director", "marketing director", "partnerships director",
+        "senior director",
+        "vp of brand", "vp of partnerships", "vp of marketing",
+        "vp partnerships", "vp brand", "vp marketing",
+        "vice president",
+    ]
+    if any(dt in title_lower for dt in stretch_titles):
+        score -= 4
+
+    # C-suite and above — hard out
+    if any(sr in title_lower for sr in ["svp", "evp", "chief ", "cmo", "cco", "ceo"]):
+        score -= 10
 
     if "austin" in text or "austin, tx" in text:
         score += 4
@@ -1285,6 +1370,8 @@ PROSPECT_INDUSTRIES = [
     "gaming", "dtc", "consumer", "lifestyle", "wellness", "cpg",
     "food", "beverage", "fashion", "apparel", "mental health",
     "editorial", "media", "creator economy", "music", "culture",
+    "menswear", "men's", "outdoor", "surf", "heritage", "lifestyle goods",
+    "functional", "running", "sportswear", "workwear",
 ]
 
 FOUNDER_SIGNALS = [
@@ -2305,6 +2392,120 @@ def seed_known_prospects():
         engagement_type="fractional",
     )
 
+    # ── MENSWEAR & LIFESTYLE GOODS — added May 2026 ──────────────────────────
+    add_prospect(
+        brand="Corridor NYC",
+        founder="Dan Snyder",
+        contact="Dan Snyder",
+        contact_title="Founder & Designer",
+        gap="American sportswear brand at ~$10M revenue with 17 employees — classic inflection point. Dan Snyder is running creative, design, production, and commercial strategy simultaneously. No dedicated partnerships director. Collab history is thin for the brand's revenue level — mostly retail, not cultural brand moments. Stocked at Mr. Porter, SSENSE, END but no systematic co-brand or creator program.",
+        instagram="https://instagram.com/corridornyc",
+        website="https://corridornyc.com",
+        industry="Menswear / DTC / Lifestyle",
+        revenue_est="$8M-12M",
+        score=8,
+        notes="$10M inflection — founder wearing all hats, collab history underdeveloped",
+        fractional_role="Fractional Head of Partnerships & Brand Strategy",
+        headcount="17",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Adsum",
+        founder="Pete Macnee",
+        contact="Pete Macnee",
+        contact_title="Founder & Creative Director",
+        gap="Menswear brand stocked at Dover Street Market, SSENSE, END, Mr. Porter, and Beams Japan — punching well above its weight class for a 5-10 person operation. Pete Macnee explicitly handles all design, development, and sales personally. Has done collabs (Gramicci, Vans, Merrell, Nanga, Reebok) — all founder-driven, no dedicated partnerships pipeline. Needs someone to develop the inbound/outbound collab pipeline so Pete can focus on design.",
+        instagram="https://instagram.com/adsumnyc",
+        website="https://adsumnyc.com",
+        industry="Menswear / Outdoor / Lifestyle",
+        revenue_est="$1M-5M",
+        score=8,
+        notes="Collab credentials proven (Vans, Reebok, Merrell) — no pipeline, all founder",
+        fractional_role="Fractional Head of Brand Partnerships",
+        headcount="5-10",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Metalwood Studio",
+        founder="Cole Young",
+        contact="Cole Young",
+        contact_title="Founder & Creative Director",
+        gap="Golf-meets-streetwear lifestyle brand at ~$10-15M revenue. Partnerships (adidas, FootJoy, Maxfli, Del Toro) come reactively — brands come to them because of cultural relevance, not because Metalwood has a proactive partnerships strategy. Post-raise ($28M) with international expansion pressure and no one building a systematic creator, athlete, or brand partnership pipeline. The window to shape the commercial identity before the brand scales past this stage is now.",
+        instagram="https://instagram.com/metalwoodstudio",
+        website="https://metalwood.studio",
+        industry="Menswear / Golf / Lifestyle",
+        revenue_est="$10M-15M",
+        score=8,
+        notes="Post-raise growth pressure — reactive partnerships need to become systematic",
+        fractional_role="Fractional Head of Brand Partnerships & GTM Strategy",
+        headcount="10-20",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Pilgrim Surf + Supply",
+        founder="Chris Gentile",
+        contact="Chris Gentile",
+        contact_title="Co-Founder & CEO",
+        gap="One of the most credible lifestyle/surf/menswear retail-to-brand crossovers in the US. International partnership with Beams (Tokyo/Kyoto stores) proves they can execute on brand relationships. But with only 7 employees and ~$13M revenue, Chris Gentile is running commercial strategy alongside everything else. No dedicated partnerships or wholesale growth operator. At this revenue level, the brand either builds commercial infrastructure or plateaus.",
+        instagram="https://instagram.com/pilgrimsurfsupply",
+        website="https://pilgrimsurfsupply.com",
+        industry="Surf / Lifestyle / Menswear",
+        revenue_est="$10M-15M",
+        score=9,
+        notes="7 employees at $13M — no dedicated commercial op, Beams collab proves the model",
+        fractional_role="Fractional Head of Brand Partnerships & Retail Expansion",
+        headcount="7-9",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Blackstock & Weber",
+        founder="Chris Echevarria",
+        contact="Chris Echevarria",
+        contact_title="Founder & Creative Director",
+        gap="Chris Echevarria is one of the most in-demand men's style figures in the US — Kith, Pharrell's BBC, Sperry have all come to him. Every partnership deal flows through Chris personally. He is simultaneously running Blackstock & Weber and launching Academy (a new apparel line) — both need commercial infrastructure he cannot give them alone. The Academy launch is the specific gap: it needs GTM attention Chris cannot fully provide.",
+        instagram="https://instagram.com/blackstockandweber",
+        website="https://blackstockandweber.com",
+        industry="Menswear / Footwear / Lifestyle",
+        revenue_est="$1M-5M",
+        score=8,
+        notes="Academy launch = new GTM need, every deal is founder-only, Pharrell/Kith credibility",
+        fractional_role="Fractional Head of Brand Partnerships & GTM",
+        headcount="7",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Dehen 1920",
+        founder="Gary Hilde",
+        contact="Gary Hilde",
+        contact_title="President & Master Knitter",
+        gap="America's best varsity and knit jacket maker — family-owned since 1920, Portland OR, 70-80 global boutique accounts (Berlin, Tokyo, Paris). Just opened their first public storefront. No brand partnerships strategy, no creator outreach, no proactive commercial pipeline. Their product is exactly what menswear creators and heritage-adjacent brands want to co-brand — no one is building that pipeline. A maker's operation that needs a fractional commercial operator to unlock partnership revenue.",
+        instagram="https://instagram.com/dehen1920",
+        website="https://dehen1920.com",
+        industry="Menswear / Heritage / Lifestyle Goods",
+        revenue_est="$3M-6M",
+        score=7,
+        notes="New storefront = growth signal, maker mentality, no partnerships pipeline",
+        fractional_role="Fractional Head of Brand Partnerships & Creator Strategy",
+        headcount="11-35",
+        engagement_type="fractional",
+    )
+    add_prospect(
+        brand="Carter Young",
+        founder="Carter Altman",
+        contact="Carter Altman",
+        contact_title="Founder & Designer",
+        gap="New Americana menswear brand with extraordinary press heat for its size — Vogue, NYT, WWD, Forbes, GQ coverage. Pedigree includes Helmut Lang, Kith womenswear, 1017 ALYX 9SM. Notable wearers include Ethan Hawke and Interpol's Paul Banks. Made in NYC garment district. But: no wholesale strategy, no creator program, no brand partnerships, no commercial structure whatsoever. There's a 12-18 month window before the press momentum fades without commercial conversion.",
+        instagram="https://instagram.com/carteryoungus",
+        website="https://carteryoungus.com",
+        industry="Menswear / DTC",
+        revenue_est="Under $1M",
+        score=7,
+        notes="Press heat (NYT, Vogue, GQ) with zero commercial infrastructure — 12-18mo window",
+        fractional_role="Fractional GTM Strategist & Brand Partnerships",
+        headcount="3-5",
+        engagement_type="fractional",
+    )
+
 def seed_known_agencies():
     """Return the curated list of boutique creative agencies for James to target."""
     return [
@@ -2473,6 +2674,73 @@ def scrape_product_hunt_prospects():
         except Exception:
             pass
 
+def scrape_thingtesting():
+    """Scrape Thingtesting for recently launched DTC brands."""
+    print("  Scraping Thingtesting for new brand launches...")
+    try:
+        resp = requests.get("https://thingtesting.com/brands?sort=newest", headers=HEADERS, timeout=12)
+        soup = BeautifulSoup(resp.text, "html.parser")
+        for item in soup.select("[class*='brand'], [class*='card'], article")[:20]:
+            name_el = item.select_one("h2, h3, [class*='name'], [class*='title']")
+            desc_el = item.select_one("p, [class*='desc'], [class*='tagline']")
+            link_el = item.select_one("a[href]")
+            if not name_el:
+                continue
+            brand = name_el.get_text(strip=True)
+            desc = desc_el.get_text(strip=True) if desc_el else ""
+            href = link_el.get("href", "") if link_el else ""
+            site = f"https://thingtesting.com{href}" if href.startswith("/") else href
+            if not brand or len(brand) < 3:
+                continue
+            sc = score_prospect(brand, desc, "DTC consumer")
+            if sc < 4:
+                continue
+            add_prospect(
+                brand=brand,
+                gap=f"{desc} Newly launched DTC brand discovered on Thingtesting. Likely founder-operated with minimal commercial infrastructure.",
+                website=site,
+                industry="DTC / Consumer",
+                score=sc,
+                notes="Thingtesting discovery — new launch",
+            )
+    except Exception:
+        pass
+
+def scrape_bevnet():
+    """Scrape BevNet news for emerging food/bev brand mentions."""
+    print("  Scanning BevNet for emerging brands...")
+    try:
+        feed = feedparser.parse("https://www.bevnet.com/feed/")
+        for entry in feed.entries[:15]:
+            title = entry.get("title", "")
+            content_raw = entry.get("content", [{}])
+            content_html = content_raw[0].get("value", entry.get("summary", "")) if content_raw else entry.get("summary", "")
+            content = BeautifulSoup(content_html, "html.parser").get_text()
+            full_text = f"{title} {content}"
+            brand_candidates = re.findall(r"\b([A-Z][a-zA-Z]{2,18}(?:\s[A-Z][a-zA-Z]{2,14})?)\b", full_text)
+            checked = set()
+            for brand in brand_candidates:
+                if brand in checked or brand in seen_brands or len(brand) < 4:
+                    continue
+                if brand.lower() in {"the", "and", "for", "with", "this", "that", "they", "from",
+                                      "have", "been", "their", "what", "when", "where", "which",
+                                      "bevnet", "news", "brand", "drink", "food", "new"}:
+                    continue
+                checked.add(brand)
+                idx = full_text.find(brand)
+                ctx = full_text[max(0, idx - 80):idx + 200].lower()
+                sc = score_prospect(brand, ctx, "food beverage DTC")
+                if sc >= 5:
+                    add_prospect(
+                        brand=brand,
+                        gap=f"Mentioned in BevNet coverage. Context: {ctx[:200].strip()}",
+                        industry="Food & Beverage / DTC",
+                        score=sc,
+                        notes="BevNet discovery",
+                    )
+    except Exception:
+        pass
+
 def scrape_words_of_mouth():
     """Parse Words of Mouth newsletter for emerging DTC brand mentions."""
     print("  Scanning Words of Mouth newsletter...")
@@ -2553,6 +2821,8 @@ for job in top_jobs[:30]:
 print("\n--- PROSPECT SCRAPERS ---")
 seed_known_prospects()
 scrape_product_hunt_prospects()
+scrape_thingtesting()
+scrape_bevnet()
 scrape_words_of_mouth()
 
 # Agencies are a static curated list — no scraping needed
