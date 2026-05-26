@@ -527,6 +527,194 @@ html, body {
 }
 .job-link-row a:hover { text-decoration: underline; }
 
+/* PLAYBOOK TAB */
+.playbook-wrap { max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; }
+.playbook-hero { margin-bottom: 28px; }
+.playbook-hero-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.playbook-hero-sub { font-size: 13px; color: var(--text-2); }
+.playbook-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 820px) { .playbook-grid { grid-template-columns: 1fr; } }
+.playbook-col { display: flex; flex-direction: column; gap: 16px; }
+.playbook-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+.playbook-card-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-3);
+  margin-bottom: 4px;
+}
+.playbook-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+.playbook-section-body { display: flex; flex-direction: column; gap: 10px; }
+.sweetspot-row { font-size: 12px; color: var(--text-2); display: flex; gap: 8px; align-items: flex-start; }
+.sweetspot-tag {
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.offer-row { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--text-2); }
+.offer-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.sector-row { font-size: 12px; color: var(--text-2); margin-bottom: 10px; line-height: 1.6; }
+.sector-label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+.sector-label.gaming { background: rgba(56,189,248,.15); color: #38bdf8; }
+.sector-label.dtc { background: rgba(52,211,153,.15); color: #34d399; }
+.sector-label.wellness { background: rgba(167,139,250,.15); color: #a78bfa; }
+.sector-label.media { background: rgba(251,146,60,.15); color: #fb923c; }
+.playbook-steps { display: flex; flex-direction: column; gap: 0; }
+.playbook-step {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.playbook-step:last-child { border-bottom: none; padding-bottom: 0; }
+.step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.step-body { flex: 1; }
+.step-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.step-desc { font-size: 12px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
+.step-check {
+  font-size: 11px;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 5px 9px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+.step-audit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+.audit-col { background: var(--bg); border-radius: 5px; padding: 8px 10px; }
+.audit-col-label { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-3); margin-bottom: 6px; }
+.audit-item { font-size: 11px; color: var(--text-2); padding: 2px 0; border-bottom: 1px solid var(--border); }
+.audit-item:last-child { border-bottom: none; }
+.step-email-structure { margin-top: 6px; display: flex; flex-direction: column; gap: 5px; }
+.email-struct-row { display: flex; gap: 8px; font-size: 11px; align-items: flex-start; }
+.estruct-label {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* PROSPECT AUDIT WIDGET */
+.prospect-audit {
+  margin-top: 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.prospect-audit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  background: var(--bg);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--text-2);
+}
+.prospect-audit-header:hover { color: var(--text); }
+.audit-progress-bar { height: 3px; background: var(--border); }
+.audit-progress-fill { height: 3px; background: var(--accent); transition: width .2s; }
+.prospect-audit-body { display: none; padding: 12px; }
+.prospect-audit-body.open { display: block; }
+.audit-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--text-3);
+  margin: 10px 0 6px;
+}
+.audit-section-label:first-child { margin-top: 0; }
+.audit-check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-2);
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+.audit-check-row input[type=checkbox] { margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--accent); }
+.audit-check-row.checked { color: var(--text-3); text-decoration: line-through; }
+.audit-gap-select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font-size: 12px;
+  padding: 5px 8px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+.audit-contact-input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font-size: 12px;
+  padding: 5px 8px;
+  margin-top: 4px;
+  outline: none;
+}
+.audit-contact-input:focus { border-color: var(--accent); }
+.audit-ready-badge {
+  display: inline-block;
+  background: rgba(34,197,94,.15);
+  color: #22c55e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
 /* MODAL */
 .modal-overlay {
   position: fixed;
@@ -596,6 +784,7 @@ html, body {
     <button class="nav-tab" data-tab="pipeline" onclick="switchTab('pipeline')">Pipeline</button>
     <button class="nav-tab" data-tab="agencies" onclick="switchTab('agencies')">Agencies</button>
     <button class="nav-tab" data-tab="reengage" onclick="switchTab('reengage')">Re-Engage</button>
+    <button class="nav-tab" data-tab="playbook" onclick="switchTab('playbook')">Playbook</button>
   </div>
   <div class="nav-meta" id="nav-meta">loading...</div>
   <button onclick="toggleMode()" id="mode-btn" style="background:none;border:none;cursor:pointer;padding:0 16px;color:var(--text-3);font-size:18px;border-left:1px solid var(--border)" title="Toggle light/dark">&#9788;</button>
@@ -779,6 +968,136 @@ html, body {
       <div>
         <div class="pipeline-section-title">Consulting Pipeline</div>
         <div class="kanban-board" id="kanban-prospects"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAYBOOK TAB -->
+  <div id="tab-playbook" class="tab-panel">
+    <div class="playbook-wrap">
+
+      <div class="playbook-hero">
+        <div class="playbook-hero-title">Outreach Playbook</div>
+        <div class="playbook-hero-sub">Kate Citron framework adapted to James Tedesco's positioning. Use this before writing any email.</div>
+      </div>
+
+      <div class="playbook-grid">
+
+        <!-- LEFT COL: Sweet spot + what I do -->
+        <div class="playbook-col">
+
+          <div class="playbook-card">
+            <div class="playbook-card-label">My Sweet Spot</div>
+            <div class="playbook-card-title">Who I Help</div>
+            <div class="playbook-section-body">
+              <div class="sweetspot-row"><span class="sweetspot-tag">Stage</span> Seed to Series A. Founder still wearing the commercial hat.</div>
+              <div class="sweetspot-row"><span class="sweetspot-tag">Size</span> 1–30 people. No dedicated partnerships or GTM function yet.</div>
+              <div class="sweetspot-row"><span class="sweetspot-tag">Product</span> Clear brand identity. Real product. Just no commercial infrastructure.</div>
+              <div class="sweetspot-row"><span class="sweetspot-tag">Industries</span> Gaming · DTC · CPG · Food &amp; Bev · Wellness · Lifestyle · Menswear · Media · Creator Economy</div>
+              <div class="sweetspot-row"><span class="sweetspot-tag">Problem</span> Founder doing partnerships alone. No pipeline. No collab framework. No GTM operator.</div>
+            </div>
+          </div>
+
+          <div class="playbook-card">
+            <div class="playbook-card-label">The Offer</div>
+            <div class="playbook-card-title">What I Do</div>
+            <div class="playbook-section-body">
+              <div class="offer-row"><span class="offer-icon">⚡</span><div><strong>Fractional Partnerships + GTM + Brand Operator</strong><br>Come in, build the function from scratch, show results in 60–90 days.</div></div>
+              <div class="offer-row"><span class="offer-icon">💰</span><div><strong>$3–4K/month retainer · 15 hrs/week</strong><br>Cheaper than one agency project. More leverage than a junior hire.</div></div>
+              <div class="offer-row"><span class="offer-icon">📋</span><div><strong>The proof:</strong> Opulist $50K in first two quarters, zero pipeline to start. Dinner Service collab 2.5M reach. Fandom: 15+ integrations/month for Sony, Microsoft, HBO, Netflix.</div></div>
+            </div>
+          </div>
+
+          <div class="playbook-card">
+            <div class="playbook-card-label">Positioning by Sector</div>
+            <div class="playbook-card-title">How to Frame It</div>
+            <div class="playbook-section-body">
+              <div class="sector-row"><span class="sector-label gaming">Gaming</span> Built the commercial layer between studios and brands at Fandom. Now doing the same for indie publishers at indie.io. Games need brand operators who grew up in the culture.</div>
+              <div class="sector-row"><span class="sector-label dtc">DTC / CPG</span> Built Dinner Service from cold outreach, Scenes of Note from concept to market, Opulist partnership program from zero. DTC brands need commercial infrastructure before they realize they do.</div>
+              <div class="sector-row"><span class="sector-label wellness">Wellness</span> Sunday Scaries gave me real understanding of how community, product, and content work together in wellness. The brand story and the commercial story are the same story.</div>
+              <div class="sector-row"><span class="sector-label media">Media / Creator</span> Five years at Fandom means I understand creator monetization, audience intelligence, and brand integration at scale. I know what moves the number and what just looks good on a deck.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COL: Kate's 5-step process -->
+        <div class="playbook-col">
+
+          <div class="playbook-card">
+            <div class="playbook-card-label">Kate Citron Framework</div>
+            <div class="playbook-card-title">Before You Write Anything</div>
+            <div class="playbook-steps">
+
+              <div class="playbook-step">
+                <div class="step-num">1</div>
+                <div class="step-body">
+                  <div class="step-title">Know who you can help</div>
+                  <div class="step-desc">Look at your past clients and spot the patterns — industries, stages, the kinds of problems that kept showing up. That's your sweet spot. If the company doesn't fit that pattern, move on.</div>
+                  <div class="step-check">For James: gaming · DTC · CPG · founder-operated · seed to Series A · no commercial infrastructure</div>
+                </div>
+              </div>
+
+              <div class="playbook-step">
+                <div class="step-num">2</div>
+                <div class="step-body">
+                  <div class="step-title">LinkedIn stalk</div>
+                  <div class="step-desc">Who works at the company? How big is the marketing team? What's the founder's background? If the team is under 30 and there's no partnerships or GTM person, that's your signal.</div>
+                  <div class="step-check">Look for: no partnerships title, founder with product/creative background, lean team, recent funding or launch</div>
+                </div>
+              </div>
+
+              <div class="playbook-step">
+                <div class="step-num">3</div>
+                <div class="step-body">
+                  <div class="step-title">10-minute audit</div>
+                  <div class="step-desc">Do a quick sweep of their marketing channels before writing. You need to be able to articulate the gap.</div>
+                  <div class="step-audit-grid">
+                    <div class="audit-col">
+                      <div class="audit-col-label">Brand</div>
+                      <div class="audit-item">Clear POV?</div>
+                      <div class="audit-item">Consistent across channels?</div>
+                      <div class="audit-item">Any brand collabs?</div>
+                      <div class="audit-item">Active partnerships?</div>
+                    </div>
+                    <div class="audit-col">
+                      <div class="audit-col-label">Commercial</div>
+                      <div class="audit-item">Partnerships page / deck?</div>
+                      <div class="audit-item">Email capture onsite?</div>
+                      <div class="audit-item">Welcome series?</div>
+                      <div class="audit-item">GTM strategy visible?</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="playbook-step">
+                <div class="step-num">4</div>
+                <div class="step-body">
+                  <div class="step-title">Find the contact</div>
+                  <div class="step-desc">Target the founder, CEO, or head of marketing — whoever would actually want your help.</div>
+                  <div class="step-check">Website → Google → LinkedIn → guess: <strong>first.last@brandurl.com</strong></div>
+                </div>
+              </div>
+
+              <div class="playbook-step">
+                <div class="step-num">5</div>
+                <div class="step-body">
+                  <div class="step-title">Write the email — introduction, not a pitch</div>
+                  <div class="step-desc">If after all the research you're confident you can help them, write it. Under 150 words. Open with something genuine you noticed. Don't pitch — introduce.</div>
+                  <div class="step-email-structure">
+                    <div class="email-struct-row"><span class="estruct-label">Open</span> One specific thing you genuinely noticed about them</div>
+                    <div class="email-struct-row"><span class="estruct-label">Who</span> A bit about me + one or two concrete credentials</div>
+                    <div class="email-struct-row"><span class="estruct-label">Why now</span> Fractional makes more sense than agency or FTE at this stage</div>
+                    <div class="email-struct-row"><span class="estruct-label">Close</span> "Would love to connect if and when it makes sense."</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -1203,6 +1522,7 @@ function render() {
   else if (currentTab === 'reengage') renderReengage();
   else if (currentTab === 'outreach') renderOutreach();
   else if (currentTab === 'pipeline') renderPipeline();
+  // playbook is static HTML — no render needed
 }
 
 // ─────────────────────────────────────────
@@ -1544,6 +1864,7 @@ function renderProspects() {
   ${p.contact && p.contact !== p.founder ? `<div class="card-subtitle" style="margin-top:2px">Target: <strong>${escH(p.contact)}</strong>${p.contact_title ? ', ' + escH(p.contact_title) : ''}</div>` : ''}
   ${p.fractional_role ? `<div style="margin:6px 0 2px"><span class="badge" style="background:rgba(139,92,246,.18);color:#a78bfa;font-size:11px;letter-spacing:.04em">${escH(p.fractional_role)}</span>${p.headcount ? `<span class="badge badge-source" style="margin-left:4px">${escH(p.headcount)} people</span>` : ''}</div>` : ''}
   ${p.gap ? `<div class="card-gap">${escH(p.gap)}</div>` : ''}
+  ${renderProspectAudit(p._id)}
   ${renderContacts(p.contacts, p.brand)}
   <div class="card-links">
     ${p.linkedin ? `<a class="card-link" href="${escH(p.linkedin)}" target="_blank">LinkedIn &rarr;</a>` : ''}
@@ -1577,6 +1898,115 @@ function setProspectStatus(id, s) {
   if (!s) return;
   LS.setProspectStatus(id, s);
   render();
+}
+
+// ─────────────────────────────────────────
+// PROSPECT AUDIT WIDGET
+// ─────────────────────────────────────────
+const AUDIT_CHECKS = [
+  { id: 'li_team',    section: 'LinkedIn Stalk',    label: 'Team size confirmed (ideally under 30)' },
+  { id: 'li_mktg',   section: 'LinkedIn Stalk',    label: 'No dedicated partnerships / marketing hire' },
+  { id: 'li_founder',section: 'LinkedIn Stalk',    label: 'Founder background understood (product/creative = gap)' },
+  { id: 'br_pov',    section: '10-Min Brand Audit', label: 'Clear brand POV — they have something to work with' },
+  { id: 'br_consist',section: '10-Min Brand Audit', label: 'Messaging consistent across channels?' },
+  { id: 'br_collabs',section: '10-Min Brand Audit', label: 'Existing brand collabs or partnerships visible?' },
+  { id: 'co_capture',section: '10-Min Brand Audit', label: 'Commercial layer: email capture / welcome series / GTM visible?' },
+  { id: 'gap_conf',  section: 'Confirm the Gap',    label: 'Gap confirmed — I know exactly what I would do here' },
+  { id: 'contact_id',section: 'Find the Contact',  label: 'Contact identified (founder / head of mktg / CEO)' },
+];
+
+function getAuditData(pid) {
+  const all = LS.get('jt_prospect_audits');
+  return all[pid] || { checks: {}, gap: '', contact: '', contactEmail: '' };
+}
+function saveAuditData(pid, data) {
+  const all = LS.get('jt_prospect_audits');
+  all[pid] = data;
+  LS.set('jt_prospect_audits', all);
+}
+function auditProgress(pid) {
+  const d = getAuditData(pid);
+  const done = AUDIT_CHECKS.filter(c => d.checks[c.id]).length;
+  return { done, total: AUDIT_CHECKS.length };
+}
+function toggleAuditPanel(pid) {
+  const body = document.getElementById('audit-body-' + pid);
+  if (body) body.classList.toggle('open');
+}
+function toggleAuditCheck(pid, checkId) {
+  const d = getAuditData(pid);
+  d.checks[checkId] = !d.checks[checkId];
+  saveAuditData(pid, d);
+  // Update UI without full re-render
+  const row = document.getElementById(`acheck-${pid}-${checkId}`);
+  if (row) row.classList.toggle('checked', d.checks[checkId]);
+  const cb = row && row.querySelector('input[type=checkbox]');
+  if (cb) cb.checked = d.checks[checkId];
+  updateAuditProgress(pid);
+}
+function updateAuditProgress(pid) {
+  const { done, total } = auditProgress(pid);
+  const pct = Math.round(done / total * 100);
+  const fill = document.getElementById('audit-fill-' + pid);
+  const label = document.getElementById('audit-label-' + pid);
+  if (fill) fill.style.width = pct + '%';
+  if (label) label.textContent = `Audit ${done}/${total}`;
+}
+function saveAuditGap(pid, val) {
+  const d = getAuditData(pid);
+  d.gap = val;
+  saveAuditData(pid, d);
+}
+function saveAuditContact(pid, field, val) {
+  const d = getAuditData(pid);
+  d[field] = val;
+  saveAuditData(pid, d);
+}
+
+function renderProspectAudit(pid) {
+  const d = getAuditData(pid);
+  const { done, total } = auditProgress(pid);
+  const pct = Math.round(done / total * 100);
+  const isReady = done >= total - 1 && d.gap && d.contact;
+
+  let sections = {};
+  AUDIT_CHECKS.forEach(c => {
+    if (!sections[c.section]) sections[c.section] = [];
+    sections[c.section].push(c);
+  });
+
+  const rows = Object.entries(sections).map(([sec, checks]) => `
+    <div class="audit-section-label">${escH(sec)}</div>
+    ${checks.map(c => `
+      <label class="audit-check-row${d.checks[c.id] ? ' checked' : ''}" id="acheck-${pid}-${c.id}" onclick="toggleAuditCheck('${pid}','${c.id}')">
+        <input type="checkbox" ${d.checks[c.id] ? 'checked' : ''} onclick="event.stopPropagation()">
+        ${escH(c.label)}
+      </label>
+    `).join('')}
+  `).join('');
+
+  return `<div class="prospect-audit">
+  <div class="audit-progress-bar"><div class="audit-progress-fill" id="audit-fill-${pid}" style="width:${pct}%"></div></div>
+  <div class="prospect-audit-header" onclick="toggleAuditPanel('${pid}')">
+    <span>Pre-Outreach Audit</span>
+    <span id="audit-label-${pid}" style="color:${pct===100?'#22c55e':'var(--text-3)'}">${done}/${total} checks${isReady ? ' ✓ Ready' : ''}</span>
+  </div>
+  <div class="prospect-audit-body" id="audit-body-${pid}">
+    ${rows}
+    <div class="audit-section-label">Identify the Gap</div>
+    <select class="audit-gap-select" onchange="saveAuditGap('${pid}',this.value)">
+      <option value="">Select gap type...</option>
+      <option value="partnerships" ${d.gap==='partnerships'?'selected':''}>No partnerships function</option>
+      <option value="gtm" ${d.gap==='gtm'?'selected':''}>No GTM / commercial infrastructure</option>
+      <option value="brand" ${d.gap==='brand'?'selected':''}>Unclear brand / messaging</option>
+      <option value="collabs" ${d.gap==='collabs'?'selected':''}>No brand collab program</option>
+      <option value="fractional" ${d.gap==='fractional'?'selected':''}>Needs fractional operator (general)</option>
+    </select>
+    <div class="audit-section-label">Contact</div>
+    <input class="audit-contact-input" placeholder="Name (e.g. Jane Smith, Founder)" value="${escH(d.contact||'')}" oninput="saveAuditContact('${pid}','contact',this.value)">
+    <input class="audit-contact-input" style="margin-top:6px" placeholder="Guessed email (e.g. jane.smith@brand.com)" value="${escH(d.contactEmail||'')}" oninput="saveAuditContact('${pid}','contactEmail',this.value)">
+  </div>
+</div>`;
 }
 
 // ─────────────────────────────────────────
