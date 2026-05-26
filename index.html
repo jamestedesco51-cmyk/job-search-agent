@@ -1308,49 +1308,135 @@ function getObservation(company) {
 // COVER LETTER GENERATION — Rebel Ventures format
 // Long-form, passion-led, category-adaptive
 // ─────────────────────────────────────────
+// ─────────────────────────────────────────
+// ROLE DETECTION — maps title to specific function
+// ─────────────────────────────────────────
+function detectRole(title) {
+  const t = (title || '').toLowerCase();
+  if (/creative producer|brand producer|senior creative producer/.test(t)) return 'creative_producer';
+  if (/associate creative director|acd/.test(t)) return 'acd';
+  if (/creative director/.test(t) && !/associate/.test(t)) return 'creative_director';
+  if (/creative strategist|creative strategy/.test(t)) return 'creative_strategist';
+  if (/content strateg|head of content|content director/.test(t)) return 'content_strategist';
+  if (/influencer|creator partnerships|talent partnerships/.test(t)) return 'influencer_partnerships';
+  if (/brand partner|partnerships manager|head of partner|strategic partner|collab/.test(t)) return 'partnerships';
+  if (/publisher relation|developer relation|devrel|game scout|publishing manager|gaming partner/.test(t)) return 'gaming';
+  if (/brand manager|brand marketing|head of brand|senior brand/.test(t)) return 'brand_manager';
+  if (/growth market|gtm|go-to-market/.test(t)) return 'growth';
+  if (/project manager|creative project|program manager/.test(t)) return 'project_manager';
+  if (/marketing manager|integrated marketing|campaign manager/.test(t)) return 'marketing_manager';
+  if (/experiential|activation|event/.test(t)) return 'experiential';
+  return 'general';
+}
+
+// ─────────────────────────────────────────
+// ROLE CONTENT BLOCKS
+// thesis: what makes James right for THIS function
+// proof: 2-3 specific resume bullets for this role
+// anchor: always ends with Fandom through-line
+// ─────────────────────────────────────────
+const ROLE_CONTENT = {
+  creative_producer: {
+    thesis: (co) => `What stands out is that ${co} is building creative that actually gets made, not just conceived. The best creative producers are the ones who can hold the vision and manage the reality simultaneously — directing the shoot, managing the timeline, and keeping the brand story intact from brief through delivery. That is the job I have been doing.`,
+    proof: `I directed all photo and video production end to end at Sunday Scaries — developing the visual language, managing talent, overseeing post-production, and maintaining brand consistency across a brand with 1M+ Instagram followers. I produced Scenes of Note Volumes I and II entirely on my own: shot on film, designed in Adobe InDesign, wrote and edited all copy, managed print production and wholesale distribution into London retail, generating $28K+ in revenue. At Smilebooth I designed the branded content and activation framework for Marfa Spirit Co from brief through consumer experience — concept, Figma design, D2C conversion path.
+
+All of it built on five years at Fandom where I managed 15+ branded campaign integrations a month for Sony, Microsoft, HBO, and Netflix simultaneously — the kind of volume that teaches you how to run production without losing the creative.`,
+  },
+  acd: {
+    thesis: (co) => `What stands out is that ${co} understands creative direction as a commercial act, not just an aesthetic one. The best associate creative directors are the ones who can articulate what a brand should feel like, make something that proves it, and connect that feeling to a result. That through-line — from cultural insight to brand identity to campaign execution — is what I have been building for eight years.`,
+    proof: `At Sunday Scaries I functioned as the full creative director across brand identity, campaign concepting, and production — creating the "For Sundays Only" tagline that defined the entire seasonal content and product storytelling direction, directing all photo and video shoots, and developing the visual language from scratch. At Scenes of Note I creative directed a travel publication shot on film, produced twice, because I understood what the cultural moment was asking for before it was obvious. At Opulist I owned creative strategy and brand storytelling for a travel media brand with a deeply engaged audience.
+
+All of it informed by five years at Fandom representing the creative vision in client presentations and pitches for Sony, Microsoft, HBO, and Netflix — where I learned that the creative brief and the commercial brief are the same brief.`,
+  },
+  creative_director: {
+    thesis: (co) => `What stands out is that ${co} is building something that requires creative leadership with real commercial instinct behind it — not just a strong aesthetic, but an understanding of how the creative connects to the brand and the audience and the result. That is the job I have been doing.`,
+    proof: `At Sunday Scaries I functioned as the full creative director — creating "For Sundays Only," directing all production, developing the visual language, and leading campaigns that drove 80% sell-through within 72 hours. At Scenes of Note I creative directed a travel publication shot on film, published twice, entirely independently. At Opulist I led creative strategy and brand storytelling direction for a travel and lifestyle media brand.
+
+All of it informed by five years at Fandom where I represented the agency creative vision in pitches and presentations for Sony, Microsoft, HBO, Netflix, and Coca-Cola — and learned that the strongest creative is also the most sellable.`,
+  },
+  creative_strategist: {
+    thesis: (co) => `What stands out is that ${co} is operating at the intersection of cultural intelligence and brand execution — where the strategic thinking and the creative output are the same thought. The brands that get this right are the ones that can spot the cultural signal before it peaks and build something around it that feels inevitable in retrospect.`,
+    proof: `At Sunday Scaries I identified the roll neck sweater moment before it peaked — traced it back to nineties romcoms and fall in New York — and turned that insight into the Dinner Service collab concept, which went from cold outreach to a six-product launch reaching 2.5M people. At Fandom I built the cultural and audience intelligence infrastructure analyzing trending topics, social signals, and platform data to identify creators and moments before they broke through. I used the same instinct at indie.io — identifying emerging studios and titles within the gaming landscape before they reach mainstream awareness.
+
+The strategic and the creative are the same thing when the instinct is right.`,
+  },
+  content_strategist: {
+    thesis: (co) => `What stands out is that ${co} understands content strategy as cultural intelligence, not just a publishing calendar. The content that builds real audiences is the content that arrives at the right cultural moment with the right point of view — and that requires someone who thinks in trends, not just topics.`,
+    proof: `At Fandom I built the cultural and audience intelligence infrastructure analyzing trending topics, social signals, and platform data across gaming, entertainment, and pop culture to identify emerging creators and moments before they broke through — and led a team of 10 executing on that intelligence across content, creative strategy, and editorial. At Sunday Scaries I applied the same thinking to brand content: spotted the roll neck moment before it peaked, translated that into the Dinner Service collab concept, and led the social-first campaign across Instagram, email, and site that drove 80% sell-through within 72 hours. I also created Scenes of Note — a travel editorial publication I produced entirely on my own, wrote, shot on film, and distributed into London wholesale.
+
+Content strategy and trend intelligence are the same discipline when the instinct is there.`,
+  },
+  influencer_partnerships: {
+    thesis: (co) => `What stands out is that ${co} is thinking about influencer and creator partnerships as a brand-building tool, not just a distribution channel. The partnerships that actually work are the ones where the creative is native to the creator's world and the commercial terms reflect real value on both sides.`,
+    proof: `At Sunday Scaries I led the Dinner Service strategic partnership from cold outreach through commercial terms, creative direction across six co-branded products, and an integrated campaign launch that reached 2.5M people across both brand channels — and drove 80% sell-through in 72 hours. At Opulist I identified and closed brand partnerships and collaborations with culturally aligned brands, developing creative concepts native to the editorial voice of the platform and building the program from scratch to $50K+ in brand revenue in the first two quarters. At Fandom I managed 15+ branded campaign integrations a month at the intersection of gaming, entertainment, and internet culture for Sony, Microsoft, HBO, Netflix, and Coca-Cola.
+
+The influencer relationships that convert are the ones built on genuine creative alignment.`,
+  },
+  partnerships: {
+    thesis: (co) => `What stands out is that ${co} is building in the partnership space with a real commercial foundation, not just a presence. The brands that build partnership programs that last are the ones that approach every relationship with both the creative context and the commercial terms in mind from the beginning.`,
+    proof: `At Opulist I came in with no pricing framework, no pipeline, no deal history, and closed $50K+ in the first two quarters by building the entire function from scratch. At Sunday Scaries I conceived the Dinner Service partnership from cold outreach through commercial terms, creative direction across six co-branded products, and a launch that reached 2.5M people. At Smilebooth I designed the CRM Moments System — an experiential activation framework that connected real-world brand moments to ongoing first-party audience relationships — and understood what brands were actually trying to do inside a content-led activation.
+
+All of it informed by five years at Fandom running 15+ integrated brand campaigns a month for Sony, Microsoft, HBO, Netflix, and Coca-Cola — where I learned that the partnership that lasts is the one where the creative and the commercial are built together.`,
+  },
+  gaming: {
+    thesis: (co) => `What stands out is that ${co} understands the gaming audience the way people who grew up in it understand it — not as a demographic to reach, but as a culture to participate in. The best publisher and developer relations work comes from people who understand the game, the community, and the creative simultaneously.`,
+    proof: `I spent five years at Fandom running 15+ branded campaign integrations a month across IP from Sony, Microsoft, HBO, and Netflix — and learned how the creative and the commercial work together inside gaming culture at scale. At indie.io I operate as one of a small number of dedicated game scouts in North America, identifying emerging studios and titles before they break through to mainstream cultural awareness, advising development teams on brand positioning and go-to-market creative strategy. I built the outbound developer acquisition pipeline from scratch, increasing activity by 150% and qualified conversations by 40%.
+
+Gaming is not a vertical I work in. It is the space I came from.`,
+  },
+  brand_manager: {
+    thesis: (co) => `What stands out is that ${co} is building brand equity and commercial infrastructure at the same time — which is the only way it actually works. Brand management at the level this role requires is not about managing a calendar. It is about understanding the cultural moment, the audience instinct, and the commercial opportunity well enough to make the right call before it becomes obvious.`,
+    proof: `At Sunday Scaries I functioned as the full brand lead — spotted the roll neck sweater moment before it peaked, built the Dinner Service collab from cold outreach through a six-product launch reaching 2.5M people, created "For Sundays Only" as the seasonal brand campaign direction, and drove 80% sell-through within 72 hours on two product drops. At Opulist I owned creative strategy, brand storytelling, and partnership development for a travel and lifestyle brand, building the program to $50K+ in brand revenue in the first two quarters. At Uncle Bill's and Seager Hats I led the full brand creative direction — voice, visual aesthetic, photography, and digital storytelling — from scratch.
+
+All of it informed by five years at Fandom running integrated brand campaigns for Sony, Microsoft, HBO, Netflix, and Coca-Cola.`,
+  },
+  growth: {
+    thesis: (co) => `What stands out is that ${co} is building for real growth — not vanity metrics, but the kind of commercial traction that compounds. GTM at this stage is about finding the right signal, building the right infrastructure, and moving faster than the moment requires.`,
+    proof: `At Sunday Scaries I led social-first campaign development across Instagram, email, and site simultaneously — driving 80% sell-through within 72 hours and $60K+ in revenue across two product drops. At Opulist I built a partnership and brand revenue program from zero to $50K+ in the first two quarters with no existing pipeline or infrastructure. At indie.io I built the outbound developer acquisition pipeline from scratch, increasing outbound activity by 150% and qualified conversations by 40%.
+
+The through-line is building the commercial infrastructure before the gap becomes urgent.`,
+  },
+  project_manager: {
+    thesis: (co) => `What stands out is that ${co} is running at the kind of pace where project management is the creative work — the ability to hold multiple complex workstreams simultaneously without losing clarity on what matters. I have been operating in exactly that environment for eight years.`,
+    proof: `At Fandom I managed 15+ branded campaign integrations simultaneously each month — coordinating creative teams, client relationships, editorial direction, and production timelines across IP from Sony, Microsoft, HBO, and Netflix. At indie.io I manage a complex pipeline of 10+ active development opportunities at the same time, built entirely from scratch. At Sunday Scaries I ran three simultaneous workstreams — the Dinner Service collab from cold outreach to six-product launch, all photo and video production, and the Scenes of Note publication from concept through London wholesale distribution — with a team of essentially two people.
+
+The ability to move multiple projects forward simultaneously without losing the thread on any of them is the job.`,
+  },
+  marketing_manager: {
+    thesis: (co) => `What stands out is that ${co} is building marketing with a real cultural instinct behind it — not just campaigns, but genuine understanding of what the audience is responding to and why. Marketing management at this level requires someone who can operate strategically and executionally in the same week.`,
+    proof: `At Sunday Scaries I led integrated marketing across Instagram, email, and site simultaneously — spotting the cultural moment (roll neck sweater, nineties nostalgia, Dinner Service collab) before it peaked and executing campaigns that drove 80% sell-through within 72 hours. At Opulist I ran creative strategy and brand marketing for a travel and lifestyle media brand, turning editorial content into commercial partnerships worth $50K+ in the first two quarters. At Fandom I managed marketing integrations for Sony, Microsoft, HBO, Netflix, and Coca-Cola across gaming, entertainment, and internet culture.
+
+The marketing I care about is the kind that understands the audience well enough to arrive at the right moment with the right thing.`,
+  },
+  experiential: {
+    thesis: (co) => `What stands out is that ${co} is building brand experience at the intersection of physical and digital — where the moment in real life becomes the content, the relationship, and the commercial conversion. That is a much harder brief than it looks, and most brands get one of the three right.`,
+    proof: `At Smilebooth I designed the CRM Moments System — an experiential activation framework connecting real-world brand moments to ongoing first-party audience relationships for bars, venues, and brand partners. I built the Marfa Spirit Co branded content and activation concept using Figma, designing the full consumer experience from brand touchpoint through D2C purchase conversion. I also developed a full UX path for Strava, utilizing tangible community moments and connecting them to an overall brand experience.
+
+All of it informed by five years at Fandom building integrated brand activations at the intersection of gaming, entertainment, and internet culture — where I learned that the experiential moment and the commercial result are the same conversation.`,
+  },
+  general: {
+    thesis: (co) => `What stands out is that ${co} is building something with a genuine point of view — the kind of brand where the creative instinct and the commercial thinking are the same thought. That is the through-line in everything I have built, and it is exactly the kind of environment where I do my best work.`,
+    proof: `At Sunday Scaries I identified the roll neck sweater moment before it peaked, built the Dinner Service collab from cold outreach through launch reaching 2.5M people, and created "For Sundays Only" as the brand campaign direction — driving 80% sell-through within 72 hours. At Opulist I built a partnership program from scratch that closed $50K in the first two quarters. At Smilebooth I understood what brands were trying to do inside a content-led activation and built the infrastructure to connect those moments to ongoing commercial relationships.
+
+All of it informed by five years at Fandom running 15+ integrated brand campaigns a month for Sony, Microsoft, HBO, Netflix, and Coca-Cola — where I learned that the creative and the sellable are not separate conversations.`,
+  },
+};
+
 function genCoverLetter(job) {
   const title  = job.title   || 'this role';
   const co     = job.company || 'your team';
-  const cat    = job._category || jobCategory(job.title || '', job.description || '');
   const raw    = getObservation(co);
-  // Strip trailing period so we can continue the sentence
-  const obsBase = raw.replace(/\.\s*$/, '');
+  const role   = detectRole(title);
+  const block  = ROLE_CONTENT[role] || ROLE_CONTENT.general;
 
-  // ── Opening ──────────────────────────────────────────────────────────────────
   const opening = `I have been following ${co}'s work for a while now. ${raw}
 
-That is why the ${title} role caught my attention. This is not an industry I work in from the outside. It is genuinely one of the loves of my life, and that is why the work I have done in these spaces actually lands.`;
+That is why the ${title} role caught my attention. This is not an industry I approach from the outside. It is genuinely one of the spaces I care most about, and that is why the work I have done here actually lands.`;
 
-  // ── Company thesis — what they uniquely understand ────────────────────────────
-  let thesis = '';
-  if (cat === 'Gaming / Publishing') {
-    thesis = `What stands out is that ${co} understands something most studios and publishers miss. The audience for a great game is not just a player base. It is a community, a cultural identity, and a creative collaborator. The most powerful campaigns live at those unexpected intersections — the ones that look like an oxymoron until you understand the audience and the fandom driving it, and then they feel completely inevitable.`;
-  } else if (cat === 'Creative') {
-    thesis = `What stands out is that ${co} understands something most creative shops miss. The lines between audience insight, brand instinct, and cultural timing are completely blurred right now. The campaigns that actually move culture are the ones where the creative and the sellable are not separate conversations. They are the same conversation, run by the same person, at the same time.`;
-  } else if (cat === 'Partnerships') {
-    thesis = `What stands out is that ${co} is building something specific in the partnership and commercial layer. The brands that matter right now are not the loudest ones. They are the ones that built the commercial infrastructure before it was obvious they needed it, with people who understood both the creative and the deal at the same time.`;
-  } else {
-    thesis = `What stands out is that ${co} is building something with a real point of view. The brands that grow fastest right now are the ones where the creative instinct and the commercial thinking are the same instinct, not two separate teams talking past each other. That is the through-line in everything I have built.`;
-  }
+  const thesis = block.thesis(co);
+  const proof  = block.proof;
 
-  // ── Career stories — emphasis shifts by category ──────────────────────────────
-  let stories = '';
-  if (cat === 'Gaming / Publishing') {
-    stories = `That instinct is what connects everything I have built. At Sunday Scaries, knowing that the nineties were having a cultural renaissance, I spotted the roll neck moment before it peaked, traced it back to nineties romcoms and fall in New York, and built the Dinner Service collab from cold outreach through launch, reaching 2.5M people across both brands. Scenes of Note came from the same thinking — people looking for a tangible way to disconnect. I creative directed a travel publication shot on film, published twice, because I understood that now more than ever people want to disconnect to reconnect, especially on Sundays.
-
-All of it informed by five years at Fandom running 15+ branded campaign integrations a month across IP from Sony, Microsoft, HBO, and Netflix, tying them into name brands like Coca-Cola and the US Army. That is where I learned that the creative and the sellable are not separate conversations. At Opulist I built a partnership program from scratch that closed $50K in the first two quarters. At indie.io I built the outbound acquisition pipeline from scratch, increasing activity by 150% and qualified conversations by 40%.`;
-  } else if (cat === 'Partnerships') {
-    stories = `That instinct is what connects everything I have built. At Opulist I came in with no pricing framework, no pipeline, no deal history, and closed $50K+ in the first two quarters. At Sunday Scaries I conceived the Dinner Service collab from cold outreach through commercial terms, creative direction across six co-branded products, and a launch that reached 2.5M people across both brand channels. At Smilebooth I understood what brands were actually trying to do inside a content-led activation, what products convert in those moments, and what the path of least resistance looks like from campaign to purchase.
-
-All of it informed by five years at Fandom running 15+ integrated brand campaigns a month at the intersection of gaming, entertainment, sports, and internet culture for Sony, Microsoft, HBO, Netflix, and Coca-Cola. That is where I learned that the partnership work that lasts is the work where the creative and the commercial are true at the same time.`;
-  } else {
-    stories = `That instinct is what connects everything I have built. At Sunday Scaries, knowing that the nineties were having a cultural renaissance, I spotted the roll neck moment before it peaked, traced it back to nineties romcoms and fall in New York, and built the Dinner Service collab from cold outreach through launch, reaching 2.5M people. At Smilebooth I understood what brands were actually trying to do inside a content-led activation and built out a full UX path for Strava connecting tangible community moments to an overall brand experience. At Opulist, I built a partnership program from scratch that closed $50K in the first two quarters with no existing pipeline or infrastructure.
-
-All of it informed by five years at Fandom running integrated brand campaigns at the intersection of gaming, entertainment, and internet culture for Sony, Microsoft, HBO, Netflix, and Coca-Cola. That is where I learned that the creative and the sellable are not separate conversations.`;
-  }
-
-  // ── Close ─────────────────────────────────────────────────────────────────────
-  const close = `${co} is the kind of team where that matters. I would love to connect around the ${title} role and see if there is a world where we could work together. Portfolio and work samples at jtworks.cargo.site. I have attached my resume below and look forward to connecting.
+  const close = `${co} is the kind of team where that matters. I would love to connect around the ${title} role and see if there is a world where we could work together. Portfolio and work samples at jtworks.cargo.site. I have attached my resume and look forward to connecting.
 
 James Tedesco
 jamestedesco51@gmail.com
@@ -1361,7 +1447,7 @@ linkedin.com/in/james-tedesco`;
 
 ${thesis}
 
-${stories}
+${proof}
 
 ${close}`;
 
