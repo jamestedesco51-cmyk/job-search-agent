@@ -469,6 +469,64 @@ html, body {
 .size-midsize { color: var(--text-2); }
 .size-enterprise { color: #f97316; }
 
+/* SCORE BREAKDOWN */
+.job-fit-score { cursor: pointer; }
+.job-fit-score:hover .fit-label { color: var(--accent); }
+.score-panel {
+  margin-top: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: none;
+}
+.score-panel.open { display: block; }
+.score-panel-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--text-3);
+  margin-bottom: 8px;
+}
+.score-rows { display: flex; flex-direction: column; gap: 4px; }
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+.score-row-label { flex: 1; color: var(--text-2); }
+.score-delta {
+  font-weight: 600;
+  font-size: 11px;
+  min-width: 28px;
+  text-align: right;
+}
+.score-delta.pos { color: #22c55e; }
+.score-delta.neg { color: #f97316; }
+.score-delta.neu { color: var(--text-3); }
+.score-bar-wrap { width: 60px; height: 4px; background: var(--border); border-radius: 2px; }
+.score-bar { height: 4px; border-radius: 2px; background: var(--accent); }
+.score-total {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-2);
+  display: flex;
+  justify-content: space-between;
+}
+.job-link-row {
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+.job-link-row a {
+  color: var(--accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+.job-link-row a:hover { text-decoration: underline; }
+
 /* MODAL */
 .modal-overlay {
   position: fixed;
@@ -899,18 +957,17 @@ function genJobEmail(job) {
 
 ${obs}
 
-I applied for the ${title} role and wanted to make sure it came through. I'm genuinely interested in this one.
+I'm reaching out because the ${title} role caught my attention and feels like exactly the kind of gap I fill.
 
-A bit of context on why I think I'm a strong fit: I build partnership and commercial infrastructure from scratch. At Opulist I came in with no pricing framework, no pipeline, no deal history, and closed $50K+ in the first two quarters. At Sunday Scaries I conceived Scenes of Note from nothing and led the Dinner Service collab from cold outreach through a six-product launch. Before that I ran 15+ branded campaign integrations a month at Fandom alongside CD Projekt Red, Sony Santa Monica, and Deep Silver.
+A bit about me: 7+ years across gaming, DTC, and consumer brand. I've built the partnerships and commercial layer from scratch at Fandom, Sunday Scaries, and Opulist. Early-stage teams often find it easier and more cost-effective to bring someone in who can handle partnerships, brand, and GTM end to end rather than piecing together an agency and a coordinator.
 
-The through-line is the same: come in early, build the function, show real results.
+Happy to share more context if useful. Work samples at jmt115.cargo.site.
 
-Work samples: jmt115.cargo.site
-linkedin.com/in/james-tedesco
+Would love to connect if and when it makes sense.
 
-Happy to get on a call if it's useful.
-
-James`;
+James Tedesco
+jmt115.cargo.site
+linkedin.com/in/james-tedesco`;
   return { subject, body };
 }
 
@@ -920,11 +977,11 @@ function genFollowUpEmail(job) {
   const subject = `Following up - ${title}`;
   const body = `Hi there,
 
-I applied for the ${title} role a few days ago and wanted to follow up. Just wanted to make sure it landed and confirm I'm still very interested.
+Wanted to follow up on the ${title} role. ${obs.split('.')[0]}.
 
-${obs}
+Still very interested. If it would help to see work samples or have a quick conversation, I'm easy to reach. Everything is at jmt115.cargo.site.
 
-I'm not going to take up a lot of your time here. If it would help to see work examples or have a quick conversation, I'm easy to reach.
+Would love to connect if and when it makes sense.
 
 James Tedesco
 jmt115.cargo.site
@@ -954,18 +1011,18 @@ function genProspectEmail(prospect) {
   const lead = gap.split('.')[0].trim() + '.';
   const isEU = prospect.region === 'EU';
 
-  const subject = `Fractional partnerships - ${brand}`;
+  const subject = `Working together - ${brand}`;
   const body = `Hi ${firstName},
 
 ${lead}
 
-I work with brands like ${brand} on the commercial layer - partnerships, GTM, brand collaborations. That's usually the piece that doesn't get built until someone decides to build it.
+I'm reaching out because I think there's a real opportunity to build out the commercial layer before it becomes urgent.
 
-Here is what I've done recently: built Opulist's entire partnership function from zero ($50K+ closed in the first two quarters), supported indie.io on developer acquisition and publishing strategy, created Scenes of Note from concept to market, and ran brand integrations at Fandom for five years.${isEU ? '\n\nI work with US and European brands remotely. Timezone-flexible and used to cross-market coordination.' : ''}
+A bit about me: 7+ years across gaming, DTC, and consumer brand. I built Opulist's entire partnership function from zero and closed $50K+ in the first two quarters. Early-stage teams often find it easier and more cost-effective to work with me versus an agency since I can handle partnerships, brand, GTM, and collaborations end to end.${isEU ? ' I work with US and European brands remotely.' : ''}
 
-I'm looking for one more client right now. Retainer-based, 15 hours a week, AI-powered backend so I deliver what used to take a full team.
+Given that ${brand} is still in the building phase, this kind of support could free up your time to stay focused on product and growth.
 
-Is a quick conversation worth 20 minutes?
+Would love to connect if and when it makes sense.
 
 James Tedesco
 jmt115.cargo.site
@@ -1071,6 +1128,95 @@ function jobFitScore(score) {
   if (score >= 7)  return 3;
   if (score >= 4)  return 2;
   return 1;
+}
+
+function explainScore(job) {
+  const title = (job.title || '').toLowerCase();
+  const desc  = (job.description || '').toLowerCase();
+  const co    = (job.company || '').toLowerCase();
+  const text  = `${title} ${desc} ${co}`;
+  const reasons = [];
+
+  // Title / desc match
+  const targetTitles = [
+    'brand partnerships manager','creative partnerships manager','partnerships manager',
+    'senior partnerships manager','head of partnerships','collaborations manager',
+    'influencer partnerships','creator partnerships','business development manager',
+    'brand manager','brand marketing manager','brand strategist','head of brand',
+    'senior brand manager','marketing manager','go-to-market manager','gtm manager',
+    'associate creative director','creative strategist','content strategist',
+    'creative producer','creative project manager','head of content','content director',
+    'growth marketing manager','ecommerce manager','head of growth',
+    'publisher relations','developer relations','gaming partnerships',
+    'fractional brand','fractional marketing','fractional partnerships',
+    'fractional creative','fractional gtm','fractional operator',
+    'interim head','contract brand','part-time brand',
+  ];
+  let titleHit = '', descHit = '';
+  for (const t of targetTitles) {
+    if (title.includes(t) && !titleHit) titleHit = t;
+    else if (text.includes(t) && !descHit) descHit = t;
+  }
+  if (titleHit)   reasons.push({ label: `Title match: "${titleHit}"`, delta: 4 });
+  else if (descHit) reasons.push({ label: `Description mention: "${descHit}"`, delta: 2 });
+  else            reasons.push({ label: 'No title/desc match', delta: 0 });
+
+  // Industry
+  const industries = ['gaming','game','indie game','esports','consumer','dtc','lifestyle',
+    'wellness','cpg','food','beverage','media','entertainment','editorial','streaming',
+    'creator','fashion','apparel','menswear','outdoor','surf','health','medtech',
+    'digital health','medical','biotech','university','education','academic'];
+  const indHits = industries.filter(i => text.includes(i));
+  if (indHits.length) reasons.push({ label: `Industry signals: ${indHits.slice(0,3).join(', ')}`, delta: Math.min(indHits.length, 4) });
+
+  // Company bonus
+  const targetCos = ['fandom','riot games','epic games','twitch','discord','bandcamp',
+    'a24','mad realities','aspyr','tower 28','dash hudson','ut austin',
+    'university of texas','sunday scaries','taika','gorgie','fly by jing'];
+  const coHit = targetCos.find(c => co.includes(c));
+  if (coHit) reasons.push({ label: `Target company: ${coHit}`, delta: 5 });
+
+  // Stretch / penalties
+  const stretchTitles = ['director of brand','director of partnerships','director of marketing',
+    'brand director','marketing director','partnerships director','senior director',
+    'vp of brand','vp of partnerships','vp of marketing','vp partnerships','vp brand',
+    'vp marketing','vice president'];
+  if (stretchTitles.some(t => title.includes(t)))
+    reasons.push({ label: 'Director/VP level — stretch', delta: -4 });
+
+  if (title.includes('creative director') && !title.includes('associate'))
+    reasons.push({ label: 'Standalone CD — senior stretch', delta: -3 });
+
+  if (['svp','evp','chief ','cmo','cco','ceo'].some(t => title.includes(t)))
+    reasons.push({ label: 'C-suite — hard out', delta: -10 });
+
+  // Location
+  if (text.includes('austin')) reasons.push({ label: 'Austin, TX', delta: 4 });
+  if (text.includes('remote') || text.includes('hybrid') || text.includes('distributed'))
+    reasons.push({ label: 'Remote / hybrid', delta: 3 });
+  if (['new york','brooklyn','manhattan'].some(l => text.includes(l)))
+    reasons.push({ label: 'NYC (on-site)', delta: -4 });
+  if (['los angeles','santa monica','culver city'].some(l => text.includes(l)))
+    reasons.push({ label: 'LA (on-site)', delta: -4 });
+  if (['san francisco','bay area','seattle'].some(l => text.includes(l)))
+    reasons.push({ label: 'SF/Seattle (on-site)', delta: -3 });
+  if (['chicago','boston','denver'].some(l => text.includes(l)))
+    reasons.push({ label: 'Non-remote city', delta: -2 });
+
+  // Team signal
+  const teamSigs = ['team','collaborate','cross-functional','work with','alongside','in-house'];
+  if (teamSigs.some(s => text.includes(s)))
+    reasons.push({ label: 'Team / collaborative signal', delta: 2 });
+
+  return reasons;
+}
+
+const _expandedScores = new Set();
+function toggleScorePanel(id) {
+  if (_expandedScores.has(id)) _expandedScores.delete(id);
+  else _expandedScores.add(id);
+  const panel = document.getElementById('score-panel-' + id);
+  if (panel) panel.classList.toggle('open');
 }
 
 function jobCategory(title, description) {
@@ -1181,11 +1327,16 @@ function renderJobs() {
     _emailCache[eid] = { subject, body };
     const mailto = makeMailto(FROM_EMAIL, subject, body);
 
+    const scoreReasons = explainScore(job);
+    const totalScore = job.score || 0;
+    const maxBar = 14;
+    const panelOpen = _expandedScores.has(job._id);
+
     return `<div class="job-row" id="row-${job._id}">
   <div class="job-row-top">
-    <div class="job-fit-score">
+    <div class="job-fit-score" onclick="toggleScorePanel('${job._id}')" title="Click to see score breakdown">
       <span class="fit-number fit-${job._fit}">${job._fit}</span>
-      <span class="fit-label">fit</span>
+      <span class="fit-label">fit ▾</span>
     </div>
     <div class="job-row-body">
       <div class="job-row-title">${job.url ? `<a href="${escH(job.url)}" target="_blank">${escH(job.title)}</a>` : escH(job.title)}</div>
@@ -1205,7 +1356,27 @@ function renderJobs() {
         </span>
         ${job.source ? `<span class="badge badge-source" style="font-size:10px">${escH(job.source)}</span>` : ''}
       </div>
+      ${job.url ? `<div class="job-link-row"><a href="${escH(job.url)}" target="_blank">${escH(job.url.replace(/^https?:\/\//, '').split('?')[0].slice(0, 80))}</a></div>` : ''}
       ${job.description ? `<div class="job-row-desc">${escH(job.description)}</div>` : ''}
+      <div class="score-panel${panelOpen ? ' open' : ''}" id="score-panel-${job._id}">
+        <div class="score-panel-title">Score breakdown &mdash; raw score: ${totalScore}</div>
+        <div class="score-rows">
+          ${scoreReasons.map(r => {
+            const cls = r.delta > 0 ? 'pos' : r.delta < 0 ? 'neg' : 'neu';
+            const barW = Math.round(Math.min(Math.abs(r.delta) / maxBar * 60, 60));
+            const barColor = r.delta > 0 ? '#22c55e' : r.delta < 0 ? '#f97316' : 'var(--border-2)';
+            return `<div class="score-row">
+              <div class="score-row-label">${escH(r.label)}</div>
+              <div class="score-bar-wrap"><div class="score-bar" style="width:${barW}px;background:${barColor}"></div></div>
+              <div class="score-delta ${cls}">${r.delta > 0 ? '+' : ''}${r.delta || '—'}</div>
+            </div>`;
+          }).join('')}
+        </div>
+        <div class="score-total">
+          <span>Display fit score</span>
+          <span class="fit-number fit-${job._fit}" style="font-size:14px">${job._fit} / 5</span>
+        </div>
+      </div>
       ${renderContacts(job.contacts, job.company)}
       <div class="job-row-actions">
         <select class="job-status-select" onchange="setJobStatus('${job._id}',this.value)" style="border-color:${statusColor}44">
