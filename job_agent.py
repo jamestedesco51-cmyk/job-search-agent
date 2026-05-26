@@ -742,6 +742,38 @@ def score_job(title, description="", company=""):
 
     return score
 
+REMOTE_KEYWORDS = {
+    "remote", "hybrid", "work from anywhere", "distributed", "wfh",
+    "anywhere", "fully remote", "100% remote", "us remote", "remote-first",
+    "remote first", "flexible location", "remote friendly",
+}
+AUSTIN_KEYWORDS = {"austin"}
+ONSITE_CITY_BLOCKLIST = {
+    "new york", "nyc", "brooklyn", "manhattan", "new york city",
+    "los angeles", "santa monica", "culver city", "west hollywood", "burbank",
+    "san francisco", "bay area", "palo alto", "mountain view", "menlo park",
+    "seattle", "bellevue", "redmond",
+    "chicago", "boston", "denver", "atlanta", "miami",
+    "dallas", "houston", "philadelphia", "portland", "nashville",
+    "san diego", "phoenix", "minneapolis", "washington, d.c", "washington dc",
+    "toronto", "london", "berlin", "amsterdam", "paris",
+}
+
+def is_location_ok(location="", description=""):
+    """Return True if the job is remote, hybrid, Austin-based, or location unknown."""
+    loc = (location or "").lower().strip()
+    desc = (description or "").lower()
+    combined = f"{loc} {desc}"
+    if any(kw in combined for kw in REMOTE_KEYWORDS):
+        return True
+    if any(kw in combined for kw in AUSTIN_KEYWORDS):
+        return True
+    if not loc:
+        return True  # no location info → benefit of the doubt
+    if any(city in loc for city in ONSITE_CITY_BLOCKLIST):
+        return False
+    return True  # some location not on blocklist → allow
+
 def make_job_id(title, company, url=""):
     raw = f"{company}-{title}-{url}"
     return re.sub(r"[^a-z0-9]", "-", raw.lower())[:48].strip("-")
@@ -767,7 +799,7 @@ def is_ascii_title(title):
         ascii_chars = sum(1 for c in title if ord(c) < 128)
         return ascii_chars / max(len(title), 1) > 0.6
 
-def add_job(title, company, url, date_str="", source="", description=""):
+def add_job(title, company, url, date_str="", source="", description="", location=""):
     if not title or not url:
         return
     if not is_ascii_title(title):
@@ -775,6 +807,9 @@ def add_job(title, company, url, date_str="", source="", description=""):
     # Hard-stop: if the title itself signals a wrong function, skip immediately
     title_lower = title.lower()
     if any(hs in title_lower for hs in TITLE_HARDSTOP):
+        return
+    # Location filter — remote, hybrid, Austin, or unknown only
+    if not is_location_ok(location, description):
         return
     if url in seen_urls:
         return
@@ -784,8 +819,10 @@ def add_job(title, company, url, date_str="", source="", description=""):
     seen_title_company.add(tc_key)
     if not is_recent(date_str):
         return
+    loc_clean = (location or "").strip()
     desc_clean = clean_text(description)
-    score = score_job(title, desc_clean, company)
+    # Fold location into scoring so remote/Austin still get their bonus
+    score = score_job(title, f"{desc_clean} {loc_clean}", company)
     if score < 4:
         return
     seen_urls.add(url)
@@ -797,6 +834,7 @@ def add_job(title, company, url, date_str="", source="", description=""):
         "date": str(date_str)[:10] if date_str else "",
         "source": source,
         "score": score,
+        "location": loc_clean,
         "description": desc_clean[:280],
     })
 
@@ -1017,12 +1055,14 @@ def scrape_lever():
             for posting in soup.select(".posting")[:8]:
                 title_el = posting.select_one(".posting-name")
                 link_el = posting.select_one("a.posting-title")
+                loc_el = posting.select_one(".sort-by-location, .posting-category.location, [class*='location']")
                 if title_el:
                     add_job(
                         title=title_el.text.strip(),
                         company=company.replace("-", " ").title(),
                         url=link_el["href"] if link_el else url,
                         source="Lever (Direct)",
+                        location=loc_el.get_text(strip=True) if loc_el else "",
                     )
         except Exception:
             pass
@@ -1074,6 +1114,8 @@ def scrape_greenhouse():
                 continue
             data = resp.json()
             for job in data.get("jobs", [])[:8]:
+                loc = job.get("location", {})
+                location = loc.get("name", "") if isinstance(loc, dict) else str(loc or "")
                 add_job(
                     title=job.get("title", ""),
                     company=company.replace("-", " ").title(),
@@ -1081,6 +1123,7 @@ def scrape_greenhouse():
                     date_str=job.get("updated_at", ""),
                     source="Greenhouse (Direct)",
                     description=BeautifulSoup(job.get("content", "") or "", "html.parser").get_text(separator=" ").strip()[:300],
+                    location=location,
                 )
         except Exception:
             pass
@@ -1312,6 +1355,7 @@ def scrape_linkedin():
                     company_el = card.select_one(".base-search-card__subtitle, h4")
                     link_el = card.select_one("a.base-card__full-link, a")
                     date_el = card.select_one("time")
+                    loc_el = card.select_one(".job-search-card__location, .base-search-card__metadata span")
                     if title_el:
                         href = link_el.get("href", "") if link_el else ""
                         add_job(
@@ -1320,6 +1364,7 @@ def scrape_linkedin():
                             url=href,
                             date_str=date_el.get("datetime", "") if date_el else "",
                             source="LinkedIn",
+                            location=loc_el.get_text(strip=True) if loc_el else "",
                         )
         except Exception:
             pass
@@ -1350,6 +1395,7 @@ def scrape_remotive():
                     date_str=job.get("publication_date", ""),
                     source="Remotive",
                     description=BeautifulSoup(job.get("description", ""), "html.parser").get_text(separator=" ")[:400],
+                    location=job.get("candidate_required_location", "remote"),
                 )
         except Exception:
             pass

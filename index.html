@@ -1343,6 +1343,7 @@ function renderJobs() {
       <div class="job-row-meta">
         <span>${escH(job.company)}</span>
         ${job.date ? `<span style="color:var(--text-3)">&middot; ${job.date}</span>` : ''}
+        ${job.location ? `<span style="color:var(--text-2)">&middot; ${escH(job.location)}</span>` : ''}
         ${job._salary ? `<span class="salary-tag">${job._salary}</span>` : ''}
         <span class="${sizeClass}">&middot; ${job._size}</span>
         ${job._warm ? `<span style="color:#f59e0b;font-size:11px">★ Warm Contact</span>` : ''}
