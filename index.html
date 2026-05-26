@@ -1012,10 +1012,14 @@ html, body {
             <div class="playbook-card-label">Positioning by Sector</div>
             <div class="playbook-card-title">How to Frame It</div>
             <div class="playbook-section-body">
-              <div class="sector-row"><span class="sector-label gaming">Gaming</span> Built the commercial layer between studios and brands at Fandom. Now doing the same for indie publishers at indie.io. Games need brand operators who grew up in the culture.</div>
-              <div class="sector-row"><span class="sector-label dtc">DTC / CPG</span> Built Dinner Service from cold outreach, Scenes of Note from concept to market, Opulist partnership program from zero. DTC brands need commercial infrastructure before they realize they do.</div>
-              <div class="sector-row"><span class="sector-label wellness">Wellness</span> Sunday Scaries gave me real understanding of how community, product, and content work together in wellness. The brand story and the commercial story are the same story.</div>
-              <div class="sector-row"><span class="sector-label media">Media / Creator</span> Five years at Fandom means I understand creator monetization, audience intelligence, and brand integration at scale. I know what moves the number and what just looks good on a deck.</div>
+              <div class="sector-row"><span class="sector-label gaming">Gaming</span> Built the commercial layer between studios and brands at Fandom for five years — Sony, Microsoft, HBO, Netflix. Now scouting emerging studios at indie.io. Games need brand operators who grew up in the culture, not ones who learned it from a deck.</div>
+              <div class="sector-row"><span class="sector-label dtc">DTC / CPG</span> Built Dinner Service from cold outreach, Scenes of Note from concept to market, Opulist $50K partnership program from zero. DTC brands need commercial infrastructure before they realize they do. I build it before the gap becomes urgent.</div>
+              <div class="sector-row"><span class="sector-label wellness">Wellness / Lifestyle</span> Sunday Scaries gave me real understanding of how community, product, and content work together in wellness and lifestyle. The brand story and the commercial story are the same story.</div>
+              <div class="sector-row"><span class="sector-label media">Travel / Editorial</span> Opulist was travel and hospitality media. I built a partnership program from scratch that turned editorial content into sellable brand integrations. Travel brands need someone who understands both the voice and the deal.</div>
+              <div class="sector-row"><span class="sector-label gaming" style="background:rgba(251,146,60,.15);color:#fb923c">Running / Athletic Culture</span> Fandom's sports vertical gave me deep literacy in how athletic culture brands build community and identity. Running brands right now are having a cultural moment — the commercial infrastructure is almost always behind the brand equity.</div>
+              <div class="sector-row"><span class="sector-label dtc" style="background:rgba(167,139,250,.15);color:#a78bfa">Music / Culture / Streetwear</span> Five years at Fandom at the intersection of gaming, music, and entertainment. I understand how cultural credibility and commercial opportunity work together — and where founders leave money on the table by not building the layer between them.</div>
+              <div class="sector-row"><span class="sector-label wellness" style="background:rgba(156,163,175,.15);color:#9ca3af">Heritage / Craft / Made in USA</span> Uncle Bill's and Seager Hats gave me direct experience building commercial infrastructure for founder-operated heritage brands. These brands have exceptional product credibility and almost no commercial layer. That gap is exactly what I fill.</div>
+              <div class="sector-row"><span class="sector-label media">Creator Economy / Newsletter</span> Fandom was creator economy before that phrase existed — audience intelligence, editorial monetization, brand integration at scale. Newsletter and creator brands have the audience. They rarely have the commercial operator who can turn it into a business.</div>
             </div>
           </div>
 
@@ -1257,6 +1261,39 @@ const COMPANY_VOICE = {
   'roc nation': 'Roc Nation has built one of the most powerful brand and talent ecosystems in entertainment. A marketing role on a spirits brand inside that organization is a genuinely interesting brief.',
   'turtle beach': 'Turtle Beach has been in gaming peripherals long enough to have real credibility and community. The partnerships angle inside a category like gaming audio is an interesting one.',
   'consiglieri': 'Consiglieri operates at the brand consulting level with a specific and sophisticated client roster. A partner marketing role there touches real brand work across multiple verticals.',
+  // Travel
+  'paravel': 'Paravel has built one of the most visually coherent sustainable travel brands in the market. The aesthetic conviction is real and the editorial voice is unusually strong for a luggage brand.',
+  'monos': 'Monos has done something rare in luggage — built a brand that people actually care about. The design is the product and the product is the brand.',
+  'pakt': 'Pakt figured out who they are for before most travel brands do. The carry-on-only constraint is a creative decision as much as a product one.',
+  // Running / Athletic Culture
+  'janji': 'JANJI has built genuine community around a running brand with a social mission — the combination of product credibility and meaningful cause creates real long-term brand equity.',
+  'bandit': 'Bandit Running has become the brand of the running revival moment. The community came before the commercial infrastructure, which is exactly when you need an operator.',
+  'bandit running': 'Bandit Running has become the brand of the running revival moment. The community came before the commercial infrastructure, which is exactly when you need an operator.',
+  'ciele': 'Ciele has become the hat brand of the running culture moment. The brand has cultural resonance that goes well beyond functional headwear.',
+  'rabbit': 'Rabbit Running has built a genuine California running identity. Small team, founder-operated, and the community is real.',
+  // Streetwear / Cultural
+  'museum of peace': 'Museum of Peace and Quiet has one of the most distinct brand identities in LA lifestyle. The cultural credibility is earned, not performed.',
+  'awake ny': 'Angelo Baque built Awake NY with relationships across every vertical that matters — music, art, sports, fashion. The brand has earned its position.',
+  'market': 'Market (formerly Grocery) does humor and cultural commentary through clothing better than almost anyone at their size. The irreverence is a real brand position, not an affectation.',
+  'noon goons': 'Noon Goons sits at the authentic intersection of skate, surf, and LA street culture. The brand identity is specific and the community is real.',
+  // Creator / Newsletter
+  'blackbird spyplane': 'Blackbird Spyplane is the most culturally credible fashion and lifestyle newsletter operating right now. The editorial authority is genuine and the audience acts on it.',
+  'dirt': 'Dirt has built a real critical voice in internet culture. The newsletter is small and the editorial POV is sharp — exactly the profile that brand partnerships can amplify without diluting.',
+  'every': 'Every is building high-quality business and technology writing at a time when quality is the differentiator. The audience is professional and engaged.',
+  // Music / Culture
+  'ghostly': 'Ghostly International has one of the most coherent aesthetic identities of any independent label — the visual design, the artist curation, and the brand feel like they came from the same mind.',
+  'numero group': 'Numero Group has built an extraordinary curatorial identity around reissue and archival music. The editorial sensibility and visual output are as strong as anyone in the space.',
+  'indify': 'indify is building infrastructure for independent artists at exactly the moment when direct artist-brand relationships are becoming the standard.',
+  // Heritage
+  'rogue territory': 'Rogue Territory makes some of the best selvedge denim in Los Angeles. The craft credibility is real and the community of devotees is genuinely engaged.',
+  'imogene': 'Imogene + Willie has built a genuine American craft story out of Nashville. The handmade identity and the devotion of the community are things most brands spend years trying to manufacture.',
+  'billykirk': 'Billykirk has been making handmade leather goods in the US for over 20 years. The product quality and the brand integrity are exceptional.',
+  // Experiential
+  'blind barber': 'Blind Barber has built something genuinely rare — a brand that operates simultaneously as a product company, a hospitality venue, and a creative community hub.',
+  // Gaming (new)
+  'humble games': 'Humble Games has real brand equity from the Humble Bundle legacy and is building a strong indie publishing catalog on top of it.',
+  'fellow traveller': 'Fellow Traveller publishes narrative games with a curatorial identity that feels like the A24 of games — specific, intentional, and genuinely respected.',
+  'playstack': 'Playstack has built a credible indie publishing operation with a growing catalog and a clear POV on what makes a game worth publishing.',
 };
 
 function getObservation(company) {
