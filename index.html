@@ -948,6 +948,95 @@ function getObservation(company) {
   return `${company} caught my attention and this role looks like a strong fit for what I've been building.`;
 }
 
+// ─────────────────────────────────────────
+// COVER LETTER GENERATION — Rebel Ventures format
+// Long-form, passion-led, category-adaptive
+// ─────────────────────────────────────────
+function genCoverLetter(job) {
+  const title  = job.title   || 'this role';
+  const co     = job.company || 'your team';
+  const cat    = job._category || jobCategory(job.title || '', job.description || '');
+  const raw    = getObservation(co);
+  // Strip trailing period so we can continue the sentence
+  const obsBase = raw.replace(/\.\s*$/, '');
+
+  // ── Opening ──────────────────────────────────────────────────────────────────
+  const opening = `I have been following ${co}'s work for a while now. ${raw}
+
+That is why the ${title} role caught my attention. This is not an industry I work in from the outside. It is genuinely one of the loves of my life, and that is why the work I have done in these spaces actually lands.`;
+
+  // ── Company thesis — what they uniquely understand ────────────────────────────
+  let thesis = '';
+  if (cat === 'Gaming / Publishing') {
+    thesis = `What stands out is that ${co} understands something most studios and publishers miss. The audience for a great game is not just a player base. It is a community, a cultural identity, and a creative collaborator. The most powerful campaigns live at those unexpected intersections — the ones that look like an oxymoron until you understand the audience and the fandom driving it, and then they feel completely inevitable.`;
+  } else if (cat === 'Creative') {
+    thesis = `What stands out is that ${co} understands something most creative shops miss. The lines between audience insight, brand instinct, and cultural timing are completely blurred right now. The campaigns that actually move culture are the ones where the creative and the sellable are not separate conversations. They are the same conversation, run by the same person, at the same time.`;
+  } else if (cat === 'Partnerships') {
+    thesis = `What stands out is that ${co} is building something specific in the partnership and commercial layer. The brands that matter right now are not the loudest ones. They are the ones that built the commercial infrastructure before it was obvious they needed it, with people who understood both the creative and the deal at the same time.`;
+  } else {
+    thesis = `What stands out is that ${co} is building something with a real point of view. The brands that grow fastest right now are the ones where the creative instinct and the commercial thinking are the same instinct, not two separate teams talking past each other. That is the through-line in everything I have built.`;
+  }
+
+  // ── Career stories — emphasis shifts by category ──────────────────────────────
+  let stories = '';
+  if (cat === 'Gaming / Publishing') {
+    stories = `That instinct is what connects everything I have built. At Sunday Scaries, knowing that the nineties were having a cultural renaissance, I spotted the roll neck moment before it peaked, traced it back to nineties romcoms and fall in New York, and built the Dinner Service collab from cold outreach through launch, reaching 2.5M people across both brands. Scenes of Note came from the same thinking — people looking for a tangible way to disconnect. I creative directed a travel publication shot on film, published twice, because I understood that now more than ever people want to disconnect to reconnect, especially on Sundays.
+
+All of it informed by five years at Fandom running 15+ branded campaign integrations a month across IP from Sony, Microsoft, HBO, and Netflix, tying them into name brands like Coca-Cola and the US Army. That is where I learned that the creative and the sellable are not separate conversations. At Opulist I built a partnership program from scratch that closed $50K in the first two quarters. At indie.io I built the outbound acquisition pipeline from scratch, increasing activity by 150% and qualified conversations by 40%.`;
+  } else if (cat === 'Partnerships') {
+    stories = `That instinct is what connects everything I have built. At Opulist I came in with no pricing framework, no pipeline, no deal history, and closed $50K+ in the first two quarters. At Sunday Scaries I conceived the Dinner Service collab from cold outreach through commercial terms, creative direction across six co-branded products, and a launch that reached 2.5M people across both brand channels. At Smilebooth I understood what brands were actually trying to do inside a content-led activation, what products convert in those moments, and what the path of least resistance looks like from campaign to purchase.
+
+All of it informed by five years at Fandom running 15+ integrated brand campaigns a month at the intersection of gaming, entertainment, sports, and internet culture for Sony, Microsoft, HBO, Netflix, and Coca-Cola. That is where I learned that the partnership work that lasts is the work where the creative and the commercial are true at the same time.`;
+  } else {
+    stories = `That instinct is what connects everything I have built. At Sunday Scaries, knowing that the nineties were having a cultural renaissance, I spotted the roll neck moment before it peaked, traced it back to nineties romcoms and fall in New York, and built the Dinner Service collab from cold outreach through launch, reaching 2.5M people. At Smilebooth I understood what brands were actually trying to do inside a content-led activation and built out a full UX path for Strava connecting tangible community moments to an overall brand experience. At Opulist, I built a partnership program from scratch that closed $50K in the first two quarters with no existing pipeline or infrastructure.
+
+All of it informed by five years at Fandom running integrated brand campaigns at the intersection of gaming, entertainment, and internet culture for Sony, Microsoft, HBO, Netflix, and Coca-Cola. That is where I learned that the creative and the sellable are not separate conversations.`;
+  }
+
+  // ── Close ─────────────────────────────────────────────────────────────────────
+  const close = `${co} is the kind of team where that matters. I would love to connect around the ${title} role and see if there is a world where we could work together. Portfolio and work samples at jtworks.cargo.site. I have attached my resume below and look forward to connecting.
+
+James Tedesco
+jamestedesco51@gmail.com
+jtworks.cargo.site
+linkedin.com/in/james-tedesco`;
+
+  const body = `${opening}
+
+${thesis}
+
+${stories}
+
+${close}`;
+
+  return { subject: `${title} — James Tedesco`, body };
+}
+
+const _coverCache = {};
+function openCoverLetter(jobId) {
+  const job = jobs.find(j => makeId(j) === jobId);
+  if (!job) return;
+  job._category = job._category || jobCategory(job.title || '', job.description || '');
+  const { subject, body } = genCoverLetter(job);
+  _coverCache[jobId] = { subject, body };
+  document.getElementById('modal-title').textContent = job.title || '';
+  document.getElementById('modal-sub').textContent = (job.company || '') + ' — Cover Letter';
+  const mailto = makeMailto(FROM_EMAIL, subject, body);
+  document.getElementById('modal-body').innerHTML = `
+<div class="modal-section-label" style="margin-bottom:8px">Cover Letter</div>
+<div class="email-preview" style="margin-bottom:12px">
+  <div class="email-subject">Subject: ${escH(subject)}</div>
+  <div class="email-body" style="max-height:340px;overflow-y:auto;white-space:pre-wrap">${escH(body)}</div>
+</div>
+<div style="font-size:11px;color:var(--accent);margin-bottom:12px">📎 Remember to attach your resume before sending.</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+  <a class="btn btn-primary" href="${mailto}">Open in Mail</a>
+  <button class="btn" onclick="navigator.clipboard.writeText(_coverCache['${jobId}'].body)">Copy Letter</button>
+  ${job.url ? `<a class="btn" href="${escH(job.url)}" target="_blank">View Job</a>` : ''}
+</div>`;
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
 function genJobEmail(job) {
   const obs = getObservation(job.company);
   const title = job.title || 'this role';
@@ -1387,6 +1476,7 @@ function renderJobs() {
         <button class="flag-btn${job._materials?' active-blue':''}" onclick="toggleJobFlag('${job._id}','materials')">✓ Materials</button>
         <button class="btn btn-danger" onclick="dismissId('${job._id}')">Dismiss</button>
         <a class="btn btn-mail" href="${mailto}">Draft Email</a>
+        <button class="btn" style="border-color:var(--accent);color:var(--accent)" onclick="openCoverLetter('${job._id}')">Cover Letter</button>
         ${job.url ? `<a class="card-link" href="${escH(job.url)}" target="_blank">View &rarr;</a>` : ''}
       </div>
     </div>
