@@ -1,125 +1,5 @@
 [
   {
-    "id": "spate",
-    "brand": "Spate",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: from the inside out: the rise of functional gut health drinks \u2013 spate q2 2026 report gut health is no longer a niche wellness conversation; it\u2019s becoming one of the defining forces shaping the functio",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 14,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "report-gut",
-    "brand": "Report Gut",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: from the inside out: the rise of functional gut health drinks \u2013 spate q2 2026 report gut health is no longer a niche wellness conversation; it\u2019s becoming one of the defining forces shaping the functio",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 14,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "inside-out",
-    "brand": "Inside Out",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: from the inside out: the rise of functional gut health drinks \u2013 spate q2 2026 report gut health is no longer a niche wellness conversation; it\u2019s becoming one of the defining forces shaping the functio",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 12,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "the-rise",
-    "brand": "The Rise",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: from the inside out: the rise of functional gut health drinks \u2013 spate q2 2026 report gut health is no longer a niche wellness conversation; it\u2019s becoming one of the defining forces shaping the functio",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 12,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "functional-gut",
-    "brand": "Functional Gut",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: from the inside out: the rise of functional gut health drinks \u2013 spate q2 2026 report gut health is no longer a niche wellness conversation; it\u2019s becoming one of the defining forces shaping the functio",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 12,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "health-drinks",
-    "brand": "Health Drinks",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: from the inside out: the rise of functional gut health drinks \u2013 spate q2 2026 report gut health is no longer a niche wellness conversation; it\u2019s becoming one of the defining forces shaping the functio",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 12,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
     "id": "opulist",
     "brand": "Opulist",
     "founder": "",
@@ -137,7 +17,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "indie-io",
@@ -157,7 +37,27 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "june",
+    "brand": "June",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: , and with more than 500 beverage industry professionals already registered for june 10+11, registrations are ramping up fast. don\u2019t wait to get a direct line to the founders, investors, retailers, an",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
   },
   {
     "id": "bill-shufelt",
@@ -177,7 +77,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "scaling-one",
@@ -197,7 +97,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "beverage",
@@ -217,7 +117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "most-disruptive",
@@ -237,7 +137,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "companies",
@@ -257,7 +157,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "shufelt",
@@ -277,7 +177,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "investors-get",
@@ -297,7 +197,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "more-selective",
@@ -317,7 +217,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "grocery-gets",
@@ -337,7 +237,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "more-curated",
@@ -357,7 +257,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "fishwife-anna-parmelee",
@@ -377,7 +277,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "highsnobiety-david-fischer",
@@ -397,7 +297,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "everyday-dose-jack-savage",
@@ -417,7 +317,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "heart---soil-paul-saladino",
@@ -437,7 +337,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "howler-brothers-adam-olson",
@@ -457,7 +357,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "surely-brandon-joldersma",
@@ -477,7 +377,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "4-8",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "gorgie-michelle-cordeiro-grant",
@@ -497,7 +397,7 @@
     "fractional_role": "Fractional Head of Influencer & Creator Partnerships",
     "headcount": "15-25",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "sunwink-eliza-ganesh",
@@ -517,7 +417,7 @@
     "fractional_role": "Fractional CMO / Head of Brand Partnerships",
     "headcount": "12",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "pilgrim-surf---supply-chris-gentile",
@@ -537,7 +437,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Retail Expansion",
     "headcount": "7-9",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "bandit-running-nils-arend",
@@ -557,7 +457,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "popagenda-gen-miller",
@@ -577,7 +477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "midwest-games-adam-orth",
@@ -597,7 +497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "taika-kal-freese",
@@ -617,7 +517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "clevr-blends-hannah-mendoza",
@@ -637,7 +537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "deux-sabeena-ladha",
@@ -657,7 +557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "halfday-lara-wyss",
@@ -677,7 +577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "dieux-skin-charlotte-palermino",
@@ -697,7 +597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "whitethorn-games-matthew-white",
@@ -717,7 +617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "diaspora-co-sana-javeri-kadri",
@@ -737,7 +637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "pangaia-amanda-parkes",
@@ -757,7 +657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "tony-s-chocolonely",
@@ -777,7 +677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "represent-george-heaton",
@@ -797,7 +697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "lomi-matt-bertulli",
@@ -817,7 +717,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "nguyen-coffee-supply-sahra-nguyen",
@@ -837,7 +737,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "canopy-ken-berkun",
@@ -857,7 +757,7 @@
     "fractional_role": "Fractional GTM Strategist",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "mela-watermelon-water-dominic-purpura",
@@ -877,7 +777,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "surreal-cereal-kit-gammell",
@@ -897,7 +797,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "aura-bora-paul-voge",
@@ -917,7 +817,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "odyssey-elixir-scott-frohman",
@@ -937,7 +837,7 @@
     "fractional_role": "Fractional Head of Creator & Brand Partnerships",
     "headcount": "10-18",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "wynk-casey-parzych",
@@ -957,7 +857,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "brami-snacks-aaron-gatti",
@@ -977,7 +877,7 @@
     "fractional_role": "Fractional Head of Brand & Influencer Partnerships",
     "headcount": "10",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "alder-apparel-mikayla-wujec",
@@ -997,7 +897,7 @@
     "fractional_role": "Fractional Head of Partnerships / Fractional CMO",
     "headcount": "6",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "avec-drinks-alex-doman",
@@ -1017,7 +917,7 @@
     "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "akupara-games-david-logan",
@@ -1037,7 +937,7 @@
     "fractional_role": "Fractional Head of Business Development & Developer Partnerships",
     "headcount": "20-44",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "matter-of-fact-paul-baek",
@@ -1057,7 +957,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships / Fractional CMO",
     "headcount": "16",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "corridor-nyc-dan-snyder",
@@ -1077,7 +977,7 @@
     "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
     "headcount": "17",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "adsum-pete-macnee",
@@ -1097,7 +997,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "metalwood-studio-cole-young",
@@ -1117,7 +1017,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "blackstock---weber-chris-echevarria",
@@ -1137,7 +1037,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM",
     "headcount": "7",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "paravel-indr--rockefeller",
@@ -1157,7 +1057,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "pakt-chad-rubin",
@@ -1177,7 +1077,7 @@
     "fractional_role": "Fractional Brand & GTM Operator",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "janji-dave-spandorfer",
@@ -1197,7 +1097,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "museum-of-peace-and-quiet-aaron-bondarof",
@@ -1217,7 +1117,7 @@
     "fractional_role": "Fractional Brand Partnerships & Collabs",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "blackbird-spyplane-jonah-weiner",
@@ -1237,7 +1137,7 @@
     "fractional_role": "Fractional Commercial Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "ghostly-international-sam-valenti-iv",
@@ -1257,7 +1157,67 @@
     "fractional_role": "Fractional Brand Partnerships & Licensing",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "nielseniq",
+    "brand": "NielsenIQ",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: e 2.5% in the 52-week period ending may 16, according to the latest analysis of nielseniq data by goldman sachs equity research.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "goldman-sachs",
+    "brand": "Goldman Sachs",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: eek period ending may 16, according to the latest analysis of nielseniq data by goldman sachs equity research.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "equity-research",
+    "brand": "Equity Research",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: ing may 16, according to the latest analysis of nielseniq data by goldman sachs equity research.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
   },
   {
     "id": "uncle-nearest",
@@ -1277,7 +1237,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "stays",
@@ -1297,7 +1257,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "receivership",
@@ -1317,7 +1277,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "founder",
@@ -1337,7 +1297,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "holding-company",
@@ -1357,7 +1317,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "added",
@@ -1377,7 +1337,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "premium-whiskey",
@@ -1397,7 +1357,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "fawn-weaver",
@@ -1417,27 +1377,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "june",
-    "brand": "June",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: rs reconsider what they want to drink, when, and where, bevnet live nyc 2026 on june 10 + 11 will feature a talk with one of the architects of that disruption when athletic brewing co-founder & ceo bi",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "athletic-brewing",
@@ -1457,7 +1397,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "ceo-bill",
@@ -1477,7 +1417,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "behind-ithaca",
@@ -1497,7 +1437,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "success",
@@ -1517,7 +1457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "guillermo",
@@ -1537,7 +1477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "hot-start",
@@ -1557,7 +1497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "chris-kirby",
@@ -1577,7 +1517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "ithaca-hummus",
@@ -1597,7 +1537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "with-guillermo",
@@ -1617,7 +1557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "salsa",
@@ -1637,7 +1577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "nyc-meetup",
@@ -1657,127 +1597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "healthy-enough",
-    "brand": "Healthy Enough",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: \u2018healthy enough\u2019 products dominate 2025 new product pacesetters healthy, but not too healthy. that\u2019s the gist of the products that made this year\u2019s edition of circana\u2019s 2025 new product pacesetters.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "products-dominate",
-    "brand": "Products Dominate",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: \u2018healthy enough\u2019 products dominate 2025 new product pacesetters healthy, but not too healthy. that\u2019s the gist of the products that made this year\u2019s edition of circana\u2019s 2025 new product pacesetters.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "new-product",
-    "brand": "New Product",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: \u2018healthy enough\u2019 products dominate 2025 new product pacesetters healthy, but not too healthy. that\u2019s the gist of the products that made this year\u2019s edition of circana\u2019s 2025 new product pacesetters.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "pacesetters-healthy",
-    "brand": "Pacesetters Healthy",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: \u2018healthy enough\u2019 products dominate 2025 new product pacesetters healthy, but not too healthy. that\u2019s the gist of the products that made this year\u2019s edition of circana\u2019s 2025 new product pacesetters.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "circana",
-    "brand": "Circana",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: t too healthy. that\u2019s the gist of the products that made this year\u2019s edition of circana\u2019s 2025 new product pacesetters.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "pacesetters",
-    "brand": "Pacesetters",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: \u2018healthy enough\u2019 products dominate 2025 new product pacesetters healthy, but not too healthy. that\u2019s the gist of the products that made this year\u2019s edition of circana\u2019s 2025 new product pacesetters.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "recess-ben-witte",
@@ -1797,7 +1617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "brightland-aishwarya-iyer",
@@ -1817,7 +1637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "fly-by-jing-jing-gao",
@@ -1837,7 +1657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "joystick-ventures",
@@ -1857,7 +1677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "fellow-traveller-chris-wright",
@@ -1877,7 +1697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "beehiiv-tyler-denk",
@@ -1897,7 +1717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "rowing-blazers-jack-carlson",
@@ -1917,7 +1737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "omsom-vanessa-pham",
@@ -1937,7 +1757,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "madhappy-peiman-raf",
@@ -1957,7 +1777,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "mud-wtr-shane-heath",
@@ -1977,7 +1797,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "criquet-shirts-billy-nachman",
@@ -1997,7 +1817,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "freedom-games",
@@ -2017,7 +1837,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "oatly",
@@ -2037,7 +1857,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "ganni-ditte-reffstrup",
@@ -2057,7 +1877,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "monocle-tyler-brule",
@@ -2077,7 +1897,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "veja",
@@ -2097,7 +1917,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "dazed-media-jefferson-hack",
@@ -2117,7 +1937,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "patagonia-provisions",
@@ -2137,7 +1957,7 @@
     "fractional_role": "Fractional Brand & GTM Strategist",
     "headcount": "10-30",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "chamberlain-coffee",
@@ -2157,7 +1977,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "public-goods-morgan-hirsh",
@@ -2177,7 +1997,7 @@
     "fractional_role": "Fractional Head of Brand",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "graffiti-games-mihalis-belantis",
@@ -2197,7 +2017,7 @@
     "fractional_role": "Fractional Head of BD & Publisher Relations",
     "headcount": "1-10",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "trashy-kaitlin-mogentale",
@@ -2217,7 +2037,7 @@
     "fractional_role": "Fractional Brand Strategist & GTM Operator",
     "headcount": "3-6",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "dehen-1920-gary-hilde",
@@ -2237,7 +2057,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Creator Strategy",
     "headcount": "11-35",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "carter-young-carter-altman",
@@ -2257,7 +2077,7 @@
     "fractional_role": "Fractional GTM Strategist & Brand Partnerships",
     "headcount": "3-5",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "abroad",
@@ -2277,7 +2097,7 @@
     "fractional_role": "Fractional Partnerships & Brand",
     "headcount": "2-8",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "monos-victor-tam",
@@ -2297,7 +2117,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "30-60",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "ciele-athletics-mike-giles",
@@ -2317,7 +2137,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "rabbit-running-monica-devreese",
@@ -2337,7 +2157,7 @@
     "fractional_role": "Fractional Brand & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "awake-ny-angelo-baque",
@@ -2357,7 +2177,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-12",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "market-brandon-svarc",
@@ -2377,7 +2197,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "noon-goons-andrew-morrison",
@@ -2397,7 +2217,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "dirt-kate-lindsay",
@@ -2417,7 +2237,7 @@
     "fractional_role": "Fractional Brand & Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "every-dan-shipper",
@@ -2437,7 +2257,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "numero-group-ken-shipley",
@@ -2457,7 +2277,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "indify-will-huston",
@@ -2477,7 +2297,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "rogue-territory-kyle-mowat",
@@ -2497,7 +2317,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "imogene---willie-matt-eddmenson",
@@ -2517,7 +2337,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "billykirk-chris-bray",
@@ -2537,7 +2357,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "humble-games",
@@ -2557,7 +2377,7 @@
     "fractional_role": "Fractional Brand Partnerships & Creator",
     "headcount": "20-50",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "playstack-harvey-elliott",
@@ -2577,7 +2397,7 @@
     "fractional_role": "Fractional Brand & Creator Partnerships (US)",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "blind-barber-jeff-laub",
@@ -2597,7 +2417,7 @@
     "fractional_role": "Fractional Brand & Experiential Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "unitedmasters-steve-stoute",
@@ -2617,7 +2437,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "dice-phil-hutcheon",
@@ -2637,7 +2457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "puck-jon-kelly",
@@ -2657,7 +2477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "outdoor-voices",
@@ -2677,7 +2497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "pietra-ronak-trivedi",
@@ -2697,7 +2517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "tecovas-paul-hedrick",
@@ -2717,7 +2537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "waterloo-sparkling-water-john-setz",
@@ -2737,7 +2557,387 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "could-conor",
+    "brand": "Could Conor",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: could conor mcgregor\u2019s mac energy kickstart ketones? if the emerging ketone market could use a kick, who better to call than a mixed martial arts superstar?",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "mcgregor",
+    "brand": "McGregor",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: could conor mcgregor\u2019s mac energy kickstart ketones? if the emerging ketone market could use a kick, who better to call than a mixed martial arts superstar?",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "mac-energy",
+    "brand": "MAC Energy",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: could conor mcgregor\u2019s mac energy kickstart ketones? if the emerging ketone market could use a kick, who better to call than a mixed martial arts superstar?",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "kickstart-ketones",
+    "brand": "Kickstart Ketones",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: could conor mcgregor\u2019s mac energy kickstart ketones? if the emerging ketone market could use a kick, who better to call than a mixed martial arts superstar?",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "energy-drinks",
+    "brand": "Energy Drinks",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: energy drinks slide, but non-alc sales mostly steady in early may non-alcoholic beverage sales maintained a steady growth curve in the first half of may, as dollar sales rose 2.5% in the 52-week perio",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "slide",
+    "brand": "Slide",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: energy drinks slide, but non-alc sales mostly steady in early may non-alcoholic beverage sales maintained a steady growth curve in the first half of may, as dollar sales rose 2.5% in the 52-week perio",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "but-non",
+    "brand": "But Non",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: energy drinks slide, but non-alc sales mostly steady in early may non-alcoholic beverage sales maintained a steady growth curve in the first half of may, as dollar sales rose 2.5% in the 52-week perio",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "alc-sales",
+    "brand": "Alc Sales",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: energy drinks slide, but non-alc sales mostly steady in early may non-alcoholic beverage sales maintained a steady growth curve in the first half of may, as dollar sales rose 2.5% in the 52-week perio",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "mostly-steady",
+    "brand": "Mostly Steady",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: energy drinks slide, but non-alc sales mostly steady in early may non-alcoholic beverage sales maintained a steady growth curve in the first half of may, as dollar sales rose 2.5% in the 52-week perio",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "early-may",
+    "brand": "Early May",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: energy drinks slide, but non-alc sales mostly steady in early may non-alcoholic beverage sales maintained a steady growth curve in the first half of may, as dollar sales rose 2.5% in the 52-week perio",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "bevnet-live",
+    "brand": "BevNET Live",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc is just two weeks away! bevnet live nyc is just two weeks away, and with more than 500 beverage industry professionals already registered for june 10+11, registrations are ramping up f",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "just-two",
+    "brand": "Just Two",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc is just two weeks away! bevnet live nyc is just two weeks away, and with more than 500 beverage industry professionals already registered for june 10+11, registrations are ramping up f",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "weeks-away",
+    "brand": "Weeks Away",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc is just two weeks away! bevnet live nyc is just two weeks away, and with more than 500 beverage industry professionals already registered for june 10+11, registrations are ramping up f",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "marketing",
+    "brand": "Marketing",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: marketing: pepsi, electrolit celebrate summer of soccer pepsi and electrolit are embracing the summer of soccer with new campaigns launching in partnership with national team players.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "pepsi",
+    "brand": "Pepsi",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: marketing: pepsi, electrolit celebrate summer of soccer pepsi and electrolit are embracing the summer of soccer with new campaigns launching in partnership with national team players.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "electrolit-celebrate",
+    "brand": "Electrolit Celebrate",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: marketing: pepsi, electrolit celebrate summer of soccer pepsi and electrolit are embracing the summer of soccer with new campaigns launching in partnership with national team players.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "summer",
+    "brand": "Summer",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: marketing: pepsi, electrolit celebrate summer of soccer pepsi and electrolit are embracing the summer of soccer with new campaigns launching in partnership with national team players.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "soccer-pepsi",
+    "brand": "Soccer Pepsi",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: marketing: pepsi, electrolit celebrate summer of soccer pepsi and electrolit are embracing the summer of soccer with new campaigns launching in partnership with national team players.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
+  },
+  {
+    "id": "electrolit",
+    "brand": "Electrolit",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: marketing: pepsi, electrolit celebrate summer of soccer pepsi and electrolit are embracing the summer of soccer with new campaigns launching in partnership with national team players.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-05-28"
   },
   {
     "id": "plezi-rebuilds",
@@ -2757,7 +2957,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "around-steph",
@@ -2777,7 +2977,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "curry",
@@ -2797,7 +2997,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "hydration-refresh",
@@ -2817,7 +3017,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "first-lady",
@@ -2837,7 +3037,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "michelle-obama",
@@ -2857,7 +3057,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "libations",
@@ -2877,7 +3077,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "plezi-hydration",
@@ -2897,27 +3097,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "bevnet-live",
-    "brand": "BevNET Live",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc 2026: the state of cannabevs: strategy on deadline is it the last call for intoxicating thc beverages, even if the industry is just taking off? at bevnet live nyc 2026, category stakeh",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "the-state",
@@ -2937,7 +3117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "cannabevs",
@@ -2957,7 +3137,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "strategy",
@@ -2977,7 +3157,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "deadline",
@@ -2997,7 +3177,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "november",
@@ -3017,7 +3197,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "distribution",
@@ -3037,7 +3217,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "little-saints",
@@ -3057,7 +3237,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "focuses",
@@ -3077,7 +3257,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "florida-adult",
@@ -3097,7 +3277,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "florida",
@@ -3117,7 +3297,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "abc-fine",
@@ -3137,7 +3317,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "wine",
@@ -3157,7 +3337,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "spirits",
@@ -3177,7 +3357,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "sunshine-state",
@@ -3197,7 +3377,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "rndc-layoffs",
@@ -3217,7 +3397,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "continue",
@@ -3237,7 +3417,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "ahead",
@@ -3257,7 +3437,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "potential-deals",
@@ -3277,7 +3457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "republic-national",
@@ -3297,7 +3477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "distributing-company",
@@ -3317,7 +3497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "rndc",
@@ -3337,7 +3517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "washington",
@@ -3357,7 +3537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "south-dakota",
@@ -3377,7 +3557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "looming-thc",
@@ -3397,7 +3577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "ban-has",
@@ -3417,7 +3597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "retailers",
@@ -3437,7 +3617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "brands-searching",
@@ -3457,7 +3637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "for-alternative",
@@ -3477,7 +3657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "buzzes-hemp",
@@ -3497,7 +3677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "zevia-taps",
@@ -3517,7 +3697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "brian-bousley",
@@ -3537,7 +3717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "new-evp",
@@ -3557,7 +3737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "chief-commercial",
@@ -3577,7 +3757,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "officer-zevia",
@@ -3597,7 +3777,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "yerba-madre",
@@ -3617,7 +3797,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "taste-radio",
@@ -3637,7 +3817,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "the-simple",
@@ -3657,7 +3837,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "reliable-secret",
@@ -3677,7 +3857,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "former-nfl",
@@ -3697,7 +3877,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "star-micah",
@@ -3717,7 +3897,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "hyde-seeks",
@@ -3737,7 +3917,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "bridge-beer",
@@ -3757,7 +3937,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "hemp-drinks",
@@ -3777,7 +3957,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "after",
@@ -3797,7 +3977,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "green-bay",
@@ -3817,7 +3997,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "packer",
@@ -3837,7 +4017,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "buffalo-bill",
@@ -3857,7 +4037,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   },
   {
     "id": "olipop",
@@ -3877,326 +4057,6 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "new-rtds",
-    "brand": "New RTDs",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new rtds from mission craft, tavern, boston beer and more may\u2019s rtd releases beckon in the summer with golf course-inspired libations from high noon and good boy vodka to glow-in-the-dark bottles from",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "from-mission",
-    "brand": "From Mission",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new rtds from mission craft, tavern, boston beer and more may\u2019s rtd releases beckon in the summer with golf course-inspired libations from high noon and good boy vodka to glow-in-the-dark bottles from",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "craft",
-    "brand": "Craft",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new rtds from mission craft, tavern, boston beer and more may\u2019s rtd releases beckon in the summer with golf course-inspired libations from high noon and good boy vodka to glow-in-the-dark bottles from",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "tavern",
-    "brand": "Tavern",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new rtds from mission craft, tavern, boston beer and more may\u2019s rtd releases beckon in the summer with golf course-inspired libations from high noon and good boy vodka to glow-in-the-dark bottles from",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "boston-beer",
-    "brand": "Boston Beer",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new rtds from mission craft, tavern, boston beer and more may\u2019s rtd releases beckon in the summer with golf course-inspired libations from high noon and good boy vodka to glow-in-the-dark bottles from",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "more-may",
-    "brand": "More May",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new rtds from mission craft, tavern, boston beer and more may\u2019s rtd releases beckon in the summer with golf course-inspired libations from high noon and good boy vodka to glow-in-the-dark bottles from",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "high-noon",
-    "brand": "High Noon",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: ay\u2019s rtd releases beckon in the summer with golf course-inspired libations from high noon and good boy vodka to glow-in-the-dark bottles from boston beer, as well as tropical margaritas, hard teas, an",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "good-boy",
-    "brand": "Good Boy",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: ses beckon in the summer with golf course-inspired libations from high noon and good boy vodka to glow-in-the-dark bottles from boston beer, as well as tropical margaritas, hard teas, and vodka-based",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "new-beverages",
-    "brand": "New Beverages",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new beverages: ghost x bubblicious, lapo\u2019s, recess this week's new beverage gallery features ghost's latest candy-coated collaboration, elmhurst's rtd protein shake debut and a long-awaited move outsi",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "ghost",
-    "brand": "GHOST",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new beverages: ghost x bubblicious, lapo\u2019s, recess this week's new beverage gallery features ghost's latest candy-coated collaboration, elmhurst's rtd protein shake debut and a long-awaited move outsi",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "bubblicious",
-    "brand": "Bubblicious",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new beverages: ghost x bubblicious, lapo\u2019s, recess this week's new beverage gallery features ghost's latest candy-coated collaboration, elmhurst's rtd protein shake debut and a long-awaited move outsi",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "lapo",
-    "brand": "Lapo",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new beverages: ghost x bubblicious, lapo\u2019s, recess this week's new beverage gallery features ghost's latest candy-coated collaboration, elmhurst's rtd protein shake debut and a long-awaited move outsi",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "recess-this",
-    "brand": "Recess This",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: new beverages: ghost x bubblicious, lapo\u2019s, recess this week's new beverage gallery features ghost's latest candy-coated collaboration, elmhurst's rtd protein shake debut and a long-awaited move outsi",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "elmhurst",
-    "brand": "Elmhurst",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: week's new beverage gallery features ghost's latest candy-coated collaboration, elmhurst's rtd protein shake debut and a long-awaited move outside of bitters for iconic brand house of angostura.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "house",
-    "brand": "House",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: protein shake debut and a long-awaited move outside of bitters for iconic brand house of angostura.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
-  },
-  {
-    "id": "angostura",
-    "brand": "Angostura",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: hake debut and a long-awaited move outside of bitters for iconic brand house of angostura.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-05-27"
+    "added_date": "2026-05-28"
   }
 ]
