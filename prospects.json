@@ -17,7 +17,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "indie-io",
@@ -37,7 +37,47 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "nick-guillen",
+    "brand": "Nick Guillen",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: oduct lines, and a retail-focused growth strategy. in this episode, co-founders nick guillen and nick ajluni talk about how they are scaling the business without losing the edge that made it a phenome",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "nick-ajluni",
+    "brand": "Nick Ajluni",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: a retail-focused growth strategy. in this episode, co-founders nick guillen and nick ajluni talk about how they are scaling the business without losing the edge that made it a phenomenon.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
   },
   {
     "id": "finance-focus",
@@ -57,7 +97,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "stage",
@@ -77,7 +117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "meetings",
@@ -97,7 +137,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "bevnet-live",
@@ -117,7 +157,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "connects-beverage",
@@ -137,7 +177,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "founders-with",
@@ -157,7 +197,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "investors-raising",
@@ -177,7 +217,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "investors",
@@ -197,7 +237,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "fishwife-anna-parmelee",
@@ -217,7 +257,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "highsnobiety-david-fischer",
@@ -237,7 +277,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "everyday-dose-jack-savage",
@@ -257,7 +297,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "heart---soil-paul-saladino",
@@ -277,7 +317,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "howler-brothers-adam-olson",
@@ -297,7 +337,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "surely-brandon-joldersma",
@@ -317,7 +357,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "4-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "gorgie-michelle-cordeiro-grant",
@@ -337,7 +377,7 @@
     "fractional_role": "Fractional Head of Influencer & Creator Partnerships",
     "headcount": "15-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "sunwink-eliza-ganesh",
@@ -357,7 +397,7 @@
     "fractional_role": "Fractional CMO / Head of Brand Partnerships",
     "headcount": "12",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "pilgrim-surf---supply-chris-gentile",
@@ -377,7 +417,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Retail Expansion",
     "headcount": "7-9",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "bandit-running-nils-arend",
@@ -397,7 +437,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "former-nutrabolt",
@@ -417,7 +457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "execs-can",
@@ -437,7 +477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "keep-new",
@@ -457,7 +497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "jobs",
@@ -477,7 +517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "texas-judge",
@@ -497,7 +537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "rules-three",
@@ -517,7 +557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "nutrabolt",
@@ -537,7 +577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "texas",
@@ -557,7 +597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "popagenda-gen-miller",
@@ -577,7 +617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "midwest-games-adam-orth",
@@ -597,7 +637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "taika-kal-freese",
@@ -617,7 +657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "clevr-blends-hannah-mendoza",
@@ -637,7 +677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "deux-sabeena-ladha",
@@ -657,7 +697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "halfday-lara-wyss",
@@ -677,7 +717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "dieux-skin-charlotte-palermino",
@@ -697,7 +737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "whitethorn-games-matthew-white",
@@ -717,7 +757,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "diaspora-co-sana-javeri-kadri",
@@ -737,7 +777,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "pangaia-amanda-parkes",
@@ -757,7 +797,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "tony-s-chocolonely",
@@ -777,7 +817,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "represent-george-heaton",
@@ -797,7 +837,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "lomi-matt-bertulli",
@@ -817,7 +857,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "nguyen-coffee-supply-sahra-nguyen",
@@ -837,7 +877,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "canopy-ken-berkun",
@@ -857,7 +897,7 @@
     "fractional_role": "Fractional GTM Strategist",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "mela-watermelon-water-dominic-purpura",
@@ -877,7 +917,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "surreal-cereal-kit-gammell",
@@ -897,7 +937,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "aura-bora-paul-voge",
@@ -917,7 +957,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "odyssey-elixir-scott-frohman",
@@ -937,7 +977,7 @@
     "fractional_role": "Fractional Head of Creator & Brand Partnerships",
     "headcount": "10-18",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "wynk-casey-parzych",
@@ -957,7 +997,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "brami-snacks-aaron-gatti",
@@ -977,7 +1017,7 @@
     "fractional_role": "Fractional Head of Brand & Influencer Partnerships",
     "headcount": "10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "alder-apparel-mikayla-wujec",
@@ -997,7 +1037,7 @@
     "fractional_role": "Fractional Head of Partnerships / Fractional CMO",
     "headcount": "6",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "avec-drinks-alex-doman",
@@ -1017,7 +1057,7 @@
     "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "akupara-games-david-logan",
@@ -1037,7 +1077,7 @@
     "fractional_role": "Fractional Head of Business Development & Developer Partnerships",
     "headcount": "20-44",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "matter-of-fact-paul-baek",
@@ -1057,7 +1097,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships / Fractional CMO",
     "headcount": "16",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "corridor-nyc-dan-snyder",
@@ -1077,7 +1117,7 @@
     "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
     "headcount": "17",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "adsum-pete-macnee",
@@ -1097,7 +1137,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "metalwood-studio-cole-young",
@@ -1117,7 +1157,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "blackstock---weber-chris-echevarria",
@@ -1137,7 +1177,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM",
     "headcount": "7",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "paravel-indr--rockefeller",
@@ -1157,7 +1197,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "pakt-chad-rubin",
@@ -1177,7 +1217,7 @@
     "fractional_role": "Fractional Brand & GTM Operator",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "janji-dave-spandorfer",
@@ -1197,7 +1237,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "museum-of-peace-and-quiet-aaron-bondarof",
@@ -1217,7 +1257,7 @@
     "fractional_role": "Fractional Brand Partnerships & Collabs",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "blackbird-spyplane-jonah-weiner",
@@ -1237,7 +1277,7 @@
     "fractional_role": "Fractional Commercial Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "ghostly-international-sam-valenti-iv",
@@ -1257,7 +1297,247 @@
     "fractional_role": "Fractional Brand Partnerships & Licensing",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "how-spade",
+    "brand": "How Spade",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: how spade\u2019s \u2018approachable,\u2019 anti-functional modern soda landed walmart landing at walmart, one of the largest retailers to establish \u201cmodern soda\u201d as a defined shelf set, has helped validate the brand",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "approachable",
+    "brand": "Approachable",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: how spade\u2019s \u2018approachable,\u2019 anti-functional modern soda landed walmart landing at walmart, one of the largest retailers to establish \u201cmodern soda\u201d as a defined shelf set, has helped validate the brand",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "anti",
+    "brand": "Anti",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: how spade\u2019s \u2018approachable,\u2019 anti-functional modern soda landed walmart landing at walmart, one of the largest retailers to establish \u201cmodern soda\u201d as a defined shelf set, has helped validate the brand",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "functional-modern",
+    "brand": "Functional Modern",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: how spade\u2019s \u2018approachable,\u2019 anti-functional modern soda landed walmart landing at walmart, one of the largest retailers to establish \u201cmodern soda\u201d as a defined shelf set, has helped validate the brand",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "soda-landed",
+    "brand": "Soda Landed",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: how spade\u2019s \u2018approachable,\u2019 anti-functional modern soda landed walmart landing at walmart, one of the largest retailers to establish \u201cmodern soda\u201d as a defined shelf set, has helped validate the brand",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "walmart-landing",
+    "brand": "Walmart Landing",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: how spade\u2019s \u2018approachable,\u2019 anti-functional modern soda landed walmart landing at walmart, one of the largest retailers to establish \u201cmodern soda\u201d as a defined shelf set, has helped validate the brand",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "walmart",
+    "brand": "Walmart",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: how spade\u2019s \u2018approachable,\u2019 anti-functional modern soda landed walmart landing at walmart, one of the largest retailers to establish \u201cmodern soda\u201d as a defined shelf set, has helped validate the brand",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "taste-radio",
+    "brand": "Taste Radio",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: truff\u2019s founders: \u2018the status quo is in all of our hands\u2019 truff built its reputation by breaking the rules. as the company expands beyond its viral hot sauce with a major rebrand, new pro",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "truff",
+    "brand": "TRUFF",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: truff\u2019s founders: \u2018the status quo is in all of our hands\u2019 truff built its reputation by breaking the rules. as the company expands beyond its viral hot sauce with a major rebrand, new pro",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "founders",
+    "brand": "Founders",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: truff\u2019s founders: \u2018the status quo is in all of our hands\u2019 truff built its reputation by breaking the rules. as the company expands beyond its viral hot sauce with a major rebrand, new pro",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "the-status",
+    "brand": "The Status",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: truff\u2019s founders: \u2018the status quo is in all of our hands\u2019 truff built its reputation by breaking the rules. as the company expands beyond its viral hot sauce with a major rebrand, new pro",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "our-hands",
+    "brand": "Our Hands",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: truff\u2019s founders: \u2018the status quo is in all of our hands\u2019 truff built its reputation by breaking the rules. as the company expands beyond its viral hot sauce with a major rebrand, new pro",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
   },
   {
     "id": "june",
@@ -1277,7 +1557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "new-york",
@@ -1297,7 +1577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "metropolitan-pavilion",
@@ -1317,7 +1597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "bodyarmor-fit",
@@ -1337,7 +1617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "squeeze-jous",
@@ -1357,7 +1637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "good-karma",
@@ -1377,7 +1657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "acquired",
@@ -1397,7 +1677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "trek-one",
@@ -1417,7 +1697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "capital-trek",
@@ -1437,7 +1717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "one-capital",
@@ -1457,7 +1737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "foods",
@@ -1477,207 +1757,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "learn",
-    "brand": "Learn",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: leaders who understand the challenges of building and scaling beverage brands. learn what retailers and investors are looking for as they\u2019re scoping out new products for their shelves and portfolios.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "distribution",
-    "brand": "Distribution",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: shakeology partners with kehe, adds sprouts locations shakeology, the premium protein mix brand launched by wellness company bodi, has partnered with broadline distributor kehe and launc",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "shakeology-partners",
-    "brand": "Shakeology Partners",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: shakeology partners with kehe, adds sprouts locations shakeology, the premium protein mix brand launched by wellness company bodi, has partnered with broadline distributor kehe and launc",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "kehe",
-    "brand": "KeHE",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: shakeology partners with kehe, adds sprouts locations shakeology, the premium protein mix brand launched by wellness company bodi, has partnered with broadline distributor kehe and launc",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "adds-sprouts",
-    "brand": "Adds Sprouts",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: shakeology partners with kehe, adds sprouts locations shakeology, the premium protein mix brand launched by wellness company bodi, has partnered with broadline distributor kehe and launc",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "locations-shakeology",
-    "brand": "Locations Shakeology",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: shakeology partners with kehe, adds sprouts locations shakeology, the premium protein mix brand launched by wellness company bodi, has partnered with broadline distributor kehe and launc",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "bodi",
-    "brand": "BODi",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: ocations shakeology, the premium protein mix brand launched by wellness company bodi, has partnered with broadline distributor kehe and launched into 80 sprouts farmers market locations across the cou",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "thc-beverages",
-    "brand": "THC Beverages",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: niq: thc beverages hit $239m in mainstream retail thc beverages reached $239 million in the 52 weeks ending april 4 2026, up 135% versus the prior year, reflecting a scaling category despite headwinds",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "mainstream-retail",
-    "brand": "Mainstream Retail",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: niq: thc beverages hit $239m in mainstream retail thc beverages reached $239 million in the 52 weeks ending april 4 2026, up 135% versus the prior year, reflecting a scaling category despite headwinds",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "april",
-    "brand": "April",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: in mainstream retail thc beverages reached $239 million in the 52 weeks ending april 4 2026, up 135% versus the prior year, reflecting a scaling category despite headwinds, according to niq data rele",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "recess-ben-witte",
@@ -1697,7 +1777,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "brightland-aishwarya-iyer",
@@ -1717,7 +1797,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "fly-by-jing-jing-gao",
@@ -1737,7 +1817,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "joystick-ventures",
@@ -1757,7 +1837,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "fellow-traveller-chris-wright",
@@ -1777,7 +1857,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "beehiiv-tyler-denk",
@@ -1797,7 +1877,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "rowing-blazers-jack-carlson",
@@ -1817,7 +1897,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "omsom-vanessa-pham",
@@ -1837,7 +1917,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "madhappy-peiman-raf",
@@ -1857,7 +1937,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "mud-wtr-shane-heath",
@@ -1877,7 +1957,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "criquet-shirts-billy-nachman",
@@ -1897,7 +1977,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "freedom-games",
@@ -1917,7 +1997,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "oatly",
@@ -1937,7 +2017,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "ganni-ditte-reffstrup",
@@ -1957,7 +2037,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "monocle-tyler-brule",
@@ -1977,7 +2057,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "veja",
@@ -1997,7 +2077,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "dazed-media-jefferson-hack",
@@ -2017,7 +2097,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "patagonia-provisions",
@@ -2037,7 +2117,7 @@
     "fractional_role": "Fractional Brand & GTM Strategist",
     "headcount": "10-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "chamberlain-coffee",
@@ -2057,7 +2137,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "public-goods-morgan-hirsh",
@@ -2077,7 +2157,7 @@
     "fractional_role": "Fractional Head of Brand",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "graffiti-games-mihalis-belantis",
@@ -2097,7 +2177,7 @@
     "fractional_role": "Fractional Head of BD & Publisher Relations",
     "headcount": "1-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "trashy-kaitlin-mogentale",
@@ -2117,7 +2197,7 @@
     "fractional_role": "Fractional Brand Strategist & GTM Operator",
     "headcount": "3-6",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "dehen-1920-gary-hilde",
@@ -2137,7 +2217,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Creator Strategy",
     "headcount": "11-35",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "carter-young-carter-altman",
@@ -2157,7 +2237,7 @@
     "fractional_role": "Fractional GTM Strategist & Brand Partnerships",
     "headcount": "3-5",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "abroad",
@@ -2177,7 +2257,7 @@
     "fractional_role": "Fractional Partnerships & Brand",
     "headcount": "2-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "monos-victor-tam",
@@ -2197,7 +2277,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "30-60",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "ciele-athletics-mike-giles",
@@ -2217,7 +2297,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "rabbit-running-monica-devreese",
@@ -2237,7 +2317,7 @@
     "fractional_role": "Fractional Brand & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "awake-ny-angelo-baque",
@@ -2257,7 +2337,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-12",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "market-brandon-svarc",
@@ -2277,7 +2357,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "noon-goons-andrew-morrison",
@@ -2297,7 +2377,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "dirt-kate-lindsay",
@@ -2317,7 +2397,7 @@
     "fractional_role": "Fractional Brand & Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "every-dan-shipper",
@@ -2337,7 +2417,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "numero-group-ken-shipley",
@@ -2357,7 +2437,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "indify-will-huston",
@@ -2377,7 +2457,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "rogue-territory-kyle-mowat",
@@ -2397,7 +2477,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "imogene---willie-matt-eddmenson",
@@ -2417,7 +2497,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "billykirk-chris-bray",
@@ -2437,7 +2517,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "humble-games",
@@ -2457,7 +2537,7 @@
     "fractional_role": "Fractional Brand Partnerships & Creator",
     "headcount": "20-50",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "playstack-harvey-elliott",
@@ -2477,7 +2557,7 @@
     "fractional_role": "Fractional Brand & Creator Partnerships (US)",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "blind-barber-jeff-laub",
@@ -2497,7 +2577,7 @@
     "fractional_role": "Fractional Brand & Experiential Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "unitedmasters-steve-stoute",
@@ -2517,7 +2597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "dice-phil-hutcheon",
@@ -2537,7 +2617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "puck-jon-kelly",
@@ -2557,7 +2637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "outdoor-voices",
@@ -2577,7 +2657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "pietra-ronak-trivedi",
@@ -2597,7 +2677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "tecovas-paul-hedrick",
@@ -2617,7 +2697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "waterloo-sparkling-water-john-setz",
@@ -2637,7 +2717,127 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "ryl-tea",
+    "brand": "Ryl Tea",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: ryl tea brings in $20m as retailers bet on \u201cmodern tea movement\u201d ryl tea has added a $20 million series c investment to fuel retail and distribution growth in mass and club channels.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "brings",
+    "brand": "Brings",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: ryl tea brings in $20m as retailers bet on \u201cmodern tea movement\u201d ryl tea has added a $20 million series c investment to fuel retail and distribution growth in mass and club channels.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "retailers-bet",
+    "brand": "Retailers Bet",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: ryl tea brings in $20m as retailers bet on \u201cmodern tea movement\u201d ryl tea has added a $20 million series c investment to fuel retail and distribution growth in mass and club channels.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "modern-tea",
+    "brand": "Modern Tea",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: ryl tea brings in $20m as retailers bet on \u201cmodern tea movement\u201d ryl tea has added a $20 million series c investment to fuel retail and distribution growth in mass and club channels.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "movement",
+    "brand": "Movement",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: ryl tea brings in $20m as retailers bet on \u201cmodern tea movement\u201d ryl tea has added a $20 million series c investment to fuel retail and distribution growth in mass and club channels.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
+  },
+  {
+    "id": "series",
+    "brand": "Series",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: $20m as retailers bet on \u201cmodern tea movement\u201d ryl tea has added a $20 million series c investment to fuel retail and distribution growth in mass and club channels.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-02"
   },
   {
     "id": "columbia-distributing",
@@ -2657,7 +2857,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "makes-strategic",
@@ -2677,7 +2877,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "investment",
@@ -2697,7 +2897,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "hayden-beverage",
@@ -2717,7 +2917,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "idaho",
@@ -2737,7 +2937,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "expanding-pnw",
@@ -2757,7 +2957,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "business-columbia",
@@ -2777,7 +2977,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "distributing",
@@ -2797,7 +2997,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "pacific-northwest",
@@ -2817,7 +3017,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "uncle-nearest",
@@ -2837,7 +3037,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "moves-closer",
@@ -2857,7 +3057,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "possible-new",
@@ -2877,7 +3077,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "ownership-uncle",
@@ -2897,7 +3097,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "nearest-premium",
@@ -2917,7 +3117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "whiskey",
@@ -2937,7 +3137,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "black",
@@ -2957,7 +3157,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "kevin-hart",
@@ -2977,7 +3177,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "supplement-brand",
@@ -2997,7 +3197,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "adds-strategic",
@@ -3017,7 +3217,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "investment-kevin",
@@ -3037,7 +3237,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "hart",
@@ -3057,7 +3257,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "vitahustle",
@@ -3077,7 +3277,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "axum-capital",
@@ -3097,7 +3297,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "partners",
@@ -3117,7 +3317,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "reyes-adds",
@@ -3137,7 +3337,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "cases",
@@ -3157,7 +3357,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "rndc-deal",
@@ -3177,7 +3377,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "now-complete",
@@ -3197,7 +3397,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "markets-reyes",
@@ -3217,7 +3417,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "beverage-group",
@@ -3237,7 +3437,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "rndc",
@@ -3257,7 +3457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "friday",
@@ -3277,7 +3477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "bodyarmor-launches",
@@ -3297,7 +3497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "fit-sparkling",
@@ -3317,7 +3517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "sports-drink",
@@ -3337,7 +3537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "line-bodyarmor",
@@ -3357,7 +3557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "coca",
@@ -3377,7 +3577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "cola-company",
@@ -3397,7 +3597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "review",
@@ -3417,7 +3617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "this-jous",
@@ -3437,7 +3637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "worth",
@@ -3457,27 +3657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "taste-radio",
-    "brand": "Taste Radio",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: taste radio: why m\u00e1s+ failed \u2014 and why patr\u00f3n continues to win lionel messi is a global sports icon and had a deep-pocketed strategic partner at his side. so why did his sports drink brand m\u00e1s+ fail?",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "failed",
@@ -3497,7 +3677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "and-why",
@@ -3517,7 +3697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "continues",
@@ -3537,7 +3717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "win-lionel",
@@ -3557,7 +3737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "messi",
@@ -3577,7 +3757,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "wilde",
@@ -3597,7 +3777,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "plus",
@@ -3617,7 +3797,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "roberto",
@@ -3637,7 +3817,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "david-rodriguez",
@@ -3657,7 +3837,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "new-beverages",
@@ -3677,7 +3857,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "bloom-enters",
@@ -3697,7 +3877,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "hydration",
@@ -3717,7 +3897,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "trip-gets",
@@ -3737,7 +3917,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "tropical",
@@ -3757,7 +3937,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "magic-mind",
@@ -3777,7 +3957,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "sleep-shot",
@@ -3797,7 +3977,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "trip",
@@ -3817,7 +3997,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "magic-mind",
@@ -3837,7 +4017,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "five-years",
@@ -3857,7 +4037,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "little-saints",
@@ -3877,7 +4057,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "staying-true",
@@ -3897,7 +4077,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "its-niche",
@@ -3917,7 +4097,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "when-megan",
@@ -3937,7 +4117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   },
   {
     "id": "klein",
@@ -3957,106 +4137,6 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "new-retailers",
-    "brand": "New Retailers",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc 2026: new retailers + investors added to 1:1 meetings bevnet live nyc 2026 attendees have the opportunity to request private, pre-scheduled, 10-minute 1:1 conversations with retail and",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "investors-added",
-    "brand": "Investors Added",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc 2026: new retailers + investors added to 1:1 meetings bevnet live nyc 2026 attendees have the opportunity to request private, pre-scheduled, 10-minute 1:1 conversations with retail and",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "meetings-bevnet",
-    "brand": "Meetings BevNET",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc 2026: new retailers + investors added to 1:1 meetings bevnet live nyc 2026 attendees have the opportunity to request private, pre-scheduled, 10-minute 1:1 conversations with retail and",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "live-nyc",
-    "brand": "Live NYC",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc 2026: new retailers + investors added to 1:1 meetings bevnet live nyc 2026 attendees have the opportunity to request private, pre-scheduled, 10-minute 1:1 conversations with retail and",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
-  },
-  {
-    "id": "sprouts-farmers",
-    "brand": "Sprouts Farmers",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: ompany bodi, has partnered with broadline distributor kehe and launched into 80 sprouts farmers market locations across the country.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-01"
+    "added_date": "2026-06-02"
   }
 ]
