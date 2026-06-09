@@ -17,7 +17,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "indie-io",
@@ -37,15 +37,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
-    "id": "energy-refreshers",
-    "brand": "Energy Refreshers",
+    "id": "keeping",
+    "brand": "Keeping",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the \u2018energy refreshers\u2019 wave is moving from qsrs to cpg refreshers, the fruit-forward, functional drinks often with moderate caffeination, is expanding from qsr chains into cpg beverage.",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: how mooala built a multi-million dollar brand by keeping it simple what if the secret to winning in cpg wasn\u2019t chasing the next trend \u2013 but staying focused on simple ingredients, a clear",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -57,15 +57,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
-    "id": "wave",
-    "brand": "Wave",
+    "id": "simple-what",
+    "brand": "Simple What",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the \u2018energy refreshers\u2019 wave is moving from qsrs to cpg refreshers, the fruit-forward, functional drinks often with moderate caffeination, is expanding from qsr chains into cpg beverage.",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: how mooala built a multi-million dollar brand by keeping it simple what if the secret to winning in cpg wasn\u2019t chasing the next trend \u2013 but staying focused on simple ingredients, a clear",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -77,15 +77,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
-    "id": "moving-from",
-    "brand": "Moving From",
+    "id": "juneshine-refreshes",
+    "brand": "JuneShine Refreshes",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the \u2018energy refreshers\u2019 wave is moving from qsrs to cpg refreshers, the fruit-forward, functional drinks often with moderate caffeination, is expanding from qsr chains into cpg beverage.",
+    "gap": "Mentioned in BevNet coverage. Context: juneshine refreshes, ramps up willie\u2019s as november hemp-derived thc ban looms juneshine co-founder forrest dein paraphrased willie\u2019s namesake, country music icon willie nelson, in a conversation with",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -97,15 +97,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
-    "id": "qsrs",
-    "brand": "QSRs",
+    "id": "ramps",
+    "brand": "Ramps",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the \u2018energy refreshers\u2019 wave is moving from qsrs to cpg refreshers, the fruit-forward, functional drinks often with moderate caffeination, is expanding from qsr chains into cpg beverage.",
+    "gap": "Mentioned in BevNet coverage. Context: juneshine refreshes, ramps up willie\u2019s as november hemp-derived thc ban looms juneshine co-founder forrest dein paraphrased willie\u2019s namesake, country music icon willie nelson, in a conversation with",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -117,15 +117,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
-    "id": "cpg-refreshers",
-    "brand": "CPG Refreshers",
+    "id": "willie",
+    "brand": "Willie",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the \u2018energy refreshers\u2019 wave is moving from qsrs to cpg refreshers, the fruit-forward, functional drinks often with moderate caffeination, is expanding from qsr chains into cpg beverage.",
+    "gap": "Mentioned in BevNet coverage. Context: juneshine refreshes, ramps up willie\u2019s as november hemp-derived thc ban looms juneshine co-founder forrest dein paraphrased willie\u2019s namesake, country music icon willie nelson, in a conversation with",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -137,7 +137,127 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "november-hemp",
+    "brand": "November Hemp",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: juneshine refreshes, ramps up willie\u2019s as november hemp-derived thc ban looms juneshine co-founder forrest dein paraphrased willie\u2019s namesake, country music icon willie nelson, in a conversation with",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "derived-thc",
+    "brand": "Derived THC",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: juneshine refreshes, ramps up willie\u2019s as november hemp-derived thc ban looms juneshine co-founder forrest dein paraphrased willie\u2019s namesake, country music icon willie nelson, in a conversation with",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "ban-looms",
+    "brand": "Ban Looms",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: juneshine refreshes, ramps up willie\u2019s as november hemp-derived thc ban looms juneshine co-founder forrest dein paraphrased willie\u2019s namesake, country music icon willie nelson, in a conversation with",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "juneshine",
+    "brand": "JuneShine",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: juneshine refreshes, ramps up willie\u2019s as november hemp-derived thc ban looms juneshine co-founder forrest dein paraphrased willie\u2019s namesake, country music icon willie nelson, in a conversation with",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "forrest-dein",
+    "brand": "Forrest Dein",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: , ramps up willie\u2019s as november hemp-derived thc ban looms juneshine co-founder forrest dein paraphrased willie\u2019s namesake, country music icon willie nelson, in a conversation with brewbound: \u201cstress",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "willie-nelson",
+    "brand": "Willie Nelson",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: shine co-founder forrest dein paraphrased willie\u2019s namesake, country music icon willie nelson, in a conversation with brewbound: \u201cstress is the biggest killer on the planet; cannabis is the best medic",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
   },
   {
     "id": "fishwife-anna-parmelee",
@@ -157,7 +277,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "highsnobiety-david-fischer",
@@ -177,7 +297,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "everyday-dose-jack-savage",
@@ -197,7 +317,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "heart---soil-paul-saladino",
@@ -217,7 +337,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "howler-brothers-adam-olson",
@@ -237,7 +357,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "surely-brandon-joldersma",
@@ -257,7 +377,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "4-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "gorgie-michelle-cordeiro-grant",
@@ -277,7 +397,7 @@
     "fractional_role": "Fractional Head of Influencer & Creator Partnerships",
     "headcount": "15-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "sunwink-eliza-ganesh",
@@ -297,7 +417,7 @@
     "fractional_role": "Fractional CMO / Head of Brand Partnerships",
     "headcount": "12",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "pilgrim-surf---supply-chris-gentile",
@@ -317,7 +437,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Retail Expansion",
     "headcount": "7-9",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "bandit-running-nils-arend",
@@ -337,167 +457,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "texas",
-    "brand": "Texas",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: texas ag opens investigation into \u2018deceptive\u2019 celsius marketing practices texas attorney general ken paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 9,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "opens-investigation",
-    "brand": "Opens Investigation",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: texas ag opens investigation into \u2018deceptive\u2019 celsius marketing practices texas attorney general ken paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 9,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "deceptive",
-    "brand": "Deceptive",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: texas ag opens investigation into \u2018deceptive\u2019 celsius marketing practices texas attorney general ken paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 9,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "celsius-marketing",
-    "brand": "Celsius Marketing",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: texas ag opens investigation into \u2018deceptive\u2019 celsius marketing practices texas attorney general ken paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 9,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "practices-texas",
-    "brand": "Practices Texas",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: texas ag opens investigation into \u2018deceptive\u2019 celsius marketing practices texas attorney general ken paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 9,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "attorney-general",
-    "brand": "Attorney General",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: texas ag opens investigation into \u2018deceptive\u2019 celsius marketing practices texas attorney general ken paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 9,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "ken-paxton",
-    "brand": "Ken Paxton",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: vestigation into \u2018deceptive\u2019 celsius marketing practices texas attorney general ken paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy drink brand has",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 9,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "celsius",
-    "brand": "Celsius",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: texas ag opens investigation into \u2018deceptive\u2019 celsius marketing practices texas attorney general ken paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 9,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "popagenda-gen-miller",
@@ -517,7 +477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "midwest-games-adam-orth",
@@ -537,7 +497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "taika-kal-freese",
@@ -557,7 +517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "clevr-blends-hannah-mendoza",
@@ -577,7 +537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "deux-sabeena-ladha",
@@ -597,7 +557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "halfday-lara-wyss",
@@ -617,7 +577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "dieux-skin-charlotte-palermino",
@@ -637,7 +597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "whitethorn-games-matthew-white",
@@ -657,7 +617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "diaspora-co-sana-javeri-kadri",
@@ -677,7 +637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "pangaia-amanda-parkes",
@@ -697,7 +657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "tony-s-chocolonely",
@@ -717,7 +677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "represent-george-heaton",
@@ -737,7 +697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "lomi-matt-bertulli",
@@ -757,7 +717,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "nguyen-coffee-supply-sahra-nguyen",
@@ -777,7 +737,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "canopy-ken-berkun",
@@ -797,7 +757,7 @@
     "fractional_role": "Fractional GTM Strategist",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "mela-watermelon-water-dominic-purpura",
@@ -817,7 +777,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "surreal-cereal-kit-gammell",
@@ -837,7 +797,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "aura-bora-paul-voge",
@@ -857,7 +817,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "odyssey-elixir-scott-frohman",
@@ -877,7 +837,7 @@
     "fractional_role": "Fractional Head of Creator & Brand Partnerships",
     "headcount": "10-18",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "wynk-casey-parzych",
@@ -897,7 +857,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "brami-snacks-aaron-gatti",
@@ -917,7 +877,7 @@
     "fractional_role": "Fractional Head of Brand & Influencer Partnerships",
     "headcount": "10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "alder-apparel-mikayla-wujec",
@@ -937,7 +897,7 @@
     "fractional_role": "Fractional Head of Partnerships / Fractional CMO",
     "headcount": "6",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "avec-drinks-alex-doman",
@@ -957,7 +917,7 @@
     "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "akupara-games-david-logan",
@@ -977,7 +937,7 @@
     "fractional_role": "Fractional Head of Business Development & Developer Partnerships",
     "headcount": "20-44",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "matter-of-fact-paul-baek",
@@ -997,7 +957,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships / Fractional CMO",
     "headcount": "16",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "corridor-nyc-dan-snyder",
@@ -1017,7 +977,7 @@
     "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
     "headcount": "17",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "adsum-pete-macnee",
@@ -1037,7 +997,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "metalwood-studio-cole-young",
@@ -1057,7 +1017,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "blackstock---weber-chris-echevarria",
@@ -1077,7 +1037,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM",
     "headcount": "7",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "paravel-indr--rockefeller",
@@ -1097,7 +1057,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "pakt-chad-rubin",
@@ -1117,7 +1077,7 @@
     "fractional_role": "Fractional Brand & GTM Operator",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "janji-dave-spandorfer",
@@ -1137,7 +1097,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "museum-of-peace-and-quiet-aaron-bondarof",
@@ -1157,7 +1117,7 @@
     "fractional_role": "Fractional Brand Partnerships & Collabs",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "blackbird-spyplane-jonah-weiner",
@@ -1177,7 +1137,7 @@
     "fractional_role": "Fractional Commercial Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "ghostly-international-sam-valenti-iv",
@@ -1197,7 +1157,247 @@
     "fractional_role": "Fractional Brand Partnerships & Licensing",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "taste-radio",
+    "brand": "Taste Radio",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: how mooala built a multi-million dollar brand by keeping it simple what if the secret to winning in cpg wasn\u2019t chasing the next trend \u2013 but staying focused on simple ingredients, a clear",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "how-mooala",
+    "brand": "How Mooala",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: how mooala built a multi-million dollar brand by keeping it simple what if the secret to winning in cpg wasn\u2019t chasing the next trend \u2013 but staying focused on simple ingredients, a clear",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "built",
+    "brand": "Built",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: how mooala built a multi-million dollar brand by keeping it simple what if the secret to winning in cpg wasn\u2019t chasing the next trend \u2013 but staying focused on simple ingredients, a clear",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "multi",
+    "brand": "Multi",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: how mooala built a multi-million dollar brand by keeping it simple what if the secret to winning in cpg wasn\u2019t chasing the next trend \u2013 but staying focused on simple ingredients, a clear",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "million-dollar",
+    "brand": "Million Dollar",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: how mooala built a multi-million dollar brand by keeping it simple what if the secret to winning in cpg wasn\u2019t chasing the next trend \u2013 but staying focused on simple ingredients, a clear",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "jeff-richards",
+    "brand": "Jeff Richards",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: g focused on simple ingredients, a clear brand promise, and flawless execution? jeff richards, founder and ceo of plant-based milk brand mooala, explains how a commitment to organic sourcing, clear po",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "mooala",
+    "brand": "Mooala",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: how mooala built a multi-million dollar brand by keeping it simple what if the secret to winning in cpg wasn\u2019t chasing the next trend \u2013 but staying focused on simple ingredients, a clear",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "aims",
+    "brand": "Aims",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: hoplark\u2019s brand refresh aims to boost discovery across channels hoplark is rolling out a comprehensive refresh this summer aimed at solidifying its identity across categories while broadening its reac",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "boost-discovery",
+    "brand": "Boost Discovery",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: hoplark\u2019s brand refresh aims to boost discovery across channels hoplark is rolling out a comprehensive refresh this summer aimed at solidifying its identity across categories while broadening its reac",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "across-channels",
+    "brand": "Across Channels",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: hoplark\u2019s brand refresh aims to boost discovery across channels hoplark is rolling out a comprehensive refresh this summer aimed at solidifying its identity across categories while broadening its reac",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "brewbound",
+    "brand": "Brewbound",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: sed willie\u2019s namesake, country music icon willie nelson, in a conversation with brewbound: \u201cstress is the biggest killer on the planet; cannabis is the best medicine.\u201d",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "stress",
+    "brand": "Stress",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: namesake, country music icon willie nelson, in a conversation with brewbound: \u201cstress is the biggest killer on the planet; cannabis is the best medicine.\u201d",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
   },
   {
     "id": "reyes-ceo",
@@ -1217,7 +1417,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "tom-day",
@@ -1237,7 +1437,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "rndc-deal",
@@ -1257,7 +1457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "scaling-spirits",
@@ -1277,7 +1477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "wine-business",
@@ -1297,7 +1497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "after",
@@ -1317,7 +1517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "reyes-beverage",
@@ -1337,7 +1537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "group",
@@ -1357,7 +1557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "registered",
@@ -1377,27 +1577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "bevnet-live",
-    "brand": "BevNET Live",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: 675+ registered for bevnet live nyc! register before we sell out on june 10+11, more than 675 founders, operators, retailers, investors, suppliers and service providers will head to bevnet live in nyc",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "register-before",
@@ -1417,7 +1597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "sell-out",
@@ -1437,7 +1617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "june",
@@ -1457,7 +1637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "wize-tea",
@@ -1477,7 +1657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "sold",
@@ -1497,7 +1677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "buyer-vancouver",
@@ -1517,7 +1697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "max-rivest",
@@ -1537,327 +1717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "why-saint",
-    "brand": "Why Saint",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: why saint spritz broke the rules nearly every ready-to-drink (rtd) startup founder hears the same piece of advice: stay narrow, go deep, and prove velocity before you scale. but saint spritz went a di",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "spritz-broke",
-    "brand": "Spritz Broke",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: why saint spritz broke the rules nearly every ready-to-drink (rtd) startup founder hears the same piece of advice: stay narrow, go deep, and prove velocity before you scale. but saint spritz went a di",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "the-rules",
-    "brand": "The Rules",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: why saint spritz broke the rules nearly every ready-to-drink (rtd) startup founder hears the same piece of advice: stay narrow, go deep, and prove velocity before you scale. but saint spritz went a di",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "nearly",
-    "brand": "Nearly",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: why saint spritz broke the rules nearly every ready-to-drink (rtd) startup founder hears the same piece of advice: stay narrow, go deep, and prove velocity before you scale. but saint spritz went a di",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "spritz",
-    "brand": "Spritz",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: why saint spritz broke the rules nearly every ready-to-drink (rtd) startup founder hears the same piece of advice: stay narrow, go deep, and prove velocity before you scale. but saint spritz went a di",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "inside",
-    "brand": "Inside",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: inside the rtd m&a frenzy: carbliss, spikedade and happy dad talk different strategies as ready-to-drink (rtd) m&a heats up, carbliss is open to potential acquirers, co-founder adam kroener made clear",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "frenzy",
-    "brand": "Frenzy",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: inside the rtd m&a frenzy: carbliss, spikedade and happy dad talk different strategies as ready-to-drink (rtd) m&a heats up, carbliss is open to potential acquirers, co-founder adam kroener made clear",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "carbliss",
-    "brand": "Carbliss",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: inside the rtd m&a frenzy: carbliss, spikedade and happy dad talk different strategies as ready-to-drink (rtd) m&a heats up, carbliss is open to potential acquirers, co-founder adam kroener made clear",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "spikedade",
-    "brand": "SpikedAde",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: inside the rtd m&a frenzy: carbliss, spikedade and happy dad talk different strategies as ready-to-drink (rtd) m&a heats up, carbliss is open to potential acquirers, co-founder adam kroener made clear",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "happy-dad",
-    "brand": "Happy Dad",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: inside the rtd m&a frenzy: carbliss, spikedade and happy dad talk different strategies as ready-to-drink (rtd) m&a heats up, carbliss is open to potential acquirers, co-founder adam kroener made clear",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "talk-different",
-    "brand": "Talk Different",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: inside the rtd m&a frenzy: carbliss, spikedade and happy dad talk different strategies as ready-to-drink (rtd) m&a heats up, carbliss is open to potential acquirers, co-founder adam kroener made clear",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "strategies",
-    "brand": "Strategies",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: inside the rtd m&a frenzy: carbliss, spikedade and happy dad talk different strategies as ready-to-drink (rtd) m&a heats up, carbliss is open to potential acquirers, co-founder adam kroener made clear",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "adam-kroener",
-    "brand": "Adam Kroener",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: o-drink (rtd) m&a heats up, carbliss is open to potential acquirers, co-founder adam kroener made clear wednesday at beer marketer\u2019s insights spring meeting.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "wednesday",
-    "brand": "Wednesday",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: up, carbliss is open to potential acquirers, co-founder adam kroener made clear wednesday at beer marketer\u2019s insights spring meeting.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "beer-marketer",
-    "brand": "Beer Marketer",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: is open to potential acquirers, co-founder adam kroener made clear wednesday at beer marketer\u2019s insights spring meeting.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "insights",
-    "brand": "Insights",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: tial acquirers, co-founder adam kroener made clear wednesday at beer marketer\u2019s insights spring meeting.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "recess-ben-witte",
@@ -1877,7 +1737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "brightland-aishwarya-iyer",
@@ -1897,7 +1757,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "fly-by-jing-jing-gao",
@@ -1917,7 +1777,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "joystick-ventures",
@@ -1937,7 +1797,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "fellow-traveller-chris-wright",
@@ -1957,7 +1817,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "beehiiv-tyler-denk",
@@ -1977,7 +1837,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "rowing-blazers-jack-carlson",
@@ -1997,7 +1857,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "omsom-vanessa-pham",
@@ -2017,7 +1877,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "madhappy-peiman-raf",
@@ -2037,7 +1897,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "mud-wtr-shane-heath",
@@ -2057,7 +1917,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "criquet-shirts-billy-nachman",
@@ -2077,7 +1937,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "freedom-games",
@@ -2097,7 +1957,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "oatly",
@@ -2117,7 +1977,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "ganni-ditte-reffstrup",
@@ -2137,7 +1997,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "monocle-tyler-brule",
@@ -2157,7 +2017,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "veja",
@@ -2177,7 +2037,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "dazed-media-jefferson-hack",
@@ -2197,7 +2057,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "patagonia-provisions",
@@ -2217,7 +2077,7 @@
     "fractional_role": "Fractional Brand & GTM Strategist",
     "headcount": "10-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "chamberlain-coffee",
@@ -2237,7 +2097,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "public-goods-morgan-hirsh",
@@ -2257,7 +2117,7 @@
     "fractional_role": "Fractional Head of Brand",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "graffiti-games-mihalis-belantis",
@@ -2277,7 +2137,7 @@
     "fractional_role": "Fractional Head of BD & Publisher Relations",
     "headcount": "1-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "trashy-kaitlin-mogentale",
@@ -2297,7 +2157,7 @@
     "fractional_role": "Fractional Brand Strategist & GTM Operator",
     "headcount": "3-6",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "dehen-1920-gary-hilde",
@@ -2317,7 +2177,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Creator Strategy",
     "headcount": "11-35",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "carter-young-carter-altman",
@@ -2337,7 +2197,7 @@
     "fractional_role": "Fractional GTM Strategist & Brand Partnerships",
     "headcount": "3-5",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "abroad",
@@ -2357,7 +2217,7 @@
     "fractional_role": "Fractional Partnerships & Brand",
     "headcount": "2-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "monos-victor-tam",
@@ -2377,7 +2237,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "30-60",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "ciele-athletics-mike-giles",
@@ -2397,7 +2257,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "rabbit-running-monica-devreese",
@@ -2417,7 +2277,7 @@
     "fractional_role": "Fractional Brand & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "awake-ny-angelo-baque",
@@ -2437,7 +2297,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-12",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "market-brandon-svarc",
@@ -2457,7 +2317,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "noon-goons-andrew-morrison",
@@ -2477,7 +2337,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "dirt-kate-lindsay",
@@ -2497,7 +2357,7 @@
     "fractional_role": "Fractional Brand & Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "every-dan-shipper",
@@ -2517,7 +2377,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "numero-group-ken-shipley",
@@ -2537,7 +2397,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "indify-will-huston",
@@ -2557,7 +2417,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "rogue-territory-kyle-mowat",
@@ -2577,7 +2437,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "imogene---willie-matt-eddmenson",
@@ -2597,7 +2457,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "billykirk-chris-bray",
@@ -2617,7 +2477,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "humble-games",
@@ -2637,7 +2497,7 @@
     "fractional_role": "Fractional Brand Partnerships & Creator",
     "headcount": "20-50",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "playstack-harvey-elliott",
@@ -2657,7 +2517,7 @@
     "fractional_role": "Fractional Brand & Creator Partnerships (US)",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "blind-barber-jeff-laub",
@@ -2677,27 +2537,7 @@
     "fractional_role": "Fractional Brand & Experiential Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "taste-radio",
-    "brand": "Taste Radio",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: taste radio: david\u2019s decadent bet, ai discovery & austin\u2019s top operators can protein be a decadent dessert? david is betting on it. we dig into the brand's new frozen desserts, unpack smash foods' $5",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 7,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "david",
@@ -2717,7 +2557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "decadent-bet",
@@ -2737,7 +2577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "discovery",
@@ -2757,7 +2597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "austin",
@@ -2777,7 +2617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "top-operators",
@@ -2797,7 +2637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "smash-foods",
@@ -2817,27 +2657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "celsius-holdings",
-    "brand": "Celsius Holdings",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: practices texas attorney general ken paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy drink brand has improperly marketed celsius and alani nu to mi",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 7,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "unitedmasters-steve-stoute",
@@ -2857,7 +2677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "dice-phil-hutcheon",
@@ -2877,7 +2697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "puck-jon-kelly",
@@ -2897,7 +2717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "outdoor-voices",
@@ -2917,7 +2737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "pietra-ronak-trivedi",
@@ -2937,7 +2757,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "tecovas-paul-hedrick",
@@ -2957,7 +2777,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "waterloo-sparkling-water-john-setz",
@@ -2977,7 +2797,687 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "distribution",
+    "brand": "Distribution",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: distribution: guru heads to sprouts; ma\u00efzly adds harris teeter canadian energy drink producer guru is expanding its guru lite and zero sugar lines into sprouts farmers market stores this month.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "guru-heads",
+    "brand": "GURU Heads",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: distribution: guru heads to sprouts; ma\u00efzly adds harris teeter canadian energy drink producer guru is expanding its guru lite and zero sugar lines into sprouts farmers market stores this month.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "sprouts",
+    "brand": "Sprouts",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: distribution: guru heads to sprouts; ma\u00efzly adds harris teeter canadian energy drink producer guru is expanding its guru lite and zero sugar lines into sprouts farmers market stores this month.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "adds-harris",
+    "brand": "Adds Harris",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: distribution: guru heads to sprouts; ma\u00efzly adds harris teeter canadian energy drink producer guru is expanding its guru lite and zero sugar lines into sprouts farmers market stores this month.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "teeter-canadian",
+    "brand": "Teeter Canadian",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: distribution: guru heads to sprouts; ma\u00efzly adds harris teeter canadian energy drink producer guru is expanding its guru lite and zero sugar lines into sprouts farmers market stores this month.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "guru",
+    "brand": "GURU",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: distribution: guru heads to sprouts; ma\u00efzly adds harris teeter canadian energy drink producer guru is expanding its guru lite and zero sugar lines into sprouts farmers market stores this month.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "guru-lite",
+    "brand": "GURU Lite",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: ma\u00efzly adds harris teeter canadian energy drink producer guru is expanding its guru lite and zero sugar lines into sprouts farmers market stores this month.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "zero-sugar",
+    "brand": "Zero Sugar",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: arris teeter canadian energy drink producer guru is expanding its guru lite and zero sugar lines into sprouts farmers market stores this month.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "sprouts-farmers",
+    "brand": "Sprouts Farmers",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: energy drink producer guru is expanding its guru lite and zero sugar lines into sprouts farmers market stores this month.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "hoplark",
+    "brand": "Hoplark",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: hoplark\u2019s brand refresh aims to boost discovery across channels hoplark is rolling out a comprehensive refresh this summer aimed at solidifying its identity across categories while broadening its reac",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "brand-refresh",
+    "brand": "Brand Refresh",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: hoplark\u2019s brand refresh aims to boost discovery across channels hoplark is rolling out a comprehensive refresh this summer aimed at solidifying its identity across categories while broadening its reac",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "bawi-closes",
+    "brand": "Bawi Closes",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bawi closes $6m to fuel west coast retail, foodservice expansion modern agua fresca maker bawi has closed a $6 million investment as it sets its sights on the west coast and moving into foodservice.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "fuel-west",
+    "brand": "Fuel West",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bawi closes $6m to fuel west coast retail, foodservice expansion modern agua fresca maker bawi has closed a $6 million investment as it sets its sights on the west coast and moving into foodservice.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "coast-retail",
+    "brand": "Coast Retail",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bawi closes $6m to fuel west coast retail, foodservice expansion modern agua fresca maker bawi has closed a $6 million investment as it sets its sights on the west coast and moving into foodservice.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "foodservice-expansion",
+    "brand": "Foodservice Expansion",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bawi closes $6m to fuel west coast retail, foodservice expansion modern agua fresca maker bawi has closed a $6 million investment as it sets its sights on the west coast and moving into foodservice.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "modern",
+    "brand": "Modern",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bawi closes $6m to fuel west coast retail, foodservice expansion modern agua fresca maker bawi has closed a $6 million investment as it sets its sights on the west coast and moving into foodservice.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "bawi",
+    "brand": "Bawi",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bawi closes $6m to fuel west coast retail, foodservice expansion modern agua fresca maker bawi has closed a $6 million investment as it sets its sights on the west coast and moving into foodservice.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "west-coast",
+    "brand": "West Coast",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bawi closes $6m to fuel west coast retail, foodservice expansion modern agua fresca maker bawi has closed a $6 million investment as it sets its sights on the west coast and moving into foodservice.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "bevnet-live",
+    "brand": "BevNET Live",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc takes place this week! join more than 700 beverage professionals in just two days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "nyc-takes",
+    "brand": "NYC Takes",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc takes place this week! join more than 700 beverage professionals in just two days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "place-this",
+    "brand": "Place This",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc takes place this week! join more than 700 beverage professionals in just two days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "week",
+    "brand": "Week",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc takes place this week! join more than 700 beverage professionals in just two days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "join-more",
+    "brand": "Join More",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc takes place this week! join more than 700 beverage professionals in just two days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "than",
+    "brand": "Than",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc takes place this week! join more than 700 beverage professionals in just two days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "beverage-professionals",
+    "brand": "Beverage Professionals",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: bevnet live nyc takes place this week! join more than 700 beverage professionals in just two days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "new-york",
+    "brand": "New York",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: es place this week! join more than 700 beverage professionals in just two days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous years told us the",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "city",
+    "brand": "City",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: this week! join more than 700 beverage professionals in just two days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous years told us the same thin",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "brands",
+    "brand": "Brands",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: wo days, new york city becomes the center of gravity for the beverage industry! brands who missed out previous years told us the same thing: they wished they'd gone. this year, you don\u2019t have to wish.",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "tom-brady",
+    "brand": "Tom Brady",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: tom brady teams with gopuff to launch good nut premium coconut water nfl legend tom brady continues to push further into the beverage industry, announcing a collaboration with gopuff on a new line of",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "teams-with",
+    "brand": "Teams With",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: tom brady teams with gopuff to launch good nut premium coconut water nfl legend tom brady continues to push further into the beverage industry, announcing a collaboration with gopuff on a new line of",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "gopuff",
+    "brand": "Gopuff",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: tom brady teams with gopuff to launch good nut premium coconut water nfl legend tom brady continues to push further into the beverage industry, announcing a collaboration with gopuff on a new line of",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "launch-good",
+    "brand": "Launch Good",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: tom brady teams with gopuff to launch good nut premium coconut water nfl legend tom brady continues to push further into the beverage industry, announcing a collaboration with gopuff on a new line of",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "nut-premium",
+    "brand": "Nut Premium",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: tom brady teams with gopuff to launch good nut premium coconut water nfl legend tom brady continues to push further into the beverage industry, announcing a collaboration with gopuff on a new line of",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
+  },
+  {
+    "id": "coconut-water",
+    "brand": "Coconut Water",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: tom brady teams with gopuff to launch good nut premium coconut water nfl legend tom brady continues to push further into the beverage industry, announcing a collaboration with gopuff on a new line of",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-06-09"
   },
   {
     "id": "profile",
@@ -2997,7 +3497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "swinger-tees",
@@ -3017,7 +3517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "golf",
@@ -3037,7 +3537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "next-frontier",
@@ -3057,7 +3557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "leisure",
@@ -3077,7 +3577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "energy-over",
@@ -3097,7 +3597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "ojai",
@@ -3117,7 +3617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "calif",
@@ -3137,7 +3637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "ingredion",
@@ -3157,7 +3657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "competitor-tate",
@@ -3177,7 +3677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "lyle",
@@ -3197,7 +3697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "deal-food",
@@ -3217,7 +3717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "tate",
@@ -3237,7 +3737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "spirits-distribution",
@@ -3257,7 +3757,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "punch-club",
@@ -3277,7 +3777,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "lands",
@@ -3297,7 +3797,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "total-wine",
@@ -3317,7 +3817,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "oishii-signs",
@@ -3337,7 +3837,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "with-sgws",
@@ -3357,7 +3857,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "european",
@@ -3377,7 +3877,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "alb-vodka",
@@ -3397,7 +3897,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "republic-national",
@@ -3417,7 +3917,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "distribution-company",
@@ -3437,7 +3937,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "rndc",
@@ -3457,7 +3957,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "new-beverages",
@@ -3477,7 +3977,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "nurri-launches",
@@ -3497,7 +3997,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "shake-for",
@@ -3517,7 +4017,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "kids",
@@ -3537,7 +4037,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "new-from",
@@ -3557,7 +4057,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "saratoga",
@@ -3577,7 +4077,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "slice",
@@ -3597,7 +4097,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "starbucks-summer",
@@ -3617,7 +4117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "nurri",
@@ -3637,7 +4137,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "club",
@@ -3657,7 +4157,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   },
   {
     "id": "there",
@@ -3677,506 +4177,6 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "florida",
-    "brand": "Florida",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: paxton has launched an investigation into celsius holdings, inc., alleging the florida-based energy drink brand has improperly marketed celsius and alani nu to minors.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "alani",
-    "brand": "Alani",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: leging the florida-based energy drink brand has improperly marketed celsius and alani nu to minors.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "but-saint",
-    "brand": "But Saint",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: ame piece of advice: stay narrow, go deep, and prove velocity before you scale. but saint spritz went a different direction, and so far, it has paid off.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "review",
-    "brand": "Review",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: review: summer camp puts craft iced tea in your pocket sunglasses, sunscreen and iced tea. could summer camp's innovative iced tea liquid sticks be a new seasonal staple? we explore.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "summer-camp",
-    "brand": "Summer Camp",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: review: summer camp puts craft iced tea in your pocket sunglasses, sunscreen and iced tea. could summer camp's innovative iced tea liquid sticks be a new seasonal staple? we explore.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "puts-craft",
-    "brand": "Puts Craft",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: review: summer camp puts craft iced tea in your pocket sunglasses, sunscreen and iced tea. could summer camp's innovative iced tea liquid sticks be a new seasonal staple? we explore.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "iced-tea",
-    "brand": "Iced Tea",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: review: summer camp puts craft iced tea in your pocket sunglasses, sunscreen and iced tea. could summer camp's innovative iced tea liquid sticks be a new seasonal staple? we explore.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "your-pocket",
-    "brand": "Your Pocket",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: review: summer camp puts craft iced tea in your pocket sunglasses, sunscreen and iced tea. could summer camp's innovative iced tea liquid sticks be a new seasonal staple? we explore.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "sunglasses",
-    "brand": "Sunglasses",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: review: summer camp puts craft iced tea in your pocket sunglasses, sunscreen and iced tea. could summer camp's innovative iced tea liquid sticks be a new seasonal staple? we explore.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "could-summer",
-    "brand": "Could Summer",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: mer camp puts craft iced tea in your pocket sunglasses, sunscreen and iced tea. could summer camp's innovative iced tea liquid sticks be a new seasonal staple? we explore.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "camp",
-    "brand": "Camp",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: review: summer camp puts craft iced tea in your pocket sunglasses, sunscreen and iced tea. could summer camp's innovative iced tea liquid sticks be a new seasonal staple? we explore.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "distribution",
-    "brand": "Distribution",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: recess makes club debut as \u2018modern unwind\u2019 space heats up recess has made its club channel debut through a new partnership with costco, where it has launched a 15-pack case of its zero p",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "recess-makes",
-    "brand": "Recess Makes",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: recess makes club debut as \u2018modern unwind\u2019 space heats up recess has made its club channel debut through a new partnership with costco, where it has launched a 15-pack case of its zero p",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "club-debut",
-    "brand": "Club Debut",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: recess makes club debut as \u2018modern unwind\u2019 space heats up recess has made its club channel debut through a new partnership with costco, where it has launched a 15-pack case of its zero p",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "modern-unwind",
-    "brand": "Modern Unwind",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: recess makes club debut as \u2018modern unwind\u2019 space heats up recess has made its club channel debut through a new partnership with costco, where it has launched a 15-pack case of its zero p",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "space-heats",
-    "brand": "Space Heats",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: distribution: recess makes club debut as \u2018modern unwind\u2019 space heats up recess has made its club channel debut through a new partnership with costco, where it has launched a 15-pack case of its zero p",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "costco",
-    "brand": "Costco",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: heats up recess has made its club channel debut through a new partnership with costco, where it has launched a 15-pack case of its zero proof mocktails.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "zero-proof",
-    "brand": "Zero Proof",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: ough a new partnership with costco, where it has launched a 15-pack case of its zero proof mocktails.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "mocktails",
-    "brand": "Mocktails",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: partnership with costco, where it has launched a 15-pack case of its zero proof mocktails.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "the-daily",
-    "brand": "The Daily",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the daily pour acquires whiskey riot, expanding spirits events platform the daily pour has acquired whiskey riot, a leading whiskey festival that travels the country.\u00a0the deal marks the daily pour\u2019s t",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "pour-acquires",
-    "brand": "Pour Acquires",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the daily pour acquires whiskey riot, expanding spirits events platform the daily pour has acquired whiskey riot, a leading whiskey festival that travels the country.\u00a0the deal marks the daily pour\u2019s t",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "whiskey-riot",
-    "brand": "Whiskey Riot",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the daily pour acquires whiskey riot, expanding spirits events platform the daily pour has acquired whiskey riot, a leading whiskey festival that travels the country.\u00a0the deal marks the daily pour\u2019s t",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "expanding-spirits",
-    "brand": "Expanding Spirits",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the daily pour acquires whiskey riot, expanding spirits events platform the daily pour has acquired whiskey riot, a leading whiskey festival that travels the country.\u00a0the deal marks the daily pour\u2019s t",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "events-platform",
-    "brand": "Events Platform",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the daily pour acquires whiskey riot, expanding spirits events platform the daily pour has acquired whiskey riot, a leading whiskey festival that travels the country.\u00a0the deal marks the daily pour\u2019s t",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
-  },
-  {
-    "id": "pour",
-    "brand": "Pour",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: the daily pour acquires whiskey riot, expanding spirits events platform the daily pour has acquired whiskey riot, a leading whiskey festival that travels the country.\u00a0the deal marks the daily pour\u2019s t",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-06-08"
+    "added_date": "2026-06-09"
   }
 ]
