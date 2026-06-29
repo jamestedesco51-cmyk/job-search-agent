@@ -1594,12 +1594,22 @@ def scrape_fractionaljobs_io():
         # Also collect all external links (company URLs and apply links)
         ext_links = [a.get("href", "") for a in soup.find_all("a", href=True)
                      if a.get("href", "").startswith("http") and "fractionaljobs" not in a.get("href", "")]
+        FRACTIONAL_RELEVANT = [
+            "brand", "market", "partner", "creative", "content", "growth",
+            "gtm", "go-to-market", "operator", "strategy", "strategist",
+            "campaign", "collab", "influencer", "communications", "pr ",
+            "experiential", "head of", "cmo", "director",
+        ]
         ext_idx = 0
         for i in range(1, len(h3_texts) - 2, 3):
             company = h3_texts[i]
             sep = h3_texts[i + 1]
             title = h3_texts[i + 2]
             if sep != "-" or not company or not title:
+                continue
+            # Only pass through roles relevant to James's skill set
+            if not any(k in title.lower() for k in FRACTIONAL_RELEVANT):
+                ext_idx += 1
                 continue
             # Grab the next available external link as the apply URL
             url = ext_links[ext_idx] if ext_idx < len(ext_links) else "https://www.fractionaljobs.io/"
