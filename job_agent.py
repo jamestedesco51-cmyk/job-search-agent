@@ -302,7 +302,7 @@ BIG_CORP_PENALTY = [
     "ford", "gm", "toyota", "honda", "valvoline",
     # big wellness (already at scale, highly competitive)
     "whoop", "oura", "noom", "betterhelp", "hims", "ro health",
-    "olipop", "liquid death", "athletic greens", "ag1",
+    "olipop", "athletic greens", "ag1",
     "calm", "headspace", "talkspace",
     # big hospitality / travel / cruise
     "marriott", "hilton", "hyatt", "intercontinental",
@@ -698,6 +698,14 @@ def score_job(title, description="", company=""):
         if kw in text:
             score -= 5
 
+    # Fractional / contract / part-time — these are exactly what James is targeting
+    # A "Fractional Brand Manager" should surface higher than a regular one
+    if any(kw in title_lower for kw in ["fractional", "contract", "part-time", "part time", "interim"]):
+        score += 3
+    # "Freelance" or "consulting" in title also signals flexible engagement
+    if any(kw in title_lower for kw in ["freelance", "consulting", "consultant", "as-needed", "retainer"]):
+        score += 2
+
     # Team-based roles are a strong positive signal — James thrives in collaborative environments
     team_signals = ["team", "collaborate", "cross-functional", "work with", "partner with",
                     "alongside", "joint", "collective", "crew", "in-house"]
@@ -724,7 +732,9 @@ def score_job(title, description="", company=""):
         score -= 4
 
     # C-suite and above — hard out
-    if any(sr in title_lower for sr in ["svp", "evp", "chief ", "cmo", "cco", "ceo"]):
+    # Exception: "fractional CMO" is a target role, don't penalize it
+    is_fractional_cmo = "fractional" in title_lower and "cmo" in title_lower
+    if not is_fractional_cmo and any(sr in title_lower for sr in ["svp", "evp", "chief ", "cmo", "cco", "ceo"]):
         score -= 10
 
     if "austin" in text or "austin, tx" in text:
@@ -1539,6 +1549,29 @@ def scrape_linkedin_contract():
         "brand advisor",
         "marketing advisor",
         "growth advisor",
+        # Role-specific fractional variants
+        "fractional brand manager",
+        "fractional creative strategist",
+        "fractional influencer marketing",
+        "fractional creative producer",
+        "fractional head of content",
+        "fractional head of brand",
+        "fractional ecommerce",
+        "fractional partnerships director",
+        "contract brand strategist",
+        "contract influencer marketing",
+        "contract creative strategist",
+        "contract head of growth",
+        "part-time marketing manager",
+        "part-time content strategist",
+        "part-time creative director",
+        "interim head of brand",
+        "interim marketing director",
+        "freelance brand strategist",
+        "freelance creative director",
+        "freelance partnerships manager",
+        "freelance marketing manager",
+        "freelance content strategist",
     ]
     seen = set()
     for q in fractional_queries:
