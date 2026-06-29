@@ -1971,15 +1971,6 @@ def seed_known_prospects():
     print("  Seeding known prospects...")
 
     add_prospect(
-        brand="Opulist",
-        gap="Active retainer client. Built the entire partnership function from scratch — closed $50K+ in brand and institutional partnerships in the first two quarters with no existing program, pricing framework, or deal history.",
-        instagram="https://instagram.com/opulist",
-        website="https://opulist.co",
-        industry="Editorial / Media",
-        score=10,
-        notes="Active retainer",
-    )
-    add_prospect(
         brand="indie.io",
         gap="Active contracting engagement. Built outbound developer acquisition pipeline from the ground up — 150% increase in outbound activity, 40% increase in qualified conversations.",
         website="https://indie.io",
@@ -3042,13 +3033,13 @@ def seed_known_prospects():
         founder="",
         contact="",
         contact_title="Founder",
-        gap="Abroad is building a travel lifestyle brand around intentional, slower travel. Editorial-forward, community-driven, founder-operated. The Opulist experience maps directly here — turning engaged travel content into commercial partnerships with hotels, gear, and experience brands.",
+        gap="Abroad is building a travel lifestyle brand around intentional, slower travel. Editorial-forward, community-driven, founder-operated. Strong fit for turning engaged travel content into commercial partnerships with hotels, gear, and experience brands.",
         instagram="https://instagram.com/abroad",
         website="https://abroadlife.com",
         industry="Travel / Editorial / Lifestyle",
         revenue_est="Under $2M",
         score=7,
-        notes="Early stage — Opulist background is a direct match",
+        notes="Early stage — travel editorial background is a direct match",
         fractional_role="Fractional Partnerships & Brand",
         headcount="2-8",
         engagement_type="fractional",
