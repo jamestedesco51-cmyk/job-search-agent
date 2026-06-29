@@ -3607,9 +3607,13 @@ def seed_known_agencies():
     ]
 
 def scrape_product_hunt_prospects():
-    """Scrape Product Hunt for recent DTC/lifestyle/gaming launches."""
+    """Scrape Product Hunt for recent brand launches across all target verticals."""
     print("  Scraping Product Hunt for prospects...")
-    categories = ["consumer-goods", "lifestyle", "gaming", "health-fitness", "food-beverage"]
+    categories = [
+        "gaming", "creator-tools", "podcasts", "music", "design-tools",
+        "lifestyle", "health-fitness", "sports", "travel", "fashion",
+        "consumer-goods", "social-media", "content-creation",
+    ]
     for cat in categories:
         try:
             url = f"https://www.producthunt.com/topics/{cat}"
@@ -3708,6 +3712,185 @@ def scrape_bevnet():
     except Exception:
         pass
 
+def scrape_gaming_prospects():
+    """Scrape gaming industry news for emerging indie studios and publishers."""
+    print("  Scanning gaming industry for prospects...")
+    feeds = [
+        ("https://www.gamesindustry.biz/feed", "Gaming / Indie Publishing"),
+        ("https://www.indiegames.com/feed", "Gaming / Indie"),
+        ("https://hitmarker.net/feed", "Gaming / Esports"),
+    ]
+    for feed_url, industry in feeds:
+        try:
+            feed = feedparser.parse(feed_url)
+            for entry in feed.entries[:12]:
+                content_raw = entry.get("content", [{}])
+                content_html = content_raw[0].get("value", entry.get("summary", "")) if content_raw else entry.get("summary", "")
+                content = BeautifulSoup(content_html, "html.parser").get_text()
+                title = entry.get("title", "")
+                full_text = f"{title} {content}"
+                brand_candidates = re.findall(r"\b([A-Z][a-zA-Z]{2,20}(?:\s(?:Games?|Studios?|Interactive|Publishing|Entertainment|Media))?)\b", full_text)
+                checked = set()
+                for brand in brand_candidates:
+                    if brand in checked or brand in seen_brands or len(brand) < 4:
+                        continue
+                    skip_words = {"The", "This", "That", "They", "When", "Where", "Which", "With",
+                                  "From", "Have", "Been", "Their", "What", "Also", "More", "Game",
+                                  "Games", "News", "New", "New", "Studios", "Here", "Read", "View"}
+                    if brand in skip_words:
+                        continue
+                    checked.add(brand)
+                    idx = full_text.find(brand)
+                    ctx = full_text[max(0, idx - 80):idx + 200].lower()
+                    sc = score_prospect(brand, ctx, industry)
+                    if sc >= 4:
+                        add_prospect(
+                            brand=brand,
+                            gap=f"Emerging studio or publisher discovered via gaming industry press. Context: {ctx[:180].strip()}",
+                            industry=industry,
+                            score=sc,
+                            notes="Gaming industry discovery",
+                        )
+        except Exception:
+            pass
+
+
+def scrape_music_culture_prospects():
+    """Scrape music and culture press for emerging independent labels and platforms."""
+    print("  Scanning music/culture press for prospects...")
+    feeds = [
+        ("https://pitchfork.com/feed/feed-news/rss", "Music / Culture"),
+        ("https://www.billboard.com/feed/", "Music / Culture"),
+        ("https://www.thefader.com/rss", "Music / Culture / Editorial"),
+    ]
+    for feed_url, industry in feeds:
+        try:
+            feed = feedparser.parse(feed_url)
+            for entry in feed.entries[:8]:
+                content_raw = entry.get("content", [{}])
+                content_html = content_raw[0].get("value", entry.get("summary", "")) if content_raw else entry.get("summary", "")
+                content = BeautifulSoup(content_html, "html.parser").get_text()
+                title = entry.get("title", "")
+                full_text = f"{title} {content}"
+                # Look for label, platform, brand-like names
+                brand_candidates = re.findall(r"\b([A-Z][a-zA-Z]{2,20}(?:\s(?:Records?|Music|Label|Collective|Sound|Media|Entertainment))?)\b", full_text)
+                checked = set()
+                for brand in brand_candidates:
+                    if brand in checked or brand in seen_brands or len(brand) < 4:
+                        continue
+                    skip_words = {"The", "This", "That", "They", "When", "Where", "Which", "With",
+                                  "From", "Have", "Been", "Their", "What", "Also", "More", "Music",
+                                  "Records", "Label", "Artist", "Album", "Song", "Tour", "Read"}
+                    if brand in skip_words:
+                        continue
+                    checked.add(brand)
+                    idx = full_text.find(brand)
+                    ctx = full_text[max(0, idx - 80):idx + 200].lower()
+                    if not any(k in ctx for k in ["label", "platform", "brand", "partner", "launch", "indie", "independent", "distribute", "deal"]):
+                        continue
+                    sc = score_prospect(brand, ctx, industry)
+                    if sc >= 5:
+                        add_prospect(
+                            brand=brand,
+                            gap=f"Independent music entity with commercial potential. Context: {ctx[:180].strip()}",
+                            industry=industry,
+                            score=sc,
+                            notes="Music/culture press discovery",
+                        )
+        except Exception:
+            pass
+
+
+def scrape_fashion_streetwear_prospects():
+    """Scrape fashion/streetwear media for emerging brand mentions."""
+    print("  Scanning fashion/streetwear media for prospects...")
+    feeds = [
+        ("https://hypebeast.com/feed", "Streetwear / Fashion / Culture"),
+        ("https://highsnobiety.com/feed", "Fashion / Menswear / Culture"),
+        ("https://sneakernews.com/feed", "Streetwear / Footwear / Culture"),
+    ]
+    for feed_url, industry in feeds:
+        try:
+            feed = feedparser.parse(feed_url)
+            for entry in feed.entries[:10]:
+                content_raw = entry.get("content", [{}])
+                content_html = content_raw[0].get("value", entry.get("summary", "")) if content_raw else entry.get("summary", "")
+                content = BeautifulSoup(content_html, "html.parser").get_text()
+                title = entry.get("title", "")
+                full_text = f"{title} {content}"
+                brand_candidates = re.findall(r"\b([A-Z][a-zA-Z]{2,20}(?:\s[A-Z][a-zA-Z]{2,14})?)\b", full_text)
+                checked = set()
+                for brand in brand_candidates:
+                    if brand in checked or brand in seen_brands or len(brand) < 4:
+                        continue
+                    skip_words = {"The", "This", "That", "They", "When", "Where", "Which", "With",
+                                  "From", "Have", "Been", "Their", "What", "Also", "More", "New",
+                                  "Drop", "Release", "Style", "Look", "Week", "Read", "Shop"}
+                    if brand in skip_words:
+                        continue
+                    checked.add(brand)
+                    idx = full_text.find(brand)
+                    ctx = full_text[max(0, idx - 80):idx + 200].lower()
+                    if not any(k in ctx for k in ["brand", "label", "launch", "collab", "collection", "indie", "independent", "founder", "drop", "exclusive"]):
+                        continue
+                    sc = score_prospect(brand, ctx, industry)
+                    if sc >= 5:
+                        add_prospect(
+                            brand=brand,
+                            gap=f"Emerging fashion or streetwear brand with cultural traction. Context: {ctx[:180].strip()}",
+                            industry=industry,
+                            score=sc,
+                            notes="Fashion/streetwear media discovery",
+                        )
+        except Exception:
+            pass
+
+
+def scrape_creator_economy_prospects():
+    """Scrape creator economy and newsletter media for emerging platforms and brands."""
+    print("  Scanning creator economy media for prospects...")
+    feeds = [
+        ("https://www.theinformation.com/feed", "Creator Economy / Media"),
+        ("https://www.axios.com/feeds/feed.rss", "Creator Economy / Media"),
+        ("https://trends.vc/feed", "Creator Economy / Startup"),
+    ]
+    for feed_url, industry in feeds:
+        try:
+            feed = feedparser.parse(feed_url)
+            for entry in feed.entries[:8]:
+                content_raw = entry.get("content", [{}])
+                content_html = content_raw[0].get("value", entry.get("summary", "")) if content_raw else entry.get("summary", "")
+                content = BeautifulSoup(content_html, "html.parser").get_text()
+                title = entry.get("title", "")
+                full_text = f"{title} {content}"
+                brand_candidates = re.findall(r"\b([A-Z][a-zA-Z]{2,20}(?:\s[A-Z][a-zA-Z]{2,14})?)\b", full_text)
+                checked = set()
+                for brand in brand_candidates:
+                    if brand in checked or brand in seen_brands or len(brand) < 4:
+                        continue
+                    skip_words = {"The", "This", "That", "They", "When", "Where", "Which", "With",
+                                  "From", "Have", "Been", "Their", "What", "Also", "More", "New",
+                                  "Read", "Here", "View", "Said", "Says", "Will", "Would"}
+                    if brand in skip_words:
+                        continue
+                    checked.add(brand)
+                    idx = full_text.find(brand)
+                    ctx = full_text[max(0, idx - 80):idx + 200].lower()
+                    if not any(k in ctx for k in ["creator", "newsletter", "platform", "brand", "startup", "launch", "funding", "raise", "series", "partner"]):
+                        continue
+                    sc = score_prospect(brand, ctx, industry)
+                    if sc >= 5:
+                        add_prospect(
+                            brand=brand,
+                            gap=f"Creator economy platform or brand with commercial potential. Context: {ctx[:180].strip()}",
+                            industry=industry,
+                            score=sc,
+                            notes="Creator economy media discovery",
+                        )
+        except Exception:
+            pass
+
+
 def scrape_words_of_mouth():
     """Parse Words of Mouth newsletter for emerging DTC brand mentions."""
     print("  Scanning Words of Mouth newsletter...")
@@ -3797,11 +3980,42 @@ scrape_product_hunt_prospects()
 scrape_thingtesting()
 scrape_bevnet()
 scrape_words_of_mouth()
+scrape_gaming_prospects()
+scrape_music_culture_prospects()
+scrape_fashion_streetwear_prospects()
+scrape_creator_economy_prospects()
 
 # Agencies are a static curated list — no scraping needed
 known_agencies = seed_known_agencies()
 
 prospects.sort(key=lambda x: x["score"], reverse=True)
+
+# ── Industry cap — prevent any one category from flooding the list ────────────
+# Food & Bev / DTC dynamic scrapers can pull 100+ similar brands.
+# Cap each broad category so the dashboard stays diverse.
+INDUSTRY_CAPS = {
+    "food": 15,
+    "beverage": 15,
+    "dtc": 10,
+    "cpg": 8,
+    "gaming": 20,
+    "streetwear": 15,
+    "fashion": 15,
+    "creator economy": 15,
+    "music": 12,
+}
+industry_counts: dict = {}
+capped_prospects = []
+for p in prospects:
+    ind = p.get("industry", "").lower()
+    # Find which cap bucket this prospect belongs to
+    bucket = next((k for k in INDUSTRY_CAPS if k in ind), None)
+    if bucket:
+        industry_counts[bucket] = industry_counts.get(bucket, 0) + 1
+        if industry_counts[bucket] > INDUSTRY_CAPS[bucket]:
+            continue  # skip — over the cap for this category
+    capped_prospects.append(p)
+prospects = capped_prospects
 
 # Contact enrichment for prospects (Apollo first, Hunter fallback)
 print("\n--- CONTACT ENRICHMENT (PROSPECTS) ---")
