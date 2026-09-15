@@ -1,5 +1,105 @@
 [
   {
+    "id": "three-years",
+    "brand": "Three Years",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: from $2m to $24m in three years. why katie\u2019s is thriving. katie\u2019s, a chef-driven italian cpg brand, has gone from $2 million in revenue to over $24 million in just three years and founder",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 12,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "why-katie",
+    "brand": "Why Katie",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: from $2m to $24m in three years. why katie\u2019s is thriving. katie\u2019s, a chef-driven italian cpg brand, has gone from $2 million in revenue to over $24 million in just three years and founder",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 12,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "thriving",
+    "brand": "Thriving",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: from $2m to $24m in three years. why katie\u2019s is thriving. katie\u2019s, a chef-driven italian cpg brand, has gone from $2 million in revenue to over $24 million in just three years and founder",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 12,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "katie",
+    "brand": "Katie",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: from $2m to $24m in three years. why katie\u2019s is thriving. katie\u2019s, a chef-driven italian cpg brand, has gone from $2 million in revenue to over $24 million in just three years and founder",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 12,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "italian-cpg",
+    "brand": "Italian CPG",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: rom $2m to $24m in three years. why katie\u2019s is thriving. katie\u2019s, a chef-driven italian cpg brand, has gone from $2 million in revenue to over $24 million in just three years and founder katie lee is",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 12,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
     "id": "indie-io",
     "brand": "indie.io",
     "founder": "",
@@ -17,15 +117,55 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "zoom-vapor",
-    "brand": "Zoom Vapor",
+    "id": "taste-radio",
+    "brand": "Taste Radio",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: \"cactus court\u201d tennis collection featuring streetwear and performance apparel, zoom vapor 12 hc sneakers, and blue ostrich-leather air force 1 lows. it\u2019s classic cactus jack x nik",
+    "gap": "Mentioned in BevNet coverage. Context: taste radio: from $2m to $24m in three years. why katie\u2019s is thriving. katie\u2019s, a chef-driven italian cpg brand, has gone from $2 million in revenue to over $24 million in just three years and founder",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "katie-lee",
+    "brand": "Katie Lee",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Mentioned in BevNet coverage. Context: from $2 million in revenue to over $24 million in just three years and founder katie lee is still running the business like a restaurateur. she shares how she built a national brand with chainwide di",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Food & Beverage / DTC",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "BevNet discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "crafts",
+    "brand": "Crafts",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: same goes for fortgens' collaborative asics, created for the sportswear giant's crafts for minds program (a portion of the shoes' proceeds will go to the charitable ffort foundatio",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -37,7 +177,27 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "minds",
+    "brand": "Minds",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: or fortgens' collaborative asics, created for the sportswear giant's crafts for minds program (a portion of the shoes' proceeds will go to the charitable ffort foundation, based on",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
   },
   {
     "id": "fishwife-anna-parmelee",
@@ -57,7 +217,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "highsnobiety-david-fischer",
@@ -77,7 +237,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "everyday-dose-jack-savage",
@@ -97,7 +257,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "heart---soil-paul-saladino",
@@ -117,7 +277,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "howler-brothers-adam-olson",
@@ -137,7 +297,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "surely-brandon-joldersma",
@@ -157,7 +317,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "4-8",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "gorgie-michelle-cordeiro-grant",
@@ -177,7 +337,7 @@
     "fractional_role": "Fractional Head of Influencer & Creator Partnerships",
     "headcount": "15-25",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "sunwink-eliza-ganesh",
@@ -197,7 +357,7 @@
     "fractional_role": "Fractional CMO / Head of Brand Partnerships",
     "headcount": "12",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "pilgrim-surf---supply-chris-gentile",
@@ -217,7 +377,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Retail Expansion",
     "headcount": "7-9",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "bandit-running-nils-arend",
@@ -237,7 +397,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "popagenda-gen-miller",
@@ -257,7 +417,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "midwest-games-adam-orth",
@@ -277,7 +437,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "taika-kal-freese",
@@ -297,7 +457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "clevr-blends-hannah-mendoza",
@@ -317,7 +477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "deux-sabeena-ladha",
@@ -337,7 +497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "halfday-lara-wyss",
@@ -357,7 +517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "dieux-skin-charlotte-palermino",
@@ -377,7 +537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "whitethorn-games-matthew-white",
@@ -397,7 +557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "diaspora-co-sana-javeri-kadri",
@@ -417,7 +577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "pangaia-amanda-parkes",
@@ -437,7 +597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "tony-s-chocolonely",
@@ -457,7 +617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "represent-george-heaton",
@@ -477,7 +637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "lomi-matt-bertulli",
@@ -497,27 +657,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "nguyen-coffee-supply-sahra-nguyen",
-    "brand": "Nguyen Coffee Supply",
-    "founder": "Sahra Nguyen",
-    "contact": "Sahra Nguyen",
-    "contact_title": "Founder / CEO",
-    "gap": "Nguyen Coffee Supply has built a strong brand identity around Vietnamese coffee culture with a devoted community. Small team, founder-operated, no dedicated brand partnership or commercial infrastructure operator.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/nguyencoffeesupply",
-    "website": "https://nguyencoffeesupply.com",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "$2M-8M",
-    "score": 8,
-    "notes": "Small team \u2014 high responsiveness likelihood",
-    "region": "US",
-    "fractional_role": "Fractional Head of Partnerships",
-    "headcount": "5-15",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "canopy-ken-berkun",
@@ -537,47 +677,7 @@
     "fractional_role": "Fractional GTM Strategist",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "mela-watermelon-water-dominic-purpura",
-    "brand": "Mela Watermelon Water",
-    "founder": "Dominic Purpura",
-    "contact": "Dominic Purpura",
-    "contact_title": "Co-Founder / CEO",
-    "gap": "Mela has built a genuinely differentiated product in the functional water space and is growing fast. Very small team, founder-operated, no dedicated partnerships or commercial infrastructure operator. Exactly the profile for fractional engagement.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/drinkwatermelon",
-    "website": "https://drinkwatermelon.com",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "$1M-5M",
-    "score": 8,
-    "notes": "Early stage \u2014 high responsiveness likelihood",
-    "region": "US",
-    "fractional_role": "Fractional Head of Partnerships",
-    "headcount": "3-10",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "surreal-cereal-kit-gammell",
-    "brand": "Surreal Cereal",
-    "founder": "Kit Gammell",
-    "contact": "Kit Gammell",
-    "contact_title": "Co-Founder / CEO",
-    "gap": "Surreal has built a brand with a genuinely funny, irreverent voice in the functional food space. UK-based but active in the US market. Small team, founder-operated, strong brand, thin commercial infrastructure.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/eatmoresurreal",
-    "website": "https://eatmoresurreal.com",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "$2M-8M",
-    "score": 8,
-    "notes": "UK-based, active US expansion \u2014 strong cultural fit",
-    "region": "EU",
-    "fractional_role": "Fractional Head of Partnerships",
-    "headcount": "5-15",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "aura-bora-paul-voge",
@@ -597,7 +697,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "15",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "odyssey-elixir-scott-frohman",
@@ -617,7 +717,7 @@
     "fractional_role": "Fractional Head of Creator & Brand Partnerships",
     "headcount": "10-18",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "wynk-casey-parzych",
@@ -637,27 +737,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "brami-snacks-aaron-gatti",
-    "brand": "Brami Snacks",
-    "founder": "Aaron Gatti",
-    "contact": "Aaron Gatti",
-    "contact_title": "Founder & CEO",
-    "gap": "Plant-based lupini bean protein snack brand, 10-person team, doubling revenue YoY with Assembled Brands growth capital deployed. No partnerships function. Lupini bean is a breakout ingredient with influencer and collab potential \u2014 no one is building brand deals or systematically running influencer programs at Brami. Founder does it all.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/enjoybrami",
-    "website": "https://enjoybrami.com",
-    "industry": "Food & Beverage / CPG",
-    "revenue_est": "$3M-8M",
-    "score": 8,
-    "notes": "Doubling YoY with capital deployed, no partnerships operator",
-    "region": "US",
-    "fractional_role": "Fractional Head of Brand & Influencer Partnerships",
-    "headcount": "10",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "alder-apparel-mikayla-wujec",
@@ -677,27 +757,7 @@
     "fractional_role": "Fractional Head of Partnerships / Fractional CMO",
     "headcount": "6",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "avec-drinks-alex-doman",
-    "brand": "AVEC Drinks",
-    "founder": "Alex Doman",
-    "contact": "Alex Doman",
-    "contact_title": "Co-Founder & CEO",
-    "gap": "Premium cocktail mixers DTC brand backed by Pharrell's Black Ambition fund and Gather Ventures. Founder Alex Doman personally hand-selling and delivering to his first 30 accounts out of a 1995 Chevy Van \u2014 still a one-man commercial band. 1,200 retail doors but no brand collab program, no influencer partnership system, no structured on-premise sales infrastructure.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/withavec",
-    "website": "https://drinkavec.com",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "$600K-2M",
-    "score": 8,
-    "notes": "Pharrell / Black Ambition backed \u2014 cultural credibility, founder-only commercial op",
-    "region": "US",
-    "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
-    "headcount": "3-8",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "akupara-games-david-logan",
@@ -717,7 +777,7 @@
     "fractional_role": "Fractional Head of Business Development & Developer Partnerships",
     "headcount": "20-44",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "matter-of-fact-paul-baek",
@@ -737,7 +797,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships / Fractional CMO",
     "headcount": "16",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "corridor-nyc-dan-snyder",
@@ -757,7 +817,7 @@
     "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
     "headcount": "17",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "adsum-pete-macnee",
@@ -777,7 +837,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "metalwood-studio-cole-young",
@@ -797,7 +857,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "blackstock---weber-chris-echevarria",
@@ -817,7 +877,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM",
     "headcount": "7",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "paravel-indr--rockefeller",
@@ -837,7 +897,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "pakt-chad-rubin",
@@ -857,7 +917,7 @@
     "fractional_role": "Fractional Brand & GTM Operator",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "janji-dave-spandorfer",
@@ -877,7 +937,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "museum-of-peace-and-quiet-aaron-bondarof",
@@ -897,7 +957,7 @@
     "fractional_role": "Fractional Brand Partnerships & Collabs",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "blackbird-spyplane-jonah-weiner",
@@ -917,7 +977,7 @@
     "fractional_role": "Fractional Commercial Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "ghostly-international-sam-valenti-iv",
@@ -937,55 +997,15 @@
     "fractional_role": "Fractional Brand Partnerships & Licensing",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "taste-radio",
-    "brand": "Taste Radio",
+    "id": "pal-sporting",
+    "brand": "PAL Sporting",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: taste radio: what goodles\u2019 $500m acquisition says about cpg innovation this week, we dig into barilla group\u2019s acquisition of goodles and how the mac and cheese brand\u2019s success reflects growing demand",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "what-goodles",
-    "brand": "What Goodles",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: taste radio: what goodles\u2019 $500m acquisition says about cpg innovation this week, we dig into barilla group\u2019s acquisition of goodles and how the mac and cheese brand\u2019s success reflects growing demand",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "releasing",
-    "brand": "Releasing",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ined forces with streetwear label staple to present the collaborative yamano 3. releasing for the fall/winter 2026 season, the collaborative footwear capsule blends technical outdo",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: pal sporting goods fuses western heritage and workwear for fw26 summarypal sporting goods launches its fw26 collection inspired by montana, david letterman and evel knievel.key sty",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -997,15 +1017,155 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "travertine",
-    "brand": "Travertine",
+    "id": "goods-fuses",
+    "brand": "Goods Fuses",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ng. oh, and it's all realized in the brand's signature light beige color called travertine.kallmeyer's first nike sneaker being a tennis model may seem a little odd at first, but i",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: pal sporting goods fuses western heritage and workwear for fw26 summarypal sporting goods launches its fw26 collection inspired by montana, david letterman and evel knievel.key sty",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "western-heritage",
+    "brand": "Western Heritage",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: pal sporting goods fuses western heritage and workwear for fw26 summarypal sporting goods launches its fw26 collection inspired by montana, david letterman and evel knievel.key sty",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "workwear",
+    "brand": "Workwear",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: pal sporting goods fuses western heritage and workwear for fw26 summarypal sporting goods launches its fw26 collection inspired by montana, david letterman and evel knievel.key sty",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "summarypal-sporting",
+    "brand": "SummaryPAL Sporting",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: pal sporting goods fuses western heritage and workwear for fw26 summarypal sporting goods launches its fw26 collection inspired by montana, david letterman and evel knievel.key sty",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "goods",
+    "brand": "Goods",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: pal sporting goods fuses western heritage and workwear for fw26 summarypal sporting goods launches its fw26 collection inspired by montana, david letterman and evel knievel.key sty",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "western",
+    "brand": "Western",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: pal sporting goods fuses western heritage and workwear for fw26 summarypal sporting goods launches its fw26 collection inspired by montana, david letterman and evel knievel.key sty",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "west",
+    "brand": "West",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: pal sporting goods fuses western heritage and workwear for fw26 summarypal sporting goods launches its fw26 collection inspired by montana, david letterman and evel knievel.key sty",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "famed",
+    "brand": "Famed",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: brand collaboration isn't normal, even calling the campaign \"something's off.\" famed photographer and filmmaker norbert schoerner came was recruited to shoot the visuals. set at a",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1017,15 +1177,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "walk",
-    "brand": "Walk",
+    "id": "pictured",
+    "brand": "Pictured",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ing a tennis model may seem a little odd at first, but it actually makes sense. walk with me.see, designer daniella kallmeyer may not be in the sportswear business, but her brand h",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: merican horror story if mowalola and jordan were running the costume department.pictured alongside red-eyed models is mowalola's first-ever jordan sneaker, an air jordan 14 mule wi",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1037,15 +1197,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "daniella-kallmeyer",
-    "brand": "Daniella Kallmeyer",
+    "id": "air-jordan",
+    "brand": "Air Jordan",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: a little odd at first, but it actually makes sense. walk with me.see, designer daniella kallmeyer may not be in the sportswear business, but her brand has long been connected to t",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: .pictured alongside red-eyed models is mowalola's first-ever jordan sneaker, an air jordan 14 mule with \"aged\" leather uppers. the collection also includes a non-backless, laced-up",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1057,15 +1217,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "took-toteme",
-    "brand": "Took Toteme",
+    "id": "think",
+    "brand": "Think",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why it took toteme 12 years to try menswear menswear has always been on toteme co-founder karl lindman's mind. but first, there was the archetypal \u201ctoteme woman\u201d to sort out \u2014 a lo",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ollection also includes a non-backless, laced-up jordan 14 sneaker and apparel. think oversized leather bomber jackets, co-branded micro patent shorts, and tartan tracksuits.the pa",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1077,15 +1237,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "years",
-    "brand": "Years",
+    "id": "start",
+    "brand": "Start",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why it took toteme 12 years to try menswear menswear has always been on toteme co-founder karl lindman's mind. but first, there was the archetypal \u201ctoteme woman\u201d to sort out \u2014 a lo",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: w through dramatic proportions and unfinished hems that betray the human touch. start with the clothes that come to mind when you think \"clothes\" and end with something entirely fr",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1097,15 +1257,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "try-menswear",
-    "brand": "Try Menswear",
+    "id": "same",
+    "brand": "Same",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why it took toteme 12 years to try menswear menswear has always been on toteme co-founder karl lindman's mind. but first, there was the archetypal \u201ctoteme woman\u201d to sort out \u2014 a lo",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: en you think \"clothes\" and end with something entirely fresh but still wearable.same goes for fortgens' collaborative asics, created for the sportswear giant's crafts for minds pro",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1117,15 +1277,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "menswear",
-    "brand": "Menswear",
+    "id": "mary-janes",
+    "brand": "Mary Janes",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why it took toteme 12 years to try menswear menswear has always been on toteme co-founder karl lindman's mind. but first, there was the archetypal \u201ctoteme woman\u201d to sort out \u2014 a lo",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: leather typically saved for premium walking sneakers. also, fortgens' asics are mary janes. ish. now this is a sneaker collab of the truest sense: a designer's taste made manifest",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1137,15 +1297,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "toteme",
-    "brand": "Toteme",
+    "id": "mary",
+    "brand": "Mary",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why it took toteme 12 years to try menswear menswear has always been on toteme co-founder karl lindman's mind. but first, there was the archetypal \u201ctoteme woman\u201d to sort out \u2014 a lo",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: leather typically saved for premium walking sneakers. also, fortgens' asics are mary janes. ish. now this is a sneaker collab of the truest sense: a designer's taste made manifest",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1157,15 +1317,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "karl-lindman",
-    "brand": "Karl Lindman",
+    "id": "jane",
+    "brand": "Jane",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: k toteme 12 years to try menswear menswear has always been on toteme co-founder karl lindman's mind. but first, there was the archetypal \u201ctoteme woman\u201d to sort out \u2014 a long, 12-yea",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: er typically saved for premium walking sneakers. also, fortgens' asics are mary janes. ish. now this is a sneaker collab of the truest sense: a designer's taste made manifest throu",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1177,27 +1337,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "scandi",
-    "brand": "Scandi",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: sort out \u2014 a long, 12-year project that\u2019s proven incredibly successful for the scandi-meets-nyc label.\u00a0over this stretch, both lindman and his wife and co-founder, former swedish",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Fashion / Menswear / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "joystick-ventures",
@@ -1217,7 +1357,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "fellow-traveller-chris-wright",
@@ -1237,7 +1377,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "beehiiv-tyler-denk",
@@ -1257,7 +1397,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "criquet-shirts-billy-nachman",
@@ -1277,7 +1417,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "freedom-games",
@@ -1297,7 +1437,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "ganni-ditte-reffstrup",
@@ -1317,7 +1457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "monocle-tyler-brule",
@@ -1337,7 +1477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "public-goods-morgan-hirsh",
@@ -1357,7 +1497,7 @@
     "fractional_role": "Fractional Head of Brand",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "graffiti-games-mihalis-belantis",
@@ -1377,7 +1517,7 @@
     "fractional_role": "Fractional Head of BD & Publisher Relations",
     "headcount": "1-10",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "dehen-1920-gary-hilde",
@@ -1397,7 +1537,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Creator Strategy",
     "headcount": "11-35",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "abroad",
@@ -1417,7 +1557,7 @@
     "fractional_role": "Fractional Partnerships & Brand",
     "headcount": "2-8",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "ciele-athletics-mike-giles",
@@ -1437,7 +1577,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "rabbit-running-monica-devreese",
@@ -1457,7 +1597,7 @@
     "fractional_role": "Fractional Brand & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "awake-ny-angelo-baque",
@@ -1477,7 +1617,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-12",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "noon-goons-andrew-morrison",
@@ -1497,7 +1637,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "dirt-kate-lindsay",
@@ -1517,7 +1657,7 @@
     "fractional_role": "Fractional Brand & Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "every-dan-shipper",
@@ -1537,7 +1677,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "numero-group-ken-shipley",
@@ -1557,7 +1697,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "indify-will-huston",
@@ -1577,7 +1717,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "rogue-territory-kyle-mowat",
@@ -1597,7 +1737,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "imogene---willie-matt-eddmenson",
@@ -1617,7 +1757,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "billykirk-chris-bray",
@@ -1637,7 +1777,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "humble-games",
@@ -1657,7 +1797,7 @@
     "fractional_role": "Fractional Brand Partnerships & Creator",
     "headcount": "20-50",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "playstack-harvey-elliott",
@@ -1677,7 +1817,7 @@
     "fractional_role": "Fractional Brand & Creator Partnerships (US)",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "blind-barber-jeff-laub",
@@ -1697,7 +1837,7 @@
     "fractional_role": "Fractional Brand & Experiential Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "unitedmasters-steve-stoute",
@@ -1717,7 +1857,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "dice-phil-hutcheon",
@@ -1737,7 +1877,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "puck-jon-kelly",
@@ -1757,7 +1897,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "outdoor-voices",
@@ -1777,7 +1917,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "tecovas-paul-hedrick",
@@ -1797,7 +1937,67 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "curve-games",
+    "brand": "Curve Games",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging studio or publisher discovered via gaming industry press. Context: curve games partners with wayfinder studios to publish online co-op rpg wyldheart  curve games has partnered with independent developer wayfinder studios to publish wyldheart, its",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Gaming / Indie Publishing",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Gaming industry discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "wayfinder-studios",
+    "brand": "Wayfinder Studios",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging studio or publisher discovered via gaming industry press. Context: curve games partners with wayfinder studios to publish online co-op rpg wyldheart  curve games has partnered with independent developer wayfinder studios to publish wyldheart, its",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Gaming / Indie Publishing",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Gaming industry discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
+  },
+  {
+    "id": "wyldheart",
+    "brand": "Wyldheart",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging studio or publisher discovered via gaming industry press. Context: curve games partners with wayfinder studios to publish online co-op rpg wyldheart  curve games has partnered with independent developer wayfinder studios to publish wyldheart, its",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Gaming / Indie Publishing",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Gaming industry discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-09-15"
   },
   {
     "id": "rockstar",
@@ -1817,7 +2017,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "iwgb",
@@ -1837,7 +2037,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "independent",
@@ -1857,7 +2057,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "workers",
@@ -1877,7 +2077,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "union",
@@ -1897,7 +2097,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "great",
@@ -1917,7 +2117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "britain",
@@ -1937,75 +2137,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "each",
-    "brand": "Each",
+    "id": "tuesday",
+    "brand": "Tuesday",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging studio or publisher discovered via gaming industry press. Context: of a bunch of emails from customers and from other people within your office!\n\neach of these card-based battles has you using up to three cards per email. these cards can add a de",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Gaming / Indie",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Gaming industry discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "these",
-    "brand": "These",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging studio or publisher discovered via gaming industry press. Context: e!\n\neach of these card-based battles has you using up to three cards per email. these cards can add a defence to your health and attacks to your enemy. the cards have different ton",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Gaming / Indie",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Gaming industry discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "bottled",
-    "brand": "Bottled",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging studio or publisher discovered via gaming industry press. Context: \u2018bottled by bears\u2019 has you creating honey and collecting bees bottled by bears is a very cute looking idle collection game where you will find yourself running a family-owned farm,",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Gaming / Indie",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Gaming industry discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "hayley",
-    "brand": "Hayley",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: hayley williams debuts easy-to-recreate tour hair as the hayley williams show kicks\u00a0off \n\nall products and services featured are independently chosen by editors. however, billboard",
+    "gap": "Independent music entity with commercial potential. Context: d slop\u201d and \u201cpolluting the listening experience.\u201d\n\n\tin a scathing lawsuit filed tuesday (sept. 15) in manhattan federal court, umg alleges that distrokid \u2014 a huge distributor value",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2017,15 +2157,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "williams",
-    "brand": "Williams",
+    "id": "sept",
+    "brand": "Sept",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: hayley williams debuts easy-to-recreate tour hair as the hayley williams show kicks\u00a0off \n\nall products and services featured are independently chosen by editors. however, billboard",
+    "gap": "Independent music entity with commercial potential. Context: nd \u201cpolluting the listening experience.\u201d\n\n\tin a scathing lawsuit filed tuesday (sept. 15) in manhattan federal court, umg alleges that distrokid \u2014 a huge distributor valued at more",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2037,15 +2177,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "debuts",
-    "brand": "Debuts",
+    "id": "manhattan",
+    "brand": "Manhattan",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: hayley williams debuts easy-to-recreate tour hair as the hayley williams show kicks\u00a0off \n\nall products and services featured are independently chosen by editors. however, billboard",
+    "gap": "Independent music entity with commercial potential. Context: the listening experience.\u201d\n\n\tin a scathing lawsuit filed tuesday (sept. 15) in manhattan federal court, umg alleges that distrokid \u2014 a huge distributor valued at more than $2 bill",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2057,15 +2197,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "easy",
-    "brand": "Easy",
+    "id": "distrokid",
+    "brand": "Distrokid",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: hayley williams debuts easy-to-recreate tour hair as the hayley williams show kicks\u00a0off \n\nall products and services featured are independently chosen by editors. however, billboard",
+    "gap": "Independent music entity with commercial potential. Context: g lawsuit filed tuesday (sept. 15) in manhattan federal court, umg alleges that distrokid \u2014 a huge distributor valued at more than $2 billion that helps independent artists get ont",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2077,15 +2217,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "recreate",
-    "brand": "Recreate",
+    "id": "riot",
+    "brand": "Riot",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: hayley williams debuts easy-to-recreate tour hair as the hayley williams show kicks\u00a0off \n\nall products and services featured are independently chosen by editors. however, billboard",
+    "gap": "Independent music entity with commercial potential. Context: dmond, oreg.)\nsept. 18-20 \u2013 making time \u221e festival (philadelphia)\nsept. 18-20 \u2013 riot fest (chicago)\nsept. 18-20 \u2013 shaky knees music festival (atlanta)\nsept. 19-20 \u2013 experts only fe",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2097,15 +2237,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "hair",
-    "brand": "Hair",
+    "id": "chicago",
+    "brand": "Chicago",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: hayley williams debuts easy-to-recreate tour hair as the hayley williams show kicks\u00a0off \n\nall products and services featured are independently chosen by editors. however, billboard",
+    "gap": "Independent music entity with commercial potential. Context: .)\nsept. 18-20 \u2013 making time \u221e festival (philadelphia)\nsept. 18-20 \u2013 riot fest (chicago)\nsept. 18-20 \u2013 shaky knees music festival (atlanta)\nsept. 19-20 \u2013 experts only festival (new",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2117,15 +2257,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "show",
-    "brand": "Show",
+    "id": "shaky",
+    "brand": "Shaky",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: hayley williams debuts easy-to-recreate tour hair as the hayley williams show kicks\u00a0off \n\nall products and services featured are independently chosen by editors. however, billboard",
+    "gap": "Independent music entity with commercial potential. Context: time \u221e festival (philadelphia)\nsept. 18-20 \u2013 riot fest (chicago)\nsept. 18-20 \u2013 shaky knees music festival (atlanta)\nsept. 19-20 \u2013 experts only festival (new york)\nsept. 19-20 \u2013 se",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2137,15 +2277,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "kicks",
-    "brand": "Kicks",
+    "id": "knees-music",
+    "brand": "Knees Music",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: hayley williams debuts easy-to-recreate tour hair as the hayley williams show kicks\u00a0off \n\nall products and services featured are independently chosen by editors. however, billboard",
+    "gap": "Independent music entity with commercial potential. Context: \u221e festival (philadelphia)\nsept. 18-20 \u2013 riot fest (chicago)\nsept. 18-20 \u2013 shaky knees music festival (atlanta)\nsept. 19-20 \u2013 experts only festival (new york)\nsept. 19-20 \u2013 sea.hear",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2157,15 +2297,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "new-arrivals",
-    "brand": "New Arrivals",
+    "id": "juventus",
+    "brand": "Juventus",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: herill brand information: established in 2019 by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gende",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: s back decades; more specifically, 47 years, when it became the main sponsor of juventus football club. since then, the italian brand\u2019s imprint on the sport has developed, adapting",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2177,15 +2317,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "from-hbx",
-    "brand": "From HBX",
+    "id": "since",
+    "brand": "Since",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: herill brand information: established in 2019 by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gende",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: cifically, 47 years, when it became the main sponsor of juventus football club. since then, the italian brand\u2019s imprint on the sport has developed, adapting its signature sportswea",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2197,15 +2337,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "herill-brand",
-    "brand": "HERILL Brand",
+    "id": "italian",
+    "brand": "Italian",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: herill brand information: established in 2019 by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gende",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ars, when it became the main sponsor of juventus football club. since then, the italian brand\u2019s imprint on the sport has developed, adapting its signature sportswear to the teams i",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2217,15 +2357,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
-    "id": "information",
-    "brand": "Information",
+    "id": "made",
+    "brand": "Made",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: herill brand information: established in 2019 by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gende",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: er, debossed circular patterns, and asymmetric lacing, illuminating the brand\u2019s made in italy archives and italian cycling heritage. discover kappa\u2019s football collections on its we",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2237,187 +2377,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "established",
-    "brand": "Established",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: herill brand information: established in 2019 by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gende",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "hiroyuki-oshima",
-    "brand": "Hiroyuki Oshima",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: herill brand information: established in 2019 by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gende",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "herill",
-    "brand": "HERILL",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: herill brand information: established in 2019 by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gende",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "japanese",
-    "brand": "Japanese",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: : herill brand information: established in 2019 by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gender-neutral staples. th",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "heritage",
-    "brand": "Heritage",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: blished in 2019 by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gender-neutral staples. the brand is defined by its obsess",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "will",
-    "brand": "Will",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: by hiroyuki oshima, herill is a japanese label that harmonizes \"heritage\" with \"will\" to create timeless, gender-neutral staples. the brand is defined by its obsessive focus on tex",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "lilly",
-    "brand": "Lilly",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: aded, washed and distresseda washed snakeskin print lands on the new lower-rise lilly jean, which the label has positioned as the hero denim silhouette of the seasonalpha industrie",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "silicon-valley",
-    "brand": "Silicon Valley",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: street in the coming days. stay tuned\u2026onto today\u2019s news\u2026when representatives of silicon valley venture capital firm dimension capital visited china on a research trip recently, one",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
-  },
-  {
-    "id": "dimension-capital",
-    "brand": "Dimension Capital",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: d\u2026onto today\u2019s news\u2026when representatives of silicon valley venture capital firm dimension capital visited china on a research trip recently, one trend that grabbed their attention",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "founder-intros",
@@ -2437,7 +2397,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "seldon",
@@ -2457,7 +2417,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "clinical",
@@ -2477,7 +2437,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "with-trends",
@@ -2497,7 +2457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   },
   {
     "id": "startup-discounts",
@@ -2517,6 +2477,6 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-09-14"
+    "added_date": "2026-09-15"
   }
 ]
