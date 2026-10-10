@@ -17,7 +17,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "nacs",
@@ -37,7 +37,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "pepsico-pushes",
@@ -57,7 +57,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "new-functional",
@@ -77,7 +77,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "territory",
@@ -97,7 +97,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "lift",
@@ -117,7 +117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "chill",
@@ -137,7 +137,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "lines-pepsico",
@@ -157,7 +157,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "kamoti-targets",
@@ -177,7 +177,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "with-bottled",
@@ -197,7 +197,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "green-tea",
@@ -217,7 +217,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "shots-for",
@@ -237,7 +237,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "kamoti",
@@ -257,7 +257,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "ceo-dylan",
@@ -277,7 +277,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "fusco",
@@ -297,7 +297,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "ceo-jess",
@@ -317,7 +317,47 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "future",
+    "brand": "Future",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: birkenstock shoe collaboration, and this week, his second-ever music video with future. both projects have been a long time coming, and both are rooted in intention \u2014 and imperfect",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "both",
+    "brand": "Both",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ock shoe collaboration, and this week, his second-ever music video with future. both projects have been a long time coming, and both are rooted in intention \u2014 and imperfection, a c",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 10,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
   },
   {
     "id": "highsnobiety-david-fischer",
@@ -337,7 +377,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "heart---soil-paul-saladino",
@@ -357,7 +397,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "howler-brothers-adam-olson",
@@ -377,7 +417,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "surely-brandon-joldersma",
@@ -397,7 +437,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "4-8",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "gorgie-michelle-cordeiro-grant",
@@ -417,7 +457,7 @@
     "fractional_role": "Fractional Head of Influencer & Creator Partnerships",
     "headcount": "15-25",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "sunwink-eliza-ganesh",
@@ -437,7 +477,7 @@
     "fractional_role": "Fractional CMO / Head of Brand Partnerships",
     "headcount": "12",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "pilgrim-surf---supply-chris-gentile",
@@ -457,7 +497,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Retail Expansion",
     "headcount": "7-9",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "bandit-running-nils-arend",
@@ -477,7 +517,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "popagenda-gen-miller",
@@ -497,7 +537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "midwest-games-adam-orth",
@@ -517,7 +557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "dieux-skin-charlotte-palermino",
@@ -537,7 +577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "whitethorn-games-matthew-white",
@@ -557,7 +597,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "pangaia-amanda-parkes",
@@ -577,7 +617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "represent-george-heaton",
@@ -597,7 +637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "lomi-matt-bertulli",
@@ -617,7 +657,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "canopy-ken-berkun",
@@ -637,7 +677,7 @@
     "fractional_role": "Fractional GTM Strategist",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "aura-bora-paul-voge",
@@ -657,7 +697,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "odyssey-elixir-scott-frohman",
@@ -677,7 +717,7 @@
     "fractional_role": "Fractional Head of Creator & Brand Partnerships",
     "headcount": "10-18",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "wynk-casey-parzych",
@@ -697,7 +737,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "alder-apparel-mikayla-wujec",
@@ -717,7 +757,7 @@
     "fractional_role": "Fractional Head of Partnerships / Fractional CMO",
     "headcount": "6",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "akupara-games-david-logan",
@@ -737,7 +777,7 @@
     "fractional_role": "Fractional Head of Business Development & Developer Partnerships",
     "headcount": "20-44",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "matter-of-fact-paul-baek",
@@ -757,7 +797,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships / Fractional CMO",
     "headcount": "16",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "corridor-nyc-dan-snyder",
@@ -777,7 +817,7 @@
     "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
     "headcount": "17",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "adsum-pete-macnee",
@@ -797,7 +837,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "metalwood-studio-cole-young",
@@ -817,7 +857,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "blackstock---weber-chris-echevarria",
@@ -837,7 +877,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM",
     "headcount": "7",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "paravel-indr--rockefeller",
@@ -857,7 +897,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "pakt-chad-rubin",
@@ -877,7 +917,7 @@
     "fractional_role": "Fractional Brand & GTM Operator",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "janji-dave-spandorfer",
@@ -897,7 +937,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "museum-of-peace-and-quiet-aaron-bondarof",
@@ -917,7 +957,7 @@
     "fractional_role": "Fractional Brand Partnerships & Collabs",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "blackbird-spyplane-jonah-weiner",
@@ -937,7 +977,7 @@
     "fractional_role": "Fractional Commercial Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "ghostly-international-sam-valenti-iv",
@@ -957,7 +997,7 @@
     "fractional_role": "Fractional Brand Partnerships & Licensing",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "video",
@@ -977,7 +1017,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "parents",
@@ -997,7 +1037,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "safe",
@@ -1017,7 +1057,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "world",
@@ -1037,7 +1077,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "four",
@@ -1057,7 +1097,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "billion",
@@ -1077,7 +1117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "players",
@@ -1097,7 +1137,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "mental",
@@ -1117,15 +1157,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "pride",
-    "brand": "Pride",
+    "id": "permission",
+    "brand": "Permission",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: y spoken out in support of transgender people and trans rights, headlined major pride celebrations and frequently credited her lgbtq+ fans for the influence they have had on her mu",
+    "gap": "Independent music entity with commercial potential. Context: s. women struggle to prioritize their health,\u201d as reported in the launch of the permission project, a betterhelp initiative focused on women\u2019s mental health.\n\n\tbetween giving yours",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1137,15 +1177,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "maybelline",
-    "brand": "Maybelline",
+    "id": "project",
+    "brand": "Project",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: and help destigmatize conversations around seeking support. she partnered with maybelline\u2019s brave together mental health initiative in 2024.\n\n\tlarsson, 28, is coming off the bigge",
+    "gap": "Independent music entity with commercial potential. Context: ruggle to prioritize their health,\u201d as reported in the launch of the permission project, a betterhelp initiative focused on women\u2019s mental health.\n\n\tbetween giving yourself permiss",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1157,55 +1197,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "brave",
-    "brand": "Brave",
+    "id": "created",
+    "brand": "Created",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: tigmatize conversations around seeking support. she partnered with maybelline\u2019s brave together mental health initiative in 2024.\n\n\tlarsson, 28, is coming off the biggest year of he",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Music / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Music/culture press discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "together",
-    "brand": "Together",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: ize conversations around seeking support. she partnered with maybelline\u2019s brave together mental health initiative in 2024.\n\n\tlarsson, 28, is coming off the biggest year of her care",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Music / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Music/culture press discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "warner-bros",
-    "brand": "Warner Bros",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: otorious super-villains for his latest collaboration.joining forces with dc and warner bros. discovery global consumer products, kidsuper is bringing eight of dc's most iconic supe",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: tive collaboration centered on his acclaimed wheelchair basketball series, real.created to celebrate the release of the manga's 17th volume, the joint collection brings the intense",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1217,15 +1217,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "discovery-global",
-    "brand": "Discovery Global",
+    "id": "chinatownat",
+    "brand": "ChinatownAt",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: r-villains for his latest collaboration.joining forces with dc and warner bros. discovery global consumer products, kidsuper is bringing eight of dc's most iconic super-villains in",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ra lifestyle label, just opened its first permanent store, manual photo lab, in chinatownat 85a allen street, the space is designed as a hangout, film lab, equipment store, stocked",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1237,95 +1237,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "consumer-products",
-    "brand": "Consumer Products",
+    "id": "three-stripes",
+    "brand": "Three Stripes",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: s latest collaboration.joining forces with dc and warner bros. discovery global consumer products, kidsuper is bringing eight of dc's most iconic super-villains into its colorful,",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "heritage",
-    "brand": "Heritage",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: lpha industries has unveiled the triple black pack for fw26, reworking the ma-1 heritage, b-15 intermediate flight jacket and cwu-45 heritage in black from the outer shell through",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "intermediate-flight",
-    "brand": "Intermediate Flight",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: has unveiled the triple black pack for fw26, reworking the ma-1 heritage, b-15 intermediate flight jacket and cwu-45 heritage in black from the outer shell through to the lining a",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "jacket",
-    "brand": "Jacket",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: iple black pack for fw26, reworking the ma-1 heritage, b-15 intermediate flight jacket and cwu-45 heritage in black from the outer shell through to the lining and tag. the result i",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "every-sneaker",
-    "brand": "Every Sneaker",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why is every sneaker brand making its own birks? sole food is a weekly series built on sneaker editor morgan smith's takes on the biggest topics in sneaker culture.the year is 2026",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: s adistar control 5 reinforces the runner\u2019s status as the new powerhouse of the three stripes' lifestyle stable. with this silhouette rapidly becoming the default canvas for adidas",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1337,15 +1257,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "brand-making",
-    "brand": "Brand Making",
+    "id": "golf",
+    "brand": "Golf",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why is every sneaker brand making its own birks? sole food is a weekly series built on sneaker editor morgan smith's takes on the biggest topics in sneaker culture.the year is 2026",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: dan\u2019s space jam anniversary collection also includes jordan 11 cleats, jordan 1 golf shoes, jordan first 1s, jordan 3s, and lifestyle-slash sports clothes. essentially, there's som",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1357,15 +1277,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "its-own",
-    "brand": "Its Own",
+    "id": "jordan-first",
+    "brand": "Jordan First",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why is every sneaker brand making its own birks? sole food is a weekly series built on sneaker editor morgan smith's takes on the biggest topics in sneaker culture.the year is 2026",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: jam anniversary collection also includes jordan 11 cleats, jordan 1 golf shoes, jordan first 1s, jordan 3s, and lifestyle-slash sports clothes. essentially, there's something for e",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1377,15 +1297,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "birks",
-    "brand": "Birks",
+    "id": "last",
+    "brand": "Last",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why is every sneaker brand making its own birks? sole food is a weekly series built on sneaker editor morgan smith's takes on the biggest topics in sneaker culture.the year is 2026",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: t\u2019s cole bennett.\u00a0i\u2019m catching bennett post-a pretty generational five-day run. last week, he dropped his first-ever birkenstock shoe collaboration, and this week, his second-ever",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1397,15 +1317,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "sole-food",
-    "brand": "Sole Food",
+    "id": "birkenstock",
+    "brand": "Birkenstock",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: why is every sneaker brand making its own birks? sole food is a weekly series built on sneaker editor morgan smith's takes on the biggest topics in sneaker culture.the year is 2026",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: t post-a pretty generational five-day run. last week, he dropped his first-ever birkenstock shoe collaboration, and this week, his second-ever music video with future. both project",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1417,15 +1337,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "morgan-smith",
-    "brand": "Morgan Smith",
+    "id": "lyrical-lemonade",
+    "brand": "Lyrical Lemonade",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: rand making its own birks? sole food is a weekly series built on sneaker editor morgan smith's takes on the biggest topics in sneaker culture.the year is 2026, and almost every sho",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: in intention \u2014 and imperfection, a crucial bennett throughline.the 30-year-old lyrical lemonade founder has repped the (birken)set since he was a kid. the two\u2019s collaborative hist",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1437,15 +1357,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "instagram",
-    "brand": "Instagram",
+    "id": "birken",
+    "brand": "Birken",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: igue doesn\u2019t come just from being months old and having a touch more than 1,000 instagram followers; it also comes from the backstory of its founder \u2014 or lack thereof. see, as is t",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: t post-a pretty generational five-day run. last week, he dropped his first-ever birkenstock shoe collaboration, and this week, his second-ever music video with future. both project",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1457,15 +1377,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "minami",
-    "brand": "Minami",
+    "id": "congrats",
+    "brand": "Congrats",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: l exchange meant to flesh out what as is. from the brand\u2019s home base in tokyo\u2019s minami-aoyama neighborhood, an upscale slice of the city home to everything from major maisons to au",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: eek, with both the birkenstock collaboration and now a music video with future.\u00a0congrats on the birkenstock collaboration! that\u2019s been a long time coming.\u00a0i've always been very voc",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1477,15 +1397,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "aoyama",
-    "brand": "Aoyama",
+    "id": "hoka",
+    "brand": "HOKA",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: nge meant to flesh out what as is. from the brand\u2019s home base in tokyo\u2019s minami-aoyama neighborhood, an upscale slice of the city home to everything from major maisons to auralee,",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: o say is, running really is for everyone. that has been the brand philosophy of hoka ever since the brand\u2019s origin: to bring communities together over a love of going the extra mil",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1497,47 +1417,187 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "auralee",
-    "brand": "AURALEE",
+    "id": "recommendations",
+    "brand": "Recommendations",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: hborhood, an upscale slice of the city home to everything from major maisons to auralee, the founder spoke with us about first impressions, strangeness, and the \u201caddictive\u201d discove",
+    "gap": "Creator economy platform or brand with commercial potential. Context: hind cognition, ramp\u2022 why techies are hoarding ai compute in their homes\u2022 plus, recommendations\u2014our weekly pop culture picks: \u201cbram stoker\u2019s dracula,\u201d \u201cthe agi chronicles\u201d and \u201cyou",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Fashion / Menswear / Culture",
+    "industry": "Creator Economy / Media",
     "revenue_est": "",
     "score": 8,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "Creator economy media discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "keeping",
-    "brand": "Keeping",
+    "id": "bram-stoker",
+    "brand": "Bram Stoker",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: s brand make possible for you after a decade of publicly running another label?\u00a0keeping the designer anonymous let me temporarily separate my career and identity from the clothes.",
+    "gap": "Creator economy platform or brand with commercial potential. Context: ai compute in their homes\u2022 plus, recommendations\u2014our weekly pop culture picks: \u201cbram stoker\u2019s dracula,\u201d \u201cthe agi chronicles\u201d and \u201cyour mother your mother your mother\u201dmark zuckerber",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Fashion / Menswear / Culture",
+    "industry": "Creator Economy / Media",
     "revenue_est": "",
     "score": 8,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "Creator economy media discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "dracula",
+    "brand": "Dracula",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Creator economy platform or brand with commercial potential. Context: their homes\u2022 plus, recommendations\u2014our weekly pop culture picks: \u201cbram stoker\u2019s dracula,\u201d \u201cthe agi chronicles\u201d and \u201cyour mother your mother your mother\u201dmark zuckerberg, the founder",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Creator Economy / Media",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Creator economy media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "the-agi",
+    "brand": "The AGI",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Creator economy platform or brand with commercial potential. Context: \u2022 plus, recommendations\u2014our weekly pop culture picks: \u201cbram stoker\u2019s dracula,\u201d \u201cthe agi chronicles\u201d and \u201cyour mother your mother your mother\u201dmark zuckerberg, the founder and ceo of",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Creator Economy / Media",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Creator economy media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "chronicles",
+    "brand": "Chronicles",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Creator economy platform or brand with commercial potential. Context: recommendations\u2014our weekly pop culture picks: \u201cbram stoker\u2019s dracula,\u201d \u201cthe agi chronicles\u201d and \u201cyour mother your mother your mother\u201dmark zuckerberg, the founder and ceo of meta pl",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Creator Economy / Media",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Creator economy media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "your-mother",
+    "brand": "Your Mother",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Creator economy platform or brand with commercial potential. Context: ur weekly pop culture picks: \u201cbram stoker\u2019s dracula,\u201d \u201cthe agi chronicles\u201d and \u201cyour mother your mother your mother\u201dmark zuckerberg, the founder and ceo of meta platforms, was only",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Creator Economy / Media",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Creator economy media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "meta-platforms",
+    "brand": "Meta Platforms",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Creator economy platform or brand with commercial potential. Context: nd \u201cyour mother your mother your mother\u201dmark zuckerberg, the founder and ceo of meta platforms, was only six years old in 1990, the year the human genome project got launched.that",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Creator Economy / Media",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Creator economy media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "human-genome",
+    "brand": "Human Genome",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Creator economy platform or brand with commercial potential. Context: founder and ceo of meta platforms, was only six years old in 1990, the year the human genome project got launched.that project, a multibillion-dollar international effort led by th",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Creator Economy / Media",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Creator economy media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "stoker",
+    "brand": "Stoker",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Creator economy platform or brand with commercial potential. Context: mpute in their homes\u2022 plus, recommendations\u2014our weekly pop culture picks: \u201cbram stoker\u2019s dracula,\u201d \u201cthe agi chronicles\u201d and \u201cyour mother your mother your mother\u201dmark zuckerberg, th",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Creator Economy / Media",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Creator economy media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
   },
   {
     "id": "joystick-ventures",
@@ -1557,7 +1617,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "fellow-traveller-chris-wright",
@@ -1577,7 +1637,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "beehiiv-tyler-denk",
@@ -1597,7 +1657,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "criquet-shirts-billy-nachman",
@@ -1617,7 +1677,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "freedom-games",
@@ -1637,7 +1697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "ganni-ditte-reffstrup",
@@ -1657,7 +1717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "monocle-tyler-brule",
@@ -1677,7 +1737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "public-goods-morgan-hirsh",
@@ -1697,7 +1757,7 @@
     "fractional_role": "Fractional Head of Brand",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "graffiti-games-mihalis-belantis",
@@ -1717,7 +1777,7 @@
     "fractional_role": "Fractional Head of BD & Publisher Relations",
     "headcount": "1-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "dehen-1920-gary-hilde",
@@ -1737,7 +1797,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Creator Strategy",
     "headcount": "11-35",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "abroad",
@@ -1757,7 +1817,7 @@
     "fractional_role": "Fractional Partnerships & Brand",
     "headcount": "2-8",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "ciele-athletics-mike-giles",
@@ -1777,7 +1837,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "rabbit-running-monica-devreese",
@@ -1797,7 +1857,7 @@
     "fractional_role": "Fractional Brand & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "awake-ny-angelo-baque",
@@ -1817,7 +1877,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-12",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "noon-goons-andrew-morrison",
@@ -1837,7 +1897,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "dirt-kate-lindsay",
@@ -1857,7 +1917,7 @@
     "fractional_role": "Fractional Brand & Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "every-dan-shipper",
@@ -1877,7 +1937,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "numero-group-ken-shipley",
@@ -1897,7 +1957,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "indify-will-huston",
@@ -1917,7 +1977,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "rogue-territory-kyle-mowat",
@@ -1937,7 +1997,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "imogene---willie-matt-eddmenson",
@@ -1957,7 +2017,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "billykirk-chris-bray",
@@ -1977,7 +2037,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "humble-games",
@@ -1997,7 +2057,7 @@
     "fractional_role": "Fractional Brand Partnerships & Creator",
     "headcount": "20-50",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "playstack-harvey-elliott",
@@ -2017,7 +2077,7 @@
     "fractional_role": "Fractional Brand & Creator Partnerships (US)",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "blind-barber-jeff-laub",
@@ -2037,7 +2097,7 @@
     "fractional_role": "Fractional Brand & Experiential Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "unitedmasters-steve-stoute",
@@ -2057,7 +2117,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "dice-phil-hutcheon",
@@ -2077,7 +2137,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "puck-jon-kelly",
@@ -2097,7 +2157,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "outdoor-voices",
@@ -2117,7 +2177,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "tecovas-paul-hedrick",
@@ -2137,7 +2197,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "philip",
@@ -2157,7 +2217,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "holt",
@@ -2177,15 +2237,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "victrola",
-    "brand": "Victrola",
+    "id": "shane",
+    "brand": "Shane",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: victrola\u2019s latest turntable & speaker prove listening to vinyl doesn\u2019t have to be\u00a0complicated \n\nall products and services featured are independently chosen by editors. however, bil",
+    "gap": "Independent music entity with commercial potential. Context: shane gillis & rosal\u00eda on \u2018snl\u2019: here\u2019s where to watch \u2018saturday night live\u2019 online for\u00a0free \n\nall products and services featured are independently chosen by editors. however, bill",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2197,15 +2257,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "latest",
-    "brand": "Latest",
+    "id": "gillis",
+    "brand": "Gillis",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: victrola\u2019s latest turntable & speaker prove listening to vinyl doesn\u2019t have to be\u00a0complicated \n\nall products and services featured are independently chosen by editors. however, bil",
+    "gap": "Independent music entity with commercial potential. Context: shane gillis & rosal\u00eda on \u2018snl\u2019: here\u2019s where to watch \u2018saturday night live\u2019 online for\u00a0free \n\nall products and services featured are independently chosen by editors. however, bill",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2217,15 +2277,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "turntable",
-    "brand": "Turntable",
+    "id": "here",
+    "brand": "Here",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: victrola\u2019s latest turntable & speaker prove listening to vinyl doesn\u2019t have to be\u00a0complicated \n\nall products and services featured are independently chosen by editors. however, bil",
+    "gap": "Independent music entity with commercial potential. Context: shane gillis & rosal\u00eda on \u2018snl\u2019: here\u2019s where to watch \u2018saturday night live\u2019 online for\u00a0free \n\nall products and services featured are independently chosen by editors. however, bill",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2237,15 +2297,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "speaker",
-    "brand": "Speaker",
+    "id": "watch",
+    "brand": "Watch",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: victrola\u2019s latest turntable & speaker prove listening to vinyl doesn\u2019t have to be\u00a0complicated \n\nall products and services featured are independently chosen by editors. however, bil",
+    "gap": "Independent music entity with commercial potential. Context: shane gillis & rosal\u00eda on \u2018snl\u2019: here\u2019s where to watch \u2018saturday night live\u2019 online for\u00a0free \n\nall products and services featured are independently chosen by editors. however, bill",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2257,147 +2317,47 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "apple",
-    "brand": "Apple",
+    "id": "saturday",
+    "brand": "Saturday",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: apple and the king\u2019s trust launch new mentoring program apple and the king\u2019s trust are taking their partnership to the next level with the launch of their new educational program,",
+    "gap": "Independent music entity with commercial potential. Context: shane gillis & rosal\u00eda on \u2018snl\u2019: here\u2019s where to watch \u2018saturday night live\u2019 online for\u00a0free \n\nall products and services featured are independently chosen by editors. however, bill",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Streetwear / Fashion / Culture",
+    "industry": "Music / Culture",
     "revenue_est": "",
     "score": 6,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "Music/culture press discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
-    "id": "the-king",
-    "brand": "The King",
+    "id": "night",
+    "brand": "Night",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: apple and the king\u2019s trust launch new mentoring program apple and the king\u2019s trust are taking their partnership to the next level with the launch of their new educational program,",
+    "gap": "Independent music entity with commercial potential. Context: shane gillis & rosal\u00eda on \u2018snl\u2019: here\u2019s where to watch \u2018saturday night live\u2019 online for\u00a0free \n\nall products and services featured are independently chosen by editors. however, bill",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Streetwear / Fashion / Culture",
+    "industry": "Music / Culture",
     "revenue_est": "",
     "score": 6,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "Music/culture press discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "trust-launch",
-    "brand": "Trust Launch",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: apple and the king\u2019s trust launch new mentoring program apple and the king\u2019s trust are taking their partnership to the next level with the launch of their new educational program,",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "new-mentoring",
-    "brand": "New Mentoring",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: apple and the king\u2019s trust launch new mentoring program apple and the king\u2019s trust are taking their partnership to the next level with the launch of their new educational program,",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "program-apple",
-    "brand": "Program Apple",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: apple and the king\u2019s trust launch new mentoring program apple and the king\u2019s trust are taking their partnership to the next level with the launch of their new educational program,",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "trust",
-    "brand": "Trust",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: apple and the king\u2019s trust launch new mentoring program apple and the king\u2019s trust are taking their partnership to the next level with the launch of their new educational program,",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "and-meituan",
-    "brand": "And Meituan",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: one maker that also sells electric cars, released its latest llm two weeks ago. and meituan, china\u2019s biggest food delivery and local services app, in june unveiled a more powerful",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   },
   {
     "id": "june",
@@ -2405,7 +2365,207 @@
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: eeks ago. and meituan, china\u2019s biggest food delivery and local services app, in june unveiled a more powerful version of the llm it launched last year.",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: main nike basketball banner following his official transition from converse in june 2026. while his debut silhouette originally launched under converse before receiving nike brand",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "while",
+    "brand": "While",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: basketball banner following his official transition from converse in june 2026. while his debut silhouette originally launched under converse before receiving nike branding at okla",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "media-day",
+    "brand": "Media Day",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: nally launched under converse before receiving nike branding at oklahoma city's media day, his second model continues the athlete's personal involvement from its inception.the nike",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "kura-chika",
+    "brand": "KURA CHIKA",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: hip store, porter shinjuku and kobe, potr ikebukuro, nagoya, namba and sapporo, kura chika by porter in fukuoka and at hong kong\u2019s k11 art mall, porter korea (yeouido), porter bang",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "fukuoka",
+    "brand": "Fukuoka",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ku and kobe, potr ikebukuro, nagoya, namba and sapporo, kura chika by porter in fukuoka and at hong kong\u2019s k11 art mall, porter korea (yeouido), porter bangkok, the yoshida & co. o",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "hong-kong",
+    "brand": "Hong Kong",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: tr ikebukuro, nagoya, namba and sapporo, kura chika by porter in fukuoka and at hong kong\u2019s k11 art mall, porter korea (yeouido), porter bangkok, the yoshida & co. official online",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "art-mall",
+    "brand": "ART MALL",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: goya, namba and sapporo, kura chika by porter in fukuoka and at hong kong\u2019s k11 art mall, porter korea (yeouido), porter bangkok, the yoshida & co. official online store and select",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "porter-korea",
+    "brand": "PORTER KOREA",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: a and sapporo, kura chika by porter in fukuoka and at hong kong\u2019s k11 art mall, porter korea (yeouido), porter bangkok, the yoshida & co. official online store and select doublet r",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "yeouido",
+    "brand": "Yeouido",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: kura chika by porter in fukuoka and at hong kong\u2019s k11 art mall, porter korea (yeouido), porter bangkok, the yoshida & co. official online store and select doublet retailers. coll",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "porter-bangkok",
+    "brand": "PORTER BANGKOK",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: a by porter in fukuoka and at hong kong\u2019s k11 art mall, porter korea (yeouido), porter bangkok, the yoshida & co. official online store and select doublet retailers. collaborative",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Streetwear / Fashion / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-10"
+  },
+  {
+    "id": "mark-zuckerberg",
+    "brand": "Mark Zuckerberg",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Creator economy platform or brand with commercial potential. Context: toker\u2019s dracula,\u201d \u201cthe agi chronicles\u201d and \u201cyour mother your mother your mother\u201dmark zuckerberg, the founder and ceo of meta platforms, was only six years old in 1990, the year the",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2417,166 +2577,6 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "jeff-navin",
-    "brand": "Jeff Navin",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: for something to happen when they're being constantly reminded that they lost,\" jeff navin, a former democratic hill staffer and co-founder of clean tech lobbying firm boundary sto",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "democratic-hill",
-    "brand": "Democratic Hill",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: en when they're being constantly reminded that they lost,\" jeff navin, a former democratic hill staffer and co-founder of clean tech lobbying firm boundary stone partners, said via",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "boundary-stone",
-    "brand": "Boundary Stone",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: in, a former democratic hill staffer and co-founder of clean tech lobbying firm boundary stone partners, said via email. the bottom line: this is a partial list!to riff on mickey r",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "partners",
-    "brand": "Partners",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: mocratic hill staffer and co-founder of clean tech lobbying firm boundary stone partners, said via email. the bottom line: this is a partial list!to riff on mickey rourke's advice",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "founder-intros",
-    "brand": "Founder Intros",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: of new markets, ideas and business models, check out our research reports.\n\u00a01:1 founder intros\u00a0\u2022 make new friends, share lessons and find ways to help each other. keep life interes",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Startup",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "make",
-    "brand": "Make",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: deas and business models, check out our research reports.\n\u00a01:1 founder intros\u00a0\u2022 make new friends, share lessons and find ways to help each other. keep life interesting by meeting n",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Startup",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "cliff-sentell",
-    "brand": "Cliff Sentell",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: aying inside chatgpt.\n ask yourself\n\n\n\nwhat did $20,000 and 1 server turn into?\ncliff sentell and two partners put in $20,000 each and bought a single server in 2005.\nthey started",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Startup",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
-  },
-  {
-    "id": "sentell",
-    "brand": "Sentell",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: inside chatgpt.\n ask yourself\n\n\n\nwhat did $20,000 and 1 server turn into?\ncliff sentell and two partners put in $20,000 each and bought a single server in 2005.\nthey started by cha",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Startup",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-09"
+    "added_date": "2026-10-10"
   }
 ]
