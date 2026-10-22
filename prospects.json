@@ -17,167 +17,127 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "cozy-girl",
-    "brand": "Cozy Girl",
+    "id": "cpg-week",
+    "brand": "CPG Week",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: at shearling acts as a fuzzy signal, like a wearable pumpkin spice latte, that \u201ccozy girl fall\u201d has arrived.there\u2019s an irony to these associations, given that the brand\u2019s roots act",
+    "gap": "Mentioned in BevNet coverage. Context: cpg week: poppi founders \u2018jet\u2019 to next act, packaged food\u2019s big payday this week, the podcast discusses poppi co-founders' new jetty brand, several funding rounds and the state of the hemp industry.",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Fashion / Menswear / Culture",
+    "industry": "Food & Beverage / DTC",
     "revenue_est": "",
     "score": 10,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "BevNet discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "fall",
-    "brand": "Fall",
+    "id": "poppi-founders",
+    "brand": "Poppi Founders",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ng acts as a fuzzy signal, like a wearable pumpkin spice latte, that \u201ccozy girl fall\u201d has arrived.there\u2019s an irony to these associations, given that the brand\u2019s roots actually bega",
+    "gap": "Mentioned in BevNet coverage. Context: cpg week: poppi founders \u2018jet\u2019 to next act, packaged food\u2019s big payday this week, the podcast discusses poppi co-founders' new jetty brand, several funding rounds and the state of the hemp industry.",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Fashion / Menswear / Culture",
+    "industry": "Food & Beverage / DTC",
     "revenue_est": "",
     "score": 10,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "BevNet discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "australian",
-    "brand": "Australian",
+    "id": "next-act",
+    "brand": "Next Act",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: brand\u2019s roots actually began in workwear and, later, sportswear: a century ago, australian shepherds handcrafted twin-faced sheepskin boots to keep their feet warm in shearing shed",
+    "gap": "Mentioned in BevNet coverage. Context: cpg week: poppi founders \u2018jet\u2019 to next act, packaged food\u2019s big payday this week, the podcast discusses poppi co-founders' new jetty brand, several funding rounds and the state of the hemp industry.",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Fashion / Menswear / Culture",
+    "industry": "Food & Beverage / DTC",
     "revenue_est": "",
     "score": 10,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "BevNet discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "manhattan",
-    "brand": "Manhattan",
+    "id": "packaged-food",
+    "brand": "Packaged Food",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: rk\u2019s most interesting vintage fashion collection is tucked inside some pristine manhattan boutique, you\u2019d be very wrong.abe lange, known online as @sumshitifound and cofounder of d",
+    "gap": "Mentioned in BevNet coverage. Context: cpg week: poppi founders \u2018jet\u2019 to next act, packaged food\u2019s big payday this week, the podcast discusses poppi co-founders' new jetty brand, several funding rounds and the state of the hemp industry.",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Fashion / Menswear / Culture",
+    "industry": "Food & Beverage / DTC",
     "revenue_est": "",
     "score": 10,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "BevNet discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "abe-lange",
-    "brand": "Abe Lange",
+    "id": "big-payday",
+    "brand": "Big Payday",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: llection is tucked inside some pristine manhattan boutique, you\u2019d be very wrong.abe lange, known online as @sumshitifound and cofounder of distressed fest, has amassed an impeccabl",
+    "gap": "Mentioned in BevNet coverage. Context: cpg week: poppi founders \u2018jet\u2019 to next act, packaged food\u2019s big payday this week, the podcast discusses poppi co-founders' new jetty brand, several funding rounds and the state of the hemp industry.",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Fashion / Menswear / Culture",
+    "industry": "Food & Beverage / DTC",
     "revenue_est": "",
     "score": 10,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "BevNet discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "distressed-fest",
-    "brand": "Distressed Fest",
+    "id": "poppi",
+    "brand": "Poppi",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: you\u2019d be very wrong.abe lange, known online as @sumshitifound and cofounder of distressed fest, has amassed an impeccable archive regularly visited by stylists, musicians, athlete",
+    "gap": "Mentioned in BevNet coverage. Context: cpg week: poppi founders \u2018jet\u2019 to next act, packaged food\u2019s big payday this week, the podcast discusses poppi co-founders' new jetty brand, several funding rounds and the state of the hemp industry.",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Fashion / Menswear / Culture",
+    "industry": "Food & Beverage / DTC",
     "revenue_est": "",
     "score": 10,
-    "notes": "Fashion/streetwear media discovery",
+    "notes": "BevNet discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "lange",
-    "brand": "Lange",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: tion is tucked inside some pristine manhattan boutique, you\u2019d be very wrong.abe lange, known online as @sumshitifound and cofounder of distressed fest, has amassed an impeccable ar",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Fashion / Menswear / Culture",
-    "revenue_est": "",
-    "score": 10,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "distressed",
-    "brand": "Distressed",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: you\u2019d be very wrong.abe lange, known online as @sumshitifound and cofounder of distressed fest, has amassed an impeccable archive regularly visited by stylists, musicians, athlete",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Fashion / Menswear / Culture",
-    "revenue_est": "",
-    "score": 10,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "fishwife-anna-parmelee",
@@ -197,7 +157,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "highsnobiety-david-fischer",
@@ -217,7 +177,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "everyday-dose-jack-savage",
@@ -237,7 +197,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "heart---soil-paul-saladino",
@@ -257,7 +217,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "howler-brothers-adam-olson",
@@ -277,7 +237,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "surely-brandon-joldersma",
@@ -297,7 +257,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "4-8",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "gorgie-michelle-cordeiro-grant",
@@ -317,7 +277,7 @@
     "fractional_role": "Fractional Head of Influencer & Creator Partnerships",
     "headcount": "15-25",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "sunwink-eliza-ganesh",
@@ -337,7 +297,7 @@
     "fractional_role": "Fractional CMO / Head of Brand Partnerships",
     "headcount": "12",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "pilgrim-surf---supply-chris-gentile",
@@ -357,7 +317,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Retail Expansion",
     "headcount": "7-9",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "bandit-running-nils-arend",
@@ -377,7 +337,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "popagenda-gen-miller",
@@ -397,7 +357,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "midwest-games-adam-orth",
@@ -417,7 +377,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "taika-kal-freese",
@@ -437,7 +397,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "clevr-blends-hannah-mendoza",
@@ -457,7 +417,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "deux-sabeena-ladha",
@@ -477,7 +437,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "halfday-lara-wyss",
@@ -497,7 +457,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "dieux-skin-charlotte-palermino",
@@ -517,7 +477,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "whitethorn-games-matthew-white",
@@ -537,7 +497,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "diaspora-co-sana-javeri-kadri",
@@ -557,7 +517,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "pangaia-amanda-parkes",
@@ -577,7 +537,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "tony-s-chocolonely",
@@ -597,7 +557,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "represent-george-heaton",
@@ -617,7 +577,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "lomi-matt-bertulli",
@@ -637,7 +597,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "nguyen-coffee-supply-sahra-nguyen",
@@ -657,7 +617,7 @@
     "fractional_role": "Fractional Head of Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "canopy-ken-berkun",
@@ -677,47 +637,7 @@
     "fractional_role": "Fractional GTM Strategist",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "mela-watermelon-water-dominic-purpura",
-    "brand": "Mela Watermelon Water",
-    "founder": "Dominic Purpura",
-    "contact": "Dominic Purpura",
-    "contact_title": "Co-Founder / CEO",
-    "gap": "Mela has built a genuinely differentiated product in the functional water space and is growing fast. Very small team, founder-operated, no dedicated partnerships or commercial infrastructure operator. Exactly the profile for fractional engagement.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/drinkwatermelon",
-    "website": "https://drinkwatermelon.com",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "$1M-5M",
-    "score": 8,
-    "notes": "Early stage \u2014 high responsiveness likelihood",
-    "region": "US",
-    "fractional_role": "Fractional Head of Partnerships",
-    "headcount": "3-10",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "surreal-cereal-kit-gammell",
-    "brand": "Surreal Cereal",
-    "founder": "Kit Gammell",
-    "contact": "Kit Gammell",
-    "contact_title": "Co-Founder / CEO",
-    "gap": "Surreal has built a brand with a genuinely funny, irreverent voice in the functional food space. UK-based but active in the US market. Small team, founder-operated, strong brand, thin commercial infrastructure.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/eatmoresurreal",
-    "website": "https://eatmoresurreal.com",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "$2M-8M",
-    "score": 8,
-    "notes": "UK-based, active US expansion \u2014 strong cultural fit",
-    "region": "EU",
-    "fractional_role": "Fractional Head of Partnerships",
-    "headcount": "5-15",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "aura-bora-paul-voge",
@@ -737,7 +657,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "odyssey-elixir-scott-frohman",
@@ -757,7 +677,7 @@
     "fractional_role": "Fractional Head of Creator & Brand Partnerships",
     "headcount": "10-18",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "wynk-casey-parzych",
@@ -777,27 +697,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "brami-snacks-aaron-gatti",
-    "brand": "Brami Snacks",
-    "founder": "Aaron Gatti",
-    "contact": "Aaron Gatti",
-    "contact_title": "Founder & CEO",
-    "gap": "Plant-based lupini bean protein snack brand, 10-person team, doubling revenue YoY with Assembled Brands growth capital deployed. No partnerships function. Lupini bean is a breakout ingredient with influencer and collab potential \u2014 no one is building brand deals or systematically running influencer programs at Brami. Founder does it all.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/enjoybrami",
-    "website": "https://enjoybrami.com",
-    "industry": "Food & Beverage / CPG",
-    "revenue_est": "$3M-8M",
-    "score": 8,
-    "notes": "Doubling YoY with capital deployed, no partnerships operator",
-    "region": "US",
-    "fractional_role": "Fractional Head of Brand & Influencer Partnerships",
-    "headcount": "10",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "alder-apparel-mikayla-wujec",
@@ -817,27 +717,7 @@
     "fractional_role": "Fractional Head of Partnerships / Fractional CMO",
     "headcount": "6",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "avec-drinks-alex-doman",
-    "brand": "AVEC Drinks",
-    "founder": "Alex Doman",
-    "contact": "Alex Doman",
-    "contact_title": "Co-Founder & CEO",
-    "gap": "Premium cocktail mixers DTC brand backed by Pharrell's Black Ambition fund and Gather Ventures. Founder Alex Doman personally hand-selling and delivering to his first 30 accounts out of a 1995 Chevy Van \u2014 still a one-man commercial band. 1,200 retail doors but no brand collab program, no influencer partnership system, no structured on-premise sales infrastructure.",
-    "linkedin": "",
-    "instagram": "https://instagram.com/withavec",
-    "website": "https://drinkavec.com",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "$600K-2M",
-    "score": 8,
-    "notes": "Pharrell / Black Ambition backed \u2014 cultural credibility, founder-only commercial op",
-    "region": "US",
-    "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
-    "headcount": "3-8",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "akupara-games-david-logan",
@@ -857,7 +737,7 @@
     "fractional_role": "Fractional Head of Business Development & Developer Partnerships",
     "headcount": "20-44",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "matter-of-fact-paul-baek",
@@ -877,7 +757,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships / Fractional CMO",
     "headcount": "16",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "corridor-nyc-dan-snyder",
@@ -897,7 +777,7 @@
     "fractional_role": "Fractional Head of Partnerships & Brand Strategy",
     "headcount": "17",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "adsum-pete-macnee",
@@ -917,7 +797,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "metalwood-studio-cole-young",
@@ -937,7 +817,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM Strategy",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "blackstock---weber-chris-echevarria",
@@ -957,7 +837,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & GTM",
     "headcount": "7",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "paravel-indr--rockefeller",
@@ -977,7 +857,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "pakt-chad-rubin",
@@ -997,7 +877,7 @@
     "fractional_role": "Fractional Brand & GTM Operator",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "janji-dave-spandorfer",
@@ -1017,7 +897,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "museum-of-peace-and-quiet-aaron-bondarof",
@@ -1037,7 +917,7 @@
     "fractional_role": "Fractional Brand Partnerships & Collabs",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "blackbird-spyplane-jonah-weiner",
@@ -1057,7 +937,7 @@
     "fractional_role": "Fractional Commercial Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "ghostly-international-sam-valenti-iv",
@@ -1077,255 +957,15 @@
     "fractional_role": "Fractional Brand Partnerships & Licensing",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "cpg-financing",
-    "brand": "CPG Financing",
+    "id": "like",
+    "brand": "Like",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: q3 cpg financing deals \u2013 northhall report, october 2026 investment activity in the food, beverage and cpg sectors rebounded in q3 2026, but the headline growth figures tell only part of the story. ben",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "deals",
-    "brand": "Deals",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Mentioned in BevNet coverage. Context: q3 cpg financing deals \u2013 northhall report, october 2026 investment activity in the food, beverage and cpg sectors rebounded in q3 2026, but the headline growth figures tell only part of the story. ben",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Food & Beverage / DTC",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "BevNet discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "live",
-    "brand": "Live",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: the offspring guitarist noodles stepping away from live performance due to \u2018fairly serious health\u00a0issue\u2019 \n\n\nthe offspring guitarist and co-founder noodles announced on wednesday mo",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Music / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Music/culture press discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "performance",
-    "brand": "Performance",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: the offspring guitarist noodles stepping away from live performance due to \u2018fairly serious health\u00a0issue\u2019 \n\n\nthe offspring guitarist and co-founder noodles announced on wednesday mo",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Music / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Music/culture press discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "fairly",
-    "brand": "Fairly",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: the offspring guitarist noodles stepping away from live performance due to \u2018fairly serious health\u00a0issue\u2019 \n\n\nthe offspring guitarist and co-founder noodles announced on wednesday mo",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Music / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Music/culture press discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "serious",
-    "brand": "Serious",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: offspring guitarist noodles stepping away from live performance due to \u2018fairly serious health\u00a0issue\u2019 \n\n\nthe offspring guitarist and co-founder noodles announced on wednesday morni",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Music / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Music/culture press discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "health",
-    "brand": "Health",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: ng guitarist noodles stepping away from live performance due to \u2018fairly serious health\u00a0issue\u2019 \n\n\nthe offspring guitarist and co-founder noodles announced on wednesday morning (oct.",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Music / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Music/culture press discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "issue",
-    "brand": "Issue",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: arist noodles stepping away from live performance due to \u2018fairly serious health\u00a0issue\u2019 \n\n\nthe offspring guitarist and co-founder noodles announced on wednesday morning (oct. 21) th",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Music / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Music/culture press discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "wednesday",
-    "brand": "Wednesday",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: us health\u00a0issue\u2019 \n\n\nthe offspring guitarist and co-founder noodles announced on wednesday morning (oct. 21) that he is stepping back from the band\u2019s tour to deal with a health issu",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Music / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Music/culture press discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "willy-chavarria",
-    "brand": "Willy Chavarria",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ring performance-ready puffer jackets and trench coats, while menswear designer willy chavarria launches his new \"adisignature\" line with adidas originals, elevating classic sports",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "originals",
-    "brand": "Originals",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: swear designer willy chavarria launches his new \"adisignature\" line with adidas originals, elevating classic sportswear with his distinct oversized proportions. closing out the wee",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "chavarria",
-    "brand": "Chavarria",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: erformance-ready puffer jackets and trench coats, while menswear designer willy chavarria launches his new \"adisignature\" line with adidas originals, elevating classic sportswear w",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Streetwear / Fashion / Culture",
-    "revenue_est": "",
-    "score": 8,
-    "notes": "Fashion/streetwear media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "aussie",
-    "brand": "Aussie",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ed sheepskin boots to keep their feet warm in shearing sheds; decades later, an aussie named brian smith launched ugg out of a van in southern california, selling the boot to fello",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: h stitched with a single red felt letter spelling out what else but\u2026 r-a-l-p-h.\u00a0like the disparate fabric scraps they pulled from, the craftspeople themselves are their own kind of",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1337,15 +977,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "brian-smith",
-    "brand": "Brian Smith",
+    "id": "pieces",
+    "brand": "Pieces",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: boots to keep their feet warm in shearing sheds; decades later, an aussie named brian smith launched ugg out of a van in southern california, selling the boot to fellow surfers in",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: aps they pulled from, the craftspeople themselves are their own kind of mosaic. pieces by yui narita, founder of osaka vintage store brown tabby works and prolific restorer of clas",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1357,15 +997,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "southern-california",
-    "brand": "Southern California",
+    "id": "yui-narita",
+    "brand": "Yui Narita",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: sheds; decades later, an aussie named brian smith launched ugg out of a van in southern california, selling the boot to fellow surfers in need of something cozy to wear between wa",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ulled from, the craftspeople themselves are their own kind of mosaic. pieces by yui narita, founder of osaka vintage store brown tabby works and prolific restorer of classic utilit",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -1377,7 +1017,167 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "osaka",
+    "brand": "Osaka",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: eople themselves are their own kind of mosaic. pieces by yui narita, founder of osaka vintage store brown tabby works and prolific restorer of classic utility clothes, sat alongsid",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "brown-tabby",
+    "brand": "Brown Tabby",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: their own kind of mosaic. pieces by yui narita, founder of osaka vintage store brown tabby works and prolific restorer of classic utility clothes, sat alongside ones by mitsugu sa",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "works",
+    "brand": "Works",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ind of mosaic. pieces by yui narita, founder of osaka vintage store brown tabby works and prolific restorer of classic utility clothes, sat alongside ones by mitsugu sasaki, whose",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "puma-suede",
+    "brand": "Puma Suede",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: assic and later adopted by the pioneers of 1980s hip-hop and skate culture, the puma suede remains one of the most culturally bulletproof sneakers in history. teaming up with a$ap",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "teaming",
+    "brand": "Teaming",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: puma suede remains one of the most culturally bulletproof sneakers in history. teaming up with a$ap rocky, the german sportswear brand reimagines an archival classic with the a$ap",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "german",
+    "brand": "German",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ost culturally bulletproof sneakers in history. teaming up with a$ap rocky, the german sportswear brand reimagines an archival classic with the a$ap rocky x puma suede 94 blue.a$ap",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "puma-suede",
+    "brand": "PUMA Suede",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: he german sportswear brand reimagines an archival classic with the a$ap rocky x puma suede 94 blue.a$ap rocky has been rolling out puma collaborations for several seasons now, cons",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "speedcat",
+    "brand": "Speedcat",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: one who loves a svelte racer shoe). jil sander and puma\u2019s collaborative leather speedcat is back. and this season, it\u2019s been given a full-on accompanying fit.as we can exclusively",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Fashion / Menswear / Culture",
+    "revenue_est": "",
+    "score": 8,
+    "notes": "Fashion/streetwear media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
   },
   {
     "id": "joystick-ventures",
@@ -1397,7 +1197,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "fellow-traveller-chris-wright",
@@ -1417,7 +1217,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "beehiiv-tyler-denk",
@@ -1437,7 +1237,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "criquet-shirts-billy-nachman",
@@ -1457,7 +1257,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "freedom-games",
@@ -1477,7 +1277,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "ganni-ditte-reffstrup",
@@ -1497,7 +1297,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "monocle-tyler-brule",
@@ -1517,7 +1317,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "public-goods-morgan-hirsh",
@@ -1537,7 +1337,7 @@
     "fractional_role": "Fractional Head of Brand",
     "headcount": "10-25",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "graffiti-games-mihalis-belantis",
@@ -1557,7 +1357,7 @@
     "fractional_role": "Fractional Head of BD & Publisher Relations",
     "headcount": "1-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "dehen-1920-gary-hilde",
@@ -1577,7 +1377,7 @@
     "fractional_role": "Fractional Head of Brand Partnerships & Creator Strategy",
     "headcount": "11-35",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "abroad",
@@ -1597,7 +1397,7 @@
     "fractional_role": "Fractional Partnerships & Brand",
     "headcount": "2-8",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "ciele-athletics-mike-giles",
@@ -1617,7 +1417,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "rabbit-running-monica-devreese",
@@ -1637,7 +1437,7 @@
     "fractional_role": "Fractional Brand & GTM",
     "headcount": "10-20",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "awake-ny-angelo-baque",
@@ -1657,7 +1457,7 @@
     "fractional_role": "Fractional Brand & Partnerships Operator",
     "headcount": "5-12",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "noon-goons-andrew-morrison",
@@ -1677,7 +1477,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "dirt-kate-lindsay",
@@ -1697,7 +1497,7 @@
     "fractional_role": "Fractional Brand & Partnerships",
     "headcount": "2-5",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "every-dan-shipper",
@@ -1717,7 +1517,7 @@
     "fractional_role": "Fractional Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "numero-group-ken-shipley",
@@ -1737,7 +1537,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "5-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "indify-will-huston",
@@ -1757,7 +1557,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "rogue-territory-kyle-mowat",
@@ -1777,7 +1577,7 @@
     "fractional_role": "Fractional Brand Partnerships & GTM",
     "headcount": "3-10",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "imogene---willie-matt-eddmenson",
@@ -1797,7 +1597,7 @@
     "fractional_role": "Fractional GTM & Brand Partnerships",
     "headcount": "5-15",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "billykirk-chris-bray",
@@ -1817,7 +1617,7 @@
     "fractional_role": "Fractional Brand & Commercial Partnerships",
     "headcount": "3-8",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "humble-games",
@@ -1837,7 +1637,7 @@
     "fractional_role": "Fractional Brand Partnerships & Creator",
     "headcount": "20-50",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "playstack-harvey-elliott",
@@ -1857,7 +1657,7 @@
     "fractional_role": "Fractional Brand & Creator Partnerships (US)",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "blind-barber-jeff-laub",
@@ -1877,7 +1677,7 @@
     "fractional_role": "Fractional Brand & Experiential Partnerships",
     "headcount": "15-30",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "unitedmasters-steve-stoute",
@@ -1897,7 +1697,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "dice-phil-hutcheon",
@@ -1917,7 +1717,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "puck-jon-kelly",
@@ -1937,7 +1737,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "outdoor-voices",
@@ -1957,7 +1757,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "tecovas-paul-hedrick",
@@ -1977,27 +1777,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "xbox",
-    "brand": "Xbox",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Emerging studio or publisher discovered via gaming industry press. Context: amd's fsr 4.1 upscaling is coming to xbox series x|s  microsoft and amd have announced that amd's fsr 4.1 upscaling technology is coming to xbox series x|s consoles. read more",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Gaming / Indie Publishing",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Gaming industry discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "series",
@@ -2017,7 +1797,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "microsoft",
@@ -2037,7 +1817,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "indies",
@@ -2057,7 +1837,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "research",
@@ -2077,7 +1857,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "sensor",
@@ -2097,7 +1877,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "tower",
@@ -2117,7 +1897,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "gamesindustry",
@@ -2137,7 +1917,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "deciding",
@@ -2157,7 +1937,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "brilliant",
@@ -2177,15 +1957,35 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "instagram",
-    "brand": "Instagram",
+    "id": "indie",
+    "brand": "Indie",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Independent music entity with commercial potential. Context: back from the band\u2019s tour to deal with a health issue. in a statement posted on instagram, the 63-year-old punk veteran wrote, \u201cit is with deep sadness that i have to announce that",
+    "gap": "Emerging studio or publisher discovered via gaming industry press. Context: the game itself. \ni got the chance to play dandy rat cricket club at brilliant indie treasures, where i found the game to be such an interesting mix of british culture and rats. i",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Gaming / Indie",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Gaming industry discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "here",
+    "brand": "Here",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Independent music entity with commercial potential. Context: here\u2019s where to shop last-minute tickets to the eagles final few las vegas sphere residency\u00a0dates \n\nall products and services featured are independently chosen by editors. however,",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2197,15 +1997,155 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "highlights",
-    "brand": "Highlights",
+    "id": "shop",
+    "brand": "Shop",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: ryshonen jump store unveils new naruto and black clover merchandise collections.highlights include a limited-edition naruto jumbo-print tee and a hand-dyed black clover asta tee.th",
+    "gap": "Independent music entity with commercial potential. Context: here\u2019s where to shop last-minute tickets to the eagles final few las vegas sphere residency\u00a0dates \n\nall products and services featured are independently chosen by editors. however,",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Music / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Music/culture press discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "minute",
+    "brand": "Minute",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Independent music entity with commercial potential. Context: here\u2019s where to shop last-minute tickets to the eagles final few las vegas sphere residency\u00a0dates \n\nall products and services featured are independently chosen by editors. however,",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Music / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Music/culture press discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "tickets",
+    "brand": "Tickets",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Independent music entity with commercial potential. Context: here\u2019s where to shop last-minute tickets to the eagles final few las vegas sphere residency\u00a0dates \n\nall products and services featured are independently chosen by editors. however,",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Music / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Music/culture press discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "eagles",
+    "brand": "Eagles",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Independent music entity with commercial potential. Context: here\u2019s where to shop last-minute tickets to the eagles final few las vegas sphere residency\u00a0dates \n\nall products and services featured are independently chosen by editors. however,",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Music / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Music/culture press discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "final",
+    "brand": "Final",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Independent music entity with commercial potential. Context: here\u2019s where to shop last-minute tickets to the eagles final few las vegas sphere residency\u00a0dates \n\nall products and services featured are independently chosen by editors. however,",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Music / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Music/culture press discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "vegas",
+    "brand": "Vegas",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Independent music entity with commercial potential. Context: here\u2019s where to shop last-minute tickets to the eagles final few las vegas sphere residency\u00a0dates \n\nall products and services featured are independently chosen by editors. however,",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Music / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Music/culture press discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "sphere",
+    "brand": "Sphere",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Independent music entity with commercial potential. Context: here\u2019s where to shop last-minute tickets to the eagles final few las vegas sphere residency\u00a0dates \n\nall products and services featured are independently chosen by editors. however,",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Music / Culture",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Music/culture press discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "new-arrivals",
+    "brand": "New Arrivals",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: salomon advanced brand information: established in 1947 by fran\u00e7ois salomon in annecy, france, salomon advanced is well-known for its outdoor products, in pa",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2217,15 +2157,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "asta",
-    "brand": "Asta",
+    "id": "from-hbx",
+    "brand": "From HBX",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: s include a limited-edition naruto jumbo-print tee and a hand-dyed black clover asta tee.the drops also feature hoodies, skate decks, desk mats and accessories.viz media's shonen j",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: salomon advanced brand information: established in 1947 by fran\u00e7ois salomon in annecy, france, salomon advanced is well-known for its outdoor products, in pa",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2237,15 +2177,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "viz-media",
-    "brand": "VIZ Media",
+    "id": "salomon-advanced",
+    "brand": "Salomon Advanced",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: asta tee.the drops also feature hoodies, skate decks, desk mats and accessories.viz media's shonen jump store is expanding its anime and manga-inspired merchandise lineup with two",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: salomon advanced brand information: established in 1947 by fran\u00e7ois salomon in annecy, france, salomon advanced is well-known for its outdoor products, in pa",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2257,15 +2197,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "tabata",
-    "brand": "Tabata",
+    "id": "brand-information",
+    "brand": "Brand Information",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: nga, while the black clover range highlights the characters and artwork of y\u016bki tabata's fantasy series. both collections place original illustrations at the forefront, combining f",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: salomon advanced brand information: established in 1947 by fran\u00e7ois salomon in annecy, france, salomon advanced is well-known for its outdoor products, in pa",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2277,15 +2217,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "both",
-    "brand": "Both",
+    "id": "established",
+    "brand": "Established",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: er range highlights the characters and artwork of y\u016bki tabata's fantasy series. both collections place original illustrations at the forefront, combining familiar scenes and charac",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: salomon advanced brand information: established in 1947 by fran\u00e7ois salomon in annecy, france, salomon advanced is well-known for its outdoor products, in pa",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2297,15 +2237,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "field-boot",
-    "brand": "Field Boot",
+    "id": "salomon",
+    "brand": "Salomon",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: niting with timberland for a rugged fall 2026 collection anchored by the iconic field boot, while palace skateboards continues its winter 2026 rollout with a weather-ready assortme",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: new arrivals from hbx: salomon advanced brand information: established in 1947 by fran\u00e7ois salomon in annecy, france, salomon advanced is well-known for its outdoor products, in pa",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2317,15 +2257,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "palace-skateboards",
-    "brand": "Palace Skateboards",
+    "id": "annecy",
+    "brand": "Annecy",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: land for a rugged fall 2026 collection anchored by the iconic field boot, while palace skateboards continues its winter 2026 rollout with a weather-ready assortment of gore-tex she",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: salomon advanced brand information: established in 1947 by fran\u00e7ois salomon in annecy, france, salomon advanced is well-known for its outdoor products, in particular, those for mo",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2337,15 +2277,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "patta",
-    "brand": "Patta",
+    "id": "france",
+    "brand": "France",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: llout with a weather-ready assortment of gore-tex shells and insulated puffers. patta joins forces with carhartt wip for the workwear-inspired \"hartt and soul\" capsule, just as g-d",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: advanced brand information: established in 1947 by fran\u00e7ois salomon in annecy, france, salomon advanced is well-known for its outdoor products, in particular, those for mountain s",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2357,15 +2297,15 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "carhartt-wip",
-    "brand": "Carhartt WIP",
+    "id": "riot-games",
+    "brand": "Riot Games",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: dy assortment of gore-tex shells and insulated puffers. patta joins forces with carhartt wip for the workwear-inspired \"hartt and soul\" capsule, just as g-dragon\u2019s peaceminusone bl",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: tallic pink anchors that keep even the wiring on theme. the collection lands as riot games music continues to build out its roster of virtual acts, a lineup that also includes pent",
     "linkedin": "",
     "instagram": "",
     "website": "",
@@ -2377,147 +2317,67 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "patch-the",
-    "brand": "Patch The",
+    "id": "music",
+    "brand": "Music",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: ai finds flaw in popular web hosting software, sparking global race to patch the creators of php, an open source programming language used by the majority of the world\u2019s websites,",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: anchors that keep even the wiring on theme. the collection lands as riot games music continues to build out its roster of virtual acts, a lineup that also includes pentakill, true",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Creator Economy / Media",
+    "industry": "Streetwear / Fashion / Culture",
     "revenue_est": "",
     "score": 6,
-    "notes": "Creator economy media discovery",
+    "notes": "Fashion/streetwear media discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "spacex",
-    "brand": "SpaceX",
+    "id": "thibaud-hug",
+    "brand": "Thibaud Hug",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: l used a web of ai agents powered by models from companies including anthropic, spacex and chinese lab moonshot ai to automate cyberattacks against more than 400 latin american fin",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: th a line-up of industry experts: back market co-founder and executive chairman thibaud hug de larauze; reecover ceo dr. marie perrin; journalist alice pfeiffer; g\u00e9n\u00e9ration lumi\u00e8re",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Creator Economy / Media",
+    "industry": "Streetwear / Fashion / Culture",
     "revenue_est": "",
     "score": 6,
-    "notes": "Creator economy media discovery",
+    "notes": "Fashion/streetwear media discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
-    "id": "chinese",
-    "brand": "Chinese",
+    "id": "larauze",
+    "brand": "Larauze",
     "founder": "",
     "contact": "",
     "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: b of ai agents powered by models from companies including anthropic, spacex and chinese lab moonshot ai to automate cyberattacks against more than 400 latin american financial targ",
+    "gap": "Emerging fashion or streetwear brand with cultural traction. Context: industry experts: back market co-founder and executive chairman thibaud hug de larauze; reecover ceo dr. marie perrin; journalist alice pfeiffer; g\u00e9n\u00e9ration lumi\u00e8re founder david",
     "linkedin": "",
     "instagram": "",
     "website": "",
-    "industry": "Creator Economy / Media",
+    "industry": "Streetwear / Fashion / Culture",
     "revenue_est": "",
     "score": 6,
-    "notes": "Creator economy media discovery",
+    "notes": "Fashion/streetwear media discovery",
     "region": "US",
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "moonshot",
-    "brand": "Moonshot",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: ts powered by models from companies including anthropic, spacex and chinese lab moonshot ai to automate cyberattacks against more than 400 latin american financial targets, accordi",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "latin-american",
-    "brand": "Latin American",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: acex and chinese lab moonshot ai to automate cyberattacks against more than 400 latin american financial targets, according to an investigation by the cybersecurity startup straike",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "straiker",
-    "brand": "Straiker",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: n financial targets, according to an investigation by the cybersecurity startup straiker.\nthe research, shared exclusively with the information, is one of the first detailed report",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "the-information",
-    "brand": "The Information",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: on by the cybersecurity startup straiker.\nthe research, shared exclusively with the information, is one of the first detailed reports of cybercriminals using ai models to successfu",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Media",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "founder-intros",
@@ -2537,27 +2397,7 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
-  },
-  {
-    "id": "make",
-    "brand": "Make",
-    "founder": "",
-    "contact": "",
-    "contact_title": "",
-    "gap": "Creator economy platform or brand with commercial potential. Context: deas and business models, check out our research reports.\n\u00a01:1 founder intros\u00a0\u2022 make new friends, share lessons and find ways to help each other. keep life interesting by meeting n",
-    "linkedin": "",
-    "instagram": "",
-    "website": "",
-    "industry": "Creator Economy / Startup",
-    "revenue_est": "",
-    "score": 6,
-    "notes": "Creator economy media discovery",
-    "region": "US",
-    "fractional_role": "",
-    "headcount": "",
-    "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
   },
   {
     "id": "cliff-sentell",
@@ -2577,6 +2417,26 @@
     "fractional_role": "",
     "headcount": "",
     "engagement_type": "fractional",
-    "added_date": "2026-10-21"
+    "added_date": "2026-10-22"
+  },
+  {
+    "id": "sentell",
+    "brand": "Sentell",
+    "founder": "",
+    "contact": "",
+    "contact_title": "",
+    "gap": "Creator economy platform or brand with commercial potential. Context: inside chatgpt.\n ask yourself\n\n\n\nwhat did $20,000 and 1 server turn into?\ncliff sentell and two partners put in $20,000 each and bought a single server in 2005.\nthey started by cha",
+    "linkedin": "",
+    "instagram": "",
+    "website": "",
+    "industry": "Creator Economy / Startup",
+    "revenue_est": "",
+    "score": 6,
+    "notes": "Creator economy media discovery",
+    "region": "US",
+    "fractional_role": "",
+    "headcount": "",
+    "engagement_type": "fractional",
+    "added_date": "2026-10-22"
   }
 ]
